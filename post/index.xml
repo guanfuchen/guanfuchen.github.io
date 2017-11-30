@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on import python</title>
-    <link>https://guanfuchen.github.io/post/</link>
+    <link>http://chenguanfu.gitee.io/blog_ws_public/post/</link>
     <description>Recent content in Posts on import python</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 29 Nov 2017 12:57:49 +0800</lastBuildDate>
     
-	<atom:link href="https://guanfuchen.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://chenguanfu.gitee.io/blog_ws_public/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Fully_Context Aware_Video_Prediction论文阅读</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/fully_context-aware_video_prediction%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/fully_context-aware_video_prediction%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
       <pubDate>Wed, 29 Nov 2017 12:57:49 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/fully_context-aware_video_prediction%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/fully_context-aware_video_prediction%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
       <description>论文资料 Fully Context-Aware Video Prediction 主页</description>
     </item>
     
     <item>
       <title>参考文献格式说明</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%E6%A0%BC%E5%BC%8F%E8%AF%B4%E6%98%8E/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%E6%A0%BC%E5%BC%8F%E8%AF%B4%E6%98%8E/</link>
       <pubDate>Tue, 28 Nov 2017 20:14:04 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%E6%A0%BC%E5%BC%8F%E8%AF%B4%E6%98%8E/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%E6%A0%BC%E5%BC%8F%E8%AF%B4%E6%98%8E/</guid>
       <description>参考资料 参考文献标准格式
 常用引用 国家规划 作者或者某单位.名称[EB/OL].网址,年-月-日. [1] 国务院.国务院关于印发新一代人工智能发展规划的通知[EB/OL],2017-07-20.
 期刊文章 [序号]主要责任者.文献题名[J].刊名,年,卷(期):起止页码. [2] Krizhevsky A, Sutskever I, Hinton G E. ImageNet classification with deep convolutional neural networks[J]. Communications of the Acm, 2012, 60(2):2012.
@@ -34,85 +34,85 @@
     
     <item>
       <title>Opencv使用相关说明</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/opencv%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E8%AF%B4%E6%98%8E/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/opencv%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E8%AF%B4%E6%98%8E/</link>
       <pubDate>Tue, 28 Nov 2017 11:34:10 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/opencv%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E8%AF%B4%E6%98%8E/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/opencv%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E8%AF%B4%E6%98%8E/</guid>
       <description>HSV颜色空间 相关文档示例 learning_2017_11/hsv_detection/hsv_color_show.ipynb
 Fire Detection with Computer Vision</description>
     </item>
     
     <item>
       <title>激活函数相关说明</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0%E7%9B%B8%E5%85%B3%E8%AF%B4%E6%98%8E/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0%E7%9B%B8%E5%85%B3%E8%AF%B4%E6%98%8E/</link>
       <pubDate>Mon, 27 Nov 2017 22:23:15 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0%E7%9B%B8%E5%85%B3%E8%AF%B4%E6%98%8E/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0%E7%9B%B8%E5%85%B3%E8%AF%B4%E6%98%8E/</guid>
       <description>相关资料 Visualising Activation Functions in Neural Networks
 26种神经网络激活函数可视化</description>
     </item>
     
     <item>
       <title>SegFlow:_Joint_Learning_for_Video_Object_Segmentation_and_Optical_Flow论文阅读</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/segflow_joint_learning_for_video_object_segmentation_and_optical_flow%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/segflow_joint_learning_for_video_object_segmentation_and_optical_flow%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
       <pubDate>Mon, 27 Nov 2017 20:46:41 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/segflow_joint_learning_for_video_object_segmentation_and_optical_flow%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/segflow_joint_learning_for_video_object_segmentation_and_optical_flow%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
       <description>论文资料 SegFlow: Joint Learning for Video Object Segmentation and Optical Flow 论文 项目</description>
     </item>
     
     <item>
       <title>音乐相关资料</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E9%9F%B3%E4%B9%90%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/%E9%9F%B3%E4%B9%90%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</link>
       <pubDate>Sun, 26 Nov 2017 20:13:01 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E9%9F%B3%E4%B9%90%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/%E9%9F%B3%E4%B9%90%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</guid>
       <description>音乐下载 鉴于现在各个平台对音乐的版权限制，早点下载还是很有必要的，下面推荐的这个软件可以从youtube上下载音乐到本地。Instant-Music-Downloader</description>
     </item>
     
     <item>
       <title>网络压缩相关资料</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E7%BD%91%E7%BB%9C%E5%8E%8B%E7%BC%A9%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/%E7%BD%91%E7%BB%9C%E5%8E%8B%E7%BC%A9%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</link>
       <pubDate>Sun, 26 Nov 2017 20:10:18 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E7%BD%91%E7%BB%9C%E5%8E%8B%E7%BC%A9%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/%E7%BD%91%E7%BB%9C%E5%8E%8B%E7%BC%A9%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</guid>
       <description> 相关论文  EIE: Efficient Inference Engine on Compressed Deep Neural Network 论文 代码 将AlexNet网络大小从233MB减少到了8.9MB  </description>
     </item>
     
     <item>
       <title>VPGNet:_Vanishing_Point_Guided_Network_for_Lane_and_Road_Marking_Detection_and_Recognition论文阅读</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/vpgnet_vanishing_point_guided_network_for_lane_and_road_marking_detection_and_recognition%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/vpgnet_vanishing_point_guided_network_for_lane_and_road_marking_detection_and_recognition%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
       <pubDate>Sun, 26 Nov 2017 20:07:58 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/vpgnet_vanishing_point_guided_network_for_lane_and_road_marking_detection_and_recognition%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/vpgnet_vanishing_point_guided_network_for_lane_and_road_marking_detection_and_recognition%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
       <description> 论文资料 VPGNet: Vanishing Point Guided Network for Lane and Road Marking Detection and Recognition 论文 VPGNet 三星研究院的文章
 运行效果 </description>
     </item>
     
     <item>
       <title>道路识别相关资料</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E9%81%93%E8%B7%AF%E8%AF%86%E5%88%AB%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/%E9%81%93%E8%B7%AF%E8%AF%86%E5%88%AB%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</link>
       <pubDate>Sun, 26 Nov 2017 20:05:28 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E9%81%93%E8%B7%AF%E8%AF%86%E5%88%AB%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/%E9%81%93%E8%B7%AF%E8%AF%86%E5%88%AB%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</guid>
       <description> 相关论文  VPGNet: Vanishing Point Guided Network for Lane and Road Marking Detection and Recognition 论文 VPGNet 三星研究院的文章  </description>
     </item>
     
     <item>
       <title>增强学习相关问题</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E5%A2%9E%E5%BC%BA%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/%E5%A2%9E%E5%BC%BA%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
       <pubDate>Sun, 26 Nov 2017 19:57:10 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E5%A2%9E%E5%BC%BA%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/%E5%A2%9E%E5%BC%BA%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>相关教程 train-robot-arm-from-scratch 莫烦的新教程，关于深度学习的，可以fork一下</description>
     </item>
     
     <item>
       <title>Tensorflow使用相关问题</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/tensorflow%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/tensorflow%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
       <pubDate>Sun, 26 Nov 2017 10:37:09 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/tensorflow%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/tensorflow%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description> 相关教程 tensorflow-mnist-tutorial 以漫画的形式使用Tensorflow进行教学
 tensorboard相关说明 tensorboard中的数据可以下载，启动左侧的下载即可。
 # 启动tensorboard，默认端口6006 tensorboard --logdir=checkpoints --port 6007  </description>
@@ -120,28 +120,28 @@ tensorboard相关说明 tensorboard中的数据可以下载，启动左侧的下
     
     <item>
       <title>Learning_Features_by_Watching_Objects_Move论文阅读</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/learning_features_by_watching_objects_move%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/learning_features_by_watching_objects_move%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
       <pubDate>Fri, 24 Nov 2017 21:34:14 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/learning_features_by_watching_objects_move%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/learning_features_by_watching_objects_move%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
       <description>论文资料 Learning Features by Watching Objects Move 代码 项目主页 这篇文章主要使用非监督的方法从视频运动信息中来作为分割的标注信息，从而学习语义分割。</description>
     </item>
     
     <item>
       <title>Generating_Sequences_With_Recurrent_Neural_Networks论文阅读</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/generating_sequences_with_recurrent_neural_networks%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/generating_sequences_with_recurrent_neural_networks%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
       <pubDate>Thu, 23 Nov 2017 13:23:32 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/generating_sequences_with_recurrent_neural_networks%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/generating_sequences_with_recurrent_neural_networks%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
       <description>论文资料 Generating Sequences With Recurrent Neural Networks demo 代码 slides</description>
     </item>
     
     <item>
       <title>Convolutional_LSTM_Network:_A_Machine_Learning_Approach_for_Precipitation_Nowcasting论文阅读</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/convolutional_lstm_network_a_machine_learning_approach_for_precipitation_nowcasting%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/convolutional_lstm_network_a_machine_learning_approach_for_precipitation_nowcasting%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
       <pubDate>Thu, 23 Nov 2017 02:58:32 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/convolutional_lstm_network_a_machine_learning_approach_for_precipitation_nowcasting%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/convolutional_lstm_network_a_machine_learning_approach_for_precipitation_nowcasting%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
       <description> 论文资料 Convolutional LSTM Network: A Machine Learning Approach for Precipitation Nowcasting 论文 代码 代码torch
 20160629-Convolutional LSTM Network: A Machine Learning Approach for Precipitation Nowcasting 这是其他人对该篇论文的简要解读，思路较为清除。
 博客资料 Convolutional LSTM keras对Conv LSTM相关的讨论
@@ -152,10 +152,10 @@ conv_lstm.py keras上对Conv LSTM相关实现例子
     
     <item>
       <title>Learning_to_Generate_Long Term_Future_via_Hierarchical_Prediction论文阅读</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/learning_to_generate_long-term_future_via_hierarchical_prediction%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/learning_to_generate_long-term_future_via_hierarchical_prediction%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
       <pubDate>Thu, 23 Nov 2017 02:50:08 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/learning_to_generate_long-term_future_via_hierarchical_prediction%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/learning_to_generate_long-term_future_via_hierarchical_prediction%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
       <description>论文资料 Learning to Generate Long-term Future via Hierarchical Prediction 项目主页 代码
 论文效果 当视频外框为绿色时，为真实视频；当外框变红时，为AI生成的“假”视频。最左边是今天要介绍的方法，中间和右边用以前方法达到的效果。其中主要比较了ConvLSTM和基于光流的方法。
 博客资料 这个AI能预测未来并生成逼真的视频（论文来自谷歌大脑、北航等）
@@ -165,19 +165,19 @@ Learning to Generate Long-term Future via Hierarchical Prediction解读
     
     <item>
       <title>DEEP_MULTI SCALE_VIDEO_PREDICTION_BEYOND_MEAN_SQUARE_ERROR论文阅读</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/deep_multi-scale_video_prediction_beyond_mean_square_error%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/deep_multi-scale_video_prediction_beyond_mean_square_error%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
       <pubDate>Sun, 19 Nov 2017 23:03:23 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/deep_multi-scale_video_prediction_beyond_mean_square_error%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/deep_multi-scale_video_prediction_beyond_mean_square_error%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
       <description>论文资料 DEEP_MULTI-SCALE_VIDEO_PREDICTION_BEYOND_MEAN_SQUARE_ERROR 论文 代码 项目主页</description>
     </item>
     
     <item>
       <title>Tmux使用相关</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/tmux%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/tmux%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3/</link>
       <pubDate>Sun, 19 Nov 2017 21:17:03 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/tmux%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/tmux%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3/</guid>
       <description>Tmux使用相关 一个命令行下可以创建多个tmux session，而在一个session中可以创建多个window，一个window中可以创建多个panel，tmux输入首先建立session比如0，然后在session中默认有一个窗口比如为 prefix为ctrl+b prefix [ 向上滚动 tmux ls tmux kill-session -t 7 tmux -S 0 prefix d # detach the session # attach session比如0 tmux a -t session_name(0)  美化tmux .tmux
 How can I page up or down in tmux with Terminal.app?
 Linux下终端利器tmux
@@ -189,10 +189,10 @@ Byobu 指南</description>
     
     <item>
       <title>安卓反编译</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E5%AE%89%E5%8D%93%E5%8F%8D%E7%BC%96%E8%AF%91/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/%E5%AE%89%E5%8D%93%E5%8F%8D%E7%BC%96%E8%AF%91/</link>
       <pubDate>Sun, 19 Nov 2017 12:22:30 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E5%AE%89%E5%8D%93%E5%8F%8D%E7%BC%96%E8%AF%91/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/%E5%AE%89%E5%8D%93%E5%8F%8D%E7%BC%96%E8%AF%91/</guid>
       <description>博客资料 Android反编译技术总结 主要按照这篇博客来进行反汇编
 相关工具 android-classyshark
 JD Project
@@ -203,29 +203,29 @@ dex2jar</description>
     
     <item>
       <title>MatchNet _Unifying_Feature_and_Metric_Learning_for_Patch Based_Matching论文阅读</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/matchnet-_unifying_feature_and_metric_learning_for_patch-based_matching%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/matchnet-_unifying_feature_and_metric_learning_for_patch-based_matching%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
       <pubDate>Fri, 17 Nov 2017 17:56:17 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/matchnet-_unifying_feature_and_metric_learning_for_patch-based_matching%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/matchnet-_unifying_feature_and_metric_learning_for_patch-based_matching%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
       <description>论文资料 MatchNet: Unifying Feature and Metric Learning for Patch-Based Matching 代码
 博客资料 MatchNet-_Unifying_Feature_and_Metric_Learning_for_Patch-Based_Matching</description>
     </item>
     
     <item>
       <title>CortexNet:_a_Generic_Network_Family_for_Robust_Visual_Temporal_Representations论文阅读</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/cortexnet_a_generic_network_family_for_robust_visual_temporal_representations%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/cortexnet_a_generic_network_family_for_robust_visual_temporal_representations%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
       <pubDate>Wed, 15 Nov 2017 21:57:14 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/cortexnet_a_generic_network_family_for_robust_visual_temporal_representations%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/cortexnet_a_generic_network_family_for_robust_visual_temporal_representations%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
       <description>论文资料 CortexNet: a Generic Network Family for Robust Visual Temporal Representations 代码 项目主页 该项目使用pytorch完成视频的预测。</description>
     </item>
     
     <item>
       <title>LSTM相关资料</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/lstm%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/lstm%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</link>
       <pubDate>Wed, 15 Nov 2017 20:06:46 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/lstm%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/lstm%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</guid>
       <description>论文资料  Learning to Forget: Continual Prediction with LSTM 讲述LSTM中的forget gate  书籍资料 Supervised Sequence Labelling with Recurrent Neural Networks 链接 使用RNN来进行监督式序列标注
 博客资料 Understanding LSTM Networks 这篇博客对LSTM层层深入，易于理解，该作者的图较生动，其博客同时包含很多神经网络的资料。
 The Unreasonable Effectiveness of Recurrent Neural Networks
@@ -238,19 +238,19 @@ torch实现的RNN结构 ni = 1; nh = 8; no = 1; len = 3 h0 = nn.</description>
     
     <item>
       <title>机器学习课程收集</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AF%BE%E7%A8%8B%E6%94%B6%E9%9B%86/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AF%BE%E7%A8%8B%E6%94%B6%E9%9B%86/</link>
       <pubDate>Wed, 15 Nov 2017 16:44:14 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AF%BE%E7%A8%8B%E6%94%B6%E9%9B%86/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AF%BE%E7%A8%8B%E6%94%B6%E9%9B%86/</guid>
       <description> 机器学习课程收集  Machine Learning: 2014-2015 该课程讲义和视频都有，非常适合学习，同时其中穿插了torch的编程，课程大作业也是使用torch来完成，可以用来作为torch的学习。 大作业示例代码 该代码仓库放置了大作业的代码，可以作为参考。 深度学习如何入门？ 知乎中也有提到这个课程  机器学习书籍收集  Pattern Recognition and Machine Learning 机器学习领域必看书之一，提供python代码PRML，提供了notebook进行学习。  </description>
     </item>
     
     <item>
       <title>Lua使用相关问题</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/lua%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/lua%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
       <pubDate>Wed, 15 Nov 2017 15:05:39 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/lua%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/lua%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>相关教程 Learn Lua in 15 Minutes 该代码较为简单，将LUA中的基本语法大致讲完，代码已经下载至cv_learning中可以自己注释增加。
 Lua 教程 菜鸟教程，分类清晰，模块化学习。
 torch7 readme
@@ -269,10 +269,10 @@ torch 读取command参数 local cmd = torch.CmdLine() cmd:option(&#39;-usegpu&#3
     
     <item>
       <title>Jupyter使用相关问题</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/jupyter%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/jupyter%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
       <pubDate>Tue, 14 Nov 2017 23:24:13 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/jupyter%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/jupyter%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>jupyter notebook # 开启jupyter notebook jupyter notebook # 显示notebook列表 jupyter notebook list  How to close IPython Notebook properly?
 How to stop the iPython notebook to run the command line, run only python code
 jupyter matlab接口 cd /usr/local/MATLAB/R2015b/extern/engines/python sudo python setup.py install sudo pip install jupyter sudo pip install numpy sudo pip install zmq sudo pip install metakernel sudo pip install pymatbridge sudo pip install matlab_kernel sudo python -m matlab_kernel install  MATLAB-BASED IPYTHON NOTEBOOKS</description>
@@ -280,40 +280,40 @@ jupyter matlab接口 cd /usr/local/MATLAB/R2015b/extern/engines/python sudo pyth
     
     <item>
       <title>Generating_Videos_with_Scene_Dynamics论文阅读</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/generating_videos_with_scene_dynamics%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/generating_videos_with_scene_dynamics%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
       <pubDate>Tue, 14 Nov 2017 16:07:23 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/generating_videos_with_scene_dynamics%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/generating_videos_with_scene_dynamics%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
       <description> 论文资料 Generating Videos with Scene Dynamics
 模型框架 整体框架如下 识别器框架如下 生成器框架如下 </description>
     </item>
     
     <item>
       <title>Temporal_Generative_Adversarial_Nets_with_Singular_Value_Clipping论文阅读</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/temporal_generative_adversarial_nets_with_singular_value_clipping%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/temporal_generative_adversarial_nets_with_singular_value_clipping%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
       <pubDate>Tue, 14 Nov 2017 15:55:21 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/temporal_generative_adversarial_nets_with_singular_value_clipping%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/temporal_generative_adversarial_nets_with_singular_value_clipping%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
       <description> 论文资料 Temporal Generative Adversarial Nets with Singular Value Clipping
 运行示例 Moving MNIST数据集 UCF-101数据集 Golf数据集 模型架构 </description>
     </item>
     
     <item>
       <title>Spatial_Transformer_Networks论文阅读</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/spatial_transformer_networks%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/spatial_transformer_networks%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
       <pubDate>Tue, 14 Nov 2017 00:56:20 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/spatial_transformer_networks%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/spatial_transformer_networks%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
       <description>论文资料 Spatial Transformer Networks 代码
 相关博客 Spatial Transformer Networks 阅读笔记</description>
     </item>
     
     <item>
       <title>Playing_for_Data:_Ground_Truth_from_Computer_Games论文阅读</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/playing_for_data_ground_truth_from_computer_games%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/playing_for_data_ground_truth_from_computer_games%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
       <pubDate>Mon, 13 Nov 2017 17:11:09 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/playing_for_data_ground_truth_from_computer_games%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/playing_for_data_ground_truth_from_computer_games%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
       <description>论文资料 Playing for Data: Ground Truth from Computer Games
 运行示例 博客资料 【数据】Playing for Data: Ground Truth from Computer Games
 Playing for Data: Ground Truth from Computer Games 该视频为论文的示例demo
@@ -322,10 +322,10 @@ Playing for Data: Ground Truth from Computer Games</description>
     
     <item>
       <title>Unsupervised_Learning_of_Video_Representations_using_LSTMs论文阅读</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/unsupervised_learning_of_video_representations_using_lstms%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/unsupervised_learning_of_video_representations_using_lstms%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
       <pubDate>Mon, 13 Nov 2017 16:48:38 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/unsupervised_learning_of_video_representations_using_lstms%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/unsupervised_learning_of_video_representations_using_lstms%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
       <description>论文资料 Unsupervised Learning of Video Representations using LSTMs 论文 代码
 该文提出了一种结合重构图像和预测图像的模型，发现比单纯地预测图像得到的结果更好，同时提供了一个两个数字moving的数据集MovingMNIST，代码中提供了可以训练的模型。
 代码相关 运行示例如下，下图显示的是，第一行图像是源序列，该数据集由20张图像组成，第二行显示的是预测的序列，其中前10张图像是重构的序列，而后10张是预测的序列。 博客资料 【论文笔记】Unsupervised Learning of Video Representations using LSTMs</description>
@@ -333,10 +333,10 @@ Playing for Data: Ground Truth from Computer Games</description>
     
     <item>
       <title>视频预测相关资料</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E8%A7%86%E9%A2%91%E9%A2%84%E6%B5%8B%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/%E8%A7%86%E9%A2%91%E9%A2%84%E6%B5%8B%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</link>
       <pubDate>Mon, 13 Nov 2017 15:13:30 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E8%A7%86%E9%A2%91%E9%A2%84%E6%B5%8B%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/%E8%A7%86%E9%A2%91%E9%A2%84%E6%B5%8B%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</guid>
       <description>综述 2015-10-09-video-applications.md 是handong1587关注的深度学习在视频方面的应用总结，具有参考价值，可以直接看渲染好的博客
 相关论文 A Survey on Deep Video Prediction 该论文是关于深度预测视频领域的一份调研报告，作者是学生 Victor Ge
 DEEP PREDICTIVE CODING NETWORKS FOR VIDEO PREDICTION AND UNSUPERVISED LEARNING 本文是关于使用深度学习的方法来预测编码
@@ -348,10 +348,10 @@ e-lab references 这是e-lab实验室对相关研究的文章收集，可以作�
     
     <item>
       <title>深层对抗网络相关资料</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E6%B7%B1%E5%B1%82%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/%E6%B7%B1%E5%B1%82%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</link>
       <pubDate>Mon, 13 Nov 2017 00:48:20 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E6%B7%B1%E5%B1%82%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/%E6%B7%B1%E5%B1%82%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</guid>
       <description>论文资料 Generative Adversarial Networks Conditional Generative Adversarial Nets Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks NIPS 2016 Tutorial: Generative Adversarial Networks
 博客资料 Generative Adversarial Networks (GANs) in 50 lines of code (PyTorch) 4.6 GAN 生成对抗网络 (PyTorch tutorial 神经网络 教学)
 AdversarialNetsPapers 这是github上搜集的关于对抗生成网络相关论文
@@ -360,10 +360,10 @@ AdversarialNetsPapers 这是github上搜集的关于对抗生成网络相关论�
     
     <item>
       <title>Deep_Predictive_Coding_Networks_for_Video_Prediction_and_Unsupervised_Learning论文阅读</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/deep_predictive_coding_networks_for_video_prediction_and_unsupervised_learning%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/deep_predictive_coding_networks_for_video_prediction_and_unsupervised_learning%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
       <pubDate>Sun, 12 Nov 2017 15:18:56 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/deep_predictive_coding_networks_for_video_prediction_and_unsupervised_learning%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/deep_predictive_coding_networks_for_video_prediction_and_unsupervised_learning%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
       <description> 论文资料 Deep Predictive Coding Networks for Video Prediction and Unsupervised Learning 论文 代码 torch-prednet torch prednet是e-lab实验室重新实现的一个预测网络 prednet_comment代码注释 该代码中为其他研究人员的相关注释。
 代码运行示例，下面是在Caltech Pedestrian数据集上运行的下一帧预测结果，该模型在KITTI数据集中训练。 代码实现 torch-prednet
 # 训练相关 th main.lua --batch 1 --nlayers 3 -s --savedir results --dataDir dataSets --dataName data-small # 测试相关 qlua main.lua --model results --dataDir dataSets --dataName data-small --visOnly --useGPU  论文资料 PredNet阅读笔记——从视频预测的角度学习视频表征
@@ -373,10 +373,10 @@ AdversarialNetsPapers 这是github上搜集的关于对抗生成网络相关论�
     
     <item>
       <title>同时预测场景解析和运动估计相关资料</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E5%90%8C%E6%97%B6%E9%A2%84%E6%B5%8B%E5%9C%BA%E6%99%AF%E8%A7%A3%E6%9E%90%E5%92%8C%E8%BF%90%E5%8A%A8%E4%BC%B0%E8%AE%A1%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/%E5%90%8C%E6%97%B6%E9%A2%84%E6%B5%8B%E5%9C%BA%E6%99%AF%E8%A7%A3%E6%9E%90%E5%92%8C%E8%BF%90%E5%8A%A8%E4%BC%B0%E8%AE%A1%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</link>
       <pubDate>Fri, 10 Nov 2017 15:54:14 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E5%90%8C%E6%97%B6%E9%A2%84%E6%B5%8B%E5%9C%BA%E6%99%AF%E8%A7%A3%E6%9E%90%E5%92%8C%E8%BF%90%E5%8A%A8%E4%BC%B0%E8%AE%A1%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/%E5%90%8C%E6%97%B6%E9%A2%84%E6%B5%8B%E5%9C%BA%E6%99%AF%E8%A7%A3%E6%9E%90%E5%92%8C%E8%BF%90%E5%8A%A8%E4%BC%B0%E8%AE%A1%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</guid>
       <description>相关论文 Predicting Deeper into the Future of Semantic Segmentation 代码 项目主页
 LR-GAN: Layered Recursive Generative Adversarial Networks for Image Generation 代码
  DEEP MULTI-SCALE VIDEO PREDICTION BEYOND MEAN SQUARE ERROR 论文 代码 Deep Predictive Coding Networks for Video Prediction and Unsupervised Learning 论文 代码 Visual Dynamics: Probabilistic Future Frame Synthesis via Cross Convolutional Networks 论文 项目主页 代码 Generating videos with scene dynamics 论文 代码 使用GAN来生成视屏 Dynamic Filter Networks 论文 代码  同时预测场景解析和运动估计 该问题和项目的要求符合，对下一帧使用运动估计进行了预测，并进行语义分割，此任务结合了这两个问题，同时解决，具有创新性。其中涵盖了语义分割、光流估计和多任务学习领域。</description>
@@ -384,10 +384,10 @@ LR-GAN: Layered Recursive Generative Adversarial Networks for Image Generation �
     
     <item>
       <title>Aerial语义分割资料收集</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/aerial%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2%E8%B5%84%E6%96%99%E6%94%B6%E9%9B%86/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/aerial%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2%E8%B5%84%E6%96%99%E6%94%B6%E9%9B%86/</link>
       <pubDate>Thu, 09 Nov 2017 14:25:40 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/aerial%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2%E8%B5%84%E6%96%99%E6%94%B6%E9%9B%86/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/aerial%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2%E8%B5%84%E6%96%99%E6%94%B6%E9%9B%86/</guid>
       <description>相关资料 下图显示了在训练期间ResNet FCN的语义分割更加精确的示例
 代码实现 raster-vision提供了空中图像语义分割的示例程序 raster-vision
 Semantic Segmentation for Aerial Imagery using Convolutional Neural Network ssai
@@ -396,20 +396,20 @@ Semantic Segmentation for Aerial / Satellite Images with Convolutional Neural Ne
     
     <item>
       <title>SPPNet论文阅读</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/sppnet%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/sppnet%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
       <pubDate>Tue, 07 Nov 2017 20:56:16 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/sppnet%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/sppnet%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
       <description>论文资料 Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition
 博客资料 SPPNet-引入空间金字塔池化改进RCNN</description>
     </item>
     
     <item>
       <title>计算机视觉相关资源整理</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/</link>
       <pubDate>Tue, 07 Nov 2017 20:14:31 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/</guid>
       <description>valse 这是国内华人组织的青年学者计算机视觉领域的研讨会，2014年至今，其中有大量国内计算机视觉大牛分享的报告资源。
 slides
 videos
@@ -421,10 +421,10 @@ CS231n Lecture 10 - Recurrent Neural Networks, Image Captioning, LSTM Andrej在c
     
     <item>
       <title>ResNet论文阅读</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/resnet%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/resnet%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
       <pubDate>Mon, 06 Nov 2017 13:07:39 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/resnet%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/resnet%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
       <description>论文资料 Deep Residual Learning for Image Recognition
 博客资料 Training and investigating Residual Nets
 Deep Residual Networks（ResNet） 简介
@@ -449,10 +449,10 @@ fb.resnet.torch
     
     <item>
       <title>PSPNet论文阅读</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/pspnet%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/pspnet%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
       <pubDate>Mon, 06 Nov 2017 13:06:17 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/pspnet%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/pspnet%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
       <description>论文资料 Pyramid Scene Parsing Network
 Pyramid Scene Parsing Network主页
 网络结构 结果示例 代码实现 pspnet-pytorch
@@ -462,10 +462,10 @@ PSPNet caffe
     
     <item>
       <title>ENet论文阅读</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/enet%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/enet%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
       <pubDate>Mon, 06 Nov 2017 10:46:04 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/enet%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/enet%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
       <description>论文资料 ENet: A Deep Neural Network Architecture for Real-Time Semantic Segmentation
 代码实现 ENet-caffe
 ENet pytorch model.py
@@ -475,10 +475,10 @@ ENet-caffe运行相关 # 测试分割结果 python scripts/test_segmentation.py 
     
     <item>
       <title>UNet论文阅读</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/unet%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/unet%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
       <pubDate>Sun, 05 Nov 2017 23:05:42 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/unet%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/unet%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
       <description>论文资料 U-Net: Convolutional Networks for Biomedical Image Segmentation
 相关架构 编码器为常规的卷积层和池化层，解码器将U对面的解码器的卷积层上采样到当前解码器层。
 代码实现 class UNetEnc(nn.Module): def __init__(self, in_channels, features, out_channels): super().__init__() self.up = nn.Sequential( nn.Conv2d(in_channels, features, 3), nn.ReLU(inplace=True), nn.Conv2d(features, features, 3), nn.ReLU(inplace=True), nn.ConvTranspose2d(features, out_channels, 2, stride=2), nn.ReLU(inplace=True), ) def forward(self, x): return self.up(x) class UNetDec(nn.Module): def __init__(self, in_channels, out_channels, dropout=False): super().__init__() layers = [ nn.Conv2d(in_channels, out_channels, 3), nn.ReLU(inplace=True), nn.Conv2d(out_channels, out_channels, 3), nn.ReLU(inplace=True), ] if dropout: layers += [nn.Dropout(.5)] layers += [nn.MaxPool2d(2, stride=2, ceil_mode=True)] self.</description>
@@ -486,10 +486,10 @@ ENet-caffe运行相关 # 测试分割结果 python scripts/test_segmentation.py 
     
     <item>
       <title>常用RSS网站</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E5%B8%B8%E7%94%A8rss%E7%BD%91%E7%AB%99/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/%E5%B8%B8%E7%94%A8rss%E7%BD%91%E7%AB%99/</link>
       <pubDate>Sun, 05 Nov 2017 10:56:43 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E5%B8%B8%E7%94%A8rss%E7%BD%91%E7%AB%99/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/%E5%B8%B8%E7%94%A8rss%E7%BD%91%E7%AB%99/</guid>
       <description>github GitHub Trends RSS
 期刊RSS 了解我的领域的新研究有助于保持我的工作知情和相关。 Knowing about new research in my field helps keep my work informed and relevant. RSS Feeds for Scientific Journals
 计算机视觉  IEEE Trans. on Image Processing (TIP) IEEE Trans. on Pattern Analysis and Machine Intelligence (PAMI) IEEE Trans. on Medical Imaging (TMI) International Journal of Computer Vision (IJCV) IEEE Trans. on Control Systems Technology (TCST) IET Computer Vision Machine Vision and Applications Journal of Mathematical Imaging and Vision Computer Vision and Image Understanding Image and Vision Computing ArXiv.</description>
@@ -497,19 +497,19 @@ ENet-caffe运行相关 # 测试分割结果 python scripts/test_segmentation.py 
     
     <item>
       <title>深度学习网络初始化trick</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%BB%9C%E5%88%9D%E5%A7%8B%E5%8C%96trick/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%BB%9C%E5%88%9D%E5%A7%8B%E5%8C%96trick/</link>
       <pubDate>Sun, 05 Nov 2017 10:19:27 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%BB%9C%E5%88%9D%E5%A7%8B%E5%8C%96trick/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%BB%9C%E5%88%9D%E5%A7%8B%E5%8C%96trick/</guid>
       <description>网络权重初始化 Initialization of deep networks</description>
     </item>
     
     <item>
       <title>Faster_rcnn论文阅读</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/faster_rcnn%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/faster_rcnn%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
       <pubDate>Sat, 04 Nov 2017 20:15:48 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/faster_rcnn%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/faster_rcnn%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
       <description>论文资料 Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks
 博客相关 【目标检测】RCNN算法详解
 【目标检测】Fast RCNN算法详解
@@ -532,30 +532,30 @@ RCNN RCNN算法的原理较为简单，首先通过Selective Search提取图像B
     
     <item>
       <title>Pytorch实现的vgg网络</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/pytorch%E5%AE%9E%E7%8E%B0%E7%9A%84vgg%E7%BD%91%E7%BB%9C/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/pytorch%E5%AE%9E%E7%8E%B0%E7%9A%84vgg%E7%BD%91%E7%BB%9C/</link>
       <pubDate>Fri, 03 Nov 2017 22:49:10 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/pytorch%E5%AE%9E%E7%8E%B0%E7%9A%84vgg%E7%BD%91%E7%BB%9C/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/pytorch%E5%AE%9E%E7%8E%B0%E7%9A%84vgg%E7%BD%91%E7%BB%9C/</guid>
       <description>vgg网络 vgg网络由于其具有较强的特征提取能力，被广泛作为一个基本的模块组合在其他的网络中，而pytorch对它的实现尤为简单，下面分析一下源码实现。
 # A B D E网络分别表示vgg11, vgg13, vgg16, vgg19网络，其中vgg16和vgg19网络的使用最为频繁，由于vgg网络的基本组成单元较简单，所以其实现也具有优美的架构，其中卷积网络都是stride为1，kernel size为3，padding为1的卷积，该卷积输入输出保持不变，而池化层则使用的是最大池化层，stride为2，kernel size为2 cfg = { &#39;A&#39;: [64, &#39;M&#39;, 128, &#39;M&#39;, 256, 256, &#39;M&#39;, 512, 512, &#39;M&#39;, 512, 512, &#39;M&#39;], &#39;B&#39;: [64, 64, &#39;M&#39;, 128, 128, &#39;M&#39;, 256, 256, &#39;M&#39;, 512, 512, &#39;M&#39;, 512, 512, &#39;M&#39;], &#39;D&#39;: [64, 64, &#39;M&#39;, 128, 128, &#39;M&#39;, 256, 256, 256, &#39;M&#39;, 512, 512, 512, &#39;M&#39;, 512, 512, 512, &#39;M&#39;], &#39;E&#39;: [64, 64, &#39;M&#39;, 128, 128, &#39;M&#39;, 256, 256, 256, 256, &#39;M&#39;, 512, 512, 512, 512, &#39;M&#39;, 512, 512, 512, 512, &#39;M&#39;], } # VGG16 2*2+3*3+3=16 # make_layers构成了vgg网络的特征层，输入为上述cfg，比如vgg16为D，那么首先输入channels为RGB三通道图像，增加每一层使用nn.</description>
     </item>
     
     <item>
       <title>Learning_Deconvolution_Network_for_Semantic_Segmentation</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/learning_deconvolution_network_for_semantic_segmentation/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/learning_deconvolution_network_for_semantic_segmentation/</link>
       <pubDate>Fri, 03 Nov 2017 20:56:26 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/learning_deconvolution_network_for_semantic_segmentation/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/learning_deconvolution_network_for_semantic_segmentation/</guid>
       <description>论文资料 Learning Deconvolution Network for Semantic Segmentation
 网络结构 代码实现 DeconvNet</description>
     </item>
     
     <item>
       <title>Multi Scale_Context_Aggregation_by_Dilated_Convolutions论文阅读</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/multi-scale_context_aggregation_by_dilated_convolutions%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/multi-scale_context_aggregation_by_dilated_convolutions%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
       <pubDate>Fri, 03 Nov 2017 15:35:00 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/multi-scale_context_aggregation_by_dilated_convolutions%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/multi-scale_context_aggregation_by_dilated_convolutions%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
       <description>论文资料 Dilated Convolution的最大价值是可以不改变feature map的大小而增大感受野。而之前的FCN使用pooling下采样来增大感受野，但随后又不得不通过Deconvolution或者upsampling来增大feature map大小，这样的一小一大总会损失很多信息。
 Multi-Scale Context Aggregation by Dilated Convolutions 代码
 卷积神经网络CNN（5）—— Dilated Convolution
@@ -564,19 +564,19 @@ Multi-Scale Context Aggregation by Dilated Convolutions 代码
     
     <item>
       <title>Understanding_Convolution_for_Semantic_Segmentation论文阅读</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/understanding_convolution_for_semantic_segmentation%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/understanding_convolution_for_semantic_segmentation%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
       <pubDate>Fri, 03 Nov 2017 15:12:41 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/understanding_convolution_for_semantic_segmentation%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/understanding_convolution_for_semantic_segmentation%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
       <description>论文资料 【简评】Understanding Convolution for Semantic Segmentation</description>
     </item>
     
     <item>
       <title>常用网络trick</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E5%B8%B8%E7%94%A8%E7%BD%91%E7%BB%9Ctrick/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/%E5%B8%B8%E7%94%A8%E7%BD%91%E7%BB%9Ctrick/</link>
       <pubDate>Fri, 03 Nov 2017 13:55:23 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E5%B8%B8%E7%94%A8%E7%BD%91%E7%BB%9Ctrick/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/%E5%B8%B8%E7%94%A8%E7%BD%91%E7%BB%9Ctrick/</guid>
       <description>卷积 卷积的参数计算，主要有卷积核大小F，步长S，padding参数P，假设输入图像为WxW，则输出图像大小为NxN，计算公式如下所示： $$N=(W-F+2P)/S+1$$
 conv_arithmetic
 转置卷积 转置卷积是卷积相反的过程，计算公式与上述相同，称为转置卷积的原因是，转置卷积的前向传播为卷积的反向传播，而反向传播为卷积的前向传播，只不过乘积为转置： $$W=(N-1)*S-2P+F$$
@@ -587,10 +587,10 @@ Deconvolution and Checkerboard Artifacts</description>
     
     <item>
       <title>FCN_论文阅读</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/fcn_%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/fcn_%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
       <pubDate>Fri, 03 Nov 2017 13:42:41 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/fcn_%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/fcn_%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
       <description>参考资料 该论文在CNN应用在语义分割任务上扮演了非常重要的角色，从这篇论文开始，很多语义分割网络都采用了类似的网络结构。
  模型架构 该模型将全连接层转换为卷积层，并且最后一层为装置卷积网络，将像素从缩小尺寸的恢复到原始图像大小，其中也包括了crop将多于的部分裁剪掉，直接恢复结果比较稀疏，论文使用前几层网络结合得到fcn8s和fcn16s的结果更加平滑，这是因为浅层的网络具有更详细的细节信息，这种组合的结构被称为skip connection架构，这也是decoder的一个思路。
 代码实现 pytorch实现 其中可参考我的ipython notebook文件，具体的推导过程以及实现的细节可以参考FCN学习:Semantic Segmentation，其中论文主要的理解部分为全卷及网络，推导最后的网络输出与原始输入图像大小一致的原因，以及第一层的padding大小为什么为100，其他层都是vgg网络，最后的输出有fcn32s，fcn16s和fcn8s这三种，最简单的推导从fcn32s开始。
@@ -607,20 +607,20 @@ FCN-semantic-segmentation
     
     <item>
       <title>Mask_R CNN论文阅读</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/mask_r-cnn%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/mask_r-cnn%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
       <pubDate>Thu, 02 Nov 2017 11:29:25 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/mask_r-cnn%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/mask_r-cnn%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
       <description>论文相关资料 Mask R-CNN
 We present a conceptually simple, flexible, and general framework for object instance segmentation. Our approach efficiently detects objects in an image while simultaneously generating a high-quality segmentation mask for each instance. The method, called Mask R-CNN, extends Faster R-CNN by adding a branch for predicting an object mask in parallel with the existing branch for bounding box recognition. Mask R-CNN is simple to train and adds only a small overhead to Faster R-CNN, running at 5 fps.</description>
     </item>
     
     <item>
       <title>MXNet使用相关说明</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/mxnet%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E8%AF%B4%E6%98%8E/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/mxnet%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E8%AF%B4%E6%98%8E/</link>
       <pubDate>Thu, 02 Nov 2017 10:36:22 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/mxnet%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E8%AF%B4%E6%98%8E/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/mxnet%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E8%AF%B4%E6%98%8E/</guid>
       <description> 常用网络结构 DenseNets A MXNet implementation of DenseNet (with BC structure) densenet.mxnet
 源码官方实现DenseNet
 其他实现 densenet.pytorch
@@ -632,10 +632,10 @@ ResNet
     
     <item>
       <title>Linux常用命令记录</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E8%AE%B0%E5%BD%95/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E8%AE%B0%E5%BD%95/</link>
       <pubDate>Thu, 02 Nov 2017 10:21:14 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E8%AE%B0%E5%BD%95/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E8%AE%B0%E5%BD%95/</guid>
       <description> 命令行自动补全相关 bash默认提示数量 bash会默认将先前的命令记录到文本中，输入history即可显示，记录命令长度为1000，文件长度为2000。
 vim ~/.bashrc # for setting history length see HISTSIZE and HISTFILESIZE in bash(1) HISTSIZE=1000 HISTFILESIZE=2000  apropos相关 输入apropos可以查看相关类别的命令。
 apropos file apropos directory  安装fish sudo apt-get install fish  记不住 Linux 命令？这三个工具可以帮你
@@ -644,10 +644,10 @@ openssl相关 openssl version -a sudo add-apt-repository ppa:0k53d-karl-f830m/op
     
     <item>
       <title>语义分割相关问题</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
       <pubDate>Wed, 01 Nov 2017 23:38:16 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>综述 主要参考这篇博客Semantic Segmentation using Fully Convolutional Networks over the years其中列举了从FCN网络开始的最新的语义分割网络的相关论文和实现。这篇博客同时提供了一篇综述A Review on Deep Learning Techniques Applied to Semantic Segmentation，下面是列举的实现的文中语义分割的pytorch代码实现： pytorch-semseg
 下文中也有分类好的语义分割网络论文 2015-10-09-segmentation.md
 A Review on Deep Learning Techniques Applied to Semantic Segmentation 该论文主要介绍了基于深度学习进行语义分割的相关方法，具有一定的参考价值，下面是翻译的文章。
@@ -662,10 +662,10 @@ Segmentation</description>
     
     <item>
       <title>Batch_Normalization论文使用分析</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/batch_normalization%E8%AE%BA%E6%96%87%E4%BD%BF%E7%94%A8%E5%88%86%E6%9E%90/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/batch_normalization%E8%AE%BA%E6%96%87%E4%BD%BF%E7%94%A8%E5%88%86%E6%9E%90/</link>
       <pubDate>Wed, 01 Nov 2017 15:11:37 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/batch_normalization%E8%AE%BA%E6%96%87%E4%BD%BF%E7%94%A8%E5%88%86%E6%9E%90/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/batch_normalization%E8%AE%BA%E6%96%87%E4%BD%BF%E7%94%A8%E5%88%86%E6%9E%90/</guid>
       <description>参考资料 该论文是2015年深度学习领域的关于提升网络训练速度的文章，原文链接。这个算法目前已经被大量的应用，最新的文献算法很多都会引用这个算法，进行网络训练。
 就像激活函数层、卷积层、全连接层、池化层一样，BN(Batch Normalization)也属于网络的一层。在前面我们提到网络除了输出层外，其它层因为低层网络在训练的时候更新了参数，而引起后面层输入数据分布的变化。这个时候我们可能就会想，如果在每一层输入的时候，再加个预处理操作那该有多好啊，比如网络第三层输入数据X3(X3表示网络第三层的输入数据)把它归一化至：均值0、方差为1，然后再输入第三层计算，这样我们就可以解决前面所提到的“Internal Covariate Shift”的问题了。 而事实上，paper的算法本质原理就是这样：在网络的每一层输入的时候，又插入了一个归一化层，也就是先做一个归一化处理，然后再进入网络的下一层。不过文献归一化层，可不像我们想象的那么简单，它是一个可学习、有参数的网络层。既然说到数据预处理，下面就先来复习一下最强的预处理方法：白化。
 经过前面简单介绍，这个时候可能我们会想当然的以为：好像很简单的样子，不就是在网络中间层数据做一个归一化处理嘛，这么简单的想法，为什么之前没人用呢？然而其实实现起来并不是那么简单的。其实如果是仅仅使用上面的归一化公式，对网络某一层A的输出数据做归一化，然后送入网络下一层B，这样是会影响到本层网络A所学习到的特征的。打个比方，比如我网络中间某一层学习到特征数据本身就分布在S型激活函数的两侧，你强制把它给我归一化处理、标准差也限制在了1，把数据变换成分布于s函数的中间部分，这样就相当于我这一层网络所学习到的特征分布被你搞坏了，这可怎么办？于是文献使出了一招惊天地泣鬼神的招式：变换重构，引入了可学习参数γ、β，这就是算法关键之处：
@@ -677,10 +677,10 @@ Recurrent Batch Normalization</description>
     
     <item>
       <title>FC DenseNet语义分割论文分析</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/fc-densenet%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2%E8%AE%BA%E6%96%87%E5%88%86%E6%9E%90/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/fc-densenet%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2%E8%AE%BA%E6%96%87%E5%88%86%E6%9E%90/</link>
       <pubDate>Wed, 01 Nov 2017 10:50:46 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/fc-densenet%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2%E8%AE%BA%E6%96%87%E5%88%86%E6%9E%90/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_11/fc-densenet%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2%E8%AE%BA%E6%96%87%E5%88%86%E6%9E%90/</guid>
       <description>100层Tiramisu: 用于语义分割的全卷积DenseNets The One Hundred Layers Tiramisu: Fully Convolutional DenseNets for Semantic Segmentation
 该文章提供了示例代码可以fork FC-DenseNet，其中数据集的加载在dataset_loaders，在github上看到了使用kears重新实现的网络One-Hundred-Layers-Tiramisu
 论文阅读 该文章主要是将DenseNets应用到了FCN中，增加了分割的精度，在CamVid数据集上获得了state of the art的精度，下面是分割结果示意结果。
@@ -692,10 +692,10 @@ git clone https://github.com/Theano/libgpuarray.git cd libgpuarray mkdir Build c
     
     <item>
       <title>Numpy使用相关问题</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/numpy%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/numpy%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
       <pubDate>Tue, 31 Oct 2017 17:09:33 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/numpy%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/numpy%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>参考资料 NumPy参考中文资料
 常用API使用 numpy.hstack 输入为np.hstack(tup)为一元组，比如(a, b)，表示将a和b数组水平堆叠。
 numpy.hstack</description>
@@ -703,10 +703,10 @@ numpy.hstack</description>
     
     <item>
       <title>Sklearn使用相关问题</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/sklearn%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/sklearn%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
       <pubDate>Tue, 31 Oct 2017 14:50:58 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/sklearn%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/sklearn%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>sklearn参考资料 sklearn是机器学习中较为常用的一个python库，其中有大量可用的机器学习方法可以直接使用，具体参考其文档sklearn英文文档，同时社区也有人提供了中文文档scikit-learn机器学习库中文文档翻译项目，scikit-learn中文文档
 sklearn中的数据预处理 机器学习中大部分数据在训练前都需要进行数据预处理，比如原图像像素值为0-255，需要将像素转换为-1-1便于分类器训练等等。
 StandardScaler StandardScaler
@@ -715,10 +715,10 @@ StandardScaler StandardScaler
     
     <item>
       <title>计算机视觉常用数据集发相关问题</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E9%9B%86%E5%8F%91%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E9%9B%86%E5%8F%91%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
       <pubDate>Tue, 31 Oct 2017 14:25:50 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E9%9B%86%E5%8F%91%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E9%9B%86%E5%8F%91%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>视频预测数据集 Moving MNIST Moving MNIST
 Moving MNIST包含了10000序列，每一个序列在64x64帧中包含了20个长度显示2个数字运动。
 UCF101 UCF101 - Action Recognition Data Set
@@ -737,10 +737,10 @@ Push Dataset
     
     <item>
       <title>Vehicle Detection项目解析</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/vehicle-detection%E9%A1%B9%E7%9B%AE%E8%A7%A3%E6%9E%90/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/vehicle-detection%E9%A1%B9%E7%9B%AE%E8%A7%A3%E6%9E%90/</link>
       <pubDate>Tue, 31 Oct 2017 10:20:58 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/vehicle-detection%E9%A1%B9%E7%9B%AE%E8%A7%A3%E6%9E%90/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/vehicle-detection%E9%A1%B9%E7%9B%AE%E8%A7%A3%E6%9E%90/</guid>
       <description>这是github上的一个开源项目，来源于Udacity自动驾驶课程。 Vehicle detection using machine learning and computer vision techniques for Udacity&amp;rsquo;s self-driving car course.
 vehicle-detection
 数据集 Vehicle_database
@@ -751,10 +751,10 @@ Object Detection Evaluation</description>
     
     <item>
       <title>Cntk使用相关问题</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/cntk%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/cntk%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
       <pubDate>Tue, 31 Oct 2017 09:45:47 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/cntk%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/cntk%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>安装cntk # 安装cntk-python wget https://cntk.ai/PythonWheel/GPU/cntk-2.2-cp27-cp27mu-linux_x86_64.whl sudo pip install cntk-2.2-cp27-cp27mu-linux_x86_64.whl # 安装openmpi wget https://www.open-mpi.org/software/ompi/v1.10/downloads/openmpi-1.10.3.tar.gz tar -xzvf ./openmpi-1.10.3.tar.gz cd openmpi-1.10.3 ./configure --prefix=/usr/local/mpi make -j all sudo make install # 测试安装是否成功 python -c &amp;quot;import cntk; print(cntk.__version__)&amp;quot; # 2.2  Setup Linux Python
 Setup CNTK on Linux
 CNTK Tutorials
@@ -763,28 +763,28 @@ CNTK-World</description>
     
     <item>
       <title>开题报告稿纸</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/%E5%BC%80%E9%A2%98%E6%8A%A5%E5%91%8A%E7%A8%BF%E7%BA%B8/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/%E5%BC%80%E9%A2%98%E6%8A%A5%E5%91%8A%E7%A8%BF%E7%BA%B8/</link>
       <pubDate>Mon, 30 Oct 2017 11:39:23 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/%E5%BC%80%E9%A2%98%E6%8A%A5%E5%91%8A%E7%A8%BF%E7%BA%B8/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/%E5%BC%80%E9%A2%98%E6%8A%A5%E5%91%8A%E7%A8%BF%E7%BA%B8/</guid>
       <description> 视频预测相关文献  Nitish Srivastava等使用LSTM网络替代RNN网络来学习视频序列的表示，从而减少梯度消失、梯度爆炸的问题。该模型使用一个编码器将输入序列转换为固定长度的表示，然后使用LSTM网络来将提取的固定长度的视频序列表示解码完成输入视频序列的重构和将来视频序列的预测。该模型同时比较了原始图像和使用分类网络提取的网络表示作为网络输入时预测的精度，结果显示通过使用监督学习网络学习到的特征作为输入不能提升视频重构的结果，但是能提升预测的精度。 Michael Mathieu等通过对loss函数的改进来探索学习到更好的视频结构表示从而提升预测精度。标准的MSE loss函数训练得到的模型存在预测视频序列模糊等问题，Michael Mathieu等提出多尺度架构，对抗训练方法和一个基于图像梯度差分loss函数这三种不同的学习特征策略来得到更好的结果。 (本文同时和Ranzato的结果比较) William Lotter等借鉴了神经科学领域的预测编码构建了一个预测编码神经网络，并在合成视频序列以及自然视频序列中预测下一帧视频，使用了Conv-LSTM-DeConv的架构进行像素级预测。 Nal Kalchbrenner等提出了一个概率视频模型VPN来估计原始像素值在视频中的联合概率分布。VPN网络模型编码了时间、空间、视频张量的颜色结构，并在Moving MNIST benchmark上获得了可能理论上最好的性能，大大超越了先前最好的模型，该模型预测的结果和置信数据只有微小的差别。 Francesco Cricri通过一种编码器-解码器网络模型，使用循环和前馈连接精巧的设计了一种类似于ResNet架构的视频预测网络VLN。VLN网络通过循环连接使用编码器中网络层的时间信息，并且残差设计大大减少了网络的参数，虽然VLN网络在预测精度仅为VPN网络的一半，但是网络参数大概减少了25倍，缩短了预测时间。  语义分割实验 </description>
     </item>
     
     <item>
       <title>Arxiv计算机视觉每日跟踪</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/arxiv%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E6%AF%8F%E6%97%A5%E8%B7%9F%E8%B8%AA/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/arxiv%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E6%AF%8F%E6%97%A5%E8%B7%9F%E8%B8%AA/</link>
       <pubDate>Mon, 30 Oct 2017 10:52:35 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/arxiv%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E6%AF%8F%E6%97%A5%E8%B7%9F%E8%B8%AA/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/arxiv%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E6%AF%8F%E6%97%A5%E8%B7%9F%E8%B8%AA/</guid>
       <description> 2017-10-30T10:56:28.255+08:00 </description>
     </item>
     
     <item>
       <title>Jquery使用相关问题</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/jquery%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/jquery%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
       <pubDate>Sun, 29 Oct 2017 22:58:35 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/jquery%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/jquery%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>jquery网络 import $ from &#39;jquery&#39;;  $.ajax({ url: this.props.url, dataType: &#39;json&#39;, cache: false, success: function(data) { this.setState({data: data}); }.bind(this), error: function(xhr, status, err) { console.error(this.props.url, status, err.toString()); }.bind(this) });  Can I use jQuery with Node.js?
 Node中没搞明白require和import，你会被坑的很惨
 jQuery - AJAX get() 和 post() 方法
@@ -793,19 +793,19 @@ jQuery.get()</description>
     
     <item>
       <title>Javascript使用相关问题</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/javascript%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/javascript%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
       <pubDate>Sun, 29 Oct 2017 11:43:23 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/javascript%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/javascript%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>相关教程 A re-introduction to JavaScript (JS tutorial)</description>
     </item>
     
     <item>
       <title>Brew使用相关问题</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/brew%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/brew%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
       <pubDate>Sun, 29 Oct 2017 11:38:05 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/brew%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/brew%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>brew搜索软件 brew search node
 leafnode node node@0.10 node@4 node@6 nodeenv llnode node-build node@0.12 node@5 nodebrew nodenv  MAC使用HOMEBREW安装指定版本NODEJS
 brew install node@6</description>
@@ -813,10 +813,10 @@ brew install node@6</description>
     
     <item>
       <title>React使用相关问题</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/react%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/react%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
       <pubDate>Sat, 28 Oct 2017 11:10:28 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/react%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/react%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>react相关资料 reason react A ReasonReact Tutorial
 reason-react
 Quickstart
@@ -833,10 +833,10 @@ BootCDN
     
     <item>
       <title>Chrome插件开发相关问题</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/chrome%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/chrome%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
       <pubDate>Fri, 27 Oct 2017 13:56:57 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/chrome%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/chrome%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>chrome开发相关资料 由于最近搜集资料和图片较多，经常对一些精美的图片想要右键直接同步到git上，但是需求过于小，没有找到合适的插件，于是打算自己倒腾，接下来在学习的过程中主要以开发一款能够右键保存图像到git仓库或者远程应用的插件。
 Chrome插件（Extensions）开发攻略
 Developer&amp;rsquo;s Guide
@@ -860,19 +860,19 @@ web permissions &amp;quot;webRequest&amp;quot;, &amp;quot;webRequestBlocking&amp
     
     <item>
       <title>Go使用相关问题</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/go%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/go%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
       <pubDate>Fri, 27 Oct 2017 09:05:46 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/go%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/go%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>参考资料 tour</description>
     </item>
     
     <item>
       <title>Python第三方库使用相关问题</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/python%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/python%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
       <pubDate>Thu, 26 Oct 2017 23:48:08 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/python%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/python%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>feed更新 使用feedparser解析feed
 import feedparser feed_url = &amp;quot;http://export.arxiv.org/rss/cs.CV&amp;quot; feed_class = feedparser.parse(feed_url) print feed_class[&#39;feed&#39;][&#39;title&#39;] print len(feed_class[&#39;entries&#39;]) entry0 = feed_class[&#39;entries&#39;][0] # print(entry0.summary) print(entry0.title) # print(entry0.author) entry0.keys() entry0.title  feedparser
 showing list item in python
@@ -885,10 +885,10 @@ import subprocess subprocess.call(&amp;quot;sleep.sh&amp;quot;, shell=True) # �
     
     <item>
       <title>Ps使用相关技巧</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/ps%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E6%8A%80%E5%B7%A7/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/ps%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E6%8A%80%E5%B7%A7/</link>
       <pubDate>Thu, 26 Oct 2017 22:51:17 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/ps%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E6%8A%80%E5%B7%A7/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/ps%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E6%8A%80%E5%B7%A7/</guid>
       <description>photoshop改变图层大小 ps中如何单独改变一张图层中图片的大小
 两个图层居中 Photoshop 里怎样把一个图层与画布居中对齐？
 去除图像中的文字 使用修补工具，筛选移动即可
@@ -897,19 +897,19 @@ import subprocess subprocess.call(&amp;quot;sleep.sh&amp;quot;, shell=True) # �
     
     <item>
       <title>图标设计相关技巧</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/%E5%9B%BE%E6%A0%87%E8%AE%BE%E8%AE%A1%E7%9B%B8%E5%85%B3%E6%8A%80%E5%B7%A7/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/%E5%9B%BE%E6%A0%87%E8%AE%BE%E8%AE%A1%E7%9B%B8%E5%85%B3%E6%8A%80%E5%B7%A7/</link>
       <pubDate>Thu, 26 Oct 2017 22:37:09 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/%E5%9B%BE%E6%A0%87%E8%AE%BE%E8%AE%A1%E7%9B%B8%E5%85%B3%E6%8A%80%E5%B7%A7/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/%E5%9B%BE%E6%A0%87%E8%AE%BE%E8%AE%A1%E7%9B%B8%E5%85%B3%E6%8A%80%E5%B7%A7/</guid>
       <description>emoji图标 emojipedia</description>
     </item>
     
     <item>
       <title>课题工作_2017_10_25</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/%E8%AF%BE%E9%A2%98%E5%B7%A5%E4%BD%9C_2017_10_25/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/%E8%AF%BE%E9%A2%98%E5%B7%A5%E4%BD%9C_2017_10_25/</link>
       <pubDate>Wed, 25 Oct 2017 23:52:02 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/%E8%AF%BE%E9%A2%98%E5%B7%A5%E4%BD%9C_2017_10_25/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/%E8%AF%BE%E9%A2%98%E5%B7%A5%E4%BD%9C_2017_10_25/</guid>
       <description> 可行区域识别算法  完成可通行区域算法的移植，目前完成了SegNet和FCN算法的移植，可以在软件中选择这两种算法的切换； 编写可行区域识别演示平台软件，界面采用pyqt，算法集成pycaffe，显示使用opengl，目前已经完成输入已经拍摄完成的视频，提取图像进行可通行区域分割并显示在界面上； 采集无人机拍摄图像，并使用ffmpeg对图像进行解码，提取部分图像作为算法示例图像； 编写图像标注软件，输入图像文件夹，对每一张图像使用bounding box进行标注； 列大疆M100所需清单并购买配件； 修改去年暑假写的多机器人定位专利 将zed双目摄像头采集的数据按照ros的协议写入并显示在主界面上  演示平台软件界面显示 算法执行界面 演示平台关于界面 数据集标签颜色对应类别显示界面 数据集标注界面（待完成） 机器人显示界面（待完成） 按照最初的设想，最好可以使用gazebo等等已经集成好的机器人可视软件，但是这些都是独立的软件，无法集成打包到自己的软件中，下述是通过python调用ros可视化软件rviz的示意图，目前有两种思路，如果继续使用rviz，则需要两个窗口，同时需要设计一套两个软件的信息交互协议，另一种思路使用matplot等软件绘制一个3D的视图，将机器人用点表示，但是模型的可视化能力稍微弱了一点。
 大疆采购合同 大疆发布开发用产品 经纬M100和Guidance 供货商：杭州金维尼科技有限公司 联系方式：吕珍珍：座机-0571-56887671，15394263089
 大疆m100报价 大疆m100裸机：19000 Guidance视觉传感导航系统：5500 Guidance连接套件：450 Manifold妙算：2775 禅思 Z3 云台相机：5999 禅思 X3 一体化云台相机：2999（不包含SD卡） 经纬 M100 - X3/Z3 云台安装套件：299 经纬 M100 - TB48D电池：1199
@@ -918,10 +918,10 @@ import subprocess subprocess.call(&amp;quot;sleep.sh&amp;quot;, shell=True) # �
     
     <item>
       <title>Shadowsocks使用相关问题</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/shadowsocks%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/shadowsocks%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
       <pubDate>Wed, 25 Oct 2017 22:39:11 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/shadowsocks%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/shadowsocks%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>privoxy代理 Mac下安装privoxy brew install privoxy 开机自启 启动privoxy
 /usr/local/Cellar/privoxy/3.0.26/sbin/privoxy /usr/local/etc/privoxy/config  修改LaunchAgents的文件，并执行下述命令自启
 sudo launchctl load /Library/LaunchAgents/local.privoxy.plist # 查看系统是否真正启动privoxy ps aux | grep privoxy  # vim /Library/LaunchAgents/local.privoxy.plist &amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt; &amp;lt;!DOCTYPE plist PUBLIC &amp;quot;-//Apple//DTD PLIST 1.0//EN&amp;quot; &amp;quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&amp;quot;&amp;gt; &amp;lt;plist version=&amp;quot;1.0&amp;quot;&amp;gt; &amp;lt;dict&amp;gt; &amp;lt;key&amp;gt;Label&amp;lt;/key&amp;gt; &amp;lt;string&amp;gt;local.arcueid.privoxy&amp;lt;/string&amp;gt; &amp;lt;key&amp;gt;ProgramArguments&amp;lt;/key&amp;gt; &amp;lt;array&amp;gt; &amp;lt;string&amp;gt;/usr/local/sbin/privoxy&amp;lt;/string&amp;gt; &amp;lt;string&amp;gt;--no-daemon&amp;lt;/string&amp;gt; &amp;lt;string&amp;gt;/usr/local/etc/privoxy/config&amp;lt;/string&amp;gt; &amp;lt;/array&amp;gt; &amp;lt;key&amp;gt;RunAtLoad&amp;lt;/key&amp;gt; &amp;lt;true/&amp;gt; &amp;lt;key&amp;gt;KeepAlive&amp;lt;/key&amp;gt; &amp;lt;true/&amp;gt; &amp;lt;key&amp;gt;StandardErrorPath&amp;lt;/key&amp;gt; &amp;lt;string&amp;gt;/usr/local/Cellar/privoxy/3.0.26/sbin/privoxy.log&amp;lt;/string&amp;gt; &amp;lt;key&amp;gt;StandardOutPath&amp;lt;/key&amp;gt; &amp;lt;string&amp;gt;/usr/local/Cellar/privoxy/3.0.26/sbin/privoxy.log&amp;lt;/string&amp;gt; &amp;lt;/dict&amp;gt; &amp;lt;/plist&amp;gt;  使用Privoxy做智能代理切换
@@ -930,20 +930,20 @@ ubuntu使用shadowsocks</description>
     
     <item>
       <title>Pycharm使用相关问题</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/pycharm%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/pycharm%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
       <pubDate>Wed, 25 Oct 2017 16:29:59 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/pycharm%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/pycharm%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>pycharm index慢 打开pycharm的工程，由于工程下有很多数据，pycharm默认会索引数据，导致工程打开较慢，此时需要将这些与代码无关的索引目录加入到工程的excluded目录下。
 pycharm启动后总是不停的updating indices&amp;hellip;indexing?</description>
     </item>
     
     <item>
       <title>Pip使用相关问题</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/pip%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/pip%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
       <pubDate>Wed, 25 Oct 2017 14:12:33 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/pip%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/pip%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>pip设置代理 pip --proxy 127.0.0.1:8123 install requests  让 pip 走代理
 pip安装package pip install XXX # 更新python package pip install XXX -U # 重新安装XXX pip install --upgrade --force-reinstall XXX # 搜索可安装的python package版本version pip install XXX==  Can I force pip to reinstall the current version?
 Python and pip, list all versions of a package that&amp;rsquo;s available?</description>
@@ -951,10 +951,10 @@ Python and pip, list all versions of a package that&amp;rsquo;s available?</desc
     
     <item>
       <title>Atom使用相关问题</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/atom%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/atom%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
       <pubDate>Wed, 25 Oct 2017 13:01:48 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/atom%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/atom%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>Markdown插件 输入ctrl+shift+p安装markdown preview toggle，该插件可以实时浏览markdown文件，其中插件浏览markdown的快捷键如下所示： - ctrl+shift+m(markdown)打开markdown预览模式 - ctrl+shift+x(mathjax)打开mathjax数学公式预览模式
 $$\sum_{i=1}^{n}{i}=\frac{n*(n+1)}{2}$$
 由于默认的markdown preview插件不支持数学公式实时显示，因此使用Markdown Preview Enhanced进行markdown文件的渲染，安装方式较为简单，首先输入ctrl+shift+p，然后输入settings view install package and theme然后进入安装界面，然后输入Markdown Preview Enhanced即可找到该插件，然后安装即可，该插件具有的功能较多，可以根据当前界面实时显示编辑，而且view界面随着编辑界面的切换而切换，非常方便。
@@ -967,10 +967,10 @@ atom设置代理 # 设置socks5代理 apm config set http-proxy socks5:127.0.0.1
     
     <item>
       <title>Pytorch使用相关问题</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/pytorch%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/pytorch%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
       <pubDate>Wed, 25 Oct 2017 12:50:09 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/pytorch%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/pytorch%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>pytorch安装 Ubuntu下安装 pip install http://download.pytorch.org/whl/cu75/torch-0.2.0.post3-cp27-cp27mu-manylinux1_x86_64.whl pip install torchvision  Ubuntu 17.04 安装 pytorch and pytorchvision
 pytorch教程 PyTorchZeroToAll
 pytorch示例程序 使用官网提供的示例程序来对pytorch进行一个初步大致的了解，对常用深度学习的框架进行一个初步的学习。 目前学习pytorch主要是通过示例程序以及莫烦PYTHON中pytorch的视频教程。
@@ -1001,20 +1001,20 @@ tensorboard-pytorch pip install tensorboardX  tensorboard-pytorch
     
     <item>
       <title>Api使用相关问题</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/api%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/api%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
       <pubDate>Wed, 25 Oct 2017 01:40:41 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/api%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/api%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>openapi规范的API文档 如何编写基于OpenAPI规范的API文档
 Swagger：Rest API的描述语言</description>
     </item>
     
     <item>
       <title>Ssh使用相关问题</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/ssh%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/ssh%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
       <pubDate>Wed, 25 Oct 2017 01:07:58 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/ssh%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/ssh%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>ssh相关key ~.终止openssh，对于未响应的ssh关闭连接 ~?显示当前连接ssh的信息  ssh文件传输 rsync断点续传 rsync -rP --rsh=ssh root@114.115.142.49:~/Data2.zip ~/Data/SegmPred/  Linux rsync实现断点续传
 ssh反向代理 局域网内没有固定IP无法直接被外网访问，使用一个有固定IP地址的外网服务器作为中转站从而进行反向代理，这里假设Local为局域网内电脑，Global为外网电脑，Client为客户电脑，Client&amp;mdash;-&amp;gt;Local转换为Client&amp;mdash;-&amp;gt;Global&amp;mdash;-&amp;gt;Local，首先在Global中配置代理的两个端口
 # Global将9001转换为9000 ssh -fCNL &#39;*:9001:localhost:9000&#39; localhost # Local将9000转换为本地的22端口 ssh -fCNR 9000:localhost:22 user_global@ip_global # Client访问Local ssh -p 9001 user_client@ip_global  从外网 SSH 进局域网，反向代理+正向代理解决方案</description>
@@ -1022,10 +1022,10 @@ ssh反向代理 局域网内没有固定IP无法直接被外网访问，使用�
     
     <item>
       <title>Mac使用相关问题</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/mac%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/mac%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
       <pubDate>Wed, 25 Oct 2017 00:30:09 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/mac%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/mac%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>mac快捷键 # Finder 回车重命名文件 双击或者command+o打开文件 # 应用程序 command+q关闭程序 command+w关闭程序，但是不完全关闭 # 键盘符号 ⌘ command ⌥ option ⇧ shift ⌃ control ⌫ delete # 新建文件夹 command+shift+N # 查看文件夹信息 command+I  刚从 Windows 转到 macOS，如何快速上手操作？| 新手问号
 mac下截取文件夹图标 首先新建文件夹，使用command+I打开文件夹信息窗口，点击左上角图标按住command+C复制图标，然后使用预览command+V，点击第一个图标然后导出即可，像素格式为1024*1024。
 自定义 macOS 文件夹图标
@@ -1038,28 +1038,28 @@ How do I delete all Terminal mail?</description>
     
     <item>
       <title>日常开源项目集合</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/%E6%97%A5%E5%B8%B8%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E9%9B%86%E5%90%88/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/%E6%97%A5%E5%B8%B8%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E9%9B%86%E5%90%88/</link>
       <pubDate>Wed, 25 Oct 2017 00:06:46 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/%E6%97%A5%E5%B8%B8%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E9%9B%86%E5%90%88/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/%E6%97%A5%E5%B8%B8%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E9%9B%86%E5%90%88/</guid>
       <description> 计算机视觉项目  Flipkart的视觉搜索和推荐系统 fk-visual-search Where to Buy It: Matching Street Clothing Photos in Online Shops  deep-learning-models使用keras的深度学习模型 deep-learning-models mx-maskrcnn使用MXNet实现的RCNN A MXNet implementation of Mask R-CNN mx-maskrcnn StackGAN-v2 StackGAN-v2  语音项目  以85％的准确度击败Google的音频reCaptcha uncaptcha  机器人SLAM项目  DynSLAM动态环境下的SLAM 动态环境下同步定位与映射SLAM硕士论文，分别重构静态环境和动态对象（如汽车）。 DynSLAM: Simultaneous Localization and Mapping in Dynamic Environments   加强学习  增强学习调研报告 Deep Reinforcement Learning survey  </description>
     </item>
     
     <item>
       <title>Vim使用相关问题</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/vim%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/vim%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
       <pubDate>Tue, 24 Oct 2017 22:07:10 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/vim%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/vim%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>Vim使用相关问题 Vim快捷键 移动光标 # 移动光标 hjik左下上右 w移动一个单词 e移动到行末 0移动到行首 $移动到行末 gg移动到文件第一行 G移动到文件末尾 行号+G移动到行号 ctrl+o跳转回之前的位置 ctrl+i跳转回跳转前的位置  退出 esc进入正常模式 :q!不保存退出 :wq保存退出  删除 x删除当前字符 dw删除至单词末尾 de删除至单词末尾 d$删除至当前行末 dd删除当前行 2dd删除2行  修改 i当前插入文字 A当前行末添加 r替换当前字符 o打开新的一行并进入插入模式  撤销 u撤销操作 ctrl+r取消撤销操作  复制 v进入可视 y复制 p粘贴  状态 ctrl+g显示当前行以及文件信息  查找 /正向查找n是正向N是相反查找 ?逆向查找 set ic忽略大小写 set noic取消忽略大小写 set hls匹配高亮显示 set is显示部分匹配  替换 :s/old/new替换该行第一个匹配 :%s/old/new替换该行所有匹配 :%s/old/new/g替换本文所有匹配  执行外部命令 :!ls  vim 神器的打造方式</description>
     </item>
     
     <item>
       <title>Blog_使用相关问题</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/blog_%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/blog_%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
       <pubDate>Tue, 24 Oct 2017 21:25:20 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/blog_%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/blog_%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description> Hugo框架 spf13.com主题 其中修改如下所示，除了样式的修改，其中有一些由于GFW的原因，国内无法访问，替换内容如下
  partials/head_includes.html中的fonts.googleapis.com修改为fonts.lug.ustc.edu.cn _default/single.html中的cdn.mathjax.org/mathjax/latest修改为cdn.bootcss.com/mathjax/2.7.2 添加评论功能，在config.toml中增加disqusShortname = &amp;ldquo;guanfuchen&amp;rdquo;即可，由于disqus网站需要FQ，日后考虑国内替换的评论网站  mathjax boot cdn
 googleapis被墙的解决办法
@@ -1071,10 +1071,10 @@ Hugo静态网站生成器中文教程
     
     <item>
       <title>Git_usage_problem</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/git%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
+      <link>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/git%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
       <pubDate>Tue, 24 Oct 2017 14:21:29 +0800</pubDate>
       
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/git%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
+      <guid>http://chenguanfu.gitee.io/blog_ws_public/post/markdown_blog_ws/markdown_blog_2017_10/git%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>git相关使用问题 记录git使用中遇到的一些trick
 git增加submodule git submodule add git@gitee.com:chenguanfu/markdown_blog_ws.git markdown_blog_ws  git中submodule的更新 这里貌似只能先把master克隆下来，然后设置每一个submodule的remote地址
 git clone git@gitee.com:chenguanfu/blog_ws.git cd blog_ws git submodule foreach git pull git submodule update git submodule update --init --recursive  Git Submodule 用法筆記
