@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="keywords" content="">
+
+ 
+<meta property="og:type" content="article"/>
+<meta property="og:description" content=""/>
+<meta property="og:title" content="Pytorch使用相关问题 : spf13.com"/>
+<meta property="og:site_name" content="spf13 is Steve Francia"/>
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="" />
+<meta property="og:image:height" content="" />
+<meta property="og:url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/pytorch%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2017-10-25"/>
+<meta property="article:modified_time" content="2017-10-25"/>
+
+
+
+
+
+<meta name="twitter:card" content="summary">
+
+<meta name="twitter:site" content="@spf13">
+<meta name="twitter:title" content="Pytorch使用相关问题 : spf13.com">
+<meta name="twitter:creator" content="@spf13">
+<meta name="twitter:description" content="">
+<meta name="twitter:image:src" content="">
+<meta name="twitter:domain" content="spf13.com">
+
+
+
+    <base href="https://guanfuchen.github.io">
+    <title> Pytorch使用相关问题 - spf13.com </title>
+    <link rel="canonical" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/pytorch%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
+    
+
+    <link href='http://fonts.lug.ustc.edu.cn/css?family=Fjalla+One|Open+Sans:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://guanfuchen.github.io/static/css/style.css">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+</head>
+
+<body lang="en" itemscope itemtype="http://schema.org/Article">
+<header id="header">
+    
+      
+    
+    <div align="center">
+        <a href="https://guanfuchen.github.io">
+        <img src="https://guanfuchen.github.io/media/avatar.png">
+        </a>
+    </div>
+    <div align="center">guanfuchen</div>
+    <nav id="nav">
+            <ul id="mainnav">
+            <li>
+                <a href="https://guanfuchen.github.io/post/">
+                <span class="icon"> <i aria-hidden="true" class="icon-quill"></i></span>
+                <span> 博客 </span>
+            </a>
+            </li>
+            
+            
+                
+                
+            
+            
+            
+            
+                
+                
+            
+            
+            <li>
+            <a href="http://github.com/guanfuchen">
+                <span class="icon"> <i aria-hidden="true" class="icon-13"></i></span>
+                <span> 关于 </span>
+            </a>
+            </li>
+        </ul>
+
+    
+    </nav>
+</header>
+
+
+
+<section id="main">
+  <h1 itemprop="name" id="title">Pytorch使用相关问题</h1>
+  <div>
+        <article itemprop="articleBody" id="content">
+           
+
+<hr />
+
+<h1 id="pytorch安装">pytorch安装</h1>
+
+<h2 id="ubuntu下安装">Ubuntu下安装</h2>
+
+<pre><code class="language-bash">pip install http://download.pytorch.org/whl/cu75/torch-0.2.0.post3-cp27-cp27mu-manylinux1_x86_64.whl
+pip install torchvision
+</code></pre>
+
+<p><a href="http://www.linuxidc.com/Linux/2017-05/143803.htm">Ubuntu 17.04 安装 pytorch and pytorchvision</a></p>
+
+<hr />
+
+<h1 id="pytorch教程">pytorch教程</h1>
+
+<p><a href="https://github.com/hunkim/PyTorchZeroToAll">PyTorchZeroToAll</a></p>
+
+<hr />
+
+<h1 id="pytorch示例程序">pytorch示例程序</h1>
+
+<p>使用官网提供的示例程序来对pytorch进行一个初步大致的了解，对常用深度学习的框架进行一个初步的学习。
+目前学习pytorch主要是通过示例程序以及莫烦PYTHON中pytorch的视频教程。</p>
+
+<p><a href="https://github.com/pytorch/examples">examples pytorch github</a></p>
+
+<p><a href="http://pytorch.org">pytorch官网</a></p>
+
+<p><a href="https://github.com/pytorch/pytorch">pytorch工程github</a></p>
+
+<p><a href="http://pytorch-cn.readthedocs.io/zh/latest/#pytorch">PyTorch中文文档</a></p>
+
+<p><a href="http://pytorch.org/tutorials/">Welcome to PyTorch Tutorials</a></p>
+
+<p><a href="https://github.com/yunjey/pytorch-tutorial">pytorch-tutorial</a></p>
+
+<p><a href="https://morvanzhou.github.io/tutorials/machine-learning/torch/">莫烦PyTorch</a></p>
+
+<p><a href="https://github.com/MorvanZhou/PyTorch-Tutorial">PyTorch-Tutorial</a></p>
+
+<p><a href="https://www.youtube.com/watch?v=6YnzemVHvIU">#2.3 Activation Function 激励函数 (PyTorch tutorial 神经网络 教学)</a></p>
+
+<p><a href="https://github.com/jcjohnson/pytorch-examples">pytorch-examples</a></p>
+
+<p><a href="https://ptorch.com/docs/3/cifar10_tutorial">训练神经网络</a></p>
+
+<p><a href="http://www.pytorchtutorial.com/">PyTorch 中文网</a></p>
+
+<p><a href="https://zhuanlan.zhihu.com/p/25572330">PyTorch深度学习：60分钟入门(Translation)</a></p>
+
+<p><a href="https://github.com/jcjohnson/pytorch-examples">pytorch-examples</a></p>
+
+<p><a href="https://zhuanlan.zhihu.com/p/28475866">吐血整理：PyTorch项目代码与资源列表 | 资源下载</a></p>
+
+<p><a href="https://xyang35.github.io/2017/08/22/GAN-2/">GAN入门实践（二）&ndash;Pytorch实现</a></p>
+
+<p><a href="https://github.com/carpedm20/DiscoGAN-pytorch">DiscoGAN-pytorch</a></p>
+
+<p><a href="https://github.com/ritchieng/the-incredible-pytorch">the-incredible-pytorch</a></p>
+
+<hr />
+
+<h1 id="pytorchvision使用相关">pytorchvision使用相关</h1>
+
+<p>pytorchvision是torch中用来简化对image的相关操作，其中包含了对大量常用数据集的一个简化操作，下面具体的操作可以参考<a href="https://gitee.com/chenguanfu/cv_learning/blob/master/learning_2017_10/torch_vision_cifar10/torch_vision_cifar10.ipynb">torch_vision_cifar10</a>
+这个代码中主要介绍了dataset的用法以及transform对图像的预处理的用法，然后还有就是dataloader将图像按照batch_size分类的方法将图像按照batch的方法随机筛选图像作为数据集，每一次next都会返回batch_size的训练数据集。</p>
+
+<p><a href="http://www.jianshu.com/p/8da9b24b2fb6">超简单！pytorch入门教程（四）：准备图片数据集</a></p>
+
+<p><a href="http://www.jianshu.com/p/e4c7b3eb8f3d">超简单！pytorch入门教程（五）：训练和测试CNN</a></p>
+
+<hr />
+
+<h1 id="tensorboard-pytorch">tensorboard-pytorch</h1>
+
+<pre><code class="language-bash">pip install tensorboardX
+</code></pre>
+
+<p><a href="https://github.com/lanpa/tensorboard-pytorch">tensorboard-pytorch</a></p>
+
+<hr />
+
+<h1 id="常用模型">常用模型</h1>
+
+<h2 id="vgg模型">vgg模型</h2>
+
+<p>一些将VGG16和VGG19的caffe模型权值转换为pytorch，该模型需要预先下载模型<a href="https://s3-us-west-2.amazonaws.com/jcjohns-models/vgg16-00b39a1b.pth">vgg16-00b39a1b.pth</a>和<a href="https://s3-us-west-2.amazonaws.com/jcjohns-models/vgg19-d01eb7cb.pth">vgg19-d01eb7cb.pth</a>
+注意点：该模型使用过程不同于pytorch model zoo中的其他模型，图像格式为BGR格式，范围为[0, 255]，并且需要减去[103.939, 116.779, 123.68]。
+<a href="https://github.com/jcjohnson/pytorch-vgg">pytorch-vgg</a></p>
+
+<h2 id="piwise">piwise</h2>
+
+<p><a href="https://github.com/bodokaiser/piwise">piwise</a></p>
+
+        </article>
+  </div>
+</section>
+
+
+
+<aside id="meta">
+
+    <div>
+        <section id="datecount">
+          <h4 id="date"> Wed Oct 25, 2017 </h4>
+          <h5 id="wc"> 100 Words </h5>
+          <h5 id="readtime"> Read in about 1 Min </h5>
+        </section>
+        <ul id="categories">
+          
+        </ul>
+        <ul id="tags">
+          
+        </ul>
+    </div>
+
+    <div>
+        <section id="prev">
+            &nbsp;<a class="previous" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/atom%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/"><i class="icon-arrow-left"></i> Atom使用相关问题</a><br>
+        </section>
+        <section id="next">
+            &nbsp;<a class="next" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/api%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">Api使用相关问题 <i class="icon-arrow-right"></i></a>
+        </section>
+    </div>
+
+    
+
+            
+            
+            
+            
+            
+
+            
+            
+                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                
+                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+        
+    
+    
+    
+                
+                
+            
+                                     
+                                     
+                                     
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+
+        
+
+</aside>
+
+<meta itemprop="wordCount" content="74">
+<meta itemprop="datePublished" content="2017-10-25">
+<meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/pytorch%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
+
+
+<aside id=comments>
+    <div><h2> Comments </h2></div>
+    <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "guanfuchen" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</aside>
+
+<footer>
+  <div>
+    <p>
+    &copy; 2017 <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">guanfuchen.</span></span>
+    Powered by <a href="http://gohugo.io">Hugo</a>.
+  </div>
+</footer>
+<script type="text/javascript">
+(function(){var j=function(a,b){return window.getComputedStyle?getComputedStyle(a).getPropertyValue(b):a.currentStyle[b]};var k=function(a,b,c){if(a.addEventListener)a.addEventListener(b,c,false);else a.attachEvent('on'+b,c)};var l=function(a,b){for(key in b)if(b.hasOwnProperty(key))a[key]=b[key];return a};window.fitText=function(d,e,f){var g=l({'minFontSize':-1/0,'maxFontSize':1/0},f);var h=function(a){var b=e||1;var c=function(){a.style.fontSize=Math.max(Math.min(a.clientWidth/(b*10),parseFloat(g.maxFontSize)),parseFloat(g.minFontSize))+'px'};c();k(window,'resize',c)};if(d.length)for(var i=0;i<d.length;i++)h(d[i]);else h(d);return d}})();
+fitText(document.getElementById('title'), 1)
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-7131036-1', 'spf13.com');
+  ga('require', 'linkid', 'linkid.js');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>
+
+<script type="text/javascript"
+        src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>

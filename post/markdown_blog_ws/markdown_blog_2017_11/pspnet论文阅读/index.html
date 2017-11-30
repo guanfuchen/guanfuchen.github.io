@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="keywords" content="">
+
+ 
+<meta property="og:type" content="article"/>
+<meta property="og:description" content=""/>
+<meta property="og:title" content="PSPNet论文阅读 : spf13.com"/>
+<meta property="og:site_name" content="spf13 is Steve Francia"/>
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="" />
+<meta property="og:image:height" content="" />
+<meta property="og:url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/pspnet%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2017-11-06"/>
+<meta property="article:modified_time" content="2017-11-06"/>
+
+
+
+
+
+<meta name="twitter:card" content="summary">
+
+<meta name="twitter:site" content="@spf13">
+<meta name="twitter:title" content="PSPNet论文阅读 : spf13.com">
+<meta name="twitter:creator" content="@spf13">
+<meta name="twitter:description" content="">
+<meta name="twitter:image:src" content="">
+<meta name="twitter:domain" content="spf13.com">
+
+
+
+    <base href="https://guanfuchen.github.io">
+    <title> PSPNet论文阅读 - spf13.com </title>
+    <link rel="canonical" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/pspnet%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">
+    
+
+    <link href='http://fonts.lug.ustc.edu.cn/css?family=Fjalla+One|Open+Sans:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://guanfuchen.github.io/static/css/style.css">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+</head>
+
+<body lang="en" itemscope itemtype="http://schema.org/Article">
+<header id="header">
+    
+      
+    
+    <div align="center">
+        <a href="https://guanfuchen.github.io">
+        <img src="https://guanfuchen.github.io/media/avatar.png">
+        </a>
+    </div>
+    <div align="center">guanfuchen</div>
+    <nav id="nav">
+            <ul id="mainnav">
+            <li>
+                <a href="https://guanfuchen.github.io/post/">
+                <span class="icon"> <i aria-hidden="true" class="icon-quill"></i></span>
+                <span> 博客 </span>
+            </a>
+            </li>
+            
+            
+                
+                
+            
+            
+            
+            
+                
+                
+            
+            
+            <li>
+            <a href="http://github.com/guanfuchen">
+                <span class="icon"> <i aria-hidden="true" class="icon-13"></i></span>
+                <span> 关于 </span>
+            </a>
+            </li>
+        </ul>
+
+    
+    </nav>
+</header>
+
+
+
+<section id="main">
+  <h1 itemprop="name" id="title">PSPNet论文阅读</h1>
+  <div>
+        <article itemprop="articleBody" id="content">
+           
+
+<hr />
+
+<h1 id="论文资料">论文资料</h1>
+
+<p><a href="https://arxiv.org/abs/1612.01105">Pyramid Scene Parsing Network</a></p>
+
+<p><a href="https://hszhao.github.io/projects/pspnet/">Pyramid Scene Parsing Network主页</a></p>
+
+<hr />
+
+<h1 id="网络结构">网络结构</h1>
+
+<p><img src="https://hszhao.github.io/projects/pspnet/figures/pspnet.png" alt="" /></p>
+
+<p>结果示例
+<img src="http://chenguanfuqq.oschina.io/tuquan/img_2017_11/2017_11_7_20_32_17.png" alt="" /></p>
+
+<hr />
+
+<h1 id="代码实现">代码实现</h1>
+
+<p><a href="https://github.com/Lextal/pspnet-pytorch">pspnet-pytorch</a></p>
+
+<p><a href="https://github.com/hszhao/PSPNet">PSPNet caffe</a></p>
+
+<hr />
+
+<h1 id="代码分析">代码分析</h1>
+
+<pre><code class="language-python">import torch
+from torch import nn
+from torch.nn import functional as F
+
+import extractors
+
+
+class PSPModule(nn.Module):
+    def __init__(self, features, out_features=1024, sizes=(1, 2, 3, 6)):
+        super().__init__()
+        # PSP池化模块，尺度为1,2,3,6分别为分辨率降低1,2,3,6
+        self.stages = []
+        self.stages = nn.ModuleList([self._make_stage(features, size) for size in sizes])
+        # 将concat所有的特征层，包括4种尺度的PSP以及原先的输入
+        self.bottleneck = nn.Conv2d(features * (len(sizes) + 1), out_features, kernel_size=1)
+        self.relu = nn.ReLU()
+
+    def _make_stage(self, features, size):
+        prior = nn.AdaptiveAvgPool2d(output_size=(size, size))
+        conv = nn.Conv2d(features, features, kernel_size=1, bias=False)
+        return nn.Sequential(prior, conv)
+
+    def forward(self, feats):
+        # 输入的特征层为BxCxHxW
+        h, w = feats.size(2), feats.size(3)
+        # 在PSP池化模块concat前首先使用双线性插值的方法上采样为原先的尺度
+        priors = [F.upsample(input=stage(feats), size=(h, w), mode='bilinear') for stage in self.stages] + [feats]
+        bottle = self.bottleneck(torch.cat(priors, 1))
+        return self.relu(bottle)
+
+
+class PSPUpsample(nn.Module):
+    def __init__(self, in_channels, out_channels):
+        super().__init__()
+
+        self.conv = nn.Sequential(
+            nn.Conv2d(in_channels, out_channels, 3, padding=1),
+            nn.BatchNorm2d(out_channels),
+            nn.PReLU()
+        )
+
+    def forward(self, x):
+        h, w = 2 * x.size(2), 2 * x.size(3)
+        # 卷积上采样层2x并且使用一个1x的conv
+        p = F.upsample(input=x, size=(h, w), mode='bilinear')
+        return self.conv(p)
+
+
+class PSPNet(nn.Module):
+    def __init__(self, n_classes=18, sizes=(1, 2, 3, 6), psp_size=2048, deep_features_size=1024, backend='resnet34',
+                 pretrained=True):
+        super().__init__()
+        # PSPNet前端特征提取模块
+        self.feats = getattr(extractors, backend)(pretrained)
+        # 默认的psp_size为2048是因为resnet的特征层为2048
+        self.psp = PSPModule(psp_size, 1024, sizes)
+        self.drop_1 = nn.Dropout2d(p=0.3)
+
+        # 原文中直接使用8x的上采样，该实现中使用3个2x的上采样循序渐进
+        self.up_1 = PSPUpsample(1024, 256)
+        self.up_2 = PSPUpsample(256, 64)
+        self.up_3 = PSPUpsample(64, 64)
+
+        self.drop_2 = nn.Dropout2d(p=0.15)
+        # 最后一层将64层的特征层转换为n_classes的pixel label map
+        self.final = nn.Sequential(
+            nn.Conv2d(64, n_classes, kernel_size=1),
+            nn.LogSoftmax()
+        )
+
+        self.classifier = nn.Sequential(
+            nn.Linear(deep_features_size, 256),
+            nn.ReLU(),
+            nn.Linear(256, n_classes)
+        )
+
+    def forward(self, x):
+        # 或得resnet的第四层特征和第三层特征
+        f, class_f = self.feats(x)
+        p = self.psp(f)
+        p = self.drop_1(p)
+
+        p = self.up_1(p)
+        p = self.drop_2(p)
+
+        p = self.up_2(p)
+        p = self.drop_2(p)
+
+        p = self.up_3(p)
+        p = self.drop_2(p)
+
+        # 第三层特征作为辅助信息，其输出维度为1024，即deep_features_size，将class_f池化为BxCx1x1然后reshape为BxC
+        auxiliary = F.adaptive_max_pool2d(input=class_f, output_size=(1, 1)).view(-1, class_f.size(1))
+
+        # 返回的是feature map的Bx[n_classes]xHxW以及辅助的class信息Bx[n_classes]
+        return self.final(p), self.classifier(auxiliary)
+</code></pre>
+
+        </article>
+  </div>
+</section>
+
+
+
+<aside id="meta">
+
+    <div>
+        <section id="datecount">
+          <h4 id="date"> Mon Nov 6, 2017 </h4>
+          <h5 id="wc"> 300 Words </h5>
+          <h5 id="readtime"> Read in about 2 Min </h5>
+        </section>
+        <ul id="categories">
+          
+        </ul>
+        <ul id="tags">
+          
+        </ul>
+    </div>
+
+    <div>
+        <section id="prev">
+            &nbsp;<a class="previous" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/resnet%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/"><i class="icon-arrow-left"></i> ResNet论文阅读</a><br>
+        </section>
+        <section id="next">
+            &nbsp;<a class="next" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/enet%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">ENet论文阅读 <i class="icon-arrow-right"></i></a>
+        </section>
+    </div>
+
+    
+
+            
+            
+            
+            
+            
+
+            
+            
+                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                
+                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+        
+    
+    
+    
+                
+                
+            
+                                     
+                                     
+                                     
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+
+        
+
+</aside>
+
+<meta itemprop="wordCount" content="269">
+<meta itemprop="datePublished" content="2017-11-06">
+<meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/pspnet%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">
+
+
+<aside id=comments>
+    <div><h2> Comments </h2></div>
+    <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "guanfuchen" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</aside>
+
+<footer>
+  <div>
+    <p>
+    &copy; 2017 <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">guanfuchen.</span></span>
+    Powered by <a href="http://gohugo.io">Hugo</a>.
+  </div>
+</footer>
+<script type="text/javascript">
+(function(){var j=function(a,b){return window.getComputedStyle?getComputedStyle(a).getPropertyValue(b):a.currentStyle[b]};var k=function(a,b,c){if(a.addEventListener)a.addEventListener(b,c,false);else a.attachEvent('on'+b,c)};var l=function(a,b){for(key in b)if(b.hasOwnProperty(key))a[key]=b[key];return a};window.fitText=function(d,e,f){var g=l({'minFontSize':-1/0,'maxFontSize':1/0},f);var h=function(a){var b=e||1;var c=function(){a.style.fontSize=Math.max(Math.min(a.clientWidth/(b*10),parseFloat(g.maxFontSize)),parseFloat(g.minFontSize))+'px'};c();k(window,'resize',c)};if(d.length)for(var i=0;i<d.length;i++)h(d[i]);else h(d);return d}})();
+fitText(document.getElementById('title'), 1)
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-7131036-1', 'spf13.com');
+  ga('require', 'linkid', 'linkid.js');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>
+
+<script type="text/javascript"
+        src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="keywords" content="">
+
+ 
+<meta property="og:type" content="article"/>
+<meta property="og:description" content=""/>
+<meta property="og:title" content="React使用相关问题 : spf13.com"/>
+<meta property="og:site_name" content="spf13 is Steve Francia"/>
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="" />
+<meta property="og:image:height" content="" />
+<meta property="og:url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/react%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2017-10-28"/>
+<meta property="article:modified_time" content="2017-10-28"/>
+
+
+
+
+
+<meta name="twitter:card" content="summary">
+
+<meta name="twitter:site" content="@spf13">
+<meta name="twitter:title" content="React使用相关问题 : spf13.com">
+<meta name="twitter:creator" content="@spf13">
+<meta name="twitter:description" content="">
+<meta name="twitter:image:src" content="">
+<meta name="twitter:domain" content="spf13.com">
+
+
+
+    <base href="https://guanfuchen.github.io">
+    <title> React使用相关问题 - spf13.com </title>
+    <link rel="canonical" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/react%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
+    
+
+    <link href='http://fonts.lug.ustc.edu.cn/css?family=Fjalla+One|Open+Sans:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://guanfuchen.github.io/static/css/style.css">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+</head>
+
+<body lang="en" itemscope itemtype="http://schema.org/Article">
+<header id="header">
+    
+      
+    
+    <div align="center">
+        <a href="https://guanfuchen.github.io">
+        <img src="https://guanfuchen.github.io/media/avatar.png">
+        </a>
+    </div>
+    <div align="center">guanfuchen</div>
+    <nav id="nav">
+            <ul id="mainnav">
+            <li>
+                <a href="https://guanfuchen.github.io/post/">
+                <span class="icon"> <i aria-hidden="true" class="icon-quill"></i></span>
+                <span> 博客 </span>
+            </a>
+            </li>
+            
+            
+                
+                
+            
+            
+            
+            
+                
+                
+            
+            
+            <li>
+            <a href="http://github.com/guanfuchen">
+                <span class="icon"> <i aria-hidden="true" class="icon-13"></i></span>
+                <span> 关于 </span>
+            </a>
+            </li>
+        </ul>
+
+    
+    </nav>
+</header>
+
+
+
+<section id="main">
+  <h1 itemprop="name" id="title">React使用相关问题</h1>
+  <div>
+        <article itemprop="articleBody" id="content">
+           
+
+<hr />
+
+<h1 id="react相关资料">react相关资料</h1>
+
+<hr />
+
+<h1 id="reason-react">reason react</h1>
+
+<p><a href="https://jaredforsyth.com/2017/07/05/a-reason-react-tutorial/#post-title">A ReasonReact Tutorial</a></p>
+
+<p><a href="https://github.com/reasonml/reason-react">reason-react</a></p>
+
+<p><a href="https://reasonml.github.io/guide/javascript/quickstart">Quickstart</a></p>
+
+<hr />
+
+<h1 id="npm镜像">npm镜像</h1>
+
+<p><a href="https://neotan.github.io/homebrew-npm-composer-srouces/">用国内的源（Source）替换官方源，提高下载速度（包括Homebrew, npm 和 Composer 等）</a></p>
+
+<hr />
+
+<h1 id="react项目创建和使用">react项目创建和使用</h1>
+
+<p><a href="https://reactjs.org/tutorial/tutorial.html">Tutorial: Intro To React</a></p>
+
+<p><a href="https://github.com/petehunt/react-howto/blob/master/README-zh.md">如何学习React</a></p>
+
+<p><a href="https://reactjs.org/blog/2013/06/05/why-react.html">Why did we build React?</a></p>
+
+<p><a href="http://blog.bpzufang.com/blog/2014/09/25/translation-give-it-five-minutes/">【译】给它个五分钟</a></p>
+
+<p><a href="https://signalvnoise.com/posts/3124-give-it-five-minutes">Give it five minutes</a></p>
+
+<hr />
+
+<h1 id="示例程序">示例程序</h1>
+
+<p>js库替换，某些源无法访问，这里使用cdn.bootcss.com</p>
+
+<p><a href="http://www.bootcdn.cn/">BootCDN</a></p>
+
+<pre><code class="language-javascript">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;title&gt;Hello React&lt;/title&gt;
+    &lt;script src=&quot;https://cdn.bootcss.com/react/0.14.7/react.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.bootcss.com/react/0.14.7/react-dom.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.bootcss.com/babel-core/5.8.23/browser.min.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;example&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/babel&quot;&gt;
+    // 通过props获取传入新的组件的数据，这里&lt;HelloWorld date=&quot;&quot;/&gt;将HelloWorld当作HTML组件使用，如&lt;image src=&quot;&quot;/&gt;
+    var HelloWorld = React.createClass({
+        render: function() {
+//            return (
+//                &lt;a href=&quot;https://facebook.github.io/react/&quot;&gt;Hello React!&lt;/a&gt;
+//            );
+            return (
+                    &lt;p&gt;
+                        Hello, &lt;input type=&quot;text&quot; placeholder=&quot;Your name here&quot; /&gt;!
+                        It is {this.props.date.toTimeString()}
+                    &lt;/p&gt;
+            );
+        }
+    });
+
+    // 设置间隔更新数据
+    setInterval(function() {
+        ReactDOM.render(
+                &lt;HelloWorld date={new Date()} /&gt;,
+            document.getElementById('example')
+        );
+    }, 500);
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<hr />
+
+<h1 id="动态创建组件">动态创建组件</h1>
+
+<p>ReactDOM渲染第一个参数为JSX语法组件，在JavaScript 代码里写着XML格式的代码称为JSX。</p>
+
+<pre><code class="language-javascript">var root = React.DOM.ul({ className: 'my-list' },
+       React.DOM.li(null, 'Text Content')
+   );
+   ReactDOM.render(root, document.getElementById('example'));
+</code></pre>
+
+<p><a href="https://github.com/reactjs/react-tutorial">react-tutorial</a></p>
+
+<hr />
+
+<h1 id="调试">调试</h1>
+
+<h2 id="自动刷新">自动刷新</h2>
+
+<p>安装插件JetBrains IDE Support并设置Host:127.0.0.1  Port: 63342</p>
+
+<p><a href="http://www.cnblogs.com/dubaokun/p/3542998.html">WebStorm + JetBrains IDE Support 实现自动刷新功能</a></p>
+
+<p><a href="http://aa0.cn/web-refresh.html">WebStorm快速开发之浏览器自动刷新</a></p>
+
+<p><a href="http://itxuye.com/react-01.html">React在webstorm和webpack下的初始配置</a></p>
+
+<hr />
+
+<h1 id="reactjs中的refs使用">reactjs中的refs使用</h1>
+
+<pre><code class="language-javascript">var author = ReactDOM.findDOMNode(this.refs.author).value.trim();
+var text = ReactDOM.findDOMNode(this.refs.text).value.trim();
+
+render() {
+    return (
+        &lt;form className=&quot;commentForm&quot; onSubmit={this.handleSubmit.bind(this)}&gt;
+            &lt;input placeholder=&quot;Your Name&quot; ref=&quot;author&quot;&gt;&lt;/input&gt;
+            &lt;input placeholder=&quot;Your Comment&quot; ref=&quot;text&quot;&gt;&lt;/input&gt;
+            &lt;input type=&quot;submit&quot; value=&quot;Post&quot;&gt;&lt;/input&gt;
+        &lt;/form&gt;
+    );
+}
+</code></pre>
+
+<p><a href="https://stackoverflow.com/questions/34298521/cannot-read-property-refs-of-null-react-error-react-js">Cannot read property &lsquo;refs&rsquo; of null react error react js</a></p>
+
+<p><a href="https://segmentfault.com/q/1010000004599948">Reactjs中报错： refs is not defined问题</a></p>
+
+<p><a href="https://stackoverflow.com/questions/33115054/react-find-dom-node-by-refs-set-to-variable">React find DOM node by refs set to variable?</a></p>
+
+<p><a href="https://www.kancloud.cn/kancloud/react/67582">React.findDOMNode()</a></p>
+
+<p><a href="https://segmentfault.com/q/1010000006198939">this.refs 和 ReactDOM.findDOMNode 区别是什么？</a></p>
+
+<p><a href="https://reactjs.org/docs/refs-and-the-dom.html">Refs and the DOM</a></p>
+
+<hr />
+
+<h1 id="constructor用法">constructor用法</h1>
+
+<p>高版本react无法使用getInitialState，只能使用constructor方法。</p>
+
+<pre><code class="language-javascript">class CommentBox extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            // data: data
+            data: []
+        };
+    }
+}
+</code></pre>
+
+<p><a href="https://stackoverflow.com/questions/33447149/class-extends-react-component-cant-use-getinitialstate-in-react">Class extends React.Component can&rsquo;t use getInitialState in React</a></p>
+
+<p><a href="https://stackoverflow.com/questions/30668326/what-is-the-difference-between-using-constructor-vs-getinitialstate-in-react-r">What is the difference between using constructor vs getInitialState in React / React Native?</a></p>
+
+<p><a href="https://stackoverflow.com/questions/43289348/disable-react-createclass-and-proptypes-deprecated-warnings-in-babel-react-prese">Disable React.createClass and PropTypes deprecated warnings in babel react present</a></p>
+
+<hr />
+
+<h1 id="多个组件构成的list键值问题">多个组件构成的List键值问题</h1>
+
+<pre><code class="language-javascript">class CommentList extends React.Component {
+    render() {
+        var commentNodes = this.props.data.map(function (comment) {
+            return &lt;Comment key={comment.author} author={comment.author}&gt;{comment.text}&lt;/Comment&gt;
+        });
+        return (
+            &lt;div className=&quot;commentList&quot;&gt;
+                {commentNodes}
+            &lt;/div&gt;
+        );
+    }
+}
+</code></pre>
+
+<p><a href="https://stackoverflow.com/questions/28329382/understanding-unique-keys-for-array-children-in-react-js">Understanding unique keys for array children in React.js</a></p>
+
+<p><a href="http://www.cnblogs.com/huanglifen/p/5175082.html">react 对循环warning提示增加key的研究</a></p>
+
+        </article>
+  </div>
+</section>
+
+
+
+<aside id="meta">
+
+    <div>
+        <section id="datecount">
+          <h4 id="date"> Sat Oct 28, 2017 </h4>
+          <h5 id="wc"> 300 Words </h5>
+          <h5 id="readtime"> Read in about 2 Min </h5>
+        </section>
+        <ul id="categories">
+          
+        </ul>
+        <ul id="tags">
+          
+        </ul>
+    </div>
+
+    <div>
+        <section id="prev">
+            &nbsp;<a class="previous" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/brew%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/"><i class="icon-arrow-left"></i> Brew使用相关问题</a><br>
+        </section>
+        <section id="next">
+            &nbsp;<a class="next" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/chrome%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">Chrome插件开发相关问题 <i class="icon-arrow-right"></i></a>
+        </section>
+    </div>
+
+    
+
+            
+            
+            
+            
+            
+
+            
+            
+                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                
+                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+        
+    
+    
+    
+                
+                
+            
+                                     
+                                     
+                                     
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+
+        
+
+</aside>
+
+<meta itemprop="wordCount" content="293">
+<meta itemprop="datePublished" content="2017-10-28">
+<meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/react%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
+
+
+<aside id=comments>
+    <div><h2> Comments </h2></div>
+    <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "guanfuchen" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</aside>
+
+<footer>
+  <div>
+    <p>
+    &copy; 2017 <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">guanfuchen.</span></span>
+    Powered by <a href="http://gohugo.io">Hugo</a>.
+  </div>
+</footer>
+<script type="text/javascript">
+(function(){var j=function(a,b){return window.getComputedStyle?getComputedStyle(a).getPropertyValue(b):a.currentStyle[b]};var k=function(a,b,c){if(a.addEventListener)a.addEventListener(b,c,false);else a.attachEvent('on'+b,c)};var l=function(a,b){for(key in b)if(b.hasOwnProperty(key))a[key]=b[key];return a};window.fitText=function(d,e,f){var g=l({'minFontSize':-1/0,'maxFontSize':1/0},f);var h=function(a){var b=e||1;var c=function(){a.style.fontSize=Math.max(Math.min(a.clientWidth/(b*10),parseFloat(g.maxFontSize)),parseFloat(g.minFontSize))+'px'};c();k(window,'resize',c)};if(d.length)for(var i=0;i<d.length;i++)h(d[i]);else h(d);return d}})();
+fitText(document.getElementById('title'), 1)
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-7131036-1', 'spf13.com');
+  ga('require', 'linkid', 'linkid.js');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>
+
+<script type="text/javascript"
+        src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>

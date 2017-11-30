@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="keywords" content="">
+
+ 
+<meta property="og:type" content="article"/>
+<meta property="og:description" content=""/>
+<meta property="og:title" content="Chrome插件开发相关问题 : spf13.com"/>
+<meta property="og:site_name" content="spf13 is Steve Francia"/>
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="" />
+<meta property="og:image:height" content="" />
+<meta property="og:url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/chrome%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2017-10-27"/>
+<meta property="article:modified_time" content="2017-10-27"/>
+
+
+
+
+
+<meta name="twitter:card" content="summary">
+
+<meta name="twitter:site" content="@spf13">
+<meta name="twitter:title" content="Chrome插件开发相关问题 : spf13.com">
+<meta name="twitter:creator" content="@spf13">
+<meta name="twitter:description" content="">
+<meta name="twitter:image:src" content="">
+<meta name="twitter:domain" content="spf13.com">
+
+
+
+    <base href="https://guanfuchen.github.io">
+    <title> Chrome插件开发相关问题 - spf13.com </title>
+    <link rel="canonical" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/chrome%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
+    
+
+    <link href='http://fonts.lug.ustc.edu.cn/css?family=Fjalla+One|Open+Sans:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://guanfuchen.github.io/static/css/style.css">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+</head>
+
+<body lang="en" itemscope itemtype="http://schema.org/Article">
+<header id="header">
+    
+      
+    
+    <div align="center">
+        <a href="https://guanfuchen.github.io">
+        <img src="https://guanfuchen.github.io/media/avatar.png">
+        </a>
+    </div>
+    <div align="center">guanfuchen</div>
+    <nav id="nav">
+            <ul id="mainnav">
+            <li>
+                <a href="https://guanfuchen.github.io/post/">
+                <span class="icon"> <i aria-hidden="true" class="icon-quill"></i></span>
+                <span> 博客 </span>
+            </a>
+            </li>
+            
+            
+                
+                
+            
+            
+            
+            
+                
+                
+            
+            
+            <li>
+            <a href="http://github.com/guanfuchen">
+                <span class="icon"> <i aria-hidden="true" class="icon-13"></i></span>
+                <span> 关于 </span>
+            </a>
+            </li>
+        </ul>
+
+    
+    </nav>
+</header>
+
+
+
+<section id="main">
+  <h1 itemprop="name" id="title">Chrome插件开发相关问题</h1>
+  <div>
+        <article itemprop="articleBody" id="content">
+           
+
+<hr />
+
+<h1 id="chrome开发相关资料">chrome开发相关资料</h1>
+
+<p>由于最近搜集资料和图片较多，经常对一些精美的图片想要右键直接同步到git上，但是需求过于小，没有找到合适的插件，于是打算自己倒腾，接下来在学习的过程中主要以开发一款能够右键保存图像到git仓库或者远程应用的插件。</p>
+
+<p><a href="http://www.cnblogs.com/guogangj/p/3235703.html">Chrome插件（Extensions）开发攻略</a></p>
+
+<p><a href="https://developer.chrome.com/extensions/devguide">Developer&rsquo;s Guide</a></p>
+
+<p><a href="https://developer.chrome.com/extensions/api_index">JavaScript APIs</a></p>
+
+<p><a href="https://developer.chrome.com/extensions/tut_debugging">Tutorial: Debugging</a></p>
+
+<p><a href="https://developer.chrome.com/extensions/overview">Overview</a></p>
+
+<p><a href="https://developer.chrome.com/extensions/getstarted">Getting Started: Building a Chrome Extension</a></p>
+
+<p><a href="http://open.chrome.360.cn/extension_dev/samples.html#646325c25f572a1d15edc73d057f821d847a4fbe">一些实例</a></p>
+
+<p><a href="https://developer.chrome.com/extensions/samples#search:">Sample Extensions</a></p>
+
+<p><a href="https://developer.chrome.com/extensions">What are extensions?</a></p>
+
+<h2 id="书籍">书籍</h2>
+
+<p><img src="http://file.ituring.com.cn/ScreenShow/0100cba60938b16fc94a" alt="" /></p>
+
+<p><a href="http://www.jianshu.com/p/049eecc2062f">如何成为一名Chrome应用开发者</a></p>
+
+<p><a href="http://www.ituring.com.cn/book/1421">Chrome扩展及应用开发（首发版）</a></p>
+
+<h2 id="相关参考程序">相关参考程序</h2>
+
+<ul>
+<li>一款书签应用
+<img src="https://camo.githubusercontent.com/a98cbcc87e694762165569e082790999c1869619/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f5f6f6a5f3659344b34636a7067756967323355707374674e644c683671557657666353334c424537335536703666384652725f517571544945576d477a71354d7052657641777a463d73313238302d683830302d653336352d7277" alt="" /></li>
+</ul>
+
+<p><a href="https://github.com/0326/iBookmark">iBookmark</a></p>
+
+<h1 id="调试问题">调试问题</h1>
+
+<h2 id="命令行安装插件">命令行安装插件</h2>
+
+<pre><code class="language-bash">/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --enable-easy-off-store-extension-install extensionPath
+</code></pre>
+
+<p><a href="http://blog.csdn.net/alex8046/article/details/44993027">Mac 命令行安装Chrome插件</a></p>
+
+<h2 id="background调试相关">background调试相关</h2>
+
+<p>插件上的弹出框较好调试，但是background.js任务的调试需要在chrome://extension中点击审查background任务即可。</p>
+
+<p><img src="http://user-image.logdown.io/user/3222/blog/3262/post/168542/4Iw9wtDBSCSP1B6JUcFd_background01.jpg" alt="" /></p>
+
+<p><a href="https://stackoverflow.com/questions/18145282/debug-background-js-in-chrome-extension">debug background.js in chrome extension</a></p>
+
+<p><a href="https://stackoverflow.com/questions/10081898/how-to-debug-google-chrome-background-script">How to debug Google Chrome background script? [duplicate]</a></p>
+
+<p><a href="http://pymaster.logdown.com/post/168542-all-operate-under-the-context-of-the-chrome-extension-debug-methods">Chrome extension 各個運作 context 下的 debug 方法</a></p>
+
+<h2 id="web">web</h2>
+
+<h3 id="permissions">permissions</h3>
+
+<pre><code class="language-bash">&quot;webRequest&quot;,
+&quot;webRequestBlocking&quot;
+</code></pre>
+
+<pre><code class="language-javascript">var xhr = new XMLHttpRequest();
+xhr.open(&quot;GET&quot;, &quot;http://115.159.26.93/lock_passwd_dynamic_check_app/date_passwd_room_delay?room=1234&amp;admin_passwd=123456&quot;, true);
+xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4) {
+        // JSON解析器不会执行攻击者设计的脚本.
+        var resp = JSON.parse(xhr.responseText);
+        console.error(resp)
+    }
+};
+xhr.send();
+</code></pre>
+
+<p><a href="https://ask.helplib.com/2921588">Chrome 扩展：你没有使用屏蔽 web request侦听器的权限 </a></p>
+
+<p><a href="https://developer.chrome.com/extensions/webRequest">chrome.webRequest</a></p>
+
+<p><a href="https://wizardforcel.gitbooks.io/chrome-doc/content/23.html">跨域 XMLHttpRequest 请求</a></p>
+
+<p><a href="https://www.gitbook.com/book/wizardforcel/chrome-doc/details">Chrome 扩展开发文档</a></p>
+
+<h2 id="通知栏">通知栏</h2>
+
+<pre><code class="language-javascript">// 创建一个简单的文字通知：
+var opt = {
+    type: &quot;basic&quot;,
+    title: &quot;Primary Title&quot;,
+    message: &quot;Primary message to display&quot;,
+    iconUrl: &quot;48.png&quot;
+};
+var notification = new Notification(&quot;Primary title&quot;, opt);
+</code></pre>
+
+<p><img src="https://developer.chrome.com/static/images/notifications.png" alt="" /></p>
+
+<p><a href="https://developer.chrome.com/extensions/richNotifications">Rich Notifications</a></p>
+
+<p><a href="https://stackoverflow.com/questions/2271156/chrome-desktop-notification-example">Chrome desktop notification example [closed]</a></p>
+
+<p><a href="https://developer.chrome.com/apps/notifications#type-NotificationOptions">chrome.notifications</a></p>
+
+<h2 id="chrome复制文本到剪切板中">chrome复制文本到剪切板中</h2>
+
+<pre><code class="language-javascript">function copyToClipboard(text) {
+  const input = document.createElement('input');
+  input.style.position = 'fixed';
+  input.style.opacity = 0;
+  input.value = text;
+  document.body.appendChild(input);
+  input.select();
+  document.execCommand('Copy');
+  document.body.removeChild(input);
+};
+</code></pre>
+
+<p><a href="https://stackoverflow.com/questions/3436102/copy-to-clipboard-in-chrome-extension">Copy to Clipboard in Chrome Extension</a></p>
+
+<p><a href="https://gist.github.com/joeperrin-gists/8814825">Copy To Clipboard in Google Chrome Extensions</a></p>
+
+        </article>
+  </div>
+</section>
+
+
+
+<aside id="meta">
+
+    <div>
+        <section id="datecount">
+          <h4 id="date"> Fri Oct 27, 2017 </h4>
+          <h5 id="wc"> 200 Words </h5>
+          <h5 id="readtime"> Read in about 1 Min </h5>
+        </section>
+        <ul id="categories">
+          
+        </ul>
+        <ul id="tags">
+          
+        </ul>
+    </div>
+
+    <div>
+        <section id="prev">
+            &nbsp;<a class="previous" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/react%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/"><i class="icon-arrow-left"></i> React使用相关问题</a><br>
+        </section>
+        <section id="next">
+            &nbsp;<a class="next" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/go%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">Go使用相关问题 <i class="icon-arrow-right"></i></a>
+        </section>
+    </div>
+
+    
+
+            
+            
+            
+            
+            
+
+            
+            
+                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                
+                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+        
+    
+    
+    
+                
+                
+            
+                                     
+                                     
+                                     
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+
+        
+
+</aside>
+
+<meta itemprop="wordCount" content="170">
+<meta itemprop="datePublished" content="2017-10-27">
+<meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/chrome%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
+
+
+<aside id=comments>
+    <div><h2> Comments </h2></div>
+    <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "guanfuchen" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</aside>
+
+<footer>
+  <div>
+    <p>
+    &copy; 2017 <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">guanfuchen.</span></span>
+    Powered by <a href="http://gohugo.io">Hugo</a>.
+  </div>
+</footer>
+<script type="text/javascript">
+(function(){var j=function(a,b){return window.getComputedStyle?getComputedStyle(a).getPropertyValue(b):a.currentStyle[b]};var k=function(a,b,c){if(a.addEventListener)a.addEventListener(b,c,false);else a.attachEvent('on'+b,c)};var l=function(a,b){for(key in b)if(b.hasOwnProperty(key))a[key]=b[key];return a};window.fitText=function(d,e,f){var g=l({'minFontSize':-1/0,'maxFontSize':1/0},f);var h=function(a){var b=e||1;var c=function(){a.style.fontSize=Math.max(Math.min(a.clientWidth/(b*10),parseFloat(g.maxFontSize)),parseFloat(g.minFontSize))+'px'};c();k(window,'resize',c)};if(d.length)for(var i=0;i<d.length;i++)h(d[i]);else h(d);return d}})();
+fitText(document.getElementById('title'), 1)
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-7131036-1', 'spf13.com');
+  ga('require', 'linkid', 'linkid.js');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>
+
+<script type="text/javascript"
+        src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>

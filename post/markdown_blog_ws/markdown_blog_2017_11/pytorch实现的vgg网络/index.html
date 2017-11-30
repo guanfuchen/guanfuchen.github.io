@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="keywords" content="">
+
+ 
+<meta property="og:type" content="article"/>
+<meta property="og:description" content=""/>
+<meta property="og:title" content="Pytorch实现的vgg网络 : spf13.com"/>
+<meta property="og:site_name" content="spf13 is Steve Francia"/>
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="" />
+<meta property="og:image:height" content="" />
+<meta property="og:url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/pytorch%E5%AE%9E%E7%8E%B0%E7%9A%84vgg%E7%BD%91%E7%BB%9C/">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2017-11-03"/>
+<meta property="article:modified_time" content="2017-11-03"/>
+
+
+
+
+
+<meta name="twitter:card" content="summary">
+
+<meta name="twitter:site" content="@spf13">
+<meta name="twitter:title" content="Pytorch实现的vgg网络 : spf13.com">
+<meta name="twitter:creator" content="@spf13">
+<meta name="twitter:description" content="">
+<meta name="twitter:image:src" content="">
+<meta name="twitter:domain" content="spf13.com">
+
+
+
+    <base href="https://guanfuchen.github.io">
+    <title> Pytorch实现的vgg网络 - spf13.com </title>
+    <link rel="canonical" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/pytorch%E5%AE%9E%E7%8E%B0%E7%9A%84vgg%E7%BD%91%E7%BB%9C/">
+    
+
+    <link href='http://fonts.lug.ustc.edu.cn/css?family=Fjalla+One|Open+Sans:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://guanfuchen.github.io/static/css/style.css">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+</head>
+
+<body lang="en" itemscope itemtype="http://schema.org/Article">
+<header id="header">
+    
+      
+    
+    <div align="center">
+        <a href="https://guanfuchen.github.io">
+        <img src="https://guanfuchen.github.io/media/avatar.png">
+        </a>
+    </div>
+    <div align="center">guanfuchen</div>
+    <nav id="nav">
+            <ul id="mainnav">
+            <li>
+                <a href="https://guanfuchen.github.io/post/">
+                <span class="icon"> <i aria-hidden="true" class="icon-quill"></i></span>
+                <span> 博客 </span>
+            </a>
+            </li>
+            
+            
+                
+                
+            
+            
+            
+            
+                
+                
+            
+            
+            <li>
+            <a href="http://github.com/guanfuchen">
+                <span class="icon"> <i aria-hidden="true" class="icon-13"></i></span>
+                <span> 关于 </span>
+            </a>
+            </li>
+        </ul>
+
+    
+    </nav>
+</header>
+
+
+
+<section id="main">
+  <h1 itemprop="name" id="title">Pytorch实现的vgg网络</h1>
+  <div>
+        <article itemprop="articleBody" id="content">
+           
+
+<hr />
+
+<h1 id="vgg网络">vgg网络</h1>
+
+<p>vgg网络由于其具有较强的特征提取能力，被广泛作为一个基本的模块组合在其他的网络中，而pytorch对它的实现尤为简单，下面分析一下源码实现。</p>
+
+<pre><code class="language-python"># A B D E网络分别表示vgg11, vgg13, vgg16, vgg19网络，其中vgg16和vgg19网络的使用最为频繁，由于vgg网络的基本组成单元较简单，所以其实现也具有优美的架构，其中卷积网络都是stride为1，kernel size为3，padding为1的卷积，该卷积输入输出保持不变，而池化层则使用的是最大池化层，stride为2，kernel size为2
+cfg = {
+    'A': [64, 'M', 128, 'M', 256, 256, 'M', 512, 512, 'M', 512, 512, 'M'],
+    'B': [64, 64, 'M', 128, 128, 'M', 256, 256, 'M', 512, 512, 'M', 512, 512, 'M'],
+    'D': [64, 64, 'M', 128, 128, 'M', 256, 256, 256, 'M', 512, 512, 512, 'M', 512, 512, 512, 'M'],
+    'E': [64, 64, 'M', 128, 128, 'M', 256, 256, 256, 256, 'M', 512, 512, 512, 512, 'M', 512, 512, 512, 512, 'M'],
+}
+# VGG16 2*2+3*3+3=16
+
+# make_layers构成了vgg网络的特征层，输入为上述cfg，比如vgg16为D，那么首先输入channels为RGB三通道图像，增加每一层使用nn.Sequential可以顺序连接这些网络
+def make_layers(cfg, batch_norm=False):
+    layers = []
+    in_channels = 3
+    for v in cfg:
+        if v == 'M':
+            layers += [nn.MaxPool2d(kernel_size=2, stride=2)]
+        else:
+            conv2d = nn.Conv2d(in_channels, v, kernel_size=3, padding=1)
+            if batch_norm:
+                layers += [conv2d, nn.BatchNorm2d(v), nn.ReLU(inplace=True)]
+            else:
+                layers += [conv2d, nn.ReLU(inplace=True)]
+            in_channels = v
+    return nn.Sequential(*layers)
+</code></pre>
+
+<p>由于VGG的不同类别仅仅在前面的特征层不同，剩下为三个全连接层，按照如下组合即可，那么这里与其他网络不同的是，这里的features和classifier并不是网络通用的，仅仅代表VGG网络前面的卷积特征层和最后的全连接分类层。</p>
+
+<pre><code class="language-python">class VGG(nn.Module):
+
+    def __init__(self, features, num_classes=1000):
+        super(VGG, self).__init__()
+        self.features = features
+        # 此处因为VGG网络输入为224x224，所以分类器的输入为1x25088
+        # 如果输入为32x32，那么分类起flat为512*1*1，分类器4096也可以修改，根据具体的分类数据集可以修改更小比如512，最后的num_classes为分类的种类
+        self.classifier = nn.Sequential(
+            nn.Linear(512 * 7 * 7, 4096),
+            nn.ReLU(True),
+            nn.Dropout(),
+            nn.Linear(4096, 4096),
+            nn.ReLU(True),
+            nn.Dropout(),
+            nn.Linear(4096, num_classes),
+        )
+        self._initialize_weights()
+
+    def forward(self, x):
+        x = self.features(x)
+        # 第一项为batch size，其余应该叠加在一起，所以用-1表示
+        x = x.view(x.size(0), -1)
+        x = self.classifier(x)
+        return x
+
+    # 任何网络构造过程中同时需要进行初始化
+    def _initialize_weights(self):
+        for m in self.modules():
+            # 不同的网络类型初始化均不同，比如Conv2d卷积层的权值初始化为均值为0，偏置为0
+            if isinstance(m, nn.Conv2d):
+                n = m.kernel_size[0] * m.kernel_size[1] * m.out_channels
+                m.weight.data.normal_(0, math.sqrt(2. / n))
+                if m.bias is not None:
+                    m.bias.data.zero_()
+            elif isinstance(m, nn.BatchNorm2d):
+                m.weight.data.fill_(1)
+                m.bias.data.zero_()
+            elif isinstance(m, nn.Linear):
+                m.weight.data.normal_(0, 0.01)
+                m.bias.data.zero_()
+</code></pre>
+
+<p>上面同样需要注意的是pytorch中卷积层的初始化和BatchNorm2d层的初始化。</p>
+
+<p>下面是vgg16的示例构造</p>
+
+<pre><code class="language-python">def vgg16(pretrained=False, **kwargs):
+    &quot;&quot;&quot;VGG 16-layer model (configuration &quot;D&quot;)
+    Args:
+        pretrained (bool): If True, returns a model pre-trained on ImageNet
+    &quot;&quot;&quot;
+    model = VGG(make_layers(cfg['D']), **kwargs)
+    if pretrained:
+        model.load_state_dict(model_zoo.load_url(model_urls['vgg16']))
+    return model
+
+
+def vgg16_bn(pretrained=False, **kwargs):
+    &quot;&quot;&quot;VGG 16-layer model (configuration &quot;D&quot;) with batch normalization
+    Args:
+        pretrained (bool): If True, returns a model pre-trained on ImageNet
+    &quot;&quot;&quot;
+    model = VGG(make_layers(cfg['D'], batch_norm=True), **kwargs)
+    if pretrained:
+        model.load_state_dict(model_zoo.load_url(model_urls['vgg16_bn']))
+    return model
+</code></pre>
+
+<p><a href="https://github.com/pytorch/vision/blob/master/torchvision/models/vgg.py">vgg.py</a></p>
+
+<p><a href="http://www.easemob.com/news/739">李理：从Image Caption Generation理解深度学习（part I）</a></p>
+
+        </article>
+  </div>
+</section>
+
+
+
+<aside id="meta">
+
+    <div>
+        <section id="datecount">
+          <h4 id="date"> Fri Nov 3, 2017 </h4>
+          <h5 id="wc"> 400 Words </h5>
+          <h5 id="readtime"> Read in about 2 Min </h5>
+        </section>
+        <ul id="categories">
+          
+        </ul>
+        <ul id="tags">
+          
+        </ul>
+    </div>
+
+    <div>
+        <section id="prev">
+            &nbsp;<a class="previous" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/faster_rcnn%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/"><i class="icon-arrow-left"></i> Faster_rcnn论文阅读</a><br>
+        </section>
+        <section id="next">
+            &nbsp;<a class="next" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/learning_deconvolution_network_for_semantic_segmentation/">Learning_Deconvolution_Network_for_Semantic_Segmentation <i class="icon-arrow-right"></i></a>
+        </section>
+    </div>
+
+    
+
+            
+            
+            
+            
+            
+
+            
+            
+                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                
+                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+        
+    
+    
+    
+                
+                
+            
+                                     
+                                     
+                                     
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+
+        
+
+</aside>
+
+<meta itemprop="wordCount" content="300">
+<meta itemprop="datePublished" content="2017-11-03">
+<meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/pytorch%E5%AE%9E%E7%8E%B0%E7%9A%84vgg%E7%BD%91%E7%BB%9C/">
+
+
+<aside id=comments>
+    <div><h2> Comments </h2></div>
+    <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "guanfuchen" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</aside>
+
+<footer>
+  <div>
+    <p>
+    &copy; 2017 <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">guanfuchen.</span></span>
+    Powered by <a href="http://gohugo.io">Hugo</a>.
+  </div>
+</footer>
+<script type="text/javascript">
+(function(){var j=function(a,b){return window.getComputedStyle?getComputedStyle(a).getPropertyValue(b):a.currentStyle[b]};var k=function(a,b,c){if(a.addEventListener)a.addEventListener(b,c,false);else a.attachEvent('on'+b,c)};var l=function(a,b){for(key in b)if(b.hasOwnProperty(key))a[key]=b[key];return a};window.fitText=function(d,e,f){var g=l({'minFontSize':-1/0,'maxFontSize':1/0},f);var h=function(a){var b=e||1;var c=function(){a.style.fontSize=Math.max(Math.min(a.clientWidth/(b*10),parseFloat(g.maxFontSize)),parseFloat(g.minFontSize))+'px'};c();k(window,'resize',c)};if(d.length)for(var i=0;i<d.length;i++)h(d[i]);else h(d);return d}})();
+fitText(document.getElementById('title'), 1)
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-7131036-1', 'spf13.com');
+  ga('require', 'linkid', 'linkid.js');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>
+
+<script type="text/javascript"
+        src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>

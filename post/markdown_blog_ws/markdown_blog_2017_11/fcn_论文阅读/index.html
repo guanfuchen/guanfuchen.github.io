@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="keywords" content="">
+
+ 
+<meta property="og:type" content="article"/>
+<meta property="og:description" content=""/>
+<meta property="og:title" content="FCN_论文阅读 : spf13.com"/>
+<meta property="og:site_name" content="spf13 is Steve Francia"/>
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="" />
+<meta property="og:image:height" content="" />
+<meta property="og:url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/fcn_%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2017-11-03"/>
+<meta property="article:modified_time" content="2017-11-03"/>
+
+
+
+
+
+<meta name="twitter:card" content="summary">
+
+<meta name="twitter:site" content="@spf13">
+<meta name="twitter:title" content="FCN_论文阅读 : spf13.com">
+<meta name="twitter:creator" content="@spf13">
+<meta name="twitter:description" content="">
+<meta name="twitter:image:src" content="">
+<meta name="twitter:domain" content="spf13.com">
+
+
+
+    <base href="https://guanfuchen.github.io">
+    <title> FCN_论文阅读 - spf13.com </title>
+    <link rel="canonical" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/fcn_%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">
+    
+
+    <link href='http://fonts.lug.ustc.edu.cn/css?family=Fjalla+One|Open+Sans:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://guanfuchen.github.io/static/css/style.css">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+</head>
+
+<body lang="en" itemscope itemtype="http://schema.org/Article">
+<header id="header">
+    
+      
+    
+    <div align="center">
+        <a href="https://guanfuchen.github.io">
+        <img src="https://guanfuchen.github.io/media/avatar.png">
+        </a>
+    </div>
+    <div align="center">guanfuchen</div>
+    <nav id="nav">
+            <ul id="mainnav">
+            <li>
+                <a href="https://guanfuchen.github.io/post/">
+                <span class="icon"> <i aria-hidden="true" class="icon-quill"></i></span>
+                <span> 博客 </span>
+            </a>
+            </li>
+            
+            
+                
+                
+            
+            
+            
+            
+                
+                
+            
+            
+            <li>
+            <a href="http://github.com/guanfuchen">
+                <span class="icon"> <i aria-hidden="true" class="icon-13"></i></span>
+                <span> 关于 </span>
+            </a>
+            </li>
+        </ul>
+
+    
+    </nav>
+</header>
+
+
+
+<section id="main">
+  <h1 itemprop="name" id="title">FCN_论文阅读</h1>
+  <div>
+        <article itemprop="articleBody" id="content">
+           
+
+<hr />
+
+<h1 id="参考资料">参考资料</h1>
+
+<p>该论文在CNN应用在语义分割任务上扮演了非常重要的角色，从这篇论文开始，很多语义分割网络都采用了类似的网络结构。</p>
+
+<h2 id="http-chenguanfuqq-oschina-io-tuquan-img-2017-11-2017-11-3-22-11-43-png"><img src="http://chenguanfuqq.oschina.io/tuquan/img_2017_11/2017_11_3_22_11_43.png" alt="" /></h2>
+
+<h1 id="模型架构">模型架构</h1>
+
+<p>该模型将全连接层转换为卷积层，并且最后一层为装置卷积网络，将像素从缩小尺寸的恢复到原始图像大小，其中也包括了crop将多于的部分裁剪掉，直接恢复结果比较稀疏，论文使用前几层网络结合得到fcn8s和fcn16s的结果更加平滑，这是因为浅层的网络具有更详细的细节信息，这种组合的结构被称为skip connection架构，这也是decoder的一个思路。</p>
+
+<p><img src="http://chenguanfuqq.oschina.io/tuquan/img_2017_11/2017_11_3_21_56_0.png" alt="" /></p>
+
+<hr />
+
+<h1 id="代码实现">代码实现</h1>
+
+<h2 id="pytorch实现">pytorch实现</h2>
+
+<p>其中可参考我的ipython notebook文件，具体的推导过程以及实现的细节可以参考<a href="https://zhuanlan.zhihu.com/p/22976342">FCN学习:Semantic Segmentation</a>，其中论文主要的理解部分为全卷及网络，推导最后的网络输出与原始输入图像大小一致的原因，以及第一层的padding大小为什么为100，其他层都是vgg网络，最后的输出有fcn32s，fcn16s和fcn8s这三种，最简单的推导从fcn32s开始。</p>
+
+<p><img src="http://chenguanfuqq.oschina.io/tuquan/img_2017_11/fcn_padding_100_results.png" alt="" /></p>
+
+<p><img src="http://chenguanfuqq.oschina.io/tuquan/img_2017_11/fcn_same_size_crop_result.png" alt="" /></p>
+
+<p><a href="https://gitee.com/chenguanfu/cv_learning/tree/master/learning_2017_10/py_torch_scripts/pytorch_fcn_same_name_with_berkeleyvision.ipynb">fcn ipython notebook</a></p>
+
+<p><a href="https://github.com/wkentaro/pytorch-fcn">pytorch-fcn</a></p>
+
+<p><a href="https://github.com/Kaixhin/FCN-semantic-segmentation">FCN-semantic-segmentation</a></p>
+
+<p><a href="http://www.jianshu.com/p/c56a37093cfa">深度学习图片卷积输出大小计算公式</a></p>
+
+<hr />
+
+<h1 id="相关论点">相关论点</h1>
+
+<p>这些抽象的特征对分类很有帮助，可以很好地判断出一幅图像中包含什么类别的物体，但是因为丢失了一些物体的细节，不能很好地给出物体的具体轮廓、指出每个像素具体属于哪个物体，因此做到精确的分割就很有难度。</p>
+
+<p>传统的基于CNN的分割方法：为了对一个像素分类，使用该像素周围的一个图像块作为CNN的输入用于训练和预测。这种方法有几个缺点：一是存储开销很大。例如对每个像素使用的图像块的大小为15x15，然后不断滑动窗口，每次滑动的窗口给CNN进行判别分类，因此则所需的存储空间根据滑动窗口的次数和大小急剧上升。二是计算效率低下。相邻的像素块基本上是重复的，针对每个像素块逐个计算卷积，这种计算也有很大程度上的重复。三是像素块大小的限制了感知区域的大小。通常像素块的大小比整幅图像的大小小很多，只能提取一些局部的特征，从而导致分类的性能受到限制。</p>
+
+<p>而全卷积网络(FCN)则是从抽象的特征中恢复出每个像素所属的类别。即从图像级别的分类进一步延伸到像素级别的分类。这也是使用网络分割图像被称为pixel wise图像语义分割，不过像素级的分割，会产生较大的噪声，导致分割的结果不够平滑。</p>
+
+<hr />
+
+<h1 id="模型缺点">模型缺点</h1>
+
+<ul>
+<li>是得到的结果还是不够精细。进行8倍上采样虽然比32倍的效果好了很多，但是上采样的结果还是比较模糊和平滑，对图像中的细节不敏感。</li>
+<li>是对各个像素进行分类，没有充分考虑像素与像素之间的关系。忽略了在通常的基于像素分类的分割方法中使用的空间规整（spatial regularization）步骤，缺乏空间一致性。</li>
+</ul>
+
+<p><a href="http://www.cnblogs.com/gujianhan/p/6030639.html">全卷积网络 FCN 详解</a></p>
+
+<p><a href="http://antkillerfarm.github.io/dl/2017/09/09/Deep_Learning_16.html">深度学习（十六）——FCN, SegNet, DeconvNet, DeepLab, ENet, GCN, Ultra Deep Network</a></p>
+
+        </article>
+  </div>
+</section>
+
+
+
+<aside id="meta">
+
+    <div>
+        <section id="datecount">
+          <h4 id="date"> Fri Nov 3, 2017 </h4>
+          <h5 id="wc"> 100 Words </h5>
+          <h5 id="readtime"> Read in about 1 Min </h5>
+        </section>
+        <ul id="categories">
+          
+        </ul>
+        <ul id="tags">
+          
+        </ul>
+    </div>
+
+    <div>
+        <section id="prev">
+            &nbsp;<a class="previous" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E5%B8%B8%E7%94%A8%E7%BD%91%E7%BB%9Ctrick/"><i class="icon-arrow-left"></i> 常用网络trick</a><br>
+        </section>
+        <section id="next">
+            &nbsp;<a class="next" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/mask_r-cnn%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">Mask_R CNN论文阅读 <i class="icon-arrow-right"></i></a>
+        </section>
+    </div>
+
+    
+
+            
+            
+            
+            
+            
+
+            
+            
+                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                
+                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+        
+    
+    
+    
+                
+                
+            
+                                     
+                                     
+                                     
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+
+        
+
+</aside>
+
+<meta itemprop="wordCount" content="37">
+<meta itemprop="datePublished" content="2017-11-03">
+<meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/fcn_%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">
+
+
+<aside id=comments>
+    <div><h2> Comments </h2></div>
+    <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "guanfuchen" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</aside>
+
+<footer>
+  <div>
+    <p>
+    &copy; 2017 <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">guanfuchen.</span></span>
+    Powered by <a href="http://gohugo.io">Hugo</a>.
+  </div>
+</footer>
+<script type="text/javascript">
+(function(){var j=function(a,b){return window.getComputedStyle?getComputedStyle(a).getPropertyValue(b):a.currentStyle[b]};var k=function(a,b,c){if(a.addEventListener)a.addEventListener(b,c,false);else a.attachEvent('on'+b,c)};var l=function(a,b){for(key in b)if(b.hasOwnProperty(key))a[key]=b[key];return a};window.fitText=function(d,e,f){var g=l({'minFontSize':-1/0,'maxFontSize':1/0},f);var h=function(a){var b=e||1;var c=function(){a.style.fontSize=Math.max(Math.min(a.clientWidth/(b*10),parseFloat(g.maxFontSize)),parseFloat(g.minFontSize))+'px'};c();k(window,'resize',c)};if(d.length)for(var i=0;i<d.length;i++)h(d[i]);else h(d);return d}})();
+fitText(document.getElementById('title'), 1)
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-7131036-1', 'spf13.com');
+  ga('require', 'linkid', 'linkid.js');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>
+
+<script type="text/javascript"
+        src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
