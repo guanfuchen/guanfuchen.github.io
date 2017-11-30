@@ -1060,7 +1060,11 @@ How do I delete all Terminal mail?</description>
       <pubDate>Tue, 24 Oct 2017 21:25:20 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/blog_%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
-      <description> Hugo框架 spf13.com主题 其中修改如下所示，除了样式的修改，其中有一些由于GFW的原因，国内无法访问，替换内容如下
+      <description> Hugo框架 多个配置 hugo框架支持多个配置文件，可以部署到多个仓库中
+hugo --config=config-common.toml  Multiple config files and menu entries
+输出目录 默认输出目录为public/
+vim config.toml publishDir = &amp;quot;public&amp;quot;  Configure Hugo
+spf13.com主题 其中修改如下所示，除了样式的修改，其中有一些由于GFW的原因，国内无法访问，替换内容如下
  partials/head_includes.html中的fonts.googleapis.com修改为fonts.lug.ustc.edu.cn _default/single.html中的cdn.mathjax.org/mathjax/latest修改为cdn.bootcss.com/mathjax/2.7.2 添加评论功能，在config.toml中增加disqusShortname = &amp;ldquo;guanfuchen&amp;rdquo;即可，由于disqus网站需要FQ，日后考虑国内替换的评论网站  mathjax boot cdn
 googleapis被墙的解决办法
 Hugo静态网站生成器中文教程
