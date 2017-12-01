@@ -108,6 +108,17 @@
 
 <h1 id="privoxy代理">privoxy代理</h1>
 
+<h2 id="配置代理">配置代理</h2>
+
+<pre><code class="language-bash"># 注释listen-address  localhost:8118并在最后一行添加，这里1081是设置的另一个端口
+forward-socks5 / 127.0.0.1:1081 .
+listen-address 0.0.0.0:8118
+
+sudo service privoxy restart
+</code></pre>
+
+<p><a href="http://blog.liu6yi1.com/?p=86">Privoxy搭建代理映射</a></p>
+
 <h2 id="mac下安装privoxy">Mac下安装privoxy</h2>
 
 <p>brew install privoxy
@@ -241,7 +252,7 @@ ps aux  | grep privoxy
 
 </aside>
 
-<meta itemprop="wordCount" content="57">
+<meta itemprop="wordCount" content="72">
 <meta itemprop="datePublished" content="2017-10-25">
 <meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/shadowsocks%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
 

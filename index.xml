@@ -6,10 +6,43 @@
     <description>Recent content on import python</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Nov 2017 12:57:49 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 01 Dec 2017 13:54:31 +0800</lastBuildDate>
     
 	<atom:link href="https://guanfuchen.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Latex使用相关问题</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/latex%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Fri, 01 Dec 2017 13:54:31 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/latex%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
+      <description>相关资料 命令行下使用 # make latex file latex *.tex bibtex *.aux latex *.tex latex *.tex # clean latex file rm *.blg *.bbl *.aux *.log *.brf *.nlo *.out *.dvi *.ps *.lof *.toc *.fls *.fdb_latexmk *.pdfsync *.synctex*.gz *.ind *.ilg *.idx  命令行下使用 LaTeX
+BibTeX使用 [转载]BibTeX的使用方法
+LaTeX技巧23:BIBTeX制作参考文献 (2009-11-05 10:22:32)</description>
+    </item>
+    
+    <item>
+      <title>模型压缩相关资料</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/%E6%A8%A1%E5%9E%8B%E5%8E%8B%E7%BC%A9%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</link>
+      <pubDate>Fri, 01 Dec 2017 12:35:23 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/%E6%A8%A1%E5%9E%8B%E5%8E%8B%E7%BC%A9%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</guid>
+      <description> 综述 A Survey of Model Compression and Acceleration for Deep Neural Networks 综述文章
+相关博客 为了压榨CNN模型，这几年大家都干了什么
+Convolutional-Neural-Network-Compression-Survey
+相关论文 </description>
+    </item>
+    
+    <item>
+      <title>FLATTENED_CONVOLUTIONAL_NEURAL_NETWORKS_FOR_FEEDFORWARD_ACCELERATION论文阅读</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/flattened_convolutional_neural_networks_for_feedforward_acceleration%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
+      <pubDate>Fri, 01 Dec 2017 12:06:42 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/flattened_convolutional_neural_networks_for_feedforward_acceleration%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
+      <description>论文资料 Flattened Convolutional Neural Networks for Feedforward Acceleration
+相关描述 本文提出了对CNN网络卷积操作的改进增加网络前向推导速度。</description>
+    </item>
     
     <item>
       <title>Fully_Context Aware_Video_Prediction论文阅读</title>
@@ -922,10 +955,10 @@ import subprocess subprocess.call(&amp;quot;sleep.sh&amp;quot;, shell=True) # �
       <pubDate>Wed, 25 Oct 2017 22:39:11 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/shadowsocks%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
-      <description>privoxy代理 Mac下安装privoxy brew install privoxy 开机自启 启动privoxy
+      <description>privoxy代理 配置代理 # 注释listen-address localhost:8118并在最后一行添加，这里1081是设置的另一个端口 forward-socks5 / 127.0.0.1:1081 . listen-address 0.0.0.0:8118 sudo service privoxy restart  Privoxy搭建代理映射
+Mac下安装privoxy brew install privoxy 开机自启 启动privoxy
 /usr/local/Cellar/privoxy/3.0.26/sbin/privoxy /usr/local/etc/privoxy/config  修改LaunchAgents的文件，并执行下述命令自启
-sudo launchctl load /Library/LaunchAgents/local.privoxy.plist # 查看系统是否真正启动privoxy ps aux | grep privoxy  # vim /Library/LaunchAgents/local.privoxy.plist &amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt; &amp;lt;!DOCTYPE plist PUBLIC &amp;quot;-//Apple//DTD PLIST 1.0//EN&amp;quot; &amp;quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&amp;quot;&amp;gt; &amp;lt;plist version=&amp;quot;1.0&amp;quot;&amp;gt; &amp;lt;dict&amp;gt; &amp;lt;key&amp;gt;Label&amp;lt;/key&amp;gt; &amp;lt;string&amp;gt;local.arcueid.privoxy&amp;lt;/string&amp;gt; &amp;lt;key&amp;gt;ProgramArguments&amp;lt;/key&amp;gt; &amp;lt;array&amp;gt; &amp;lt;string&amp;gt;/usr/local/sbin/privoxy&amp;lt;/string&amp;gt; &amp;lt;string&amp;gt;--no-daemon&amp;lt;/string&amp;gt; &amp;lt;string&amp;gt;/usr/local/etc/privoxy/config&amp;lt;/string&amp;gt; &amp;lt;/array&amp;gt; &amp;lt;key&amp;gt;RunAtLoad&amp;lt;/key&amp;gt; &amp;lt;true/&amp;gt; &amp;lt;key&amp;gt;KeepAlive&amp;lt;/key&amp;gt; &amp;lt;true/&amp;gt; &amp;lt;key&amp;gt;StandardErrorPath&amp;lt;/key&amp;gt; &amp;lt;string&amp;gt;/usr/local/Cellar/privoxy/3.0.26/sbin/privoxy.log&amp;lt;/string&amp;gt; &amp;lt;key&amp;gt;StandardOutPath&amp;lt;/key&amp;gt; &amp;lt;string&amp;gt;/usr/local/Cellar/privoxy/3.0.26/sbin/privoxy.log&amp;lt;/string&amp;gt; &amp;lt;/dict&amp;gt; &amp;lt;/plist&amp;gt;  使用Privoxy做智能代理切换
-ubuntu使用shadowsocks</description>
+sudo launchctl load /Library/LaunchAgents/local.privoxy.plist # 查看系统是否真正启动privoxy ps aux | grep privoxy  # vim /Library/LaunchAgents/local.privoxy.plist &amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt; &amp;lt;!DOCTYPE plist PUBLIC &amp;quot;-//Apple//DTD PLIST 1.0//EN&amp;quot; &amp;quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&amp;quot;&amp;gt; &amp;lt;plist version=&amp;quot;1.0&amp;quot;&amp;gt; &amp;lt;dict&amp;gt; &amp;lt;key&amp;gt;Label&amp;lt;/key&amp;gt; &amp;lt;string&amp;gt;local.arcueid.privoxy&amp;lt;/string&amp;gt; &amp;lt;key&amp;gt;ProgramArguments&amp;lt;/key&amp;gt; &amp;lt;array&amp;gt; &amp;lt;string&amp;gt;/usr/local/sbin/privoxy&amp;lt;/string&amp;gt; &amp;lt;string&amp;gt;--no-daemon&amp;lt;/string&amp;gt; &amp;lt;string&amp;gt;/usr/local/etc/privoxy/config&amp;lt;/string&amp;gt; &amp;lt;/array&amp;gt; &amp;lt;key&amp;gt;RunAtLoad&amp;lt;/key&amp;gt; &amp;lt;true/&amp;gt; &amp;lt;key&amp;gt;KeepAlive&amp;lt;/key&amp;gt; &amp;lt;true/&amp;gt; &amp;lt;key&amp;gt;StandardErrorPath&amp;lt;/key&amp;gt; &amp;lt;string&amp;gt;/usr/local/Cellar/privoxy/3.0.26/sbin/privoxy.log&amp;lt;/string&amp;gt; &amp;lt;key&amp;gt;StandardOutPath&amp;lt;/key&amp;gt; &amp;lt;string&amp;gt;/usr/local/Cellar/privoxy/3.</description>
     </item>
     
     <item>
