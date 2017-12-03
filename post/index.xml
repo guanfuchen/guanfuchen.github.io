@@ -6,10 +6,35 @@
     <description>Recent content in Posts on import python</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 Dec 2017 13:54:31 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 03 Dec 2017 13:33:26 +0800</lastBuildDate>
     
 	<atom:link href="https://guanfuchen.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>爬虫使用相关问题</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/%E7%88%AC%E8%99%AB%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Sun, 03 Dec 2017 13:33:26 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/%E7%88%AC%E8%99%AB%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
+      <description>伪装浏览器 from fake_useragent import UserAgent import requests ua = UserAgent() print(ua.chrome) header = {&#39;User-Agent&#39;:str(ua.chrome)} print(header) url = &amp;quot;https://www.hybrid-analysis.com/recent-submissions?filter=file&amp;amp;sort=^timestamp&amp;quot; htmlContent = requests.get(url, headers=header) print(htmlContent)  fake-useragent
+Requests.get in Python using “User-Agent” not simulating a browser request
+How to use Python requests to fake a browser visit?
+bs4使用技巧 bs4查询对象 How to find tags with only certain attributes - BeautifulSoup
+BeautifulSoup ：一些常用功能的使用和测试
+How to find elements by class Ask Question
+获取href BeautifulSoup getting href [duplicate] Ask</description>
+    </item>
+    
+    <item>
+      <title>Zsh使用相关问题</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/zsh%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Sat, 02 Dec 2017 13:14:20 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/zsh%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
+      <description>相关资料 oh-my-zsh
+更新Zsh upgrade_oh_my_zsh  How do I update zsh to the latest version?</description>
+    </item>
     
     <item>
       <title>Latex使用相关问题</title>
@@ -1050,7 +1075,9 @@ Swagger：Rest API的描述语言</description>
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/ssh%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>ssh相关key ~.终止openssh，对于未响应的ssh关闭连接 ~?显示当前连接ssh的信息  ssh文件传输 rsync断点续传 rsync -rP --rsh=ssh root@114.115.142.49:~/Data2.zip ~/Data/SegmPred/  Linux rsync实现断点续传
 ssh反向代理 局域网内没有固定IP无法直接被外网访问，使用一个有固定IP地址的外网服务器作为中转站从而进行反向代理，这里假设Local为局域网内电脑，Global为外网电脑，Client为客户电脑，Client&amp;mdash;-&amp;gt;Local转换为Client&amp;mdash;-&amp;gt;Global&amp;mdash;-&amp;gt;Local，首先在Global中配置代理的两个端口
-# Global将9001转换为9000 ssh -fCNL &#39;*:9001:localhost:9000&#39; localhost # Local将9000转换为本地的22端口 ssh -fCNR 9000:localhost:22 user_global@ip_global # Client访问Local ssh -p 9001 user_client@ip_global  从外网 SSH 进局域网，反向代理+正向代理解决方案</description>
+# Global将9001转换为9000 ssh -fCNL &#39;*:9001:localhost:9000&#39; localhost # Local将9000转换为本地的22端口 ssh -fCNR 9000:localhost:22 user_global@ip_global # Client访问Local ssh -p 9001 user_client@ip_global  从外网 SSH 进局域网，反向代理+正向代理解决方案
+http反向代理 tcprp 首先编译客户端和服务端
+cd client go build ./client 127.0.0.1:8080 example.com:9000 KEYKEY cd server go build ./server :9001 :9000 KEYKEY 访问example.com:80即可  非常好用的tcp反向代理，将本地端口反向到远程服务器上的监听端口，远程端口在转发监听端口到转发端口，直接查看转发端口即可。</description>
     </item>
     
     <item>

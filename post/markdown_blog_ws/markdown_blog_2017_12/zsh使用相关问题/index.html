@@ -15,16 +15,16 @@
  
 <meta property="og:type" content="article"/>
 <meta property="og:description" content=""/>
-<meta property="og:title" content="Ssh使用相关问题 : spf13.com"/>
+<meta property="og:title" content="Zsh使用相关问题 : spf13.com"/>
 <meta property="og:site_name" content="spf13 is Steve Francia"/>
 <meta property="og:image" content="" />
 <meta property="og:image:type" content="image/jpeg" />
 <meta property="og:image:width" content="" />
 <meta property="og:image:height" content="" />
-<meta property="og:url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/ssh%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
+<meta property="og:url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/zsh%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2017-10-25"/>
-<meta property="article:modified_time" content="2017-10-25"/>
+<meta property="article:published_time" content="2017-12-02"/>
+<meta property="article:modified_time" content="2017-12-02"/>
 
 
 
@@ -33,7 +33,7 @@
 <meta name="twitter:card" content="summary">
 
 <meta name="twitter:site" content="@spf13">
-<meta name="twitter:title" content="Ssh使用相关问题 : spf13.com">
+<meta name="twitter:title" content="Zsh使用相关问题 : spf13.com">
 <meta name="twitter:creator" content="@spf13">
 <meta name="twitter:description" content="">
 <meta name="twitter:image:src" content="">
@@ -42,8 +42,8 @@
 
 
     <base href="https://guanfuchen.github.io">
-    <title> Ssh使用相关问题 - spf13.com </title>
-    <link rel="canonical" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/ssh%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
+    <title> Zsh使用相关问题 - spf13.com </title>
+    <link rel="canonical" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/zsh%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
     
 
     <link href='https://fonts.lug.ustc.edu.cn/css?family=Fjalla+One|Open+Sans:300' rel='stylesheet' type='text/css'>
@@ -99,62 +99,23 @@
 
 
 <section id="main">
-  <h1 itemprop="name" id="title">Ssh使用相关问题</h1>
+  <h1 itemprop="name" id="title">Zsh使用相关问题</h1>
   <div>
         <article itemprop="articleBody" id="content">
            
 
 <hr />
 
-<h1 id="ssh相关key">ssh相关key</h1>
+<h1 id="相关资料">相关资料</h1>
 
-<pre><code class="language-bash">~.终止openssh，对于未响应的ssh关闭连接
-~?显示当前连接ssh的信息
+<p><a href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh</a></p>
+
+<h2 id="更新zsh">更新Zsh</h2>
+
+<pre><code class="language-bash">upgrade_oh_my_zsh
 </code></pre>
 
-<hr />
-
-<h1 id="ssh文件传输">ssh文件传输</h1>
-
-<h2 id="rsync断点续传">rsync断点续传</h2>
-
-<pre><code class="language-bash">rsync -rP --rsh=ssh root@114.115.142.49:~/Data2.zip ~/Data/SegmPred/
-</code></pre>
-
-<p><a href="http://www.cnblogs.com/jyzhao/p/3809095.html">Linux rsync实现断点续传</a></p>
-
-<hr />
-
-<h1 id="ssh反向代理">ssh反向代理</h1>
-
-<p>局域网内没有固定IP无法直接被外网访问，使用一个有固定IP地址的外网服务器作为中转站从而进行反向代理，这里假设Local为局域网内电脑，Global为外网电脑，Client为客户电脑，Client&mdash;-&gt;Local转换为Client&mdash;-&gt;Global&mdash;-&gt;Local，首先在Global中配置代理的两个端口</p>
-
-<pre><code class="language-bash"># Global将9001转换为9000
-ssh -fCNL '*:9001:localhost:9000' localhost
-# Local将9000转换为本地的22端口
-ssh -fCNR 9000:localhost:22 user_global@ip_global
-# Client访问Local
-ssh -p 9001 user_client@ip_global
-</code></pre>
-
-<p><a href="https://segmentfault.com/a/1190000002718360">从外网 SSH 进局域网，反向代理+正向代理解决方案</a></p>
-
-<hr />
-
-<h1 id="http反向代理">http反向代理</h1>
-
-<p><a href="https://github.com/iovxw/tcprp">tcprp</a> 首先编译客户端和服务端</p>
-
-<pre><code class="language-bash">cd client
-go build
-./client 127.0.0.1:8080 example.com:9000 KEYKEY
-cd server
-go build
-./server :9001 :9000 KEYKEY
-访问example.com:80即可
-</code></pre>
-
-<p>非常好用的tcp反向代理，将本地端口反向到远程服务器上的监听端口，远程端口在转发监听端口到转发端口，直接查看转发端口即可。</p>
+<p><a href="https://stackoverflow.com/questions/17648621/how-do-i-update-zsh-to-the-latest-version">How do I update zsh to the latest version?</a></p>
 
         </article>
   </div>
@@ -166,7 +127,7 @@ go build
 
     <div>
         <section id="datecount">
-          <h4 id="date"> Wed Oct 25, 2017 </h4>
+          <h4 id="date"> Sat Dec 2, 2017 </h4>
           <h5 id="wc"> 100 Words </h5>
           <h5 id="readtime"> Read in about 1 Min </h5>
         </section>
@@ -180,10 +141,10 @@ go build
 
     <div>
         <section id="prev">
-            &nbsp;<a class="previous" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/api%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/"><i class="icon-arrow-left"></i> Api使用相关问题</a><br>
+            &nbsp;<a class="previous" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/%E7%88%AC%E8%99%AB%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/"><i class="icon-arrow-left"></i> 爬虫使用相关问题</a><br>
         </section>
         <section id="next">
-            &nbsp;<a class="next" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/mac%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">Mac使用相关问题 <i class="icon-arrow-right"></i></a>
+            &nbsp;<a class="next" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/latex%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">Latex使用相关问题 <i class="icon-arrow-right"></i></a>
         </section>
     </div>
 
@@ -244,9 +205,9 @@ go build
 
 </aside>
 
-<meta itemprop="wordCount" content="56">
-<meta itemprop="datePublished" content="2017-10-25">
-<meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/ssh%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
+<meta itemprop="wordCount" content="13">
+<meta itemprop="datePublished" content="2017-12-02">
+<meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/zsh%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
 
 
 <aside id=comments>
