@@ -6,10 +6,20 @@
     <description>Recent content in Posts on import python</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 05 Dec 2017 20:44:29 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 08 Dec 2017 20:15:55 +0800</lastBuildDate>
     
 	<atom:link href="https://guanfuchen.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Prediction_Under_Uncertainty_with_Error Encoding_Networks论文阅读</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/prediction_under_uncertainty_with_error-encoding_networks%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
+      <pubDate>Fri, 08 Dec 2017 20:15:55 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/prediction_under_uncertainty_with_error-encoding_networks%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
+      <description>论文资料 Prediction Under Uncertainty with Error-Encoding Networks EEN代码 项目主页
+博客资料 LeCun提出错误编码网络，可在不确定环境中执行时间预测</description>
+    </item>
     
     <item>
       <title>Dynamic_Filter_Networks论文阅读</title>
@@ -211,6 +221,8 @@ tensorboard相关说明 tensorboard中的数据可以下载，启动左侧的下
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/convolutional_lstm_network_a_machine_learning_approach_for_precipitation_nowcasting%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
       <description> 论文资料 Convolutional LSTM Network: A Machine Learning Approach for Precipitation Nowcasting 论文 代码 代码torch
 20160629-Convolutional LSTM Network: A Machine Learning Approach for Precipitation Nowcasting 这是其他人对该篇论文的简要解读，思路较为清除。
+作者Xingjian Shi (施行健)
+VALSE20160323-Panel-WanfGangNTU_ShiXingjianHKUST_ShiBaoguangHUST.mp4 施行健在VALSE上的演讲内容
 博客资料 Convolutional LSTM keras对Conv LSTM相关的讨论
 conv_lstm.py keras上对Conv LSTM相关实现例子
 相关代码 Convolutional-LSTM-in-Tensorflow 其中提供了ConvLSTM网络的实现结构，同时包括了改进的ConvLSTM网络结构
@@ -480,6 +492,7 @@ Semantic Segmentation for Aerial / Satellite Images with Convolutional Neural Ne
       <description>valse 这是国内华人组织的青年学者计算机视觉领域的研讨会，2014年至今，其中有大量国内计算机视觉大牛分享的报告资源。
 slides
 videos
+AI Conference Deadlines AI Conference Deadlines
 计算机视觉相关同行  赵恒爽 The Chinese University of Hong Kong(CUHK)博士生，从PSPNet网络检索到，同时在valse中有他分享的视频资源，主要讲解PSPNet和CINet。valse 赵恒爽分享  视频 Andrew Rabinovich - Then, Now, Tomorrow: Neural Networks for Computer Vision 这是UberNet的作者对神经网络在当时，现在，将来的一个oral，其中主要介绍了将来会将不同的task结合训练，也就是所谓的Multi Task Learning。
 Deep Learning for Computer Vision Andrej Karpathy对深度学习的发展做了一个简单的介绍，从Hubel到LeCun到AlexNet到VGGNet到GoogleNet到ResNet等等，同时也提到了卷积、池化de等等
 Recurrent Neural Networks (RNN) and Long Short-Term Memory (LSTM) 通过一个例子将LSTM的原理深入浅出得讲解，从RNN开始，然后引入select gates，ignore gates和forget gates到最后的LSTM网络。
@@ -940,14 +953,17 @@ web permissions &amp;quot;webRequest&amp;quot;, &amp;quot;webRequestBlocking&amp
       <pubDate>Thu, 26 Oct 2017 23:48:08 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/python%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
-      <description>feed更新 使用feedparser解析feed
+      <description>python导入 测试代码尽量在上层目录中
+Python绝对导入
+How to fix “Attempted relative import in non-package” even with init.py
+How to fix “Attempted relative import in non-package” even with init.py
+Python 的 import 机制
+结构化您的工程
+feed更新 使用feedparser解析feed
 import feedparser feed_url = &amp;quot;http://export.arxiv.org/rss/cs.CV&amp;quot; feed_class = feedparser.parse(feed_url) print feed_class[&#39;feed&#39;][&#39;title&#39;] print len(feed_class[&#39;entries&#39;]) entry0 = feed_class[&#39;entries&#39;][0] # print(entry0.summary) print(entry0.title) # print(entry0.author) entry0.keys() entry0.title  feedparser
 showing list item in python
 Newsbeuter Newsbeuter是ubuntu下的一款feed阅读器，下述命令可以定时刷新feed，设置存储路径，阅览的文章可以存储在本地，默认存储路径为~，设置存储路径为~/GitHub/Quick/newsbeuter，首先在命令行中输入:set save-path ~/GitHub/Quick/newsbeuter，然后按下s即可存储文章。
-crontab -e /usr/bin/newsbeuter -x reload ls ~/.config/newsbeuter/ ls ~/.local/share/newsbeuter  Newsbeuter定时加载
-The Newsbeuter RSS Feedreader
-python执行外部脚本文件 Running bash script from within python
-import subprocess subprocess.call(&amp;quot;sleep.sh&amp;quot;, shell=True) # 其中存在permission问题，需要设置脚本权限chmod 755 sleep.sh  Permission denied when launch python script via bash</description>
+crontab -e /usr/bin/newsbeuter -x reload ls ~/.</description>
     </item>
     
     <item>
