@@ -6,10 +6,20 @@
     <description>Recent content on import python</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Dec 2017 20:15:55 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 10 Dec 2017 00:35:43 +0800</lastBuildDate>
     
 	<atom:link href="https://guanfuchen.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mac使用相关说明</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/mac%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E8%AF%B4%E6%98%8E/</link>
+      <pubDate>Sun, 10 Dec 2017 00:35:43 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/mac%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E8%AF%B4%E6%98%8E/</guid>
+      <description>扩展屏幕 将ipad作为mac的第二个屏幕
+Duet Display将ipad设定为扩展屏幕</description>
+    </item>
     
     <item>
       <title>Prediction_Under_Uncertainty_with_Error Encoding_Networks论文阅读</title>
@@ -352,7 +362,9 @@ torch 读取command参数 local cmd = torch.CmdLine() cmd:option(&#39;-usegpu&#3
       <pubDate>Tue, 14 Nov 2017 23:24:13 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/jupyter%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
-      <description>jupyter notebook # 开启jupyter notebook jupyter notebook # 显示notebook列表 jupyter notebook list  How to close IPython Notebook properly?
+      <description>jupyterlab使用 jupyterlab更加强大，可以实时显示markdown，同时有文件窗口
+# 安装如下 pip install jupyterlab jupyter serverextension enable --py jupyterlab --sys-prefix # 使用方法 jupyter lab  jupyterlab
+jupyter notebook # 开启jupyter notebook jupyter notebook # 显示notebook列表 jupyter notebook list  How to close IPython Notebook properly?
 How to stop the iPython notebook to run the command line, run only python code
 jupyter matlab接口 cd /usr/local/MATLAB/R2015b/extern/engines/python sudo python setup.py install sudo pip install jupyter sudo pip install numpy sudo pip install zmq sudo pip install metakernel sudo pip install pymatbridge sudo pip install matlab_kernel sudo python -m matlab_kernel install  MATLAB-BASED IPYTHON NOTEBOOKS</description>
     </item>
