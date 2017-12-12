@@ -163,7 +163,7 @@ Fire Detection with Computer Vision</description>
       <pubDate>Sun, 26 Nov 2017 20:10:18 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E7%BD%91%E7%BB%9C%E5%8E%8B%E7%BC%A9%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</guid>
-      <description> 相关论文  EIE: Efficient Inference Engine on Compressed Deep Neural Network 论文 代码 将AlexNet网络大小从233MB减少到了8.9MB  </description>
+      <description>相关论文  EIE: Efficient Inference Engine on Compressed Deep Neural Network 论文 代码 将AlexNet网络大小从233MB减少到了8.9MB  网络参数大小 convnet-burden 包含了主流模型的参数大小</description>
     </item>
     
     <item>
@@ -236,6 +236,7 @@ VALSE20160323-Panel-WanfGangNTU_ShiXingjianHKUST_ShiBaoguangHUST.mp4 施行健�
 博客资料 Convolutional LSTM keras对Conv LSTM相关的讨论
 conv_lstm.py keras上对Conv LSTM相关实现例子
 相关代码 Convolutional-LSTM-in-Tensorflow 其中提供了ConvLSTM网络的实现结构，同时包括了改进的ConvLSTM网络结构
+lstms.py 提供了convlstm的相关代码
 网络结构 经典LSTM网络结构 经典LSTM的公式 预测云图的Conv LSTM结构 Conv LSTM网络结构的内部结构 Conv LSTM的公式 </description>
     </item>
     
@@ -457,7 +458,8 @@ AdversarialNetsPapers 这是github上搜集的关于对抗生成网络相关论�
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/deep_predictive_coding_networks_for_video_prediction_and_unsupervised_learning%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
       <description> 论文资料 Deep Predictive Coding Networks for Video Prediction and Unsupervised Learning 论文 代码 torch-prednet torch prednet是e-lab实验室重新实现的一个预测网络 prednet_comment代码注释 该代码中为其他研究人员的相关注释。
 代码运行示例，下面是在Caltech Pedestrian数据集上运行的下一帧预测结果，该模型在KITTI数据集中训练。 代码实现 torch-prednet
-# 训练相关 th main.lua --batch 1 --nlayers 3 -s --savedir results --dataDir dataSets --dataName data-small # 测试相关 qlua main.lua --model results --dataDir dataSets --dataName data-small --visOnly --useGPU  论文资料 PredNet阅读笔记——从视频预测的角度学习视频表征
+# 训练相关 th main.lua --batch 1 --nlayers 3 -s --savedir results --dataDir dataSets --dataName data-small # 测试相关 qlua main.lua --model results --dataDir dataSets --dataName data-small --visOnly --useGPU  pytorch-prednet
+论文资料 PredNet阅读笔记——从视频预测的角度学习视频表征
 相关描述 实验证明，PredNet在视频预测任务表现一般，预测时间短且不够清晰；但在学习视频表征方面表现突出，可以提取物体动态特征，将这些特征用于分类器、参数估算等任务，相比于从静态图像中提取的特征，物体识别准确度会提高。
 基本架构 </description>
     </item>
