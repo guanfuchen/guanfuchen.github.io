@@ -3,6 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/nips%E8%B5%84%E6%96%99%E6%95%B4%E7%90%86/</loc>
+    <lastmod>2017-12-15T11:54:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/efficient_convnet_for_real-time_semantic_segmentation%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</loc>
+    <lastmod>2017-12-15T11:50:05+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/one-shot_video_object_segmentation%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</loc>
+    <lastmod>2017-12-14T10:38:23+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/%E7%BD%91%E7%BB%9Closs%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</loc>
+    <lastmod>2017-12-12T22:54:20+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/mac%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E8%AF%B4%E6%98%8E/</loc>
     <lastmod>2017-12-10T00:35:43+08:00</lastmod>
   </url>
@@ -469,7 +489,7 @@
   
   <url>
     <loc>https://guanfuchen.github.io/post/</loc>
-    <lastmod>2017-12-10T00:35:43+08:00</lastmod>
+    <lastmod>2017-12-15T11:54:21+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -480,7 +500,7 @@
   
   <url>
     <loc>https://guanfuchen.github.io/</loc>
-    <lastmod>2017-12-10T00:35:43+08:00</lastmod>
+    <lastmod>2017-12-15T11:54:21+08:00</lastmod>
     <priority>0</priority>
   </url>
   

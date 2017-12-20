@@ -6,10 +6,55 @@
     <description>Recent content in Posts on import python</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 10 Dec 2017 00:35:43 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 15 Dec 2017 11:54:21 +0800</lastBuildDate>
     
 	<atom:link href="https://guanfuchen.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>NIPS资料整理</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/nips%E8%B5%84%E6%96%99%E6%95%B4%E7%90%86/</link>
+      <pubDate>Fri, 15 Dec 2017 11:54:21 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/nips%E8%B5%84%E6%96%99%E6%95%B4%E7%90%86/</guid>
+      <description>NIPS2017 收集NIPS 2017相关文章
+nips_2017</description>
+    </item>
+    
+    <item>
+      <title>Efficient_ConvNet_for_Real Time_Semantic_Segmentation论文阅读</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/efficient_convnet_for_real-time_semantic_segmentation%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
+      <pubDate>Fri, 15 Dec 2017 11:50:05 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/efficient_convnet_for_real-time_semantic_segmentation%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
+      <description>论文资料 ERFNet: Efficient Residual Factorized ConvNet for Real-time Semantic Segmentation
+Efficient ConvNet for Real-time Semantic Segmentation
+代码运行 erfnet
+erfnet_pytorch
+相关描述 这些文章关注点在语义分割实时性上。</description>
+    </item>
+    
+    <item>
+      <title>One Shot_Video_Object_Segmentation论文阅读</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/one-shot_video_object_segmentation%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
+      <pubDate>Thu, 14 Dec 2017 10:38:23 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/one-shot_video_object_segmentation%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
+      <description>论文资料 One-Shot Video Object Segmentation(OSVOS) 论文 OSVOS-caffe OSVOS-TensorFlow 项目主页
+博客资料 One-Shot Video Object Segmentation论文笔记
+相关描述 本文任务为从视频中的第一帧mask分割将来帧的物体。</description>
+    </item>
+    
+    <item>
+      <title>网络loss相关资料</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/%E7%BD%91%E7%BB%9Closs%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</link>
+      <pubDate>Tue, 12 Dec 2017 22:54:20 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/%E7%BD%91%E7%BB%9Closs%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</guid>
+      <description>博客资料 pytorch loss function 总结
+相关描述 分类模型使用cross-entropy而不是classifier error的原因是，分类模型用cross-entropy。这里使用一个例子来解释cross-entropy在分类模型中的优势。
+分类模型的 Loss 为什么使用 cross entropy 而不是 classification error 或 squared error</description>
+    </item>
     
     <item>
       <title>Mac使用相关说明</title>
@@ -507,10 +552,11 @@ Semantic Segmentation for Aerial / Satellite Images with Convolutional Neural Ne
 slides
 videos
 AI Conference Deadlines AI Conference Deadlines
-计算机视觉相关同行  赵恒爽 The Chinese University of Hong Kong(CUHK)博士生，从PSPNet网络检索到，同时在valse中有他分享的视频资源，主要讲解PSPNet和CINet。valse 赵恒爽分享  视频 Andrew Rabinovich - Then, Now, Tomorrow: Neural Networks for Computer Vision 这是UberNet的作者对神经网络在当时，现在，将来的一个oral，其中主要介绍了将来会将不同的task结合训练，也就是所谓的Multi Task Learning。
+计算机视觉相关同行  赵恒爽 The Chinese University of Hong Kong(CUHK)博士生，从PSPNet网络检索到，同时在valse中有他分享的视频资源，主要讲解PSPNet和CINet。valse 赵恒爽分享  Computer Vision领域相关资料 [Computer Vision Literature Review]()https://github.com/jinwchoi/computer_vision_literature_review
+视频 Andrew Rabinovich - Then, Now, Tomorrow: Neural Networks for Computer Vision 这是UberNet的作者对神经网络在当时，现在，将来的一个oral，其中主要介绍了将来会将不同的task结合训练，也就是所谓的Multi Task Learning。
 Deep Learning for Computer Vision Andrej Karpathy对深度学习的发展做了一个简单的介绍，从Hubel到LeCun到AlexNet到VGGNet到GoogleNet到ResNet等等，同时也提到了卷积、池化de等等
 Recurrent Neural Networks (RNN) and Long Short-Term Memory (LSTM) 通过一个例子将LSTM的原理深入浅出得讲解，从RNN开始，然后引入select gates，ignore gates和forget gates到最后的LSTM网络。
-CS231n Lecture 10 - Recurrent Neural Networks, Image Captioning, LSTM Andrej在cs231n上的课，比较浅显，其中有继续研究意义的比如给出的rnn_mnist可以下载阅读。 min-char-rnn.py</description>
+CS231n Lecture 10 - Recurrent Neural Networks, Image Captioning, LSTM Andrej在cs231n上的课，比较浅显，其中有继续研究意义的比如给出的rnn_mnist可以下载阅读。 min-char-rnn.</description>
     </item>
     
     <item>
@@ -823,6 +869,8 @@ THE 20BN-SOMETHING-SOMETHING DATASET 人和物交互视频数据集
 twentybn-dl 数据集下载脚本
 Push Dataset 机械臂操作视频
 Push Dataset
+DAVIS davis-2017
+DAVIS Challenge on Video Object Segmentation 2017
 语义分割数据集 Datasets for ADAS
 语义分割常用数据集
 各领域公开数据集下载
@@ -1070,6 +1118,7 @@ atom设置代理 # 设置socks5代理 apm config set http-proxy socks5:127.0.0.1
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/pytorch%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>pytorch安装 Ubuntu下安装 pip install http://download.pytorch.org/whl/cu75/torch-0.2.0.post3-cp27-cp27mu-manylinux1_x86_64.whl pip install torchvision  Ubuntu 17.04 安装 pytorch and pytorchvision
 pytorch教程 PyTorchZeroToAll
+Awesome-pytorch-list 这是pytorch-list的awesome系统，其中的资料可以参考学习一下
 pytorch示例程序 使用官网提供的示例程序来对pytorch进行一个初步大致的了解，对常用深度学习的框架进行一个初步的学习。 目前学习pytorch主要是通过示例程序以及莫烦PYTHON中pytorch的视频教程。
 examples pytorch github
 pytorch官网
