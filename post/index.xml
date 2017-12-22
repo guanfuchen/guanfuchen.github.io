@@ -574,6 +574,7 @@ ResNet之Deeper Bottleneck Architectures
 残差网络ResNet笔记
 Deep Residual Network 深度残差网络
 残差resnet网络原理详解
+Deep Residual Networks学习(一)
 网络架构 ResNet核心架构Bottleneck Architecture
 ResNet网络各个层次的主要框架
 Bottleneck的基本结构
@@ -610,7 +611,8 @@ PSPNet caffe
 代码实现 ENet-caffe
 ENet pytorch model.py
 ENet-training torch
-ENet-caffe运行相关 # 测试分割结果 python scripts/test_segmentation.py --model prototxts/enet_deploy_final.prototxt --weights enet_weights_zoo/cityscapes_weights.caffemodel --colours scripts/cityscapes19.png --input_image example_image/munich_000000_000019_leftImg8bit.png --out_dir example_image/  测试结果</description>
+ENet-caffe运行相关 # 测试分割结果 python scripts/test_segmentation.py --model prototxts/enet_deploy_final.prototxt --weights enet_weights_zoo/cityscapes_weights.caffemodel --colours scripts/cityscapes19.png --input_image example_image/munich_000000_000019_leftImg8bit.png --out_dir example_image/  测试结果
+相关描述 ENet网络运行速度较快，在I5处理器上每帧运行时间为2s左右，在Titan X上可以达到实时分割的效果。</description>
     </item>
     
     <item>
@@ -1142,7 +1144,7 @@ pytorchvision使用相关 pytorchvision是torch中用来简化对image的相关�
 超简单！pytorch入门教程（四）：准备图片数据集
 超简单！pytorch入门教程（五）：训练和测试CNN
 tensorboard-pytorch pip install tensorboardX  tensorboard-pytorch
-常用模型 vgg模型 一些将VGG16和VGG19的caffe模型权值转换为pytorch，该模型需要预先下载模型vgg16-00b39a1b.pth和vgg19-d01eb7cb.pth 注意点：该模型使用过程不同于pytorch model zoo中的其他模型，图像格式为BGR格式，范围为[0, 255]，并且需要减去[103.</description>
+常用模型 pretrained-models.pytorch 这个仓库包含了大量预先训练的pytorhc模型。</description>
     </item>
     
     <item>

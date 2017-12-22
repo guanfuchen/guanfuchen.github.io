@@ -191,6 +191,8 @@ pip install torchvision
 
 <h1 id="常用模型">常用模型</h1>
 
+<p><a href="https://github.com/Cadene/pretrained-models.pytorch">pretrained-models.pytorch</a> 这个仓库包含了大量预先训练的pytorhc模型。</p>
+
 <h2 id="vgg模型">vgg模型</h2>
 
 <p>一些将VGG16和VGG19的caffe模型权值转换为pytorch，该模型需要预先下载模型<a href="https://s3-us-west-2.amazonaws.com/jcjohns-models/vgg16-00b39a1b.pth">vgg16-00b39a1b.pth</a>和<a href="https://s3-us-west-2.amazonaws.com/jcjohns-models/vgg19-d01eb7cb.pth">vgg19-d01eb7cb.pth</a>
@@ -200,6 +202,23 @@ pip install torchvision
 <h2 id="piwise">piwise</h2>
 
 <p><a href="https://github.com/bodokaiser/piwise">piwise</a></p>
+
+<hr />
+
+<h1 id="常用函数">常用函数</h1>
+
+<h2 id="pixelshuffle">PixelShuffle</h2>
+
+<p>将(B, (C*r^2), H, W)转换为(B, C, H*r, W*r)</p>
+
+<pre><code class="language-python">&gt;&gt;&gt; ps = nn.PixelShuffle(3)
+&gt;&gt;&gt; input = autograd.Variable(torch.Tensor(1, 9, 4, 4))
+&gt;&gt;&gt; output = ps(input)
+&gt;&gt;&gt; print(output.size())
+torch.Size([1, 1, 12, 12])
+</code></pre>
+
+<p><a href="https://github.com/pytorch/pytorch/blob/master/torch/nn/modules/pixelshuffle.py">pixelshuffle.py</a></p>
 
         </article>
   </div>
@@ -212,7 +231,7 @@ pip install torchvision
     <div>
         <section id="datecount">
           <h4 id="date"> Wed Oct 25, 2017 </h4>
-          <h5 id="wc"> 100 Words </h5>
+          <h5 id="wc"> 200 Words </h5>
           <h5 id="readtime"> Read in about 1 Min </h5>
         </section>
         <ul id="categories">
@@ -289,7 +308,7 @@ pip install torchvision
 
 </aside>
 
-<meta itemprop="wordCount" content="76">
+<meta itemprop="wordCount" content="109">
 <meta itemprop="datePublished" content="2017-10-25">
 <meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/pytorch%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
 
