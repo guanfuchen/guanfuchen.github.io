@@ -6,10 +6,21 @@
     <description>Recent content on import python</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 15 Dec 2017 11:54:21 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 27 Dec 2017 17:16:59 +0800</lastBuildDate>
     
 	<atom:link href="https://guanfuchen.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>微信开发相关内容</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9/</link>
+      <pubDate>Wed, 27 Dec 2017 17:16:59 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9/</guid>
+      <description>调用接口查看 接口调用频次限制说明
+接口权限
+WeRoBot.Client —— 微信 API 操作类</description>
+    </item>
     
     <item>
       <title>NIPS资料整理</title>
@@ -480,7 +491,7 @@ DEEP PREDICTIVE CODING NETWORKS FOR VIDEO PREDICTION AND UNSUPERVISED LEARNING �
 MoCoGAN: Decomposing Motion and Content for Video Generation
 从论文Generating Videos with Scene Dynamics跟踪到，该论文中提到的论文都可以好好研究，与视频预测相关。
 e-lab references 这是e-lab实验室对相关研究的文章收集，可以作为无监督学习预测视频的参考。
- Unsupervised Learning of Video Representations using LSTMs 代码 Learning to Generate Long-term Future via Hierarchical Prediction 项目主页 代码 Parallel multi-dimensional LSTM, with application to fast biomedical volumetric image segmentation 论文 和ConvLSTM一样拓展了FCLSTM从而捕捉了空间-时间关系。  相关IDEA  能否使用安卓的视频数据+传感器数据来进行数据集的收集，并且同时进行视频预测和语义分割。 能使用视频预测技术对NBA篮球的动作进行预测   相关开源项目  e-lab e-lab实验室中实现了很多视频预测的模型，大部分使用torch或者pytorch。Welcome to e-Lab!</description>
+ Unsupervised Learning of Video Representations using LSTMs 代码 Learning to Generate Long-term Future via Hierarchical Prediction 项目主页 代码 Parallel multi-dimensional LSTM, with application to fast biomedical volumetric image segmentation 论文 和ConvLSTM一样拓展了FCLSTM从而捕捉了空间-时间关系。 Decomposing Motion and Content for Natural Video Sequence Prediction 主页 代码 Learning to linearize under uncertainty Action-conditional video prediction using deep networks in atari games Unsupervised learning of visual structure using predictive generative networks Two-stream convolutional networks for action recognition in videos 双流视频预测 Convolutional Two-Stream Network Fusion for Video Action Recognition 主页 代码 双流视频预测，同时编码空间和时间信息（光流） TS-LSTM and Temporal-Inception: Exploiting Spatiotemporal Dynamics for Activity Recognition Long-term Temporal Convolutions for Action Recognition 论文 主页 代码  相关IDEA  能否使用安卓的视频数据+传感器数据来进行数据集的收集，并且同时进行视频预测和语义分割。 能使用视频预测技术对NBA篮球的动作进行预测   相关开源项目  e-lab e-lab实验室中实现了很多视频预测的模型，大部分使用torch或者pytorch。Welcome to e-Lab!</description>
     </item>
     
     <item>
@@ -608,6 +619,7 @@ PSPNet caffe
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/enet%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
       <description>论文资料 ENet: A Deep Neural Network Architecture for Real-Time Semantic Segmentation
+博客资料 【CV-Semantic Segmentation】ENet阅读笔记 简单描述整体论文内容，推荐指数**
 代码实现 ENet-caffe
 ENet pytorch model.py
 ENet-training torch

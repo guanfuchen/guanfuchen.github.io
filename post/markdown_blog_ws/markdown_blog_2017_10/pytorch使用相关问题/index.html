@@ -220,6 +220,20 @@ torch.Size([1, 1, 12, 12])
 
 <p><a href="https://github.com/pytorch/pytorch/blob/master/torch/nn/modules/pixelshuffle.py">pixelshuffle.py</a></p>
 
+<hr />
+
+<h2 id="torch-utils-model-zoo">torch.utils.model_zoo</h2>
+
+<p>加载model_zoo</p>
+
+<p><a href="http://pytorch.org/docs/master/model_zoo.html">torch.utils.model_zoo</a></p>
+
+<pre><code class="language-python"># 文件名为filename-&lt;sha256&gt;.ext结构，其中sha256是sha256 hash值的前八个值
+# sha256sum resnet18-5c106cde.pth
+# 5c106cde386e87d4033832f2996f5493238eda96ccf559d1d62760c4de0613f8
+state_dict = torch.utils.model_zoo.load_url('https://s3.amazonaws.com/pytorch/models/resnet18-5c106cde.pth')
+</code></pre>
+
         </article>
   </div>
 </section>
@@ -308,7 +322,7 @@ torch.Size([1, 1, 12, 12])
 
 </aside>
 
-<meta itemprop="wordCount" content="109">
+<meta itemprop="wordCount" content="123">
 <meta itemprop="datePublished" content="2017-10-25">
 <meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/pytorch%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
 
