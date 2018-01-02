@@ -109,18 +109,24 @@
 <h2 id="图像拼接">图像拼接</h2>
 
 <p>维护标签图和原始图，不断增加贴图扩大语义地图
-图像拼接算法简述如下：
-- 提取特征点并计算描述子，如SIFT、SURF、ORB等
-- 匹配特征点，计算H矩阵，两幅图像的变换矩阵
-- 使用H矩阵将新图warp到一个柱面上，和旧图进行拼接
-- 拼接后的图片作为旧图，新图循环上述操作形成大图</p>
+图像拼接算法简述如下：</p>
 
-<p>语义地图拼接算法简述如下：
-- 提取特征点并计算描述子，如SIFT、SURF、ORB等
-- 匹配特征点，计算H矩阵，两幅图像的变换矩阵
-- <strong>输入语义网络中计算每一时刻当前的语义标签</strong>
-- <del>使用H矩阵将新图warp到一个柱面上，和旧图进行拼接</del><strong>使用H矩阵将新语义标签图warp到一个柱面上，和旧语义标签图进行拼接</strong>
-- 拼接后的图片作为旧图，新图循环上述操作形成大图</p>
+<ul>
+<li>提取特征点并计算描述子，如SIFT、SURF、ORB等</li>
+<li>匹配特征点，计算H矩阵，两幅图像的变换矩阵</li>
+<li>使用H矩阵将新图warp到一个柱面上，和旧图进行拼接</li>
+<li>拼接后的图片作为旧图，新图循环上述操作形成大图</li>
+</ul>
+
+<p>语义地图拼接算法简述如下：</p>
+
+<ul>
+<li>提取特征点并计算描述子，如SIFT、SURF、ORB等</li>
+<li>匹配特征点，计算H矩阵，两幅图像的变换矩阵</li>
+<li><strong>输入语义网络中计算每一时刻当前的语义标签</strong></li>
+<li><del>使用H矩阵将新图warp到一个柱面上，和旧图进行拼接</del><strong>使用H矩阵将新语义标签图warp到一个柱面上，和旧语义标签图进行拼接</strong></li>
+<li>拼接后的图片作为旧图，新图循环上述操作形成大图</li>
+</ul>
 
 <h3 id="测试图像gif">测试图像gif</h3>
 
@@ -279,7 +285,7 @@
     <div>
         <section id="datecount">
           <h4 id="date"> Tue Jan 2, 2018 </h4>
-          <h5 id="wc"> 300 Words </h5>
+          <h5 id="wc"> 200 Words </h5>
           <h5 id="readtime"> Read in about 1 Min </h5>
         </section>
         <ul id="categories">
@@ -356,7 +362,7 @@
 
 </aside>
 
-<meta itemprop="wordCount" content="200">
+<meta itemprop="wordCount" content="191">
 <meta itemprop="datePublished" content="2018-01-02">
 <meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_01/hpec%E6%9C%88%E4%BE%8B%E4%BC%9A_2018%E5%B9%B4_1%E6%9C%88/">
 
