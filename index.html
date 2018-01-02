@@ -24,8 +24,8 @@
 <meta property="og:image:height" content="" />
 <meta property="og:url" content="https://guanfuchen.github.io/">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2017-12-27"/>
-<meta property="article:modified_time" content="2017-12-27"/>
+<meta property="article:published_time" content="2018-01-02"/>
+<meta property="article:modified_time" content="2018-01-02"/>
 
 
 
@@ -99,6 +99,21 @@
 <section id="main">
   <div>
       <h1 id="title">import python</h1>
+    
+        <article class="post">
+    <header>
+      <h2><a href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_01/hpec%E6%9C%88%E4%BE%8B%E4%BC%9A_2018%E5%B9%B4_1%E6%9C%88/">HPEC月例会_2018年_1月 </a> </h2>
+      <div class="post-meta">Tue, Jan 2, 2018 -  Read in 1 Min </div>
+    </header>
+
+    图像拼接 维护标签图和原始图，不断增加贴图扩大语义地图 图像拼接算法简述如下： - 提取特征点并计算描述子，如SIFT、SURF、ORB等 - 匹配特征点，计算H矩阵，两幅图像的变换矩阵 - 使用H矩阵将新图warp到一个柱面上，和旧图进行拼接 - 拼接后的图片作为旧图，新图循环上述操作形成大图
+语义地图拼接算法简述如下： - 提取特征点并计算描述子，如SIFT、SURF、ORB等 - 匹配特征点，计算H矩阵，两幅图像的变换矩阵 - 输入语义网络中计算每一时刻当前的语义标签 - 使用H矩阵将新图warp到一个柱面上，和旧图进行拼接使用H矩阵将新语义标签图warp到一个柱面上，和旧语义标签图进行拼接 - 拼接后的图片作为旧图，新图循环上述操作形成大图
+测试图像gif 最后拼接的大图 工大无人机视频语义图拼接原图 工大无人机视频语义图拼接结果 具体代码仓库和结构如下： def main(): # Get input set of images img1 = cv2.imread(sys.argv[1]) img2 = cv2.imread(sys.argv[2]) img1_label = None img2_label = None if len(sys.argv) == 5: img1_label = cv2.imread(sys.argv[3]) img2_label = cv2.imread(sys.argv[4]) # print('img1_label:', img1_label) # print('img2_label:', img2_label) # Equalize histogram img1 = equalize_histogram_color(img1) img2 = equalize_histogram_color(img2) # Show input images #input_images = np.
+    <footer>
+        <a href='https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_01/hpec%E6%9C%88%E4%BE%8B%E4%BC%9A_2018%E5%B9%B4_1%E6%9C%88/'><nobr>Read more →</nobr></a>
+    </footer>
+</article>
+
     
         <article class="post">
     <header>
@@ -232,20 +247,6 @@ How to find elements by class Ask Question
 获取href BeautifulSoup getting href [duplicate] Ask
     <footer>
         <a href='https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/%E7%88%AC%E8%99%AB%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/'><nobr>Read more →</nobr></a>
-    </footer>
-</article>
-
-    
-        <article class="post">
-    <header>
-      <h2><a href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/zsh%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">Zsh使用相关问题 </a> </h2>
-      <div class="post-meta">Sat, Dec 2, 2017 -  Read in 1 Min </div>
-    </header>
-
-    相关资料 oh-my-zsh
-更新Zsh upgrade_oh_my_zsh  How do I update zsh to the latest version?
-    <footer>
-        <a href='https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/zsh%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/'><nobr>Read more →</nobr></a>
     </footer>
 </article>
 

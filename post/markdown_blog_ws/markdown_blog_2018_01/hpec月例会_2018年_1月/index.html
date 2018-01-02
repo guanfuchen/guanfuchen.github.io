@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="keywords" content="">
+
+ 
+<meta property="og:type" content="article"/>
+<meta property="og:description" content=""/>
+<meta property="og:title" content="HPEC月例会_2018年_1月 : spf13.com"/>
+<meta property="og:site_name" content="spf13 is Steve Francia"/>
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="" />
+<meta property="og:image:height" content="" />
+<meta property="og:url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_01/hpec%E6%9C%88%E4%BE%8B%E4%BC%9A_2018%E5%B9%B4_1%E6%9C%88/">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2018-01-02"/>
+<meta property="article:modified_time" content="2018-01-02"/>
+
+
+
+
+
+<meta name="twitter:card" content="summary">
+
+<meta name="twitter:site" content="@spf13">
+<meta name="twitter:title" content="HPEC月例会_2018年_1月 : spf13.com">
+<meta name="twitter:creator" content="@spf13">
+<meta name="twitter:description" content="">
+<meta name="twitter:image:src" content="">
+<meta name="twitter:domain" content="spf13.com">
+
+
+
+    <base href="https://guanfuchen.github.io">
+    <title> HPEC月例会_2018年_1月 - spf13.com </title>
+    <link rel="canonical" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_01/hpec%E6%9C%88%E4%BE%8B%E4%BC%9A_2018%E5%B9%B4_1%E6%9C%88/">
+    
+
+    <link href='https://fonts.lug.ustc.edu.cn/css?family=Fjalla+One|Open+Sans:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://guanfuchen.github.io/static/css/style.css">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+</head>
+
+<body lang="en" itemscope itemtype="http://schema.org/Article">
+<header id="header">
+    
+      
+    
+    <div align="center">
+        <a href="https://guanfuchen.github.io">
+        <img src="https://guanfuchen.github.io/media/avatar.png">
+        </a>
+    </div>
+    <div align="center">guanfuchen</div>
+    <nav id="nav">
+            <ul id="mainnav">
+            <li>
+                <a href="https://guanfuchen.github.io/post/">
+                <span class="icon"> <i aria-hidden="true" class="icon-quill"></i></span>
+                <span> 博客 </span>
+            </a>
+            </li>
+            
+            
+                
+                
+            
+            
+            
+            
+                
+                
+            
+            
+            <li>
+            <a href="http://github.com/guanfuchen">
+                <span class="icon"> <i aria-hidden="true" class="icon-13"></i></span>
+                <span> 关于 </span>
+            </a>
+            </li>
+        </ul>
+
+    
+    </nav>
+</header>
+
+
+
+<section id="main">
+  <h1 itemprop="name" id="title">HPEC月例会_2018年_1月</h1>
+  <div>
+        <article itemprop="articleBody" id="content">
+           
+
+<hr />
+
+<h2 id="图像拼接">图像拼接</h2>
+
+<p>维护标签图和原始图，不断增加贴图扩大语义地图
+图像拼接算法简述如下：
+- 提取特征点并计算描述子，如SIFT、SURF、ORB等
+- 匹配特征点，计算H矩阵，两幅图像的变换矩阵
+- 使用H矩阵将新图warp到一个柱面上，和旧图进行拼接
+- 拼接后的图片作为旧图，新图循环上述操作形成大图</p>
+
+<p>语义地图拼接算法简述如下：
+- 提取特征点并计算描述子，如SIFT、SURF、ORB等
+- 匹配特征点，计算H矩阵，两幅图像的变换矩阵
+- <strong>输入语义网络中计算每一时刻当前的语义标签</strong>
+- <del>使用H矩阵将新图warp到一个柱面上，和旧图进行拼接</del><strong>使用H矩阵将新语义标签图warp到一个柱面上，和旧语义标签图进行拼接</strong>
+- 拼接后的图片作为旧图，新图循环上述操作形成大图</p>
+
+<h3 id="测试图像gif">测试图像gif</h3>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan/img_2018_1/stitch_ori_image.gif" alt="" /></p>
+
+<h3 id="最后拼接的大图">最后拼接的大图</h3>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan/img_2018_1/stitch_ori_image.png" alt="" /></p>
+
+<h3 id="工大无人机视频语义图拼接原图">工大无人机视频语义图拼接原图</h3>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan/img_2018_1/prev_image.png" alt="" /></p>
+
+<h3 id="工大无人机视频语义图拼接结果">工大无人机视频语义图拼接结果</h3>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan/img_2018_1/prev_label.png" alt="" /></p>
+
+<h3 id="具体代码仓库和结构如下">具体代码仓库和结构如下：</h3>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan/img_2018_1/stitch_sem_repo_url.png" alt="" /></p>
+
+<pre><code class="language-python">def main():
+
+    # Get input set of images
+    img1 = cv2.imread(sys.argv[1])
+    img2 = cv2.imread(sys.argv[2])
+
+    img1_label = None
+    img2_label = None
+    if len(sys.argv) == 5:
+        img1_label = cv2.imread(sys.argv[3])
+        img2_label = cv2.imread(sys.argv[4])
+    # print('img1_label:', img1_label)
+    # print('img2_label:', img2_label)
+
+    # Equalize histogram
+    img1 = equalize_histogram_color(img1)
+    img2 = equalize_histogram_color(img2)
+
+    # Show input images
+    #input_images = np.hstack( (img1, img2) )
+    #cv2.imshow ('Input Images', input_images)
+
+    # Use SIFT to find keypoints and return homography matrix
+    M =  get_sift_homography(img1, img2)
+
+    # Stitch the images together using homography matrix
+
+    result_image = get_stitched_image(img2, img1, M)
+    result_image_label = None
+    if img1_label is not None and img2_label is not None:
+        print(&quot;result_image_label&quot;)
+        result_image_label = get_stitched_image(img2_label, img1_label, M)
+
+    # Write the result to the same directory
+    # result_image_name = 'results/result_'+sys.argv[1]
+    # cv2.imwrite(result_image_name, result_image)
+
+    # Show the resulting image
+    cv2.imshow ('Result', result_image)
+    if result_image_label is not None:
+        cv2.imshow ('Result_Label', result_image_label)
+    cv2.waitKey()
+</code></pre>
+
+<h3 id="进一步工作">进一步工作</h3>
+
+<p>尝试算法实现仅仅比较前后两帧图像的基础上对图像拼接，而不是逐渐扩大结果图进行拼接。</p>
+
+<hr />
+
+<h2 id="语义分割">语义分割</h2>
+
+<hr />
+
+<h3 id="网络实现">网络实现</h3>
+
+<p>将主流论文中的语义分割算法参考开源代码，使用pytorch统一实现，封装为自己的语义分割库，方便修改以及后期的实验比较。主要按照模型加载、数据集加载、训练、测试、校准、可视化等方面集成，并且对每一个网络在CamVid数据集上进行了训练并显示评估指标，同时对于速度实时性这个方面尤其测试，方便后期改进自己的模型实现实时语义分割。</p>
+
+<ul>
+<li>FCN，参考<a href="doc/fcn_understanding.md">fcn_understanding</a></li>
+<li>RefineNet，参考<a href="doc/refinenet_understanging.md">refinenet_understanging</a></li>
+<li>DUC，参考<a href="doc/duc_understanding.md">duc_understanding</a></li>
+<li>DRN</li>
+<li>PSPNet</li>
+<li>ENet</li>
+<li>EefNet</li>
+<li>&hellip;</li>
+</ul>
+
+<hr />
+
+<h3 id="数据集实现">数据集实现</h3>
+
+<ul>
+<li>CamVid</li>
+<li>PASCAL VOC</li>
+<li>CityScapes</li>
+<li>ADE20K，参考<a href="doc/ade20k_dataset.md">ade20k数据集相关</a></li>
+<li>&hellip;</li>
+</ul>
+
+<hr />
+
+<h3 id="训练过程可视化界面">训练过程可视化界面</h3>
+
+<p>显示正确的语义图和预测的语义图，同时将每一个epoch中的loss以及一次epoch里面的loss显示绘图出来。</p>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan/img_2018_1/main_semantic_view.png" alt="" /></p>
+
+<h3 id="具体代码仓库和结构如下-1">具体代码仓库和结构如下：</h3>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan/img_2018_1/semseg_repo_url.png" alt="" /></p>
+
+<hr />
+
+<h3 id="进一步工作-1">进一步工作</h3>
+
+<ul>
+<li>由于部分网络结构代码未公开，仍旧在阅读论文重现论文结果；</li>
+<li>在CamVid数据集上的测试结果精度依然较低，mIOU为60%左右，思考是训练周期不够长的问题，还是其他问题等等（以上网络均进行训练过,ps使用同学的CPU服务器。。。。比较耗时因此在一定epoch时终止训练）；</li>
+<li>对原始工大无人机数据进行标记，同时在调试好无人机整体数据采集后在工大记录有用数据拍摄图像，以求更好进行图像拼接以及分割；</li>
+</ul>
+
+<hr />
+
+<h2 id="视频预测">视频预测</h2>
+
+<ul>
+<li>继续先前的工作，将Moving MNIST数据集更换为真实场景的Kitti数据集，并进行预测；</li>
+<li>在视频采集前期，将大疆的图像记录到本地，通过ROS实现大疆图像在同一局域网下的存储显示，并参考ROS android demo同样使用ROS接口显示大疆相应数据以及操控大疆运动；</li>
+</ul>
+
+<hr />
+
+<h3 id="具体代码仓库和结构如下-2">具体代码仓库和结构如下：</h3>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan/img_2018_1/videopred_repo_url.png" alt="" /></p>
+
+<hr />
+
+<h3 id="进一步工作-2">进一步工作</h3>
+
+<ul>
+<li>实现prednet网络并在Kitti数据集上训练预测；</li>
+</ul>
+
+        </article>
+  </div>
+</section>
+
+
+
+<aside id="meta">
+
+    <div>
+        <section id="datecount">
+          <h4 id="date"> Tue Jan 2, 2018 </h4>
+          <h5 id="wc"> 300 Words </h5>
+          <h5 id="readtime"> Read in about 1 Min </h5>
+        </section>
+        <ul id="categories">
+          
+        </ul>
+        <ul id="tags">
+          
+        </ul>
+    </div>
+
+    <div>
+        <section id="prev">
+            &nbsp;
+        </section>
+        <section id="next">
+            &nbsp;<a class="next" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9/">微信开发相关内容 <i class="icon-arrow-right"></i></a>
+        </section>
+    </div>
+
+    
+
+            
+            
+            
+            
+            
+
+            
+            
+                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                
+                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+        
+    
+    
+    
+                
+                
+            
+                                     
+                                     
+                                     
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+
+        
+
+</aside>
+
+<meta itemprop="wordCount" content="200">
+<meta itemprop="datePublished" content="2018-01-02">
+<meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_01/hpec%E6%9C%88%E4%BE%8B%E4%BC%9A_2018%E5%B9%B4_1%E6%9C%88/">
+
+
+<aside id=comments>
+    <div><h2> Comments </h2></div>
+    <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "guanfuchen" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</aside>
+
+<footer>
+  <div>
+    <p>
+    &copy; 2017 <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">guanfuchen.</span></span>
+    Powered by <a href="http://gohugo.io">Hugo</a>.
+  </div>
+</footer>
+<script type="text/javascript">
+(function(){var j=function(a,b){return window.getComputedStyle?getComputedStyle(a).getPropertyValue(b):a.currentStyle[b]};var k=function(a,b,c){if(a.addEventListener)a.addEventListener(b,c,false);else a.attachEvent('on'+b,c)};var l=function(a,b){for(key in b)if(b.hasOwnProperty(key))a[key]=b[key];return a};window.fitText=function(d,e,f){var g=l({'minFontSize':-1/0,'maxFontSize':1/0},f);var h=function(a){var b=e||1;var c=function(){a.style.fontSize=Math.max(Math.min(a.clientWidth/(b*10),parseFloat(g.maxFontSize)),parseFloat(g.minFontSize))+'px'};c();k(window,'resize',c)};if(d.length)for(var i=0;i<d.length;i++)h(d[i]);else h(d);return d}})();
+fitText(document.getElementById('title'), 1)
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-7131036-1', 'spf13.com');
+  ga('require', 'linkid', 'linkid.js');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>
+
+
+<script type="text/javascript"
+        src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>

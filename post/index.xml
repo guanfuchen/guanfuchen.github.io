@@ -6,10 +6,21 @@
     <description>Recent content in Posts on import python</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Dec 2017 17:16:59 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 02 Jan 2018 17:15:47 +0800</lastBuildDate>
     
 	<atom:link href="https://guanfuchen.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>HPEC月例会_2018年_1月</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_01/hpec%E6%9C%88%E4%BE%8B%E4%BC%9A_2018%E5%B9%B4_1%E6%9C%88/</link>
+      <pubDate>Tue, 02 Jan 2018 17:15:47 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_01/hpec%E6%9C%88%E4%BE%8B%E4%BC%9A_2018%E5%B9%B4_1%E6%9C%88/</guid>
+      <description>图像拼接 维护标签图和原始图，不断增加贴图扩大语义地图 图像拼接算法简述如下： - 提取特征点并计算描述子，如SIFT、SURF、ORB等 - 匹配特征点，计算H矩阵，两幅图像的变换矩阵 - 使用H矩阵将新图warp到一个柱面上，和旧图进行拼接 - 拼接后的图片作为旧图，新图循环上述操作形成大图
+语义地图拼接算法简述如下： - 提取特征点并计算描述子，如SIFT、SURF、ORB等 - 匹配特征点，计算H矩阵，两幅图像的变换矩阵 - 输入语义网络中计算每一时刻当前的语义标签 - 使用H矩阵将新图warp到一个柱面上，和旧图进行拼接使用H矩阵将新语义标签图warp到一个柱面上，和旧语义标签图进行拼接 - 拼接后的图片作为旧图，新图循环上述操作形成大图
+测试图像gif 最后拼接的大图 工大无人机视频语义图拼接原图 工大无人机视频语义图拼接结果 具体代码仓库和结构如下： def main(): # Get input set of images img1 = cv2.imread(sys.argv[1]) img2 = cv2.imread(sys.argv[2]) img1_label = None img2_label = None if len(sys.argv) == 5: img1_label = cv2.imread(sys.argv[3]) img2_label = cv2.imread(sys.argv[4]) # print(&#39;img1_label:&#39;, img1_label) # print(&#39;img2_label:&#39;, img2_label) # Equalize histogram img1 = equalize_histogram_color(img1) img2 = equalize_histogram_color(img2) # Show input images #input_images = np.</description>
+    </item>
     
     <item>
       <title>微信开发相关内容</title>
@@ -635,7 +646,8 @@ ENet-caffe运行相关 # 测试分割结果 python scripts/test_segmentation.py 
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/unet%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
       <description>论文资料 U-Net: Convolutional Networks for Biomedical Image Segmentation
 相关架构 编码器为常规的卷积层和池化层，解码器将U对面的解码器的卷积层上采样到当前解码器层。
-代码实现 class UNetEnc(nn.Module): def __init__(self, in_channels, features, out_channels): super().__init__() self.up = nn.Sequential( nn.Conv2d(in_channels, features, 3), nn.ReLU(inplace=True), nn.Conv2d(features, features, 3), nn.ReLU(inplace=True), nn.ConvTranspose2d(features, out_channels, 2, stride=2), nn.ReLU(inplace=True), ) def forward(self, x): return self.up(x) class UNetDec(nn.Module): def __init__(self, in_channels, out_channels, dropout=False): super().__init__() layers = [ nn.Conv2d(in_channels, out_channels, 3), nn.ReLU(inplace=True), nn.Conv2d(out_channels, out_channels, 3), nn.ReLU(inplace=True), ] if dropout: layers += [nn.Dropout(.5)] layers += [nn.MaxPool2d(2, stride=2, ceil_mode=True)] self.</description>
+代码实现 unet keras 该仓库使用keras来实现unet，由于unet数据过少，仓库使用了相应的数据增强的方法来扩充数据集。
+class UNetEnc(nn.Module): def __init__(self, in_channels, features, out_channels): super().__init__() self.up = nn.Sequential( nn.Conv2d(in_channels, features, 3), nn.ReLU(inplace=True), nn.Conv2d(features, features, 3), nn.ReLU(inplace=True), nn.ConvTranspose2d(features, out_channels, 2, stride=2), nn.ReLU(inplace=True), ) def forward(self, x): return self.up(x) class UNetDec(nn.Module): def __init__(self, in_channels, out_channels, dropout=False): super().__init__() layers = [ nn.Conv2d(in_channels, out_channels, 3), nn.ReLU(inplace=True), nn.Conv2d(out_channels, out_channels, 3), nn.ReLU(inplace=True), ] if dropout: layers += [nn.Dropout(.5)] layers += [nn.</description>
     </item>
     
     <item>
@@ -888,6 +900,7 @@ DAVIS Challenge on Video Object Segmentation 2017
 语义分割数据集 Datasets for ADAS
 语义分割常用数据集
 各领域公开数据集下载
+语义分割数据代码 dataset_loaders fvision提供的常用的语义和视频数据loader，其中同时提供了数据集的扩充方法。
 合成数据集 相关论文  UnrealCV: Connecting Computer Vision to Unreal Engine 论文 代码 项目主页 这个提供了常用的合成数据集的相关论文 Playing for Data: Ground Truth from Computer Games 论文 代码 项目主页  LSUN 大尺度场景理解挑战，该挑战从2015年开始，直至现在，PASCAL VOC和ImageNet ILSVRC的挑战在过去十年中已经使对象识别取得了显着进步。我们计划借这个机制，加快场景理解的进度。与ICCV / ECCV每年举办的以物象为中心的ImageNet ILSVRC挑战赛相辅相成，我们每年都会在CVPR主办一个以场景为中心的挑战。我们的挑战主要集中在现场理解中的四个主要任务，包括场景分类，显着预测，房间布局估计和字幕生成（由MS COCO主办）。受到最近使用大数据（如深度学习）的成功启发，我们将重点提供比现有数据大至少几倍的基准，以支持培训这些数据饥饿算法。通过以年度挑战格式提供一套大型基准测试，我们预计未来几年将会为现场认识取得重大进展。</description>
     </item>
     
