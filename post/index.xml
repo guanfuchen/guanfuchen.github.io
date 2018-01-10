@@ -95,7 +95,9 @@ Duet Display将ipad设定为扩展屏幕</description>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/prediction_under_uncertainty_with_error-encoding_networks%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
       <description>论文资料 Prediction Under Uncertainty with Error-Encoding Networks EEN代码 项目主页
-博客资料 LeCun提出错误编码网络，可在不确定环境中执行时间预测</description>
+博客资料 LeCun提出错误编码网络，可在不确定环境中执行时间预测
+PREDICTION UNDER UNCERTAINTY WITH ERROR-ENCODING NETWORKS 论文摘要部分中文
+相关描述 论文主要还是基于将将来帧的预测分解为一个确定性网络和隐变量网络。</description>
     </item>
     
     <item>
@@ -815,15 +817,14 @@ openssl相关 openssl version -a sudo add-apt-repository ppa:0k53d-karl-f830m/op
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>综述 主要参考这篇博客Semantic Segmentation using Fully Convolutional Networks over the years其中列举了从FCN网络开始的最新的语义分割网络的相关论文和实现。这篇博客同时提供了一篇综述A Review on Deep Learning Techniques Applied to Semantic Segmentation，下面是列举的实现的文中语义分割的pytorch代码实现： pytorch-semseg
+SemanticSegmentation_DL 这是github上一个科研作者一直更新的语义分割相关论文列表，可以参考。 推荐指数 *****
 下文中也有分类好的语义分割网络论文 2015-10-09-segmentation.md
 A Review on Deep Learning Techniques Applied to Semantic Segmentation 该论文主要介绍了基于深度学习进行语义分割的相关方法，具有一定的参考价值，下面是翻译的文章。
 综述论文翻译：A Review on Deep Learning Techniques Applied to Semantic Segmentation
 Computer Vision for Autonomous Vehicles: Problems, Datasets and State-of-the-Art Kitti提供的综述文章，其中一章语义分割可以细看
 Kitti 综述文章可视化导航
 该文章主要是在空中使用深度学习进行语义分割 Deep Learning for Semantic Segmentation of Aerial Imagery
-SemanticSegmentation_DL 该博客整理了相关语义分割的论文和代码。
-相关博客 awesome_segmentation
-Segmentation</description>
+SemanticSegmentation_DL 该博客整理了相关语义分割的论文和代码。</description>
     </item>
     
     <item>
@@ -1164,12 +1165,12 @@ pytorch-examples
 吐血整理：PyTorch项目代码与资源列表 | 资源下载
 GAN入门实践（二）&amp;ndash;Pytorch实现
 DiscoGAN-pytorch
-the-incredible-pytorch
+the-incredible-pytorch 本仓库收集了相关的pytorch项目
 pytorchvision使用相关 pytorchvision是torch中用来简化对image的相关操作，其中包含了对大量常用数据集的一个简化操作，下面具体的操作可以参考torch_vision_cifar10 这个代码中主要介绍了dataset的用法以及transform对图像的预处理的用法，然后还有就是dataloader将图像按照batch_size分类的方法将图像按照batch的方法随机筛选图像作为数据集，每一次next都会返回batch_size的训练数据集。
 超简单！pytorch入门教程（四）：准备图片数据集
 超简单！pytorch入门教程（五）：训练和测试CNN
 tensorboard-pytorch pip install tensorboardX  tensorboard-pytorch
-常用模型 pretrained-models.pytorch 这个仓库包含了大量预先训练的pytorhc模型。</description>
+常用模型 pretrained-models.pytorch 这个仓库包含了大量预先训练的pytorch模型。</description>
     </item>
     
     <item>

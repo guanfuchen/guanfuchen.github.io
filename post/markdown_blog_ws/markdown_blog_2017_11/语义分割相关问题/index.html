@@ -111,6 +111,8 @@
 <p>主要参考这篇博客<a href="https://meetshah1995.github.io/semantic-segmentation/deep-learning/pytorch/visdom/2017/06/01/semantic-segmentation-over-the-years.html">Semantic Segmentation using Fully Convolutional Networks over the years</a>其中列举了从FCN网络开始的最新的语义分割网络的相关论文和实现。这篇博客同时提供了一篇综述A Review on Deep Learning Techniques Applied to Semantic Segmentation，下面是列举的实现的文中语义分割的pytorch代码实现：
 <a href="https://github.com/meetshah1995/pytorch-semseg">pytorch-semseg</a></p>
 
+<p><a href="https://github.com/tangzhenyu/SemanticSegmentation_DL">SemanticSegmentation_DL</a> 这是github上一个科研作者一直更新的语义分割相关论文列表，可以参考。 推荐指数 *****</p>
+
 <p>下文中也有分类好的语义分割网络论文
 <a href="https://github.com/handong1587/handong1587.github.io/blob/master/_posts/deep_learning/2015-10-09-segmentation.md">2015-10-09-segmentation.md</a></p>
 
@@ -141,6 +143,8 @@ Kitti提供的综述文章，其中一章语义分割可以细看</p>
 <p><a href="https://github.com/azavea/raster-vision">deep learning for aerial/satellite imagery</a></p>
 
 <p><a href="https://zhuanlan.zhihu.com/p/31117500">深度学习从入门到放弃之CV-Semantic Segmentation目录</a> 介绍了作者对部分经典语义分割框架的理解，推荐指数**</p>
+
+<p><a href="https://github.com/leonardoaraujosantos/LearnSegmentation">LearnSegmentation</a> 实现了部分算法，仅仅部分参考。</p>
 
 <hr />
 
@@ -176,7 +180,7 @@ Kitti提供的综述文章，其中一章语义分割可以细看</p>
 <li>Material Recognition in the Wild with the Materials in Context Database <a href="https://arxiv.org/abs/1412.0623">论文</a></li>
 <li>Predicting Depth, Surface Normals and Semantic Labels with a Common Multi-Scale Convolutional Architecture <a href="https://arxiv.org/abs/1411.4734">论文</a></li>
 <li>Parsenet: Looking wider to see better <a href="https://arxiv.org/abs/1506.04579">论文</a></li>
-<li>ReSeg: A Recurrent Neural Network-based Model for Semantic Segmentation <a href="https://arxiv.org/abs/1511.07053">论文</a> <a href="https://github.com/fvisin/reseg">代码</a></li>
+<li>ReSeg: A Recurrent Neural Network-based Model for Semantic Segmentation <a href="https://arxiv.org/abs/1511.07053">论文</a> <a href="https://github.com/fvisin/reseg">代码</a> <strong>试验包括CamVid</strong></li>
 <li>LSTM-CF: Unifying Context Modeling and Fusion with LSTMs for RGB-D Scene Labeling <a href="https://arxiv.org/abs/1604.05000">论文</a></li>
 <li>Squeeze-SegNet: A new fast Deep Convolutional Neural Network for Semantic Segmentation <a href="https://arxiv.org/abs/1711.05491">论文</a> 较新的论文</li>
 <li>Efficient ConvNet for Real-time Semantic Segmentation</li>
@@ -185,6 +189,12 @@ Kitti提供的综述文章，其中一章语义分割可以细看</p>
 <li>Semantic Instance Segmentation with a Discriminative Loss Function <a href="https://arxiv.org/abs/1708.02551">论文</a></li>
 <li>Fast Scene Understanding for Autonomous Driving <a href="https://arxiv.org/abs/1708.02550">论文</a> <a href="https://github.com/DavyNeven/fastSceneUnderstanding">代码</a> 无人驾驶领域上的快速场景理解，同时实现语义分割，实例分割和单目深度估计，<strong>可以借鉴同时实现语义分割，视频预测</strong></li>
 <li>Understanding Convolution for Semantic Segmentation <a href="https://arxiv.org/abs/1702.08502">论文</a> <a href="https://github.com/TuSimple/TuSimple-DUC">代码</a> 图森科技在语义分割系统上的改进，提出了DUC和HDC。</li>
+<li>In-Place Activated BatchNorm for Memory-Optimized Training of DNNs <a href="https://arxiv.org/abs/1712.02616">论文</a> 本文提出了新的BatchNorm方法，加速网络的训练。 <a href="https://github.com/mapillary/inplace_abn">代码</a></li>
+<li>Instance Embedding Transfer to Unsupervised Video Object Segmentation <a href="https://arxiv.org/abs/1801.00908">论文</a> 使用视频进行非监督物体分割。</li>
+<li>Panoptic Segmentation <a href="https://arxiv.org/pdf/1801.00868.pdf">论文</a> 凯明提出的新论文，重点关注。</li>
+<li>Stacked Deconvolutional Network for Semantic Segmentation <a href="https://arxiv.org/pdf/1708.04943.pdf">论文</a> 使用类似DenseNet思路栈式构造装置卷积网络实现，<strong>试验包括CamVid</strong></li>
+<li>S4Net: Single Stage Salient-Instance Segmentation <a href="https://arxiv.org/abs/1711.07618">论文</a> <a href="https://github.com/RuochenFan/S4Net">代码</a></li>
+<li>Semantic Segmentation via Highly Fused Convolutional Network with Multiple Soft Cost Functions</li>
 </ul>
 
 <h2 id="弱监督">弱监督</h2>
@@ -195,7 +205,7 @@ Kitti提供的综述文章，其中一章语义分割可以细看</p>
 <li>Semi-Supervised Learning with Ladder Networks</li>
 <li>Feedback Neural Network for Weakly Supervised Geo-Semantic Segmentation <a href="https://arxiv.org/abs/1612.02766">论文</a></li>
 <li>Weakly Supervised Semantic Segmentation with Convolutional Networks <a href="http://ronan.collobert.com/pub/matos/2015_semisupsemseg_cvpr.pdf">论文</a></li>
-<li>BoxSup: Exploiting Bounding Boxes to Supervise Convolutional Networks for Semantic Segmentation <a href="http://arxiv.org/abs/1503.01640">论文</a></li>
+<li>BoxSup: Exploiting Bounding Boxes to Supervise Convolutional Networks for Semantic Segmentation <a href="http://arxiv.org/abs/1503.01640">论文</a> 使用bounding box进行语义分割</li>
 <li>ScribbleSup: Scribble-Supervised Convolutional Networks for Semantic Segmentation <a href="https://arxiv.org/abs/1604.05144">论文</a></li>
 <li>One-Shot Learning for Semantic Segmentation <a href="https://arxiv.org/abs/1709.03410">论文</a></li>
 <li>Semantic Segmentation from Limited Training Data <a href="https://arxiv.org/abs/1709.07665">论文</a></li>
@@ -235,6 +245,8 @@ Kitti提供的综述文章，其中一章语义分割可以细看</p>
 
 <p><a href="https://github.com/akirasosa/mobile-semantic-segmentation">mobile-semantic-segmentation</a></p>
 
+<p><a href="https://github.com/mohitsharma916/Adversarial-Semisupervised-Semantic-Segmentation">Adversarial-Semisupervised-Semantic-Segmentation</a> 基于对抗生成网络的语义分割网络</p>
+
         </article>
   </div>
 </section>
@@ -246,7 +258,7 @@ Kitti提供的综述文章，其中一章语义分割可以细看</p>
     <div>
         <section id="datecount">
           <h4 id="date"> Wed Nov 1, 2017 </h4>
-          <h5 id="wc"> 600 Words </h5>
+          <h5 id="wc"> 700 Words </h5>
           <h5 id="readtime"> Read in about 3 Min </h5>
         </section>
         <ul id="categories">
@@ -323,7 +335,7 @@ Kitti提供的综述文章，其中一章语义分割可以细看</p>
 
 </aside>
 
-<meta itemprop="wordCount" content="538">
+<meta itemprop="wordCount" content="601">
 <meta itemprop="datePublished" content="2017-11-01">
 <meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
 
