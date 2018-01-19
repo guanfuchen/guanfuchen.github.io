@@ -232,7 +232,7 @@ Fire Detection with Computer Vision</description>
       <pubDate>Sun, 26 Nov 2017 20:10:18 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E7%BD%91%E7%BB%9C%E5%8E%8B%E7%BC%A9%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</guid>
-      <description>相关论文  EIE: Efficient Inference Engine on Compressed Deep Neural Network 论文 代码 将AlexNet网络大小从233MB减少到了8.9MB  网络参数大小 convnet-burden 包含了主流模型的参数大小</description>
+      <description>相关论文  EIE: Efficient Inference Engine on Compressed Deep Neural Network 论文 代码 将AlexNet网络大小从233MB减少到了8.9MB DeepRebirth: Accelerating Deep Neural Network Execution on Mobile Devices 论文 三星研究院加速深度学习的方法  博客资料  DeepRebirth——通过融合加速网络  网络参数大小 convnet-burden 包含了主流模型的参数大小</description>
     </item>
     
     <item>
@@ -306,6 +306,7 @@ VALSE20160323-Panel-WanfGangNTU_ShiXingjianHKUST_ShiBaoguangHUST.mp4 施行健�
 conv_lstm.py keras上对Conv LSTM相关实现例子
 相关代码 Convolutional-LSTM-in-Tensorflow 其中提供了ConvLSTM网络的实现结构，同时包括了改进的ConvLSTM网络结构
 lstms.py 提供了convlstm的相关代码
+Convolution_LSTM_pytorch 使用pytorch实现的卷积lstm网络
 网络结构 经典LSTM网络结构 经典LSTM的公式 预测云图的Conv LSTM结构 Conv LSTM网络结构的内部结构 Conv LSTM的公式 </description>
     </item>
     
@@ -504,7 +505,7 @@ DEEP PREDICTIVE CODING NETWORKS FOR VIDEO PREDICTION AND UNSUPERVISED LEARNING �
 MoCoGAN: Decomposing Motion and Content for Video Generation
 从论文Generating Videos with Scene Dynamics跟踪到，该论文中提到的论文都可以好好研究，与视频预测相关。
 e-lab references 这是e-lab实验室对相关研究的文章收集，可以作为无监督学习预测视频的参考。
- Unsupervised Learning of Video Representations using LSTMs 代码 Learning to Generate Long-term Future via Hierarchical Prediction 项目主页 代码 Parallel multi-dimensional LSTM, with application to fast biomedical volumetric image segmentation 论文 和ConvLSTM一样拓展了FCLSTM从而捕捉了空间-时间关系。 Decomposing Motion and Content for Natural Video Sequence Prediction 主页 代码 Learning to linearize under uncertainty Action-conditional video prediction using deep networks in atari games Unsupervised learning of visual structure using predictive generative networks Two-stream convolutional networks for action recognition in videos 双流视频预测 Convolutional Two-Stream Network Fusion for Video Action Recognition 主页 代码 双流视频预测，同时编码空间和时间信息（光流） TS-LSTM and Temporal-Inception: Exploiting Spatiotemporal Dynamics for Activity Recognition Long-term Temporal Convolutions for Action Recognition 论文 主页 代码  相关IDEA  能否使用安卓的视频数据+传感器数据来进行数据集的收集，并且同时进行视频预测和语义分割。 能使用视频预测技术对NBA篮球的动作进行预测   相关开源项目  e-lab e-lab实验室中实现了很多视频预测的模型，大部分使用torch或者pytorch。Welcome to e-Lab!</description>
+ Unsupervised Learning of Video Representations using LSTMs 代码 Learning to Generate Long-term Future via Hierarchical Prediction 项目主页 代码 Parallel multi-dimensional LSTM, with application to fast biomedical volumetric image segmentation 论文 和ConvLSTM一样拓展了FCLSTM从而捕捉了空间-时间关系。 Decomposing Motion and Content for Natural Video Sequence Prediction 主页 代码 Learning to linearize under uncertainty Action-conditional video prediction using deep networks in atari games Unsupervised learning of visual structure using predictive generative networks Two-stream convolutional networks for action recognition in videos 双流视频预测 Convolutional Two-Stream Network Fusion for Video Action Recognition 主页 代码 双流视频预测，同时编码空间和时间信息（光流） TS-LSTM and Temporal-Inception: Exploiting Spatiotemporal Dynamics for Activity Recognition Long-term Temporal Convolutions for Action Recognition 论文 主页 代码 Video Scene Parsing with Predictive Feature Learning Semantic Video Segmentation by Gated Recurrent Flow Propagation 论文  相关IDEA  能否使用安卓的视频数据+传感器数据来进行数据集的收集，并且同时进行视频预测和语义分割。 能使用视频预测技术对NBA篮球的动作进行预测   相关开源项目  e-lab e-lab实验室中实现了很多视频预测的模型，大部分使用torch或者pytorch。Welcome to e-Lab!</description>
     </item>
     
     <item>
@@ -525,12 +526,13 @@ AdversarialNetsPapers 这是github上搜集的关于对抗生成网络相关论�
       <pubDate>Sun, 12 Nov 2017 15:18:56 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/deep_predictive_coding_networks_for_video_prediction_and_unsupervised_learning%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
-      <description> 论文资料 Deep Predictive Coding Networks for Video Prediction and Unsupervised Learning 论文 代码 torch-prednet torch prednet是e-lab实验室重新实现的一个预测网络 prednet_comment代码注释 该代码中为其他研究人员的相关注释。
+      <description>论文资料 Deep Predictive Coding Networks for Video Prediction and Unsupervised Learning 论文 代码 torch-prednet torch prednet是e-lab实验室重新实现的一个预测网络 prednet_comment代码注释 该代码中为其他研究人员的相关注释。
 代码运行示例，下面是在Caltech Pedestrian数据集上运行的下一帧预测结果，该模型在KITTI数据集中训练。 代码实现 torch-prednet
 # 训练相关 th main.lua --batch 1 --nlayers 3 -s --savedir results --dataDir dataSets --dataName data-small # 测试相关 qlua main.lua --model results --dataDir dataSets --dataName data-small --visOnly --useGPU  pytorch-prednet
+PredNet-ConvGRU 使用convgru同时用pytorch实现prednet
 论文资料 PredNet阅读笔记——从视频预测的角度学习视频表征
 相关描述 实验证明，PredNet在视频预测任务表现一般，预测时间短且不够清晰；但在学习视频表征方面表现突出，可以提取物体动态特征，将这些特征用于分类器、参数估算等任务，相比于从静态图像中提取的特征，物体识别准确度会提高。
-基本架构 </description>
+基本架构 项目需求 项目中需要类似的frame prediction功能，首先准备两个h5文件，其中一个包含图像数据，另一个包含图像数据的来源，比如视频A有30帧，视频B有30帧，这里，将数据预处理为(H, W, C)&amp;mdash;-A&amp;hellip;(H, W, C)&amp;mdash;-B等等，这里有两个文件目录，其中为A和B文件夹表示视频来源，各个文件下</description>
     </item>
     
     <item>
@@ -886,7 +888,8 @@ StandardScaler StandardScaler
       <pubDate>Tue, 31 Oct 2017 14:25:50 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E9%9B%86%E5%8F%91%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
-      <description>视频预测数据集 Moving MNIST Moving MNIST
+      <description>视频预测数据集 video-understanding-dataset 视频理解数据集收集，可以参考部分
+Moving MNIST Moving MNIST
 Moving MNIST包含了10000序列，每一个序列在64x64帧中包含了20个长度显示2个数字运动。
 UCF101 UCF101 - Action Recognition Data Set
 e-VDS e-VDS
@@ -1256,9 +1259,10 @@ Hugo静态网站生成器中文教程
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/git%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>git相关使用问题 记录git使用中遇到的一些trick
+untracked working tree file git reset --hard HEAD git clean -f -d git pull  untracked working tree file
 git增加submodule git submodule add git@gitee.com:chenguanfu/markdown_blog_ws.git markdown_blog_ws  git中submodule的更新 这里貌似只能先把master克隆下来，然后设置每一个submodule的remote地址
 git clone git@gitee.com:chenguanfu/blog_ws.git cd blog_ws git submodule foreach git pull git submodule update git submodule update --init --recursive  Git Submodule 用法筆記
-git中submodule的路径 # vim .gitmodules [submodule &amp;quot;hugo_ws/mysite/content/post/markdown_blog_ws&amp;quot;] path = hugo_ws/mysite/content/post/markdown_blog_ws url = git@gitee.com:chenguanfu/markdown_blog_ws.git [submodule &amp;quot;hugo_ws/mysite/public&amp;quot;] path = hugo_ws/mysite/public url = git@gitee.com:chenguanfu/blog_ws_public.git  git add相关区别 # git add -u表示添加修改的文件，而git add .表示添加修改的文件和新文件，但不包括删除的文件，git add -A表示所有的文件  git add -A 和 git add .</description>
+git中submodule的路径 # vim .gitmodules [submodule &amp;quot;hugo_ws/mysite/content/post/markdown_blog_ws&amp;quot;] path = hugo_ws/mysite/content/post/markdown_blog_ws url = git@gitee.com:chenguanfu/markdown_blog_ws.git [submodule &amp;quot;hugo_ws/mysite/public&amp;quot;] path = hugo_ws/mysite/public url = git@gitee.</description>
     </item>
     
   </channel>

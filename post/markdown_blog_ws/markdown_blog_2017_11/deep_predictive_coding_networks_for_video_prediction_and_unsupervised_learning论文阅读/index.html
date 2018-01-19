@@ -131,6 +131,8 @@ qlua main.lua --model results --dataDir dataSets --dataName data-small --visOnly
 
 <p><a href="https://github.com/leido/pytorch-prednet">pytorch-prednet</a></p>
 
+<p><a href="https://github.com/bionick87/PredNet-ConvGRU">PredNet-ConvGRU</a> 使用convgru同时用pytorch实现prednet</p>
+
 <hr />
 
 <h1 id="论文资料-1">论文资料</h1>
@@ -148,6 +150,12 @@ qlua main.lua --model results --dataDir dataSets --dataName data-small --visOnly
 <h1 id="基本架构">基本架构</h1>
 
 <p><img src="http://chenguanfuqq.oschina.io/tuquan/img_2017_11/2017_11_12_15_16_53.png" alt="" /></p>
+
+<hr />
+
+<h1 id="项目需求">项目需求</h1>
+
+<p>项目中需要类似的frame prediction功能，首先准备两个h5文件，其中一个包含图像数据，另一个包含图像数据的来源，比如视频A有30帧，视频B有30帧，这里，将数据预处理为(H, W, C)&mdash;-A&hellip;(H, W, C)&mdash;-B等等，这里有两个文件目录，其中为A和B文件夹表示视频来源，各个文件下</p>
 
         </article>
   </div>
@@ -237,7 +245,7 @@ qlua main.lua --model results --dataDir dataSets --dataName data-small --visOnly
 
 </aside>
 
-<meta itemprop="wordCount" content="55">
+<meta itemprop="wordCount" content="64">
 <meta itemprop="datePublished" content="2017-11-12">
 <meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/deep_predictive_coding_networks_for_video_prediction_and_unsupervised_learning%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">
 
