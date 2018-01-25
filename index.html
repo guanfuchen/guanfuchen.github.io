@@ -183,7 +183,12 @@ erfnet_pytorch
     </header>
 
     博客资料 pytorch loss function 总结
+PyTorch中的Loss Fucntion
 相关描述 分类模型使用cross-entropy而不是classifier error的原因是，分类模型用cross-entropy。这里使用一个例子来解释cross-entropy在分类模型中的优势。
+深度学习中的Loss Function有很多，常见的有L1、L2、HingeLoss、CrossEntropy，其最终目的就是计算预测的 f(x)f(x) 与真值 yy 之间的差别，而优化器的目的就是minimize这个差值，当loss的值稳定后，便是f(x)f(x) 的参数WW最优的时候。
+首先引入交叉熵的概念。Cross Entropy（也就是交叉熵）来自香农的信息论，简单来说，交叉熵是用来衡量在给定的真实分布pkpk下，使用非真实分布qkqk所指定的策略 f(x)f(x) 消除系统的不确定性所需要付出的努力的大小。交叉熵的越低说明这个策略越好，我们总是minimize交叉熵，因为交叉熵越小，就证明算法所产生的策略越接近最优策略，也就间接证明我们的算法所计算出的非真实分布越接近真实分布。交叉熵损失函数从信息论的角度来说，其实来自于KL散度，只不过最后推导的新式等价于交叉熵的计算公式：
+$$H(p,q)=-\sum_{k=1}^{N}(p_k*\log{q_k})$$
+最大似然估计、Negative Log Liklihood(NLL)、KL散度与Cross Entropy其实是等价的，都可以进行互相推导，当然MSE也可以用Cross Entropy进行对到出（详见Deep Learning Book P132）。
 分类模型的 Loss 为什么使用 cross entropy 而不是 classification error 或 squared error
     <footer>
         <a href='https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/%E7%BD%91%E7%BB%9Closs%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/'><nobr>Read more →</nobr></a>

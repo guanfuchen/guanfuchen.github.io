@@ -74,7 +74,12 @@ erfnet_pytorch
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/%E7%BD%91%E7%BB%9Closs%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</guid>
       <description>博客资料 pytorch loss function 总结
+PyTorch中的Loss Fucntion
 相关描述 分类模型使用cross-entropy而不是classifier error的原因是，分类模型用cross-entropy。这里使用一个例子来解释cross-entropy在分类模型中的优势。
+深度学习中的Loss Function有很多，常见的有L1、L2、HingeLoss、CrossEntropy，其最终目的就是计算预测的 f(x)f(x) 与真值 yy 之间的差别，而优化器的目的就是minimize这个差值，当loss的值稳定后，便是f(x)f(x) 的参数WW最优的时候。
+首先引入交叉熵的概念。Cross Entropy（也就是交叉熵）来自香农的信息论，简单来说，交叉熵是用来衡量在给定的真实分布pkpk下，使用非真实分布qkqk所指定的策略 f(x)f(x) 消除系统的不确定性所需要付出的努力的大小。交叉熵的越低说明这个策略越好，我们总是minimize交叉熵，因为交叉熵越小，就证明算法所产生的策略越接近最优策略，也就间接证明我们的算法所计算出的非真实分布越接近真实分布。交叉熵损失函数从信息论的角度来说，其实来自于KL散度，只不过最后推导的新式等价于交叉熵的计算公式：
+$$H(p,q)=-\sum_{k=1}^{N}(p_k*\log{q_k})$$
+最大似然估计、Negative Log Liklihood(NLL)、KL散度与Cross Entropy其实是等价的，都可以进行互相推导，当然MSE也可以用Cross Entropy进行对到出（详见Deep Learning Book P132）。
 分类模型的 Loss 为什么使用 cross entropy 而不是 classification error 或 squared error</description>
     </item>
     
@@ -435,9 +440,13 @@ torch 读取command参数 local cmd = torch.CmdLine() cmd:option(&#39;-usegpu&#3
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/jupyter%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>jupyterlab使用 jupyterlab更加强大，可以实时显示markdown，同时有文件窗口
 # 安装如下 pip install jupyterlab jupyter serverextension enable --py jupyterlab --sys-prefix # 使用方法 jupyter lab  jupyterlab
+查看tensorboard jupyter tensorboard enable  jupyter_tensorboard
+转换成pdf 需要安装pandoc，latex等，在文本转换时支持中文需要修改，nbconvert中的latex模版
+# sudo vim /usr/local/lib/python2.7/dist-packages/nbconvert/templates/latex/article.tplx \usepackage{ctex}  Jupyter: downloading notebook as PDF via LaTeX
+MacOS Jupyter Notebook 输出PDF中文支持
+Jupyter Notebook PDF输出的中文支持
 jupyter notebook # 开启jupyter notebook jupyter notebook # 显示notebook列表 jupyter notebook list  How to close IPython Notebook properly?
-How to stop the iPython notebook to run the command line, run only python code
-jupyter matlab接口 cd /usr/local/MATLAB/R2015b/extern/engines/python sudo python setup.py install sudo pip install jupyter sudo pip install numpy sudo pip install zmq sudo pip install metakernel sudo pip install pymatbridge sudo pip install matlab_kernel sudo python -m matlab_kernel install  MATLAB-BASED IPYTHON NOTEBOOKS</description>
+How to stop the iPython notebook to run the command line, run only python code</description>
     </item>
     
     <item>
@@ -530,6 +539,7 @@ AdversarialNetsPapers 这是github上搜集的关于对抗生成网络相关论�
 代码运行示例，下面是在Caltech Pedestrian数据集上运行的下一帧预测结果，该模型在KITTI数据集中训练。 代码实现 torch-prednet
 # 训练相关 th main.lua --batch 1 --nlayers 3 -s --savedir results --dataDir dataSets --dataName data-small # 测试相关 qlua main.lua --model results --dataDir dataSets --dataName data-small --visOnly --useGPU  pytorch-prednet
 PredNet-ConvGRU 使用convgru同时用pytorch实现prednet
+使用Keras进行视频预测（时间序列）
 论文资料 PredNet阅读笔记——从视频预测的角度学习视频表征
 相关描述 实验证明，PredNet在视频预测任务表现一般，预测时间短且不够清晰；但在学习视频表征方面表现突出，可以提取物体动态特征，将这些特征用于分类器、参数估算等任务，相比于从静态图像中提取的特征，物体识别准确度会提高。
 基本架构 项目需求 项目中需要类似的frame prediction功能，首先准备两个h5文件，其中一个包含图像数据，另一个包含图像数据的来源，比如视频A有30帧，视频B有30帧，这里，将数据预处理为(H, W, C)&amp;mdash;-A&amp;hellip;(H, W, C)&amp;mdash;-B等等，这里有两个文件目录，其中为A和B文件夹表示视频来源，各个文件下</description>
@@ -635,6 +645,7 @@ PSPNet caffe
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/enet%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
       <description>论文资料 ENet: A Deep Neural Network Architecture for Real-Time Semantic Segmentation
 博客资料 【CV-Semantic Segmentation】ENet阅读笔记 简单描述整体论文内容，推荐指数**
+语义分割论文-ENet 对ENet中相关内容的提取，推荐指数***
 代码实现 ENet-caffe
 ENet pytorch model.py
 ENet-training torch
@@ -1148,6 +1159,8 @@ atom设置代理 # 设置socks5代理 apm config set http-proxy socks5:127.0.0.1
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/pytorch%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>pytorch安装 Ubuntu下安装 pip install http://download.pytorch.org/whl/cu75/torch-0.2.0.post3-cp27-cp27mu-manylinux1_x86_64.whl pip install torchvision  Ubuntu 17.04 安装 pytorch and pytorchvision
+相关描述 PyTorch, a year in&amp;hellip;. pytorch发布一年的总结
+博客资料 pytorch学习笔记（二）：gradient 介绍pytorch中Variable的grad相应计算，说明了optim的引入原因，梯度清零的原因（梯度的累加），Variable保存了tensor和grad，真正计算的仍然是内部的tensor。
 pytorch教程 PyTorchZeroToAll
 Awesome-pytorch-list 这是pytorch-list的awesome系统，其中的资料可以参考学习一下
 pytorch示例程序 使用官网提供的示例程序来对pytorch进行一个初步大致的了解，对常用深度学习的框架进行一个初步的学习。 目前学习pytorch主要是通过示例程序以及莫烦PYTHON中pytorch的视频教程。
@@ -1170,10 +1183,7 @@ GAN入门实践（二）&amp;ndash;Pytorch实现
 DiscoGAN-pytorch
 the-incredible-pytorch 本仓库收集了相关的pytorch项目
 pytorchvision使用相关 pytorchvision是torch中用来简化对image的相关操作，其中包含了对大量常用数据集的一个简化操作，下面具体的操作可以参考torch_vision_cifar10 这个代码中主要介绍了dataset的用法以及transform对图像的预处理的用法，然后还有就是dataloader将图像按照batch_size分类的方法将图像按照batch的方法随机筛选图像作为数据集，每一次next都会返回batch_size的训练数据集。
-超简单！pytorch入门教程（四）：准备图片数据集
-超简单！pytorch入门教程（五）：训练和测试CNN
-tensorboard-pytorch pip install tensorboardX  tensorboard-pytorch
-常用模型 pretrained-models.pytorch 这个仓库包含了大量预先训练的pytorch模型。</description>
+超简单！pytorch入门教程（四）：准备图片数据集</description>
     </item>
     
     <item>

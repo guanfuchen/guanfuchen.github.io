@@ -121,6 +121,31 @@ jupyter lab
 
 <hr />
 
+<h1 id="查看tensorboard">查看tensorboard</h1>
+
+<pre><code class="language-bash">jupyter tensorboard enable
+</code></pre>
+
+<p><a href="https://github.com/lspvic/jupyter_tensorboard">jupyter_tensorboard</a></p>
+
+<hr />
+
+<h1 id="转换成pdf">转换成pdf</h1>
+
+<p>需要安装pandoc，latex等，在文本转换时支持中文需要修改，nbconvert中的latex模版</p>
+
+<pre><code class="language-bash"># sudo vim /usr/local/lib/python2.7/dist-packages/nbconvert/templates/latex/article.tplx
+\usepackage{ctex}
+</code></pre>
+
+<p><a href="https://tex.stackexchange.com/questions/382724/jupyter-downloading-notebook-as-pdf-via-latex">Jupyter: downloading notebook as PDF via LaTeX</a></p>
+
+<p><a href="https://www.jianshu.com/p/c3f660188766">MacOS Jupyter Notebook 输出PDF中文支持</a></p>
+
+<p><a href="https://www.cnblogs.com/SC-CS/p/Jupyter-PDF_Chinese_Support.html">Jupyter Notebook PDF输出的中文支持</a></p>
+
+<hr />
+
 <h1 id="jupyter-notebook">jupyter notebook</h1>
 
 <pre><code class="language-bash"># 开启jupyter notebook
@@ -242,7 +267,7 @@ sudo python -m matlab_kernel install
 
 </aside>
 
-<meta itemprop="wordCount" content="103">
+<meta itemprop="wordCount" content="129">
 <meta itemprop="datePublished" content="2017-11-14">
 <meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/jupyter%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
 
