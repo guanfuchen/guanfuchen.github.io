@@ -166,6 +166,19 @@ git submodule update --init --recursive
 
 <p><a href="https://www.cnblogs.com/skura23/p/5859243.html">git add -A 和 git add . 的区别</a></p>
 
+<hr />
+
+<h1 id="git-fork同步">git fork同步</h1>
+
+<pre><code class="language-bash">git remote add upstream XXX
+# 拉取最新信息
+git fetch upstream
+# 合并git信息
+git merge upstream/master
+</code></pre>
+
+<p><a href="https://jinlong.github.io/2015/10/12/syncing-a-fork/">如何同步 Github fork 出来的分支</a></p>
+
         </article>
   </div>
 </section>
@@ -177,7 +190,7 @@ git submodule update --init --recursive
     <div>
         <section id="datecount">
           <h4 id="date"> Tue Oct 24, 2017 </h4>
-          <h5 id="wc"> 100 Words </h5>
+          <h5 id="wc"> 200 Words </h5>
           <h5 id="readtime"> Read in about 1 Min </h5>
         </section>
         <ul id="categories">
@@ -254,7 +267,7 @@ git submodule update --init --recursive
 
 </aside>
 
-<meta itemprop="wordCount" content="87">
+<meta itemprop="wordCount" content="108">
 <meta itemprop="datePublished" content="2017-10-24">
 <meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/git%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
 

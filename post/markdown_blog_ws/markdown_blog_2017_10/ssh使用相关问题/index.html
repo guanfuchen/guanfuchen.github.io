@@ -119,9 +119,14 @@
 <h2 id="rsync断点续传">rsync断点续传</h2>
 
 <pre><code class="language-bash">rsync -rP --rsh=ssh root@114.115.142.49:~/Data2.zip ~/Data/SegmPred/
+# 排除某些目录
+
+--exclude=AAA --exclude=BBB --exclude=CCC
 </code></pre>
 
 <p><a href="http://www.cnblogs.com/jyzhao/p/3809095.html">Linux rsync实现断点续传</a></p>
+
+<p><a href="https://askubuntu.com/questions/320458/how-to-exclude-multiple-directories-with-rsync">How to exclude multiple directories with rsync?</a></p>
 
 <hr />
 
@@ -244,7 +249,7 @@ go build
 
 </aside>
 
-<meta itemprop="wordCount" content="56">
+<meta itemprop="wordCount" content="68">
 <meta itemprop="datePublished" content="2017-10-25">
 <meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/ssh%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
 

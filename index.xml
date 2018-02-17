@@ -145,9 +145,17 @@ How to find elements by class Ask Question
       <pubDate>Fri, 01 Dec 2017 13:54:31 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/latex%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
-      <description>相关资料 命令行下使用 # make latex file latex *.tex bibtex *.aux latex *.tex latex *.tex # clean latex file rm *.blg *.bbl *.aux *.log *.brf *.nlo *.out *.dvi *.ps *.lof *.toc *.fls *.fdb_latexmk *.pdfsync *.synctex*.gz *.ind *.ilg *.idx  命令行下使用 LaTeX
-BibTeX使用 [转载]BibTeX的使用方法
-LaTeX技巧23:BIBTeX制作参考文献 (2009-11-05 10:22:32)</description>
+      <description>相关资料 安装包 maxtex maxtex 2013下载
+文本编辑器 Texmaker pdf viewer和文本在同一窗口中 Texmaker: source editor and embedded pdf viewer on same window
+中文字体 最好使用latex2013，并将ctex-xecjk-winfonts.def修改为如下
+sudo vim /usr/local/texlive/2013/texmf-dist/tex/latex/ctex/fontset/ctex-xecjk-winfonts.def % vim:ft=tex \setCJKmainfont[BoldFont={STHeiti},ItalicFont={STKaiti}] {STSong} \setCJKsansfont{STHeiti} \setCJKmonofont{STFangsong} \setCJKfamilyfont{zhsong}{STSong} \setCJKfamilyfont{zhhei}{STHeiti} \setCJKfamilyfont{zhkai}{STKaiti} \setCJKfamilyfont{zhfs}{STFangsong} % \setCJKfamilyfont{zhli}{LiSu} % \setCJKfamilyfont{zhyou}{YouYuan} \newcommand*{\songti}{\CJKfamily{zhsong}} \newcommand*{\heiti}{\CJKfamily{zhhei}} \newcommand*{\kaishu}{\CJKfamily{zhkai}} \newcommand*{\fangsong}{\CJKfamily{zhfs}} % \newcommand*{\lishu}{\CJKfamily{zhli}} % \newcommand*{\youyuan}{\CJKfamily{zhyou}} \endinput  安装TeX及中文支持
+Mac 下编写中文 Beamer
+在Mac OS系统下配置使用基于TeXLive/MacTeX的CTeX+XeLaTeX方案处理中文文档 
+在Mac下使用LaTeX的中文字体
+LaTeX 在 Mac 下的中文环境配置 推荐指数****
+为 MacTeX 配置中文支持
+在Mac OS系统下配置使用基于TeXLive/MacTeX的CTeX+XeLaTeX方案处理中文文档 
+命令行下使用 # make latex file latex *.</description>
     </item>
     
     <item>
@@ -274,9 +282,9 @@ Fire Detection with Computer Vision</description>
       <pubDate>Sun, 26 Nov 2017 10:37:09 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/tensorflow%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
-      <description> 相关教程 tensorflow-mnist-tutorial 以漫画的形式使用Tensorflow进行教学
+      <description>相关教程 tensorflow-mnist-tutorial 以漫画的形式使用Tensorflow进行教学
 tensorboard相关说明 tensorboard中的数据可以下载，启动左侧的下载即可。
-# 启动tensorboard，默认端口6006 tensorboard --logdir=checkpoints --port 6007  </description>
+# 启动tensorboard，默认端口6006 tensorboard --logdir=checkpoints --port 6007  tensorflow model使用问题 # protoc版本为3.3才可以 /usr/local/protoc/bin/protoc object_detection/protos/*.proto --python_out=.  How to fix the bug “Expected &amp;ldquo;required&amp;rdquo;, &amp;ldquo;optional&amp;rdquo;, or &amp;ldquo;repeated&amp;rdquo;.”？</description>
     </item>
     
     <item>
@@ -1202,11 +1210,12 @@ Swagger：Rest API的描述语言</description>
       <pubDate>Wed, 25 Oct 2017 01:07:58 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/ssh%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
-      <description>ssh相关key ~.终止openssh，对于未响应的ssh关闭连接 ~?显示当前连接ssh的信息  ssh文件传输 rsync断点续传 rsync -rP --rsh=ssh root@114.115.142.49:~/Data2.zip ~/Data/SegmPred/  Linux rsync实现断点续传
+      <description>ssh相关key ~.终止openssh，对于未响应的ssh关闭连接 ~?显示当前连接ssh的信息  ssh文件传输 rsync断点续传 rsync -rP --rsh=ssh root@114.115.142.49:~/Data2.zip ~/Data/SegmPred/ # 排除某些目录 --exclude=AAA --exclude=BBB --exclude=CCC  Linux rsync实现断点续传
+How to exclude multiple directories with rsync?
 ssh反向代理 局域网内没有固定IP无法直接被外网访问，使用一个有固定IP地址的外网服务器作为中转站从而进行反向代理，这里假设Local为局域网内电脑，Global为外网电脑，Client为客户电脑，Client&amp;mdash;-&amp;gt;Local转换为Client&amp;mdash;-&amp;gt;Global&amp;mdash;-&amp;gt;Local，首先在Global中配置代理的两个端口
 # Global将9001转换为9000 ssh -fCNL &#39;*:9001:localhost:9000&#39; localhost # Local将9000转换为本地的22端口 ssh -fCNR 9000:localhost:22 user_global@ip_global # Client访问Local ssh -p 9001 user_client@ip_global  从外网 SSH 进局域网，反向代理+正向代理解决方案
 http反向代理 tcprp 首先编译客户端和服务端
-cd client go build ./client 127.0.0.1:8080 example.com:9000 KEYKEY cd server go build ./server :9001 :9000 KEYKEY 访问example.com:80即可  非常好用的tcp反向代理，将本地端口反向到远程服务器上的监听端口，远程端口在转发监听端口到转发端口，直接查看转发端口即可。</description>
+cd client go build ./client 127.0.0.1:8080 example.com:9000 KEYKEY cd server go build ./server :9001 :9000 KEYKEY 访问example.</description>
     </item>
     
     <item>

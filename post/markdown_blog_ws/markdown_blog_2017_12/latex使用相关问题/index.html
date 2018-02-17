@@ -110,6 +110,70 @@
 
 <hr />
 
+<h1 id="安装包">安装包</h1>
+
+<h2 id="maxtex">maxtex</h2>
+
+<p><a href="http://ftp.math.utah.edu/pub/tex/historic/systems/mactex/2013/">maxtex 2013下载</a></p>
+
+<hr />
+
+<h1 id="文本编辑器">文本编辑器</h1>
+
+<h2 id="texmaker">Texmaker</h2>
+
+<p>pdf viewer和文本在同一窗口中
+<a href="https://tex.stackexchange.com/questions/36100/texmaker-source-editor-and-embedded-pdf-viewer-on-same-window">Texmaker: source editor and embedded pdf viewer on same window</a></p>
+
+<hr />
+
+<h1 id="中文字体">中文字体</h1>
+
+<p>最好使用latex2013，并将ctex-xecjk-winfonts.def修改为如下</p>
+
+<pre><code class="language-bash">sudo vim /usr/local/texlive/2013/texmf-dist/tex/latex/ctex/fontset/ctex-xecjk-winfonts.def
+
+% vim:ft=tex
+
+\setCJKmainfont[BoldFont={STHeiti},ItalicFont={STKaiti}]
+  {STSong}
+\setCJKsansfont{STHeiti}
+\setCJKmonofont{STFangsong}
+
+\setCJKfamilyfont{zhsong}{STSong}
+\setCJKfamilyfont{zhhei}{STHeiti}
+\setCJKfamilyfont{zhkai}{STKaiti}
+\setCJKfamilyfont{zhfs}{STFangsong}
+% \setCJKfamilyfont{zhli}{LiSu}
+% \setCJKfamilyfont{zhyou}{YouYuan}
+
+\newcommand*{\songti}{\CJKfamily{zhsong}}
+\newcommand*{\heiti}{\CJKfamily{zhhei}}
+\newcommand*{\kaishu}{\CJKfamily{zhkai}}
+\newcommand*{\fangsong}{\CJKfamily{zhfs}}
+% \newcommand*{\lishu}{\CJKfamily{zhli}}
+% \newcommand*{\youyuan}{\CJKfamily{zhyou}}
+
+\endinput
+
+</code></pre>
+
+<p><a href="https://zhengmingpei.github.io/2015/02/12/install-tex/">安装TeX及中文支持</a></p>
+
+<p><a href="http://harttle.land/2016/09/27/mactex-beamer.html">Mac 下编写中文 Beamer</a></p>
+
+<p><a href="http://kqwd.blog.163.com/blog/static/4122344820117725633776/">在Mac OS系统下配置使用基于TeXLive/MacTeX的CTeX+XeLaTeX方案处理中文文档 </a></p>
+
+<p><a href="http://friskit.me/2013/08/15/ctex-fonts-in-mac-latex-live/">在Mac下使用LaTeX的中文字体</a></p>
+
+<p><a href="https://loggerhead.me/posts/latex-zai-mac-xia-de-zhong-wen-huan-jing-pei-zhi.html?PageSpeed=noscript">LaTeX 在 Mac 下的中文环境配置</a> 推荐指数****</p>
+
+<p><a href="https://liam0205.me/2014/11/02/latex-mactex-chinese-support/">为 MacTeX 配置中文支持</a></p>
+
+<p><a href="http://kqwd.blog.163.com/blog/static/4122344820117725633776/">在Mac OS系统下配置使用基于TeXLive/MacTeX的CTeX+XeLaTeX方案处理中文文档  </a></p>
+
+<hr />
+
 <h1 id="命令行下使用">命令行下使用</h1>
 
 <pre><code class="language-bash"># make latex file
@@ -144,7 +208,7 @@ rm *.blg *.bbl *.aux *.log *.brf *.nlo *.out *.dvi *.ps *.lof *.toc *.fls *.fdb_
     <div>
         <section id="datecount">
           <h4 id="date"> Fri Dec 1, 2017 </h4>
-          <h5 id="wc"> 100 Words </h5>
+          <h5 id="wc"> 200 Words </h5>
           <h5 id="readtime"> Read in about 1 Min </h5>
         </section>
         <ul id="categories">
@@ -221,7 +285,7 @@ rm *.blg *.bbl *.aux *.log *.brf *.nlo *.out *.dvi *.ps *.lof *.toc *.fls *.fdb_
 
 </aside>
 
-<meta itemprop="wordCount" content="44">
+<meta itemprop="wordCount" content="107">
 <meta itemprop="datePublished" content="2017-12-01">
 <meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/latex%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
 

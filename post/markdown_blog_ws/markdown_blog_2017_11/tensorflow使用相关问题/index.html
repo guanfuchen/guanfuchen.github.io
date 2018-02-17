@@ -120,6 +120,16 @@
 tensorboard --logdir=checkpoints --port 6007
 </code></pre>
 
+<hr />
+
+<h1 id="tensorflow-model使用问题">tensorflow model使用问题</h1>
+
+<pre><code class="language-bash"># protoc版本为3.3才可以
+/usr/local/protoc/bin/protoc object_detection/protos/*.proto --python_out=.
+</code></pre>
+
+<p><a href="https://github.com/tensorflow/models/issues/1834">How to fix the bug “Expected &ldquo;required&rdquo;, &ldquo;optional&rdquo;, or &ldquo;repeated&rdquo;.”？</a></p>
+
         </article>
   </div>
 </section>
@@ -208,7 +218,7 @@ tensorboard --logdir=checkpoints --port 6007
 
 </aside>
 
-<meta itemprop="wordCount" content="11">
+<meta itemprop="wordCount" content="28">
 <meta itemprop="datePublished" content="2017-11-26">
 <meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/tensorflow%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
 
