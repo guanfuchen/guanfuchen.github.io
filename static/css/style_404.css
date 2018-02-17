@@ -1,8 +1,5 @@
 @media (max-width: 800px) { /* =Base */
   p { font-size: 16px; line-height: 1.6; }
-  .page-title { margin-top: 80px; margin-bottom: 60px; }
-  .page-title__text { font-size: 40px; }
-  .page-title__subtitle { font-size: 18px; }
 /* Source: http://codepen.io/bulby97/pen/fcvay */
 .glitch { position: relative; animation: glitch 2s steps(100) infinite; }
 
