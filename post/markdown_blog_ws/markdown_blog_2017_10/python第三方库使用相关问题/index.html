@@ -90,6 +90,12 @@
                 <span> 关于 </span>
             </a>
             </li>
+            <li>
+                <a href="https://guanfuchen.github.io/resume.pdf">
+                    <span class="icon"> <i aria-hidden="true" class="console"></i></span>
+                    <span> 简历 </span>
+                </a>
+            </li>
         </ul>
 
     
@@ -211,6 +217,48 @@ sys.version
 
 <p><a href="https://blog.ernest.me/post/python-progress-bar">从 Python 第三方进度条库 tqdm 谈起</a></p>
 
+<hr />
+
+<h1 id="复制文件">复制文件</h1>
+
+<pre><code class="language-python">shutil.copyfile(src, dst)
+</code></pre>
+
+<p><a href="http://www.cnblogs.com/funsion/p/4017989.html">Python默认模块os和shutil实用函数</a></p>
+
+<hr />
+
+<h1 id="获取求整的整数部分和余数部分">获取求整的整数部分和余数部分</h1>
+
+<pre><code>divmod
+</code></pre>
+
+<hr />
+
+<h1 id="python字典用法">python字典用法</h1>
+
+<p><a href="https://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/001411031239400f7181f65f33a4623bc42276a605debf6000">collections</a></p>
+
+<pre><code class="language-python"># defaultdict用来表示默认不存在value，但是插入了key的值
+from collections import defaultdict
+dd = defaultdict(lambda: 'N/A')
+dd['key1'] = 'abc'
+dd['key1'] # key1存在
+# 输出'abc'
+dd['key2'] # key2不存在，返回默认值
+# 输出'N/A'
+</code></pre>
+
+<hr />
+
+<h1 id="python图像文件truncated">python图像文件truncated</h1>
+
+<pre><code class="language-python">from PIL import ImageFile
+ImageFile.LOAD_TRUNCATED_IMAGES = True
+</code></pre>
+
+<p><a href="https://stackoverflow.com/questions/12984426/python-pil-ioerror-image-file-truncated-with-big-images">Python PIL “IOError: image file truncated” with big images</a></p>
+
         </article>
   </div>
 </section>
@@ -222,7 +270,7 @@ sys.version
     <div>
         <section id="datecount">
           <h4 id="date"> Thu Oct 26, 2017 </h4>
-          <h5 id="wc"> 200 Words </h5>
+          <h5 id="wc"> 300 Words </h5>
           <h5 id="readtime"> Read in about 1 Min </h5>
         </section>
         <ul id="categories">
@@ -299,7 +347,7 @@ sys.version
 
 </aside>
 
-<meta itemprop="wordCount" content="153">
+<meta itemprop="wordCount" content="201">
 <meta itemprop="datePublished" content="2017-10-26">
 <meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/python%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
 

@@ -24,8 +24,8 @@
 <meta property="og:image:height" content="" />
 <meta property="og:url" content="https://guanfuchen.github.io/">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2018-01-02"/>
-<meta property="article:modified_time" content="2018-01-02"/>
+<meta property="article:published_time" content="2018-02-26"/>
+<meta property="article:modified_time" content="2018-02-26"/>
 
 
 
@@ -89,6 +89,12 @@
                 <span> 关于 </span>
             </a>
             </li>
+            <li>
+                <a href="https://guanfuchen.github.io/resume.pdf">
+                    <span class="icon"> <i aria-hidden="true" class="console"></i></span>
+                    <span> 简历 </span>
+                </a>
+            </li>
         </ul>
 
     
@@ -99,6 +105,41 @@
 <section id="main">
   <div>
       <h1 id="title">import python</h1>
+    
+        <article class="post">
+    <header>
+      <h2><a href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_02/leetcode%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">LeetCode相关问题 </a> </h2>
+      <div class="post-meta">Mon, Feb 26, 2018 -  Read in 1 Min </div>
+    </header>
+
+    常用算法 并查集(Union-Find)算法介绍
+LeetCode 解题报告(684，685)-并查集介绍及应用
+遗留问题 725. Split Linked List in Parts
+654. Maximum Binary Tree 题目大意： 给定无重复的数组。一棵最大树定义如下： 从数组中挑选最大的数字作为根 挑选左半数组中最大的数字作为左子树的根 挑选右半数组中最大的数字作为右子树的根 递归此过程。
+# Definition for a binary tree node. # class TreeNode(object): # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution(object): def constructMaximumBinaryTree(self, nums): &quot;&quot;&quot; :type nums: List[int] :rtype: TreeNode &quot;&quot;&quot; if not nums: return None maxn = max(nums) idx = nums.
+    <footer>
+        <a href='https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_02/leetcode%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/'><nobr>Read more →</nobr></a>
+    </footer>
+</article>
+
+    
+        <article class="post">
+    <header>
+      <h2><a href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_02/kmp%E7%AE%97%E6%B3%95%E7%9B%B8%E5%85%B3/">KMP算法相关 </a> </h2>
+      <div class="post-meta">Mon, Feb 26, 2018 -  Read in 2 Min </div>
+    </header>
+
+    相关资料 可参考大话数据结构中串的一节KMP匹配 Algorithm Implementation/String searching/Knuth-Morris-Pratt pattern matcher 字符串匹配的KMP算法 主要参考大神阮一峰进行学习的，下面均来自于其博客。 The Knuth-Morris-Pratt Algorithm in my own words
+核心思路是将比较过的位置不要继续进行比较，其中使用《部分匹配表》（Partial Match Table）既可以解决这个问题。已知空格与D不匹配时，前面六个字符&rdquo;ABCDAB&rdquo;是匹配的。查表可知，最后一个匹配字符B对应的&rdquo;部分匹配值&rdquo;为2，因此按照下面的公式算出向后移动的位数：
+移动位数 = 已匹配的字符数 - 对应的部分匹配值 因为 6 - 2 等于4，所以将搜索词向后移动4位。  下面介绍《部分匹配表》是如何产生的。
+首先，要了解两个概念：&rdquo;前缀&rdquo;和&rdquo;后缀&rdquo;。 &ldquo;前缀&rdquo;指除了最后一个字符以外，一个字符串的全部头部组合；&rdquo;后缀&rdquo;指除了第一个字符以外，一个字符串的全部尾部组合。
+&ldquo;部分匹配值&rdquo;就是&rdquo;前缀&rdquo;和&rdquo;后缀&rdquo;的最长的共有元素的长度。以&rdquo;ABCDABD&rdquo;为例，
+　－　&quot;A&quot;的前缀和后缀都为空集，共有元素的长度为0； －　&quot;AB&quot;的前缀为[A]，后缀为[B]，共有元素的长度为0； －　&quot;ABC&quot;的前缀为[A, AB]，后缀为[BC, C]，共有元素的长度0； －　&quot;ABCD&quot;的前缀为[A, AB, ABC]，后缀为[BCD, CD, D]，共有元素的长度为0； －　&quot;ABCDA&quot;的前缀为[A, AB, ABC, ABCD]，后缀为[BCDA, CDA, DA, A]，共有元素为&quot;A&quot;，长度为1； －　&quot;ABCDAB&quot;的前缀为[A, AB, ABC, ABCD, ABCDA]，后缀为[BCDAB, CDAB, DAB, AB, B]，共有元素为&quot;AB&quot;，长度为2； －　&quot;ABCDABD&quot;的前缀为[A, AB, ABC, ABCD, ABCDA, ABCDAB]，后缀为[BCDABD, CDABD, DABD, ABD, BD, D]，共有元素的长度为0。  &ldquo;部分匹配&rdquo;的实质是，有时候，字符串头部和尾部会有重复。比如，&rdquo;ABCDAB&rdquo;之中有两个&rdquo;AB&rdquo;，那么它的&rdquo;部分匹配值&rdquo;就是2（&rdquo;AB&rdquo;的长度）。搜索词移动的时候，第一个&rdquo;AB&rdquo;向后移动4位（字符串长度-部分匹配值），就可以来到第二个&rdquo;AB&rdquo;的位置。
+    <footer>
+        <a href='https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_02/kmp%E7%AE%97%E6%B3%95%E7%9B%B8%E5%85%B3/'><nobr>Read more →</nobr></a>
+    </footer>
+</article>
+
     
         <article class="post">
     <header>
@@ -222,38 +263,6 @@ PREDICTION UNDER UNCERTAINTY WITH ERROR-ENCODING NETWORKS 论文摘要部分中�
 相关描述 论文主要还是基于将将来帧的预测分解为一个确定性网络和隐变量网络。
     <footer>
         <a href='https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/prediction_under_uncertainty_with_error-encoding_networks%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/'><nobr>Read more →</nobr></a>
-    </footer>
-</article>
-
-    
-        <article class="post">
-    <header>
-      <h2><a href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/dynamic_filter_networks%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">Dynamic_Filter_Networks论文阅读 </a> </h2>
-      <div class="post-meta">Tue, Dec 5, 2017 -  Read in 1 Min </div>
-    </header>
-
-    论文资料 Dynamic Filter Networks 代码
-    <footer>
-        <a href='https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/dynamic_filter_networks%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/'><nobr>Read more →</nobr></a>
-    </footer>
-</article>
-
-    
-        <article class="post">
-    <header>
-      <h2><a href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/%E7%88%AC%E8%99%AB%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">爬虫使用相关问题 </a> </h2>
-      <div class="post-meta">Sun, Dec 3, 2017 -  Read in 1 Min </div>
-    </header>
-
-    伪装浏览器 from fake_useragent import UserAgent import requests ua = UserAgent() print(ua.chrome) header = {'User-Agent':str(ua.chrome)} print(header) url = &quot;https://www.hybrid-analysis.com/recent-submissions?filter=file&amp;sort=^timestamp&quot; htmlContent = requests.get(url, headers=header) print(htmlContent)  fake-useragent
-Requests.get in Python using “User-Agent” not simulating a browser request
-How to use Python requests to fake a browser visit?
-bs4使用技巧 bs4查询对象 How to find tags with only certain attributes - BeautifulSoup
-BeautifulSoup ：一些常用功能的使用和测试
-How to find elements by class Ask Question
-获取href BeautifulSoup getting href [duplicate] Ask
-    <footer>
-        <a href='https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/%E7%88%AC%E8%99%AB%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/'><nobr>Read more →</nobr></a>
     </footer>
 </article>
 

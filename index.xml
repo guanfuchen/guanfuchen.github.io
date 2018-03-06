@@ -6,10 +6,37 @@
     <description>Recent content on import python</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 Jan 2018 17:15:47 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 26 Feb 2018 20:27:54 +0800</lastBuildDate>
     
 	<atom:link href="https://guanfuchen.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LeetCode相关问题</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_02/leetcode%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Mon, 26 Feb 2018 20:27:54 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_02/leetcode%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
+      <description>常用算法 并查集(Union-Find)算法介绍
+LeetCode 解题报告(684，685)-并查集介绍及应用
+遗留问题 725. Split Linked List in Parts
+654. Maximum Binary Tree 题目大意： 给定无重复的数组。一棵最大树定义如下： 从数组中挑选最大的数字作为根 挑选左半数组中最大的数字作为左子树的根 挑选右半数组中最大的数字作为右子树的根 递归此过程。
+# Definition for a binary tree node. # class TreeNode(object): # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution(object): def constructMaximumBinaryTree(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: TreeNode &amp;quot;&amp;quot;&amp;quot; if not nums: return None maxn = max(nums) idx = nums.</description>
+    </item>
+    
+    <item>
+      <title>KMP算法相关</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_02/kmp%E7%AE%97%E6%B3%95%E7%9B%B8%E5%85%B3/</link>
+      <pubDate>Mon, 26 Feb 2018 19:41:14 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_02/kmp%E7%AE%97%E6%B3%95%E7%9B%B8%E5%85%B3/</guid>
+      <description>相关资料 可参考大话数据结构中串的一节KMP匹配 Algorithm Implementation/String searching/Knuth-Morris-Pratt pattern matcher 字符串匹配的KMP算法 主要参考大神阮一峰进行学习的，下面均来自于其博客。 The Knuth-Morris-Pratt Algorithm in my own words
+核心思路是将比较过的位置不要继续进行比较，其中使用《部分匹配表》（Partial Match Table）既可以解决这个问题。已知空格与D不匹配时，前面六个字符&amp;rdquo;ABCDAB&amp;rdquo;是匹配的。查表可知，最后一个匹配字符B对应的&amp;rdquo;部分匹配值&amp;rdquo;为2，因此按照下面的公式算出向后移动的位数：
+移动位数 = 已匹配的字符数 - 对应的部分匹配值 因为 6 - 2 等于4，所以将搜索词向后移动4位。  下面介绍《部分匹配表》是如何产生的。
+首先，要了解两个概念：&amp;rdquo;前缀&amp;rdquo;和&amp;rdquo;后缀&amp;rdquo;。 &amp;ldquo;前缀&amp;rdquo;指除了最后一个字符以外，一个字符串的全部头部组合；&amp;rdquo;后缀&amp;rdquo;指除了第一个字符以外，一个字符串的全部尾部组合。
+&amp;ldquo;部分匹配值&amp;rdquo;就是&amp;rdquo;前缀&amp;rdquo;和&amp;rdquo;后缀&amp;rdquo;的最长的共有元素的长度。以&amp;rdquo;ABCDABD&amp;rdquo;为例，
+　－　&amp;quot;A&amp;quot;的前缀和后缀都为空集，共有元素的长度为0； －　&amp;quot;AB&amp;quot;的前缀为[A]，后缀为[B]，共有元素的长度为0； －　&amp;quot;ABC&amp;quot;的前缀为[A, AB]，后缀为[BC, C]，共有元素的长度0； －　&amp;quot;ABCD&amp;quot;的前缀为[A, AB, ABC]，后缀为[BCD, CD, D]，共有元素的长度为0； －　&amp;quot;ABCDA&amp;quot;的前缀为[A, AB, ABC, ABCD]，后缀为[BCDA, CDA, DA, A]，共有元素为&amp;quot;A&amp;quot;，长度为1； －　&amp;quot;ABCDAB&amp;quot;的前缀为[A, AB, ABC, ABCD, ABCDA]，后缀为[BCDAB, CDAB, DAB, AB, B]，共有元素为&amp;quot;AB&amp;quot;，长度为2； －　&amp;quot;ABCDABD&amp;quot;的前缀为[A, AB, ABC, ABCD, ABCDA, ABCDAB]，后缀为[BCDABD, CDABD, DABD, ABD, BD, D]，共有元素的长度为0。  &amp;ldquo;部分匹配&amp;rdquo;的实质是，有时候，字符串头部和尾部会有重复。比如，&amp;rdquo;ABCDAB&amp;rdquo;之中有两个&amp;rdquo;AB&amp;rdquo;，那么它的&amp;rdquo;部分匹配值&amp;rdquo;就是2（&amp;rdquo;AB&amp;rdquo;的长度）。搜索词移动的时候，第一个&amp;rdquo;AB&amp;rdquo;向后移动4位（字符串长度-部分匹配值），就可以来到第二个&amp;rdquo;AB&amp;rdquo;的位置。</description>
+    </item>
     
     <item>
       <title>HPEC月例会_2018年_1月</title>
