@@ -28,6 +28,19 @@ Improving the way neural networks learn</description>
     </item>
     
     <item>
+      <title>神经网络分享</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_03/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%88%86%E4%BA%AB/</link>
+      <pubDate>Sat, 03 Mar 2018 23:38:00 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_03/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%88%86%E4%BA%AB/</guid>
+      <description>神经网络（Neural Network） 第四期分享会 汇报人：陈官富 2018.3.23 引言 神经网络被广泛应用在图像分类、图像分割、目标跟踪等领域 引言 引言 引言 引言 人工智能、机器学习、表示学习、深度学习和CNN之间的关系 引言 传统机器学习 VS 深度学习
+引言 典型的图像分类Pipeline
+多层感知机-卷积神经网络**），感知器可以实现简单的分类操作，由**感知器**组成的一个**多层感知机**（MLP）能够表示更大的假设空间（学习能力更强），实现权值共享的多层感知机也就是卷积神经网络，减少了训练的参数，极大地加快了训练，增强了上下文信息建模能力，从而被广泛应用在图像、语音等二维数据上。 -- 目录  感知器（Perceptron）  梯度下降算法（Gradient Descent）  多层感知器（MLP）  反向传播算法（Back Propogation）  卷积神经网络（Convolution Neural Network） 循环神经网络（Recurrent Neural Network）  感知器 感知器 输入：样本的特征向量$x$ 输出：样本的类别$y \in {-1, +1}$ 模型： $$f(x)=sign(w \cdot x+b)$$ $$sign(x)=\begin{cases} 1&amp;amp; if&amp;amp; x&amp;gt;0
+0&amp;amp; if&amp;amp; x \leq 0 \end{cases}$$ 其中$w$和$b$是感知器参数，$w$是权重（weight），$b$是偏置（bias），$sign$是符号函数。
+感知器 $$y_i=sign(w^{(1)}x_i^{(1)}+w^{(2)}x_i^{(2)}+&amp;hellip;+w^{(d)}x_i^{(d)}+b)$$ 其中$i=1,2,&amp;hellip;,N,$，$N$为样本数，$d$为输入样本的特征维度，训练集为$T={x_1,x_2,&amp;hellip;,x_N}$，$y_i \in {-1, +1}$，$+1$表示正样本，$-1$表示负样本。 感知器 感知器 计算简单的逻辑功能</description>
+    </item>
+    
+    <item>
       <title>LeetCode相关问题</title>
       <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_02/leetcode%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
       <pubDate>Mon, 26 Feb 2018 20:27:54 +0800</pubDate>
@@ -1358,19 +1371,6 @@ git中submodule的路径 # vim .gitmodules [submodule &amp;quot;hugo_ws/mysite/c
 表示最优化满足如下条件： $$\nabla f(x,y)=\lambda \nabla (g(x,y)-c)$$ 即最优化点满足两个函数的法向量相同，如下构造拉格朗日乘子： $$L(x,y,\lambda)=f(x,y)+\lambda (g(x,y)-c)$$
 多个等式约束的拉格朗日乘子法 将单一等式约束的拉格朗日乘子法扩展即可： $$min{(x, y)}{f(x,y)}$$ $$s.t.\ g{i}(x,y)=0, i=1,2,&amp;hellip;,N$$ $$L(x,y,\lambda)=f(x,y)+\sum{i=1}^{N}{\lambda{i} g_{i}(x,y)}$$
 广义拉格朗日乘子法 $$min{(x, y)}{f(x,y)}$$ $$s.t.\ g{i}(x,y)=0, i=1,2,&amp;hellip;,N$$ $$h{i}(x,y)&amp;lt;=0, i=1,2,&amp;hellip;,M$$ 构造广义拉格朗日乘子法 $$L(x,y,\alpha,\beta)=f(x,y)+\sum{i=1}^{N}{\alpha{i} g{i}(x,y)}+\sum{i=1}^{M}{\beta{i} h{i}(x,y)}$$ 满足如下KKT条件即可求得最优解： - 法向量相同 $$\nabla L(x,y,\alpha,\beta)=0$$ - 基本条件 $$g{i}(x,y)=0, i=1,2,&amp;hellip;,N$$ $$h_{i}(x,y)&amp;lt;=0, i=1,2,&amp;hellip;,M$$ - 不等约束系数非负 $$\beta_i&amp;gt;=0, i=1,2,&amp;hellip;,M$$ - 不等约束和系数其中一个为0 $$\beta_i h_i(x,y)=0, i=1,2,&amp;hellip;,M$$</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_03/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%88%86%E4%BA%AB/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_03/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%88%86%E4%BA%AB/</guid>
-      <description>神经网络（Neural Network） 第四期分享会 汇报人：陈官富 2018.3.23 引言 神经网络被广泛应用在图像分类、图像分割、目标跟踪等领域 引言 引言 引言 引言 人工智能、机器学习、表示学习、深度学习和CNN之间的关系 引言 传统机器学习 VS 深度学习
-引言 典型的图像分类Pipeline
-多层感知机-卷积神经网络**），感知器可以实现简单的分类操作，由**感知器**组成的一个**多层感知机**（MLP）能够表示更大的假设空间（学习能力更强），实现权值共享的多层感知机也就是卷积神经网络，减少了训练的参数，极大地加快了训练，增强了上下文信息建模能力，从而被广泛应用在图像、语音等二维数据上。 -- 目录  感知器（Perceptron）  梯度下降算法（Gradient Descent）  多层感知器（MLP）  反向传播算法（Back Propogation）  卷积神经网络（Convolution Neural Network） 循环神经网络（Recurrent Neural Network）  感知器 感知器 输入：样本的特征向量$x$ 输出：样本的类别$y \in {-1, +1}$ 模型： $$f(x)=sign(w \cdot x+b)$$ $$sign(x)=\begin{cases} 1&amp;amp; if&amp;amp; x&amp;gt;0
-0&amp;amp; if&amp;amp; x \leq 0 \end{cases}$$ 其中$w$和$b$是感知器参数，$w$是权重（weight），$b$是偏置（bias），$sign$是符号函数。
-感知器 $$y_i=sign(w^{(1)}x_i^{(1)}+w^{(2)}x_i^{(2)}+&amp;hellip;+w^{(d)}x_i^{(d)}+b)$$ 其中$i=1,2,&amp;hellip;,N,$，$N$为样本数，$d$为输入样本的特征维度，训练集为$T={x_1,x_2,&amp;hellip;,x_N}$，$y_i \in {-1, +1}$，$+1$表示正样本，$-1$表示负样本。 感知器 感知器 计算简单的逻辑功能</description>
     </item>
     
   </channel>

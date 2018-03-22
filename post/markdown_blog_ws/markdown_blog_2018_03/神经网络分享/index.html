@@ -1,8 +1,120 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="keywords" content="">
+
+ 
+<meta property="og:type" content="article"/>
+<meta property="og:description" content=""/>
+<meta property="og:title" content="神经网络分享 : spf13.com"/>
+<meta property="og:site_name" content="spf13 is Steve Francia"/>
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="" />
+<meta property="og:image:height" content="" />
+<meta property="og:url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_03/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%88%86%E4%BA%AB/">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2018-03-03"/>
+<meta property="article:modified_time" content="2018-03-03"/>
 
 
 
 
 
+<meta name="twitter:card" content="summary">
+
+<meta name="twitter:site" content="@spf13">
+<meta name="twitter:title" content="神经网络分享 : spf13.com">
+<meta name="twitter:creator" content="@spf13">
+<meta name="twitter:description" content="">
+<meta name="twitter:image:src" content="">
+<meta name="twitter:domain" content="spf13.com">
+
+
+
+    <base href="https://guanfuchen.github.io">
+    <title> 神经网络分享 - spf13.com </title>
+    <link rel="canonical" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_03/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%88%86%E4%BA%AB/">
+    
+
+    <link href='https://fonts.lug.ustc.edu.cn/css?family=Fjalla+One|Open+Sans:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://guanfuchen.github.io/static/css/style.css">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+</head>
+
+<body lang="en" itemscope itemtype="http://schema.org/Article">
+<header id="header">
+    
+      
+    
+    <div align="center">
+        <a href="https://guanfuchen.github.io">
+        <img src="https://guanfuchen.github.io/media/avatar.png">
+        </a>
+    </div>
+    <div align="center">guanfuchen</div>
+    <nav id="nav">
+            <ul id="mainnav">
+            <li>
+                <a href="https://guanfuchen.github.io/post/">
+                <span class="icon"> <i aria-hidden="true" class="icon-quill"></i></span>
+                <span> 博客 </span>
+            </a>
+            </li>
+            
+            
+                
+                
+            
+            
+            
+            
+                
+                
+            
+            
+            <li>
+            <a href="http://github.com/guanfuchen">
+                <span class="icon"> <i aria-hidden="true" class="icon-13"></i></span>
+                <span> 关于 </span>
+            </a>
+            </li>
+            <li>
+                <a href="https://guanfuchen.github.io/resume.pdf">
+                    <span class="icon"> <i aria-hidden="true" class="icon-console"></i></span>
+                    <span> 简历 </span>
+                </a>
+            </li>
+        </ul>
+
+    
+    </nav>
+</header>
+
+
+
+<section id="main">
+  <h1 itemprop="name" id="title">神经网络分享</h1>
+  <div>
+        <article itemprop="articleBody" id="content">
+           
+
+<hr />
+
+<!-- $theme: gaia -->
+
+<!-- *template: invert -->
 
 <h1 id="神经网络-neural-network">神经网络（Neural Network）</h1>
 
@@ -14,7 +126,7 @@
 
 <hr />
 
-
+<!-- page_number: true -->
 
 <h1 id="引言">引言</h1>
 
@@ -62,7 +174,9 @@
 
 <p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/screen_2018-03-21_22.03.49.png" alt="" /></p>
 
-
+<!--
+这些技术被统称为深度学习技术，相比于先前的人工特征技术，不需要经过特征提取就可以自动从数据中“端到端”地学习到分类、分割、跟踪，极大地简化了计算机视觉的Pipeline。这里面深度学习主要是指**卷积神经网络（Convolution Neural Network）**，但究其根本依然是**神经网络**技术。这些技术由简单到复杂（**感知机->多层感知机->卷积神经网络**），感知器可以实现简单的分类操作，由**感知器**组成的一个**多层感知机**（MLP）能够表示更大的假设空间（学习能力更强），实现权值共享的多层感知机也就是卷积神经网络，减少了训练的参数，极大地加快了训练，增强了上下文信息建模能力，从而被广泛应用在图像、语音等二维数据上。
+-->
 
 <hr />
 
@@ -87,15 +201,19 @@
 
 <h1 id="感知器">感知器</h1>
 
+<!--
+-->
 
-
-
+<!-- *template: invert -->
 
 <hr />
 
 <h1 id="感知器-1">感知器</h1>
 
-
+<!--
+感知器是一个二分类线性分类模型，输入实例的特征向量，输出实例的类别（+1，-1），旨在求出将训练数据进行线性划分的分离超平面，属于判别模型，其分类误差为误分类的损失函数，利用梯度下降法对损失函数进行极小化，求得感知机模型。
+我们可以把感知器看作是n维实例空间中的超平面决策面。对于超平面一侧的实例，感知器输出1，对于另一侧的实例输出-1。这个决策超平面方程是$w \cdot x+b=0$。一般情况下，正负样例集合不可能被任一超平面分割。其中可以被分割的称为线性可分的样例集合。
+-->
 
 <p>输入：样本的特征向量$x$
 输出：样本的类别$y \in {-1, +1}$
@@ -111,7 +229,8 @@ $$sign(x)=\begin{cases}
 
 <h1 id="感知器-2">感知器</h1>
 
-
+<!--
+-->
 
 <p>$$y_i=sign(w^{(1)}x_i^{(1)}+w^{(2)}x_i^{(2)}+&hellip;+w^{(d)}x_i^{(d)}+b)$$
 其中$i=1,2,&hellip;,N,$，$N$为样本数，$d$为输入样本的特征维度，训练集为$T={x_1,x_2,&hellip;,x_N}$，$y_i \in {-1, +1}$，$+1$表示正样本，$-1$表示负样本。
@@ -121,7 +240,9 @@ $$sign(x)=\begin{cases}
 
 <h1 id="感知器-3">感知器</h1>
 
-
+<!--
+感知器可以看作是最简单的神经网络（只有一层），该模型是有美国计算机科学家Reseblatt于1957年提出的。这也是网络的精简结构，包括对输入进行的线性化操作以及使用特殊的符号函数作为激活函数。
+-->
 
 <p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/neural_network_figures_5.png" alt="50% 感知器模型" /></p>
 
@@ -129,7 +250,9 @@ $$sign(x)=\begin{cases}
 
 <h1 id="感知器-4">感知器</h1>
 
-
+<!--
+实际上，我们完全能用感知器来计算任何逻辑功能，原因是与非门是通用计算
+-->
 
 <p>计算简单的逻辑功能</p>
 
@@ -159,7 +282,8 @@ $$sign(x)=\begin{cases}
 
 <h1 id="感知器-7">感知器</h1>
 
-
+<!--
+-->
 
 <h2 id="感知器学习策略-线性可分">感知器学习策略（线性可分）</h2>
 
@@ -175,7 +299,9 @@ $$s.t.\ y_i(w \cdot x + b)&lt;0$$</li>
 
 <h1 id="感知器-8">感知器</h1>
 
-
+<!--
+损失函数的选择是误分类点到超平面S的总距离
+-->
 
 <h2 id="感知器学习策略-线性可分-1">感知器学习策略（线性可分）</h2>
 
@@ -187,7 +313,9 @@ $$s.t.\ y_i(w \cdot x + b)&lt;0$$</p>
 
 <h1 id="感知器-9">感知器</h1>
 
-
+<!--
+感知器的学习算法转换为最优化问题，一般方法是求导，根据导数为0求得极值点，但是如果特征维度增加，多项式求解的问题不高效且不实际。这里我们使用梯度下降算法来求解最小值。
+-->
 
 <h2 id="感知器学习方法-线性可分">感知器学习方法（线性可分）</h2>
 
@@ -200,7 +328,11 @@ $$\min<em>{w,b}L(w,b)=-\sum</em>{x_i \in M}{y_i(w \cdot x_i + b)}$$
 
 <h1 id="感知器-10">感知器</h1>
 
-
+<!--
+这里我们考虑一个通用问题，最小化一个代价函数$C(v)$。它可以是任意的多元实值函数，$v=v_1,v_2,...$。为了最小化C(v)，想象C是一个只有两个变量$v_1$和$v_2$的函数，一种找到C的全局最小值的方法是可以计算导数来寻找C的极值点，这对于求解只有一个或者少数几个变量的函数来说可行，但是如果变量过多那就不切实际（求解导数为0变得较慢）。在神经网络中使用了大量的权重和偏置等参数，极其复杂，因此通过微积分的方法来计算最小值变得不可行。
+首先把我们的优化函数想象成一个山谷，一个小球从山谷的斜坡滚落下来，经验告诉我们这个球最终会滚到谷底，梯度下降就是利用这一想法来找到函数的最小值。我们为一个球体随机选择一个起始位置（初始化的$w_0$和$b_0$），然后模拟球体滚落到谷底的运动。
+这里将问题重新描述一下，即如何在$v_1$和$v_2$方向移动一个很小的量，即$\delta v_1$和$\delta v_2$时，球体会下降，首先观察改变后球体位置的变化$\delta C$：
+-->
 
 <h2 id="梯度下降算法">梯度下降算法</h2>
 
@@ -210,13 +342,20 @@ $$\Delta C \approx \frac{\partial{C}}{\partial{v_1}} \Delta{v_1} + \frac{\partia
 <p>定义$\Delta v = (\Delta v_1, \Delta v_2)^T$和$\nabla C = (\frac{\partial{C}}{\partial{v_1}}, \frac{\partial{C}}{\partial{v_2}})^T$
 上述式子简化为：
 $$\Delta C \approx \nabla C \cdot \Delta v$$
-</p>
+<!--
+我们要寻找一种选择$\Delta{v_1}$和$\Delta{v_2}$的方法使得$\Delta C$为负。定义$\Delta v = (\Delta v_1, \Delta v_2)^T$和$\nabla C = (\frac{\partial{C}}{\partial{v_1}}, \frac{\partial{C}}{\partial{v_2}})^T$，其中$\nabla C$表示梯度向量，也就是$C$的偏导数向量。
+那么，上述优化式子改写为：
+--></p>
 
 <hr />
 
 <h1 id="感知器-11">感知器</h1>
 
-
+<!--
+这个方程给出了如何取$\Delta v$使得$\Delta C$为负数，假设我们选取：
+$$\Delta v = -\eta \nabla C$$
+这里的$\eta$是一个很小的正数（神经网络中称为学习率），那么$\Delta C \approx \nabla C \cdot \Delta v = \eta \nabla C \cdot \nabla C = -\eta ||\nabla C||^2$，这个式子保证了$\Delta C \leq 0$，所以根据这个规则不断改变$v$，C会一直减小，不会增加（当然要在$\Delta C$的近似约束下才能成立）。这里我们总结这种方法为梯度下降算法：
+-->
 
 <h2 id="梯度下降算法-1">梯度下降算法</h2>
 
@@ -226,13 +365,16 @@ $\Delta C \approx \nabla C \cdot \Delta v = \eta \nabla C \cdot \nabla C = -\eta
 $$v \rightarrow v^{\prime} = v - \eta \nabla C$$
 其中$\eta$是一个超参数，这里表示学习率。</p>
 
-
+<!--
+上述式子中的$\eta$是学习率，不能过大也不能过小。过大会导致球体滚落急剧变化，学习易震荡，而过小的学习率会导致球体滚落较慢，学习非常缓慢。深度学习中会在学习的过程中调整学习率，首先给一个较大的学习率使得快速学习下降到极值点附近，然后减小学习率（比如初始学习了0.1，经过50个epoch改变为0.01，然后经过50个epoch改变为0.001等等），使得不断接近最小值。
+-->
 
 <hr />
 
 <h1 id="感知器-12">感知器</h1>
 
-
+<!--
+-->
 
 <h2 id="梯度下降算法-2">梯度下降算法</h2>
 
@@ -243,7 +385,8 @@ $$v \rightarrow v^{\prime} = v - \eta \nabla C$$
 
 <h1 id="感知器-13">感知器</h1>
 
-
+<!--
+-->
 
 <h2 id="感知器学习方法-线性可分-1">感知器学习方法（线性可分）</h2>
 
@@ -256,7 +399,8 @@ $$b \leftarrow b-\eta \nabla_{b}{L(w,b)}$$</p>
 
 <h1 id="感知器-14">感知器</h1>
 
-
+<!--
+-->
 
 <h2 id="感知器学习方法-线性可分-2">感知器学习方法（线性可分）</h2>
 
@@ -269,7 +413,8 @@ $$\nabla</em>{b}{L(w,b)}=-\sum_{x_i \in M} y_i$$</p>
 
 <h1 id="感知器-15">感知器</h1>
 
-
+<!--
+-->
 
 <h2 id="感知器学习方法-线性可分-3">感知器学习方法（线性可分）</h2>
 
@@ -287,7 +432,9 @@ $$b \leftarrow b+\eta y_i$$
 
 <h2 id="感知器学习方法-线性可分-4">感知器学习方法（线性可分）</h2>
 
-
+<!--
+这里以两个特征的输入向量来实现感知器算法
+-->
 
 <p><a href="http://10.14.42.229:8888/notebooks/perceptron/perceptron_custom.ipynb">感知器学习算法代码示例</a></p>
 
@@ -299,14 +446,18 @@ $$b \leftarrow b+\eta y_i$$
 
 <h2 id="算法收敛性-线性可分">算法收敛性（线性可分）</h2>
 
-
+<!--
+可以证明，对于线性可分数据集感知机学习算法收敛，即经过有限次迭代可以得到一个奖训练数据集完全正确划分的分离超平面及感知机模型
+-->
 
 <p>课后题：
 证明略，可参考李航《统计学习方法》P47</p>
 
 <hr />
 
-
+<!--
+一般情况下，输入数据都是充满噪声，使得原先线性可分的数据不在线性可分，这时使用梯度下降算法学习算法无法收敛。但是噪声数据是少量的，我们始终能找到一个能分类较好的分离超平面，使得误分类错误最小。这里我们使用贪心算法，即每一次迭代过程中保存最小的损失值，如果当前计算的损失值更小，则更新权重和偏置，否则对下一个误分类样本进行更新。
+-->
 
 <h1 id="感知器-18">感知器</h1>
 
@@ -338,19 +489,27 @@ $$\hat{b} \leftarrow b+\eta y<em>i$$
 
 <hr />
 
-
+<!--
+多层感知器，顾名思义是由多层的感知器组成，但事实上，这种叫法并不合理，实际上多层感知器是由多层的logistic回归模型（连续的非线性函数）组成，而不是由多层的感知器（不连续的非线性函数）组成。该模型由大量的节点之间相互连接构成，这里节点我们称之为神经元。
+-->
 
 <h1 id="多层感知器">多层感知器</h1>
 
-
+<!-- *template: invert -->
 
 <hr />
 
-
+<!--
+首先我们来感受一下多层感知器相比感知器的能力提升，之前介绍感知器无法解决异或的逻辑操作，通过组合多个感知器合成一个异或模型，其中异或操作可以转换为或操作和与操作的组合。
+-->
 
 <h1 id="多层感知器-1">多层感知器</h1>
 
-
+<!--
+[LOGIC  AND  LOGICAL  OPERATIONS](http://toritris.weebly.com/perceptron-2-logical-operations.html)
+[单层感知机不能表示XOR(异或逻辑）问题的证明](https://juejin.im/post/599e380b5188252433707139)
+[【机器学习】神经网络实现异或（XOR）](http://www.cnblogs.com/Belter/p/6711160.html)
+-->
 
 <p>单层感知器无法表示逻辑xor（异或）</p>
 
@@ -360,7 +519,9 @@ $$\hat{b} \leftarrow b+\eta y<em>i$$
 
 <hr />
 
-
+<!--
+实际的多层感知器并不是上述的感知器连接而成，是由一种类似的神经元这个基本单元构成。
+-->
 
 <h1 id="多层感知器-2">多层感知器</h1>
 
@@ -372,7 +533,8 @@ $$\hat{b} \leftarrow b+\eta y<em>i$$
 
 <hr />
 
-
+<!--
+-->
 
 <h1 id="多层感知器-3">多层感知器</h1>
 
@@ -383,7 +545,8 @@ $$\hat{b} \leftarrow b+\eta y<em>i$$
 
 <hr />
 
-
+<!--
+-->
 
 <h1 id="多层感知器-4">多层感知器</h1>
 
@@ -394,7 +557,8 @@ $$\hat{b} \leftarrow b+\eta y<em>i$$
 
 <hr />
 
-
+<!--
+-->
 
 <h1 id="多层感知器-5">多层感知器</h1>
 
@@ -409,7 +573,8 @@ x&amp; if&amp; x \geq 0<br />
 
 <hr />
 
-
+<!--
+-->
 
 <h1 id="多层感知器-6">多层感知器</h1>
 
@@ -424,7 +589,8 @@ x&amp; if&amp; x \geq 0<br />
 
 <hr />
 
-
+<!--
+-->
 
 <h1 id="多层感知器-7">多层感知器</h1>
 
@@ -435,7 +601,8 @@ x&amp; if&amp; x \geq 0<br />
 
 <hr />
 
-
+<!--
+-->
 
 <h1 id="多层感知器-8">多层感知器</h1>
 
@@ -445,7 +612,9 @@ x&amp; if&amp; x \geq 0<br />
 
 <hr />
 
-
+<!--
+多层感知器由多个神经元连接而层，分为输入层、隐藏层和输出层，其中隐藏层仅仅是指非输入和输出层的网络层而已，没有其他特殊含义。
+-->
 
 <h1 id="多层感知器-9">多层感知器</h1>
 
@@ -456,7 +625,8 @@ x&amp; if&amp; x \geq 0<br />
 
 <hr />
 
-
+<!--
+-->
 
 <h1 id="多层感知器-10">多层感知器</h1>
 
@@ -464,7 +634,9 @@ x&amp; if&amp; x \geq 0<br />
 
 <hr />
 
-
+<!--
+这里让我们构建一个更加强大的神经网络，手写数字识别MNIST是机器学习领域中常用的benchmark，总共有50000张训练图像，10000张测试图像，每一个样本都是28*28*1的灰度图像。这个任务使用多层感知器能够获得96%的精度，曾被广泛应用在银行支票数字识别中。
+-->
 
 <h1 id="多层感知器-11">多层感知器</h1>
 
@@ -474,7 +646,9 @@ x&amp; if&amp; x \geq 0<br />
 
 <hr />
 
-
+<!--
+输入是28*28*1，拉伸为一个784*1的向量作为输入，这里使用一个15个输出的网络作为隐藏层，最后输出层为10*1，如果第i个输出层最大，那么识别结果就是i-1
+-->
 
 <h1 id="多层感知器-12">多层感知器</h1>
 
@@ -484,7 +658,9 @@ x&amp; if&amp; x \geq 0<br />
 
 <hr />
 
-
+<!--
+输入是28*28*1，拉伸为一个784*1的向量作为输入，这里使用一个15个输出的网络作为隐藏层，最后输出层为10*1，如果第i个输出层最大，那么识别结果就是i-1
+-->
 
 <h3 id="多层感知器-13">多层感知器</h3>
 
@@ -498,7 +674,9 @@ x&amp; if&amp; x \geq 0<br />
 
 <hr />
 
-
+<!--
+可以看出$w_{24}^3$表示第二层第四个神经元和第三层第二个神经元连接的权重，$b_3^2$表示第二层第三个偏置，$a_2^3$表示第三层第二个神经元的激活值，激活前的值为$z_2^3$，有了上述表达式那么可以计算每一层的前向传播公式
+-->
 
 <h1 id="多层感知器-14">多层感知器</h1>
 
@@ -506,7 +684,9 @@ x&amp; if&amp; x \geq 0<br />
 
 <hr />
 
-
+<!--
+问题和感知器类似，给出一个损失函数，使用梯度下降算法最小化这个损失函数。
+-->
 
 <h1 id="多层感知器-15">多层感知器</h1>
 
@@ -519,7 +699,9 @@ $$a^l=\sigma(w^l a^{l-1} + b^l)$$</p>
 
 <hr />
 
-
+<!--
+这里转换为对每一层的权重和偏置求解梯度，然后使用梯度下降算法更新
+-->
 
 <h1 id="多层感知器-16">多层感知器</h1>
 
@@ -533,7 +715,9 @@ $$C(w, b)=\frac{1}{2n}\sum_{x}||y(x)-a||^2$$
 
 <hr />
 
-
+<!--
+反向传播算法的核心是计算每一层的误差，然后通过误差和权重、偏置的关系求解梯度
+-->
 
 <h3 id="多层感知器-17">多层感知器</h3>
 
@@ -550,7 +734,9 @@ BP4 <strong>代价函数关于任何一个权重的改变率</strong>
 
 <hr />
 
-
+<!--
+使用链式法则进行推导
+-->
 
 <h1 id="多层感知器-18">多层感知器</h1>
 
@@ -561,7 +747,9 @@ $\delta_j^L = \frac{\partial{C}}{\partial{z_j^L}}  = \frac{\partial{C}}{\partial
 
 <hr />
 
-
+<!--
+使用链式法则进行推导
+-->
 
 <h1 id="多层感知器-19">多层感知器</h1>
 
@@ -579,7 +767,9 @@ $\delta_j^L = \frac{\partial{C}}{\partial{z_j^L}}  = \frac{\partial{C}}{\partial
 
 <hr />
 
-
+<!--
+使用链式法则进行推导
+-->
 
 <h1 id="多层感知器-20">多层感知器</h1>
 
@@ -590,7 +780,9 @@ $\frac{\partial{C}}{\partial{b_j^l}} = \frac{\partial{C}}{\partial{z_j^l}} \frac
 
 <hr />
 
-
+<!--
+使用链式法则进行推导
+-->
 
 <h1 id="多层感知器-21">多层感知器</h1>
 
@@ -605,7 +797,9 @@ $\frac{\partial{C}}{\partial{b_j^l}} = \frac{\partial{C}}{\partial{z_j^l}} \frac
 
 <hr />
 
-
+<!--
+使用链式法则进行推导
+-->
 
 <h1 id="多层感知器-22">多层感知器</h1>
 
@@ -616,7 +810,9 @@ $$b_j^l \leftarrow b_j^l-\eta \frac{\partial{C}}{\partial{b_j^l}}$$</p>
 
 <hr />
 
-
+<!--
+使用上述方式构建的模型训练结果
+-->
 
 <h1 id="多层感知器-23">多层感知器</h1>
 
@@ -627,13 +823,17 @@ $$b_j^l \leftarrow b_j^l-\eta \frac{\partial{C}}{\partial{b_j^l}}$$</p>
 
 <h1 id="卷积神经网络">卷积神经网络</h1>
 
+<!--
+卷积神经网络被广泛使用的原因是其端到端的思想，直接输入图像完成最终的任务，比如识别、分割、跟踪等等。其实卷积神经网络使用了一个较强的先验假设，比如局部连接、权重共享、以及空间或时间上的次采样，这些强先验假设适用于图像、音频数据，因此表现较好。
+-->
 
-
-
+<!-- *template: invert -->
 
 <hr />
 
-
+<!--
+首先我们看一下卷积神经网络的应用，如图是LeNet5网络架构，输入是28*28*1的MNIST手写数字，输出是数字或者字母。可以看出这个网络由卷积层、下采样层和之前介绍的全连接层（多层感知器）构成。CNN具有局部连接、权值共享、以及空间或时间上的次采样这三个结构上的特性。这些特性使得CNN具有一定程度上的平移、缩放和扭曲不变性。
+-->
 
 <h1 id="卷积神经网络-1">卷积神经网络</h1>
 
@@ -647,7 +847,9 @@ $$b_j^l \leftarrow b_j^l-\eta \frac{\partial{C}}{\partial{b_j^l}}$$</p>
 
 <hr />
 
-
+<!--
+卷积神经网络是一种前馈神经网络。受生物学上的感受野的机制提出。感受野主要是指听觉系统、本体感觉系统和视觉系统中神经元的一些性质。比如在视觉系统中，一个神经元的感受野是指视网膜上的特定区域，只有这个区域内的刺激才能够激活该神经元。
+-->
 
 <h1 id="卷积神经网络-2">卷积神经网络</h1>
 
@@ -657,7 +859,9 @@ $$b_j^l \leftarrow b_j^l-\eta \frac{\partial{C}}{\partial{b_j^l}}$$</p>
 
 <hr />
 
-
+<!--
+如图所示是卷积的一个过程，卷积核是3*3的卷积核，每次往右平移1格，计算卷积核所在大小的输入和卷积核的乘积，直至最右边，从起始开始往下继续这一过程
+-->
 
 <h1 id="卷积神经网络-3">卷积神经网络</h1>
 
@@ -669,7 +873,8 @@ $$b_j^l \leftarrow b_j^l-\eta \frac{\partial{C}}{\partial{b_j^l}}$$</p>
 
 <hr />
 
-
+<!--
+-->
 
 <h1 id="卷积神经网络-4">卷积神经网络</h1>
 
@@ -681,7 +886,9 @@ $$\sigma(b+\sum_{l=0}^{k<em>h-1}\sum</em>{m=0}^{k<em>w-1}w</em>{l,m}a_{j+k, k+m}
 
 <hr />
 
-
+<!--
+池化层减小了特征图的大小，池化层的主要作用就是增大了引入了平移、缩放、旋转不变性。
+-->
 
 <h1 id="卷积神经网络-5">卷积神经网络</h1>
 
@@ -696,7 +903,8 @@ $$\sigma(b+\sum_{l=0}^{k<em>h-1}\sum</em>{m=0}^{k<em>w-1}w</em>{l,m}a_{j+k, k+m}
 
 <hr />
 
-
+<!--
+-->
 
 <h1 id="卷积神经网络-6">卷积神经网络</h1>
 
@@ -719,10 +927,158 @@ $$\sigma(b+\sum_{l=0}^{k<em>h-1}\sum</em>{m=0}^{k<em>w-1}w</em>{l,m}a_{j+k, k+m}
 
 <hr />
 
-
+<!--
+-->
 
 <h1 id="循环神经网络">循环神经网络</h1>
 
 <p>未完待续~~</p>
 
 <p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/neural_network_figures_14.jpg" alt="center" /></p>
+
+        </article>
+  </div>
+</section>
+
+
+
+<aside id="meta">
+
+    <div>
+        <section id="datecount">
+          <h4 id="date"> Sat Mar 3, 2018 </h4>
+          <h5 id="wc"> 600 Words </h5>
+          <h5 id="readtime"> Read in about 3 Min </h5>
+        </section>
+        <ul id="categories">
+          
+        </ul>
+        <ul id="tags">
+          
+        </ul>
+    </div>
+
+    <div>
+        <section id="prev">
+            &nbsp;<a class="previous" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_03/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/"><i class="icon-arrow-left"></i> 深度学习基础</a><br>
+        </section>
+        <section id="next">
+            &nbsp;<a class="next" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_02/leetcode%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">LeetCode相关问题 <i class="icon-arrow-right"></i></a>
+        </section>
+    </div>
+
+    
+
+            
+            
+            
+            
+            
+
+            
+            
+                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                
+                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+        
+    
+    
+    
+                
+                
+            
+                                     
+                                     
+                                     
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+
+        
+
+</aside>
+
+<meta itemprop="wordCount" content="554">
+<meta itemprop="datePublished" content="2018-03-03">
+<meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_03/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%88%86%E4%BA%AB/">
+
+
+<aside id=comments>
+    <div><h2> Comments </h2></div>
+    <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "guanfuchen" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</aside>
+
+<footer>
+  <div>
+    <p>
+    &copy; 2017 <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">guanfuchen.</span></span>
+    Powered by <a href="http://gohugo.io">Hugo</a>.
+  </div>
+</footer>
+<script type="text/javascript">
+(function(){var j=function(a,b){return window.getComputedStyle?getComputedStyle(a).getPropertyValue(b):a.currentStyle[b]};var k=function(a,b,c){if(a.addEventListener)a.addEventListener(b,c,false);else a.attachEvent('on'+b,c)};var l=function(a,b){for(key in b)if(b.hasOwnProperty(key))a[key]=b[key];return a};window.fitText=function(d,e,f){var g=l({'minFontSize':-1/0,'maxFontSize':1/0},f);var h=function(a){var b=e||1;var c=function(){a.style.fontSize=Math.max(Math.min(a.clientWidth/(b*10),parseFloat(g.maxFontSize)),parseFloat(g.minFontSize))+'px'};c();k(window,'resize',c)};if(d.length)for(var i=0;i<d.length;i++)h(d[i]);else h(d);return d}})();
+fitText(document.getElementById('title'), 1)
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-7131036-1', 'spf13.com');
+  ga('require', 'linkid', 'linkid.js');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>
+
+
+<script type="text/javascript"
+        src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
