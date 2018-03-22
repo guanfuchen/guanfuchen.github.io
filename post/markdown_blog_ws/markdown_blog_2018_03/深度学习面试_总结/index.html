@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="keywords" content="">
+
+ 
+<meta property="og:type" content="article"/>
+<meta property="og:description" content=""/>
+<meta property="og:title" content=" : spf13.com"/>
+<meta property="og:site_name" content="spf13 is Steve Francia"/>
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="" />
+<meta property="og:image:height" content="" />
+<meta property="og:url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_03/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E9%9D%A2%E8%AF%95_%E6%80%BB%E7%BB%93/">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="0001-01-01"/>
+<meta property="article:modified_time" content="0001-01-01"/>
+
+
+
+
+
+<meta name="twitter:card" content="summary">
+
+<meta name="twitter:site" content="@spf13">
+<meta name="twitter:title" content=" : spf13.com">
+<meta name="twitter:creator" content="@spf13">
+<meta name="twitter:description" content="">
+<meta name="twitter:image:src" content="">
+<meta name="twitter:domain" content="spf13.com">
+
+
+
+    <base href="https://guanfuchen.github.io">
+    <title>  - spf13.com </title>
+    <link rel="canonical" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_03/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E9%9D%A2%E8%AF%95_%E6%80%BB%E7%BB%93/">
+    
+
+    <link href='https://fonts.lug.ustc.edu.cn/css?family=Fjalla+One|Open+Sans:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://guanfuchen.github.io/static/css/style.css">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+</head>
+
+<body lang="en" itemscope itemtype="http://schema.org/Article">
+<header id="header">
+    
+      
+    
+    <div align="center">
+        <a href="https://guanfuchen.github.io">
+        <img src="https://guanfuchen.github.io/media/avatar.png">
+        </a>
+    </div>
+    <div align="center">guanfuchen</div>
+    <nav id="nav">
+            <ul id="mainnav">
+            <li>
+                <a href="https://guanfuchen.github.io/post/">
+                <span class="icon"> <i aria-hidden="true" class="icon-quill"></i></span>
+                <span> 博客 </span>
+            </a>
+            </li>
+            
+            
+                
+                
+            
+            
+            
+            
+                
+                
+            
+            
+            <li>
+            <a href="http://github.com/guanfuchen">
+                <span class="icon"> <i aria-hidden="true" class="icon-13"></i></span>
+                <span> 关于 </span>
+            </a>
+            </li>
+            <li>
+                <a href="https://guanfuchen.github.io/resume.pdf">
+                    <span class="icon"> <i aria-hidden="true" class="icon-console"></i></span>
+                    <span> 简历 </span>
+                </a>
+            </li>
+        </ul>
+
+    
+    </nav>
+</header>
+
+
+
+<section id="main">
+  <h1 itemprop="name" id="title"></h1>
+  <div>
+        <article itemprop="articleBody" id="content">
+           
+
+<h2 id="简要介绍svm">简要介绍SVM</h2>
+
+<p>支持向量机，因其英文名为support vector machine，故一般简称SVM，通俗来讲，它是一种二分类模型，基本模型定义为特征空间上的间隔最大的线性分类器，学习策略便是间隔最大化，最终可转化为一个凸二次规划问题的求解。其中支持向量是满足$|w^Tx+b|=1$的点，除了支持向量外所有的点满足$y|w^Tx+b|&gt;=1$。这种方式得到的模型能够用来处理线性的情况，通过引入核函数将扩展到非线性情况下。</p>
+
+<p>事实上，大部分时候数据并不是线性可分的，这个时候满足这样条件的超平面就根本不存在。在上文中，我们已经了解到了SVM处理线性可分的情况，那对于非线性的数据SVM咋处理呢？对于非线性的情况，SVM 的处理方法是选择一个核函数，通过将数据映射到高维空间，来解决在原始空间中线性不可分的问题。
+具体来说，在线性不可分的情况下，支持向量机首先在低维空间中完成计算，然后通过核函数将输入空间映射到高维特征空间，最终在高维特征空间中构造出最优分离超平面，从而把平面上本身不好分的非线性数据分开。</p>
+
+<p>核函数将原先的公式用非线性变换$\phi$转换，首先使用一个非线性映射将数据变换到一个特征空间F，然后在特征空间使用线性学习器分类。
+$$f(x,y)=w^Tx+b$$
+$$f(x,y)=w^T\phi(x)+b$$</p>
+
+<p>常用核函数：
+- 多项式核函数
+$$k(x_1,x_2)=(<x_1,x_2>+R)^d$$
+- 高斯核函数
+$$k(x_1,x_2)=\exp(-\frac{||x_1-x_2||}{2\theta^2})$$
+- 线性核函数</p>
+
+<p>上述证明都是基于不存在outilers的情况下，但是实际过程中，在最大间隔间中存在outilers，此时引入松弛变量来处理，也就是酱outilers中的点也加入到Loss中，其中C为松弛变量。</p>
+
+<p>主要构造不等式约束的拉格朗日乘子法，然后用对偶方式将minmax转换为maxmin的方式进行求解。</p>
+
+<p>拉格朗日乘子法、KKT条件
+拉格朗日乘子法：</p>
+
+<h3 id="单一等式约束的拉格朗日乘子法">单一等式约束的拉格朗日乘子法：</h3>
+
+<p>$$min_{(x, y)}{f(x,y)}$$
+$$s.t.\ g(x,y)=c$$</p>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan/img_2018_3/Lagrange_multiplier.png" alt="" />
+表示最优化满足如下条件：
+$$\nabla f(x,y)=\lambda \nabla (g(x,y)-c)$$
+即最优化点满足两个函数的法向量相同，如下构造拉格朗日乘子：
+$$L(x,y,\lambda)=f(x,y)+\lambda (g(x,y)-c)$$</p>
+
+<h3 id="多个等式约束的拉格朗日乘子法">多个等式约束的拉格朗日乘子法</h3>
+
+<p>将单一等式约束的拉格朗日乘子法扩展即可：
+$$min<em>{(x, y)}{f(x,y)}$$
+$$s.t.\ g</em>{i}(x,y)=0, i=1,2,&hellip;,N$$
+$$L(x,y,\lambda)=f(x,y)+\sum<em>{i=1}^{N}{\lambda</em>{i} g_{i}(x,y)}$$</p>
+
+<h3 id="广义拉格朗日乘子法">广义拉格朗日乘子法</h3>
+
+<p>$$min<em>{(x, y)}{f(x,y)}$$
+$$s.t.\ g</em>{i}(x,y)=0, i=1,2,&hellip;,N$$
+$$h<em>{i}(x,y)&lt;=0, i=1,2,&hellip;,M$$
+构造广义拉格朗日乘子法
+$$L(x,y,\alpha,\beta)=f(x,y)+\sum</em>{i=1}^{N}{\alpha<em>{i} g</em>{i}(x,y)}+\sum<em>{i=1}^{M}{\beta</em>{i} h<em>{i}(x,y)}$$
+满足如下KKT条件即可求得最优解：
+- 法向量相同
+$$\nabla L(x,y,\alpha,\beta)=0$$
+- 基本条件
+$$g</em>{i}(x,y)=0, i=1,2,&hellip;,N$$
+$$h_{i}(x,y)&lt;=0, i=1,2,&hellip;,M$$
+- 不等约束系数非负
+$$\beta_i&gt;=0, i=1,2,&hellip;,M$$
+- 不等约束和系数其中一个为0
+$$\beta_i h_i(x,y)=0, i=1,2,&hellip;,M$$</p>
+
+<p><a href="http://blog.csdn.net/Timingspace/article/details/50966105">对偶和KKT条件</a>
+<a href="http://blog.csdn.net/Timingspace/article/details/50966105">对偶和KKT条件</a>
+<a href="http://blog.csdn.net/LoseInVain/article/details/78624888">《SVM笔记系列之三》拉格朗日乘数法和KKT条件的直观解释</a> 这篇文章对理解拉格朗日乘子法帮助很大
+<a href="https://g.luciaz.me/extdomains/zh.wikipedia.org/zh-hans/%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E4%B9%98%E6%95%B0">拉格朗日乘数</a></p>
+
+<p><a href="http://blog.csdn.net/v_july_v/article/details/7624837">支持向量机通俗导论（理解SVM的三层境界）</a>
+<a href="http://blog.csdn.net/on2way/article/details/47729419">解密SVM系列（一）：关于拉格朗日乘子法和KKT条件</a></p>
+
+<h2 id="请简要介绍下tensorflow的计算图">请简要介绍下tensorflow的计算图</h2>
+
+<h2 id="2015百度校招机器学习题目">2015百度校招机器学习题目</h2>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan/img_2018_3/baidu_2015_ml_1.jpg" alt="" />
+<img src="http://chenguanfuqq.gitee.io/tuquan/img_2018_3/baidu_2015_ml_2.jpg" alt="" />
+<img src="http://chenguanfuqq.gitee.io/tuquan/img_2018_3/baidu_2015_ml_3.jpg" alt="" /></p>
+
+<p><a href="http://www.itmian4.com/thread-7042-1-1.html">百度2015校招机器学习笔试题</a></p>
+
+<h2 id="关于lr逻辑回归">关于LR逻辑回归</h2>
+
+<p>逻辑回归</p>
+
+<p>@rickjin：把LR从头到脚都给讲一遍。建模，现场数学推导，每种解法的原理，正则化，LR和maxent模型啥关系，lr为啥比线性回归好。有不少会背答案的人，问逻辑细节就糊涂了。原理都会? 那就问工程，并行化怎么做，有几种并行化方式，读过哪些开源的实现。还会，那就准备收了吧，顺便逼问LR模型发展历史。</p>
+
+<p>虽然逻辑回归（Logistic Regression）称为回归，不过其实它的真实身份是二分类器，这个名字来源于逻辑斯蒂分布，回归将式子回归到[0,1]，而分类则如果大于0则为正样本，如果小于0则为负样本。</p>
+
+<p>$$z=w^Tx+b$$
+$$ y=\left{
+\begin{array}{rcl}
+0       &amp;      &amp; {z      &lt;      0}<br />
+0.5     &amp;      &amp; {z      =      0}<br />
+1       &amp;      &amp; {z      &gt;      0}
+\end{array} \right. $$</p>
+
+<p>$$y=\frac{1}{1+e^{-z}}$$
+$$y=\frac{1}{1+e^{-(w^Tx+b)}}$$
+其中$\ln{\frac{y}{1-y}}$称为对数几率
+$$\ln{\frac{y}{1-y}}=w^Tx+b$$</p>
+
+<p>逻辑回归BP推导
+<img src="https://pic1.zhimg.com/80/v2-8ae29e91788891ab67b966e243f86476_hd.jpg" alt="" /></p>
+
+<h3 id="逻辑回归的正则化">逻辑回归的正则化</h3>
+
+<p>正则化是符合奥卡姆剃刀(Occam’s razor)原理的：在所有可能选择的模型中，能够很好地解释已知数据并且十分简单的才是最好的模型。正则化项是为了防止模型容量大，而数据样本小，从而导致模型将不属于泛化特征而属于训练集本身的特征学习到了，从而虽然在训练集上表现较好但是在测试集上表现极差，即泛化能力降低，产生过拟合。正则化通过增加对某种表达式的偏好程度来减小模型的复杂度，从而达到简单化同时泛化能力强的效果，常用的正则化有L1正则化、L2正则化</p>
+
+<p>L1正则化和L2正则化可以看做是损失函数的惩罚项。所谓『惩罚』是指对损失函数中的某些参数做一些限制。对于线性回归模型，使用L1正则化的模型建叫做Lasso回归，使用L2正则化的模型叫做Ridge回归（岭回归）。
+- L1正则化
+L1正则化是指权值向量w中各个元素的绝对值之和，通常表示为$||w||_1$
+L1正则化可以产生稀疏权值矩阵，即产生一个稀疏模型，可以用于特征选择
+相比 L2正则化，L1正则化会产生更稀疏(sparse)的解。此处稀疏性指的是最优值中的一些参数为 0。和 L2正则化相比，L1正则化的稀疏性具有本质的不同。
+- L2正则化
+L2正则化是指权值向量w中各个元素的平方和然后再求平方根（可以看到Ridge回归的L2正则化项有平方符号），通常表示为$||w||_2$
+L2正则化可以防止模型过拟合（overfitting）；一定程度上，L1也可以防止过拟合</p>
+
+<p><a href="http://blog.csdn.net/richard_more/article/details/52764559">LR深入理解</a>
+<a href="http://blog.csdn.net/keycxl/article/details/78623930">关于LR的总结</a> 其中包括了逻辑回归的相关问题，值得一看
+<a href="http://blog.csdn.net/zouxy09/article/details/20319673">机器学习算法与Python实践之（七）逻辑回归（Logistic Regression）</a></p>
+
+<p><a href="http://blog.csdn.net/jinping_shi/article/details/52433975">机器学习中正则化项L1和L2的直观理解</a></p>
+
+<h2 id="overfitting怎么解决">overfitting怎么解决？</h2>
+
+<ul>
+<li>dropout
+在第一种近似下，Dropout可以被认为是集成大量深层神 经网络的实用Bagging方法。Dropout提供了一种廉价的Bagging集成近似，能够训练和 评估指数级数量的神经网络。Bagging是一种集成方法，dropout相当于各个不同的集成公用一个模型进行了参数共享，一般作为分类器最后一层全联接之后，超参数一般取之为0.5</li>
+<li>regularization 正则化
+包括L2正则化、L1正则化</li>
+<li>bagging集成方法
+Bagging(bootstrap aggregating)是通过结合几个模型降低泛化误差的技术 (Breiman, 1994)。主要想法是分别训练几个不同的模型，然后让所有模型表决测 试样例的输出。这是机器学习中常规策略的一个例子，被称为模型平均(model averaging)。采用这种策略的技术被称为集成方法。</li>
+<li>batch normalization BN
+批规范化，即在每次SGD时，通过mini-batch来对相应的activation做规范化操作，使得结果（输出信号各个维度）的均值为0，方差为1。
+算法本质原理：在网络的每一层输入的时候，又插入了一个归一化层，也就是先做一个归一化处理，然后再进入网络的下一层。不过文献归一化层，可不像我们想象的那么简单，它是一个可学习、有参数的网络层。
+使用变换重构，在不破坏上一层网络的特征分布的前提下进行归一化，引入了可学习参数γ、β，这就是算法关键之处，核心是先对原数据进行变化</li>
+</ul>
+
+<p>batch normation的原理
+<img src="https://pic2.zhimg.com/80/9ad70be49c408d464c71b8e9a006d141_hd.jpg" alt="" /></p>
+
+<p>batch normation的BP
+<img src="https://pic1.zhimg.com/80/beb44145200caafe24fe88e7480e9730_hd.jpg" alt="" />
+- early stopping
+即在每一个epoch结束时（一个epoch即对所有训练数据的一轮遍历）计算 validation data的accuracy，当accuracy不再提高时，就停止训练。这是很自然的做法，因为accuracy不再提高了，训练下去也没用。这样做能防止overfitting。</p>
+
+<p><a href="http://blog.csdn.net/u012162613/article/details/44265967">机器学习算法中如何选取超参数：学习速率、正则项系数、minibatch size</a></p>
+
+<p><a href="https://www.zhihu.com/question/38102762">深度学习中 Batch Normalization为什么效果好？</a></p>
+
+<h2 id="在k-means或knn-我们常用欧氏距离来计算最近的邻居之间的距离-有时也用曼哈顿距离-请对比下这两种距离的差别">在k-means或kNN，我们常用欧氏距离来计算最近的邻居之间的距离，有时也用曼哈顿距离，请对比下这两种距离的差别。</h2>
+
+<p>欧氏距离：
+<img src="https://pic1.zhimg.com/80/v2-5c52b3e1a005c1b088a4877445523f37_hd.jpg" alt="" />
+曼哈顿距离：
+<img src="https://pic4.zhimg.com/80/v2-2b7100736e6870c9ce4e2a51037dbae1_hd.jpg" alt="" /></p>
+
+<p><a href="http://blog.csdn.net/v_july_v/article/details/8203674">从K近邻算法、距离度量谈到KD树、SIFT+BBF算法</a></p>
+
+<h2 id="lr和svm的联系与区别">LR和SVM的联系与区别</h2>
+
+<p>@朝阳在望，联系：</p>
+
+<p>1、LR和SVM都可以处理分类问题，且一般都用于处理线性二分类问题（在改进的情况下可以处理多分类问题）</p>
+
+<p>2、两个方法都可以增加不同的正则化项，如l1、l2等等。所以在很多实验中，两种算法的结果是很接近的。
+区别： 1、LR是参数模型，SVM是非参数模型。
+2、从目标函数来看，区别在于逻辑回归采用的是logistical loss，SVM采用的是hinge loss.这两个损失函数的目的都是增加对分类影响较大的数据点的权重，减少与分类关系较小的数据点的权重。
+3、SVM的处理方法是只考虑support vectors，也就是和分类最相关的少数点，去学习分类器。而逻辑回归通过非线性映射，大大减小了离分类平面较远的点的权重，相对提升了与分类最相关的数据点的权重。
+4、逻辑回归相对来说模型更简单，好理解，特别是大规模线性分类时比较方便。而SVM的理解和优化相对来说复杂一些，SVM转化为对偶问题后,分类只需要计算与少数几个支持向量的距离,这个在进行复杂核函数计算时优势很明显,能够大大简化模型和计算。
+5、logic 能做的 svm能做，但可能在准确率上有问题，svm能做的logic有的做不了。</p>
+
+<h2 id="softmax推导过程">softmax推导过程</h2>
+
+<p>softmax用于多分类过程中，它将多个神经元的输出，映射到（0,1）区间内，可以看成概率来理解，从而来进行多分类！
+假设我们有一个数组，V，Vi表示V中的第i个元素，那么这个元素的softmax值就是
+$$S_i=\frac{e_i}{\sum_j{e_j}}$$
+softmax直白来说就是将原来输出是3,1,-3通过softmax函数一作用，就映射成为(0,1)的值，而这些值的累和为1（满足概率的性质），那么我们就可以将它理解成概率，在最后选取输出结点的时候，我们就可以选取概率最大（也就是值对应最大的）结点，作为我们的预测目标！</p>
+
+<h3 id="softmax求导">softmax求导</h3>
+
+<p>要使用梯度下降，肯定需要一个损失函数，这里我们使用交叉熵作为我们的损失函数，为什么使用交叉熵损失函数，不是这篇文章重点，后面有时间会单独写一下为什么要用到交叉熵函数（这里我们默认选取它作为损失函数）
+$$Loss=-\sum_i{y_i \ln a_i}$$</p>
+
+<p><img src="https://pic2.zhimg.com/80/v2-d3a4e22a107052ee998823b24b49db71_hd.jpg" alt="" /></p>
+
+<p><img src="https://pic4.zhimg.com/80/v2-5eafb4c0a835bc90248766ac0c123dfe_hd.jpg" alt="" /></p>
+
+<p><a href="https://zhuanlan.zhihu.com/p/25723112">详解softmax函数以及相关求导过程</a></p>
+
+<h2 id="convolution实现">convolution实现</h2>
+
+<h2 id="deconvolution实现">deconvolution实现</h2>
+
+<p>卷积过程如下
+<img src="https://raw.githubusercontent.com/vdumoulin/conv_arithmetic/master/gif/no_padding_no_strides.gif" alt="" /></p>
+
+<p>装置卷积过程如下，存在补0操作
+<img src="https://raw.githubusercontent.com/vdumoulin/conv_arithmetic/master/gif/no_padding_no_strides_transposed.gif" alt="" /></p>
+
+<p><a href="http://blog.csdn.net/u014722627/article/details/60574260">深度学习卷积网络中反卷积/转置卷积的理解 transposed conv/deconv</a>
+<a href="https://www.zhihu.com/question/43609045">如何理解深度学习中的deconvolution networks？</a></p>
+
+<h2 id="反向传播过程">反向传播过程</h2>
+
+<h2 id="densenet实现">densenet实现</h2>
+
+<h2 id="sgd-中-s-stochastic-代表什么">SGD 中 S(stochastic)代表什么</h2>
+
+<p>mini-batch和Full-batch</p>
+
+<h2 id="监督学习-迁移学习-半监督学习-弱监督学习-非监督学习">监督学习／迁移学习／半监督学习／弱监督学习／非监督学习？</h2>
+
+<ul>
+<li>监督学习：给定标签的训练集进行学习</li>
+<li>迁移学习：某一训练集训练的权值使用微调的方式作为另一个数据集的初始训练权值进行学习</li>
+<li>半监督学习：部分训练集有标签，大量训练集无标签</li>
+<li>弱监督学习：给定的标签不是完全对应于最后的标签，比如像素级分割学习，给定的标签仅仅是图像类别或者物体的bounding box，而不是最后的标签类别图</li>
+<li>非监督学习：无标签学习，比如聚类，KNN聚类等</li>
+</ul>
+
+<h2 id="激活函数">激活函数</h2>
+
+<p>Sigmond／Tanh／ReLU以及ReLU线性整理的变种，比如PReLU和LReLU，解决了ReLU负半区神经死亡的问题
+Sigmoid：
+<img src="http://cs231n.github.io/assets/nn1/sigmoid.jpeg" alt="" />
+- 缺点：会有梯度弥散、不是关于原点对称、计算exp比较耗时
+- 优点：
+Tanh：
+<img src="http://cs231n.github.io/assets/nn1/tanh.jpeg" alt="" />
+- 缺点：梯度弥散没解决
+- 优点：解决了原点对称问题、比sigmoid更快
+ReLU：
+<img src="http://cs231n.github.io/assets/nn1/relu.jpeg" alt="" />
+- 缺点：梯度弥散没完全解决，在（-）部分相当于神经元死亡而且不会复活
+- 优点：解决了部分梯度弥散问题、收敛速度更快</p>
+
+<h2 id="用过哪些dl的library呀">用过哪些DL的library呀?</h2>
+
+<p>pytorch、tensorflow、caffe、keras、thenao</p>
+
+<h2 id="现在的dl-的state-of-art-model有哪些呀">现在的DL 的state of art model有哪些呀?</h2>
+
+<p>2012 AlexNet
+2013 ZFNet
+2015 GoogLeNet
+2016 ResNet
+2017 DenseNet</p>
+
+<h2 id="如何pre-train-model呀">如何pre-train model呀?</h2>
+
+<p>将模型在大的宽泛的数据集上训练，然后将该权值作为模型的初始权重加载。</p>
+
+<h2 id="损失函数">损失函数</h2>
+
+<p>常见的损失函数Cross-Entropy / MSE／KL散度
+其中KL散度和Cross-Entropy是信息论中的相关损失度量，KL散度的最小化等价于Cross-Entropy交叉熵的最小化，另外MSE是均方根最小误差</p>
+
+<p><img src="chenguanfuqq.gitee.io/tuquan/img_2018_3/loss_function.png" alt="" /></p>
+
+<p><a href="https://plushunter.github.io/2017/07/08/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95%E7%B3%BB%E5%88%97%EF%BC%8824%EF%BC%89%EF%BC%9A%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0/">机器学习算法系列（24）：机器学习中的损失函数</a> 损失函数总结的非常好，值得根据这个目录进行总结。</p>
+
+<h2 id="cnn最成功的应用是在cv-那为什么nlp和speech的很多问题也可以用cnn解出来-为什么alphago里也用了cnn-这几个不相关的问题的相似性在哪里-cnn通过什么手段抓住了这个共性">CNN最成功的应用是在CV，那为什么NLP和Speech的很多问题也可以用CNN解出来？为什么AlphaGo里也用了CNN？这几个不相关的问题的相似性在哪里？CNN通过什么手段抓住了这个共性？</h2>
+
+<p>以上几个不相关问题的相关性在于，都存在局部与整体的关系，由低层次的特征经过组合，组成高层次的特征，并且得到不同特征之间的空间相关性。如下图：低层次的直线／曲线等特征，组合成为不同的形状，最后得到汽车的表示。</p>
+
+<p>CNN抓住此共性的手段主要有四个：局部连接／权值共享／池化操作／多层次结构。</p>
+
+<p>局部连接使网络可以提取数据的局部特征；权值共享大大降低了网络的训练难度，一个Filter只提取一个特征，在整个图片（或者语音／文本） 中进行卷积；池化操作与多层次结构一起，实现了数据的降维，将低层次的局部特征组合成为较高层次的特征，从而对整个图片进行表示。如下图：</p>
+
+<h2 id="什麽样的资料集不适合用深度学习">什麽样的资料集不适合用深度学习?</h2>
+
+<ul>
+<li>数据集过小</li>
+<li>数据集没有局部相关性</li>
+</ul>
+
+<h2 id="对所有优化问题来说-有没有可能找到比現在已知算法更好的算法">对所有优化问题来说, 有没有可能找到比現在已知算法更好的算法?</h2>
+
+<p>没有免费的午餐定理：
+也就是说：对于所有问题，无论学习算法A多聪明，学习算法 B多笨拙，它们的期望性能相同。
+但是：没有免费午餐定力假设所有问题出现几率相同，实际应用中，不同的场景，会有不同的问题分布，所以，在优化算法时，针对具体问题进行分析，是算法优化的核心所在。</p>
+
+<p><img src="https://pic4.zhimg.com/80/v2-ee269730f637849151525ab8ac299840_hd.jpg" alt="" /></p>
+
+<h2 id="用贝叶斯机率说明dropout的原理">用贝叶斯机率说明Dropout的原理</h2>
+
+<h2 id="什麽造成梯度消失问题-推导一下">什麽造成梯度消失问题? 推导一下</h2>
+
+<p>神经网络的训练中，通过改变神经元的权重，使网络的输出值尽可能逼近标签以降低误差值，训练普遍使用BP算法，核心思想是，计算出输出与标签间的损失函数值，然后计算其相对于每个神经元的梯度，进行权值的迭代。</p>
+
+<p>梯度消失会造成权值更新缓慢，模型训练难度增加。造成梯度消失的一个原因是，许多激活函数将输出值挤压在很小的区间内，在激活函数两端较大范围的定义域内梯度为0。造成学习停止。常见的比如sigmoid函数，在x较大或较小时，梯度就很小了，而ReLU线性整流函数的导数不存在这种问题，它的导数除了0处为1</p>
+
+<p>梯度消失：这本质上是由于激活函数的选择导致的， 最简单的sigmoid函数为例，在函数的两端梯度求导结果非常小（饱和区），导致后向传播过程中由于多次用到激活函数的导数值使得整体的乘积梯度结果变得越来越小，也就出现了梯度消失的现象。</p>
+
+<h2 id="什麽造成梯度爆炸问题-推导一下">什麽造成梯度爆炸问题? 推导一下</h2>
+
+<p>出现在激活函数处在激活区，而且权重W过大的情况下。但是梯度爆炸不如梯度消失出现的机会多。</p>
+
+<h2 id="weights-initialization-不同的方式-造成的后果-为什么会造成这样的结果">Weights Initialization. 不同的方式，造成的后果。为什么会造成这样的结果。</h2>
+
+<p>权值初始化</p>
+
+<p>主要还是标准初始化作为一个最基本的模型，其中Xavier和He等初始化都是修改了正态初始化中的stdev和均匀分布中的scale
+- 标准初始化
+  - 标准正态初始化
+  - 标准均匀初始化
+- Xavier初始化
+  - Xavier正态初始化
+  - Xavier均匀初始化
+- He初始化
+  - He正态初始化
+  - He均匀初始化</p>
+
+<h2 id="自动编码器">自动编码器</h2>
+
+<p>自编码器(autoencoder)是神经网络的一种，经过训练后能尝试将输入复制到输出。自编码器(autoencoder)内部有一个隐藏层h，可以产生编码(code)表示 输入。该网络可以看作由两部分组成:一个由函数$h=f(x)$表示的编码器和一个生 成重构的解码器$r=g(h)$。</p>
+
+<p>如果一个自编码器只是简单地 学会将处处设置为$g(f(x))=x$，那么这个自编码器就没什么特别的用处。相反，我 们不应该将自编码器设计成输入到输出完全相等。这通常需要向自编码器强加一些 约束，使它只能近似地复制，并只能复制与训练数据相似的输入。这些约束强制模 型考虑输入数据的哪些部分需要被优先复制，因此它往往能学习到数据的有用特性。</p>
+
+<h2 id="优化算法">优化算法</h2>
+
+<h2 id="rnn原理">RNN原理</h2>
+
+<p>在普通的全连接网络或CNN中，每层神经元的信号只能向上一层传播，样本的处理在各个时刻独立，因此又被成为前向神经网络(Feed-forward+Neural+Networks)。而在RNN中，神经元的输出可以在下一个时间戳直接作用到自身，即第i层神经元在m时刻的输入，除了（i-1）层神经元在该时刻的输出外，还包括其自身在（m-1）时刻的输出。所以叫循环神经网络。</p>
+
+<p>类似于控制科学理论中的状态方程</p>
+
+<h2 id="rnn-lstm-gru区别">RNN、LSTM、GRU区别</h2>
+
+<p>RNN引入了循环的概念，但是在实际过程中却出现了初始信息随时间消失的问题，即长期依赖（Long-Term Dependencies）问题，所以引入了LSTM。
+LSTM：因为LSTM有进有出且当前的cell informaton是通过input gate控制之后叠加的，RNN是叠乘，因此LSTM可以防止梯度消失或者爆炸。推导forget gate，input gate，cell state， hidden information等因为LSTM有进有出且当前的cell informaton是通过input gate控制之后叠加的，RNN是叠乘，因此LSTM可以防止梯度消失或者爆炸的变化是关键，GRU是LSTM的变体，将忘记门和输入们合成了一个单一的更新门。</p>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/42741-dd3d241fa44a71c0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /></p>
+
+<h2 id="lstm防止梯度弥散和爆炸">LSTM防止梯度弥散和爆炸</h2>
+
+<p>LSTM用加和的方式取代了乘积，使得很难出现梯度弥散。但是相应的更大的几率会出现梯度爆炸，但是可以通过给梯度加门限解决这一问题。</p>
+
+<h2 id="gan">GAN</h2>
+
+<p>GAN结合了生成模型和判别模型，相当于矛与盾的撞击。生成模型负责生成最好的数据骗过判别模型，而判别模型负责识别出哪些是真的哪些是生成模型生成的。但是这些只是在了解了GAN之后才体会到的，但是为什么这样会有效呢？</p>
+
+<h2 id="机器学习中的bias-偏差-error-误差-和variance-方差-有什么区别和联系">机器学习中的Bias(偏差)，Error(误差)，和Variance(方差)有什么区别和联系？</h2>
+
+<p><img src="https://pic3.zhimg.com/80/v2-286539c808d9a429e69fd59fe33a16dd_hd.jpg" alt="" /></p>
+
+<p>Error可以理解为在测试数据上跑出来的不准确率 ，即为 (1-准确率)。</p>
+
+<p>在训练数据上面，我们可以进行交叉验证(Cross-Validation)。
+一种方法叫做K-fold Cross Validation (K折交叉验证), K折交叉验证，初始采样分割成K个子样本，一个单独的子样本被保留作为验证模型的数据，其他K-1个样本用来训练。交叉验证重复K次，每个子样本验证一次，平均K次的结果或者使用其它结合方式，最终得到一个单一估测。</p>
+
+<p>当K值大的时候， 我们会有更少的Bias(偏差), 更多的Variance。可以考虑为接近batch_size=1的情况，那么个体之间的方差肯定更大了，但是Bias会减小
+当K值小的时候， 我们会有更多的Bias(偏差), 更少的Variance。可以考虑为几乎为full_batch_size进行切分，数据量大的情况下方差肯定小了，但是偏差会增加。</p>
+
+<p>Error可以理解为在测试数据上跑出来的不准确率 ，即为 (1-准确率)。</p>
+
+<p>在训练数据上面，我们可以进行交叉验证(Cross-Validation)。
+一种方法叫做K-fold Cross Validation (K折交叉验证), K折交叉验证，初始采样分割成K个子样本，一个单独的子样本被保留作为验证模型的数据，其他K-1个样本用来训练。交叉验证重复K次，每个子样本验证一次，平均K次的结果或者使用其它结合方式，最终得到一个单一估测。</p>
+
+<p>当K值大的时候， 我们会有更少的Bias(偏差), 更多的Variance。
+当K值小的时候， 我们会有更多的Bias(偏差), 更少的Variance。</p>
+
+<p><a href="https://www.zhihu.com/question/27068705">机器学习中的Bias(偏差)，Error(误差)，和Variance(方差)有什么区别和联系？</a></p>
+
+<h2 id="如何理解空洞卷积-dilated-convolution">如何理解空洞卷积（dilated convolution）？</h2>
+
+<p><img src="https://pic2.zhimg.com/80/v2-b448e1e8b5bbf7ace5f14c6c4d44c44e_hd.jpg" alt="" /></p>
+
+<p>dilated的好处是不做pooling损失信息的情况下，加大了感受野，让每个卷积输出都包含较大范围的信息。在图像需要全局信息或者语音文本需要较长的sequence信息依赖的问题中，都能很好的应用dilated conv，比如图像分割[3]、语音合成WaveNet[2]、机器翻译ByteNet[1]中。简单贴下ByteNet和WaveNet用到的dilated conv结构，可以更形象的了解dilated conv本身。</p>
+
+<p><a href="https://www.zhihu.com/question/54149221">如何理解空洞卷积（dilated convolution）？</a></p>
+
+<h2 id="准确率-accuracy-精确率-precision-召回率-recall-和f1-measure">准确率(Accuracy), 精确率(Precision), 召回率(Recall)和F1-Measure</h2>
+
+<p>下面的表格表示了TP、FN、FP和TN的表示情况，其中斜对角线表示的都是True，而负对角线表示的是False，之后紧跟着的是预测情况是正例还是反例，如果预测结果是正例，同时是正确的，则表示为TP。</p>
+
+<table>
+<thead>
+<tr>
+<th>真实情况\预测情况</th>
+<th>正例</th>
+<th>反例</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>正例</td>
+<td>TP（真正例）</td>
+<td>FN（假反例）</td>
+</tr>
+
+<tr>
+<td>反例</td>
+<td>FP（假正例）</td>
+<td>TN（真反例）</td>
+</tr>
+</tbody>
+</table>
+
+<p><img src="http://hi.csdn.net/attachment/201106/14/0_1308034676G5GQ.gif" alt="" /></p>
+
+<p>P、R表示精确率和召回率，如下所示：
+精确率表示真实情况为正例的情况下，预测为正例的精度；召回率表示预测为正例的情况下，真实情况为正例的情况。</p>
+
+<p>$$P=\frac{TP}{TP+FN}$$
+$$R=\frac{TP}{TP+FP}$$
+$$2/F1=1/P+1/R$$</p>
+
+<p><a href="https://www.cnblogs.com/sddai/p/5696870.html">准确率(Accuracy), 精确率(Precision), 召回率(Recall)和F1-Measure</a></p>
+
+<h2 id="sigmoid-函数和-softmax-函数的区别和关系">Sigmoid 函数和 Softmax 函数的区别和关系</h2>
+
+<p>sigmoid函数</p>
+
+<p>$$S(x)=\frac{1}{1+e^{-x}}$$</p>
+
+<p>softmax函数</p>
+
+<p>$$S(x_j)=\frac{e^{x<em>j}}{\sum</em>{k=1}^{N}{e^{x_k}}}$$</p>
+
+<p>二元分类下，softmax函数退化为sigmoid函数</p>
+
+<p>sigmoid为：
+$$P(y=0|x)=\frac{e^{w^T x+b}}{1+e^{w^T x+b}}$$
+$$P(y=1|x)=\frac{1}{1+e^{w^T x+b}}$$</p>
+
+<p>N=2，softmax为：
+$$P(y=1|x)=\frac{e^{w_1^T x+b_1}}{e^{w_1^T x+b_1}+e^{w_2^T x+b_2}}=\frac{1}{1+e^{(w_2 -w_1)^T x+(b_2-b_1)}}$$
+$$P(y=0|x)=\frac{e^{w_2^T x+b_2}}{e^{w_1^T x+b_1}+e^{w_2^T x+b_2}}=\frac{e^{(w_2 -w_1)^T x+(b_2-b_1)}}{1+e^{(w_2 -w_1)^T x+(b_2-b_1)}}$$</p>
+
+<p><a href="https://blog.nex3z.com/2017/05/02/sigmoid-%E5%87%BD%E6%95%B0%E5%92%8C-softmax-%E5%87%BD%E6%95%B0%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E5%85%B3%E7%B3%BB/">Sigmoid 函数和 Softmax 函数的区别和关系</a></p>
+
+<h1 id="相关面试总结资料">相关面试总结资料</h1>
+
+<p><a href="http://blog.csdn.net/woaidapaopao/article/details/77806273">面试笔试整理3：深度学习机器学习面试问题准备（必会）</a></p>
+
+<p><a href="https://www.zhihu.com/question/23259302/answer/219153454">如何准备机器学习工程师的面试 ？</a></p>
+
+<h1 id="未整理">未整理</h1>
+
+<p><a href="http://lib.csdn.net/article/machinelearning/59568">机器学习之逻辑回归和softmax回归及代码示例</a></p>
+
+        </article>
+  </div>
+</section>
+
+
+
+<aside id="meta">
+
+    <div>
+        <section id="datecount">
+          <h4 id="date"> Mon Jan 1, 0001 </h4>
+          <h5 id="wc"> 500 Words </h5>
+          <h5 id="readtime"> Read in about 3 Min </h5>
+        </section>
+        <ul id="categories">
+          
+        </ul>
+        <ul id="tags">
+          
+        </ul>
+    </div>
+
+    <div>
+        <section id="prev">
+            &nbsp;<a class="previous" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_03/gaia/"><i class="icon-arrow-left"></i> </a><br>
+        </section>
+        <section id="next">
+            &nbsp;<a class="next" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_03/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%88%86%E4%BA%AB/"> <i class="icon-arrow-right"></i></a>
+        </section>
+    </div>
+
+    
+
+            
+            
+            
+            
+            
+
+            
+            
+                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                
+                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+        
+    
+    
+    
+                
+                
+            
+                                     
+                                     
+                                     
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+
+        
+
+</aside>
+
+<meta itemprop="wordCount" content="455">
+<meta itemprop="datePublished" content="0001-01-01">
+<meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_03/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E9%9D%A2%E8%AF%95_%E6%80%BB%E7%BB%93/">
+
+
+<aside id=comments>
+    <div><h2> Comments </h2></div>
+    <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "guanfuchen" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</aside>
+
+<footer>
+  <div>
+    <p>
+    &copy; 2017 <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">guanfuchen.</span></span>
+    Powered by <a href="http://gohugo.io">Hugo</a>.
+  </div>
+</footer>
+<script type="text/javascript">
+(function(){var j=function(a,b){return window.getComputedStyle?getComputedStyle(a).getPropertyValue(b):a.currentStyle[b]};var k=function(a,b,c){if(a.addEventListener)a.addEventListener(b,c,false);else a.attachEvent('on'+b,c)};var l=function(a,b){for(key in b)if(b.hasOwnProperty(key))a[key]=b[key];return a};window.fitText=function(d,e,f){var g=l({'minFontSize':-1/0,'maxFontSize':1/0},f);var h=function(a){var b=e||1;var c=function(){a.style.fontSize=Math.max(Math.min(a.clientWidth/(b*10),parseFloat(g.maxFontSize)),parseFloat(g.minFontSize))+'px'};c();k(window,'resize',c)};if(d.length)for(var i=0;i<d.length;i++)h(d[i]);else h(d);return d}})();
+fitText(document.getElementById('title'), 1)
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-7131036-1', 'spf13.com');
+  ga('require', 'linkid', 'linkid.js');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>
+
+
+<script type="text/javascript"
+        src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>

@@ -17,7 +17,8 @@
       <pubDate>Mon, 26 Feb 2018 20:27:54 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_02/leetcode%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
-      <description>常用算法 并查集(Union-Find)算法介绍
+      <description>鸡汤 LeetCode 刷题指南（一）：为什么要刷题 对leetcode的评价非常客观
+常用算法 并查集(Union-Find)算法介绍
 LeetCode 解题报告(684，685)-并查集介绍及应用
 遗留问题 725. Split Linked List in Parts
 654. Maximum Binary Tree 题目大意： 给定无重复的数组。一棵最大树定义如下： 从数组中挑选最大的数字作为根 挑选左半数组中最大的数字作为左子树的根 挑选右半数组中最大的数字作为右子树的根 递归此过程。
@@ -1258,7 +1259,8 @@ mac下换取图标 选中command+I然后点击左上角的图像command+V复制�
 Mac怎么更改文件夹图标，Mac更改文件夹图标
 mac下terminal主题 osx-terminal-themes
 mac下terminal删除mail mail delete * q
-How do I delete all Terminal mail?</description>
+How do I delete all Terminal mail?
+mac下修改截图 sudo su cd /System/Library/CoreServices/SystemUIServer.app/Contents/Resources/English.lpro plutil -convert xml1 ScreenCapture.strings vim ScreenCapture.strings 按照下述进行修改然后转换为原格式即可 plutil -convert binary1 ScreenCapture.</description>
     </item>
     
     <item>
@@ -1285,7 +1287,7 @@ How do I delete all Terminal mail?</description>
       <pubDate>Tue, 24 Oct 2017 21:25:20 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/blog_%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
-      <description> Hugo框架 多个配置 hugo框架支持多个配置文件，可以部署到多个仓库中
+      <description>Hugo框架 多个配置 hugo框架支持多个配置文件，可以部署到多个仓库中
 hugo --config=config-common.toml  Multiple config files and menu entries
 输出目录 默认输出目录为public/
 vim config.toml publishDir = &amp;quot;public&amp;quot;  Configure Hugo
@@ -1295,7 +1297,7 @@ googleapis被墙的解决办法
 Hugo静态网站生成器中文教程
 解决Hexo博客中 Disqus 在国内不能访问的方案
 定制的个人主页  使用terminal样式的个人主页，作者使用angularjs搭建的一个主页  My personal site is a terminal
- 艾米杰的博客 艾米杰的博客 flexible-jekyll flexible-jekyll   </description>
+ 艾米杰的博客 艾米杰的博客 flexible-jekyll flexible-jekyll   程序员怎样才能写出一篇好的博客或者技术文章</description>
     </item>
     
     <item>
@@ -1309,6 +1311,50 @@ untracked working tree file git reset --hard HEAD git clean -f -d git pull  untr
 git增加submodule git submodule add git@gitee.com:chenguanfu/markdown_blog_ws.git markdown_blog_ws  git中submodule的更新 这里貌似只能先把master克隆下来，然后设置每一个submodule的remote地址
 git clone git@gitee.com:chenguanfu/blog_ws.git cd blog_ws git submodule foreach git pull git submodule update git submodule update --init --recursive  Git Submodule 用法筆記
 git中submodule的路径 # vim .gitmodules [submodule &amp;quot;hugo_ws/mysite/content/post/markdown_blog_ws&amp;quot;] path = hugo_ws/mysite/content/post/markdown_blog_ws url = git@gitee.com:chenguanfu/markdown_blog_ws.git [submodule &amp;quot;hugo_ws/mysite/public&amp;quot;] path = hugo_ws/mysite/public url = git@gitee.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_03/gaia/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_03/gaia/</guid>
+      <description>Introducing ==Gaia== theme Marp&amp;rsquo;s new slide theme Created by Yuki Hattori (@yhatt)  In Greek mythology, Gaia also spelled Gaea, was the personification of the Earth and one of the Greek primordial deities.
+&amp;ndash; Gaia (mythology) - Wikipedia, the free encyclopedia
+ Overview Gaia is the beautiful presentation theme on Marp!
+ ==New features==  Title Slides Highlight Color scheme   How to use From menu Select menu: View :arrow_right: Theme :arrow_right: Gaia</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_03/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E9%9D%A2%E8%AF%95_%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_03/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E9%9D%A2%E8%AF%95_%E6%80%BB%E7%BB%93/</guid>
+      <description>简要介绍SVM 支持向量机，因其英文名为support vector machine，故一般简称SVM，通俗来讲，它是一种二分类模型，基本模型定义为特征空间上的间隔最大的线性分类器，学习策略便是间隔最大化，最终可转化为一个凸二次规划问题的求解。其中支持向量是满足$|w^Tx+b|=1$的点，除了支持向量外所有的点满足$y|w^Tx+b|&amp;gt;=1$。这种方式得到的模型能够用来处理线性的情况，通过引入核函数将扩展到非线性情况下。
+事实上，大部分时候数据并不是线性可分的，这个时候满足这样条件的超平面就根本不存在。在上文中，我们已经了解到了SVM处理线性可分的情况，那对于非线性的数据SVM咋处理呢？对于非线性的情况，SVM 的处理方法是选择一个核函数，通过将数据映射到高维空间，来解决在原始空间中线性不可分的问题。 具体来说，在线性不可分的情况下，支持向量机首先在低维空间中完成计算，然后通过核函数将输入空间映射到高维特征空间，最终在高维特征空间中构造出最优分离超平面，从而把平面上本身不好分的非线性数据分开。
+核函数将原先的公式用非线性变换$\phi$转换，首先使用一个非线性映射将数据变换到一个特征空间F，然后在特征空间使用线性学习器分类。 $$f(x,y)=w^Tx+b$$ $$f(x,y)=w^T\phi(x)+b$$
+常用核函数： - 多项式核函数 $$k(x_1,x_2)=(+R)^d$$ - 高斯核函数 $$k(x_1,x_2)=\exp(-\frac{||x_1-x_2||}{2\theta^2})$$ - 线性核函数
+上述证明都是基于不存在outilers的情况下，但是实际过程中，在最大间隔间中存在outilers，此时引入松弛变量来处理，也就是酱outilers中的点也加入到Loss中，其中C为松弛变量。
+主要构造不等式约束的拉格朗日乘子法，然后用对偶方式将minmax转换为maxmin的方式进行求解。
+拉格朗日乘子法、KKT条件 拉格朗日乘子法：
+单一等式约束的拉格朗日乘子法： $$min_{(x, y)}{f(x,y)}$$ $$s.t.\ g(x,y)=c$$
+表示最优化满足如下条件： $$\nabla f(x,y)=\lambda \nabla (g(x,y)-c)$$ 即最优化点满足两个函数的法向量相同，如下构造拉格朗日乘子： $$L(x,y,\lambda)=f(x,y)+\lambda (g(x,y)-c)$$
+多个等式约束的拉格朗日乘子法 将单一等式约束的拉格朗日乘子法扩展即可： $$min{(x, y)}{f(x,y)}$$ $$s.t.\ g{i}(x,y)=0, i=1,2,&amp;hellip;,N$$ $$L(x,y,\lambda)=f(x,y)+\sum{i=1}^{N}{\lambda{i} g_{i}(x,y)}$$
+广义拉格朗日乘子法 $$min{(x, y)}{f(x,y)}$$ $$s.t.\ g{i}(x,y)=0, i=1,2,&amp;hellip;,N$$ $$h{i}(x,y)&amp;lt;=0, i=1,2,&amp;hellip;,M$$ 构造广义拉格朗日乘子法 $$L(x,y,\alpha,\beta)=f(x,y)+\sum{i=1}^{N}{\alpha{i} g{i}(x,y)}+\sum{i=1}^{M}{\beta{i} h{i}(x,y)}$$ 满足如下KKT条件即可求得最优解： - 法向量相同 $$\nabla L(x,y,\alpha,\beta)=0$$ - 基本条件 $$g{i}(x,y)=0, i=1,2,&amp;hellip;,N$$ $$h_{i}(x,y)&amp;lt;=0, i=1,2,&amp;hellip;,M$$ - 不等约束系数非负 $$\beta_i&amp;gt;=0, i=1,2,&amp;hellip;,M$$ - 不等约束和系数其中一个为0 $$\beta_i h_i(x,y)=0, i=1,2,&amp;hellip;,M$$</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_03/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%88%86%E4%BA%AB/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_03/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%88%86%E4%BA%AB/</guid>
+      <description>神经网络（Neural Network） 第四期分享会 汇报人：陈官富 2018.3.23 引言 神经网络被广泛应用在图像分类、图像分割、目标跟踪等领域 引言 引言 引言 引言 人工智能、机器学习、表示学习、深度学习和CNN之间的关系 引言 传统机器学习 VS 深度学习
+引言 典型的图像分类Pipeline
+多层感知机-卷积神经网络**），感知器可以实现简单的分类操作，由**感知器**组成的一个**多层感知机**（MLP）能够表示更大的假设空间（学习能力更强），实现权值共享的多层感知机也就是卷积神经网络，减少了训练的参数，极大地加快了训练，增强了上下文信息建模能力，从而被广泛应用在图像、语音等二维数据上。 -- 目录  感知器（Perceptron）  梯度下降算法（Gradient Descent）  多层感知器（MLP）  反向传播算法（Back Propogation）  卷积神经网络（Convolution Neural Network） 循环神经网络（Recurrent Neural Network）  感知器 感知器 输入：样本的特征向量$x$ 输出：样本的类别$y \in {-1, +1}$ 模型： $$f(x)=sign(w \cdot x+b)$$ $$sign(x)=\begin{cases} 1&amp;amp; if&amp;amp; x&amp;gt;0
+0&amp;amp; if&amp;amp; x \leq 0 \end{cases}$$ 其中$w$和$b$是感知器参数，$w$是权重（weight），$b$是偏置（bias），$sign$是符号函数。
+感知器 $$y_i=sign(w^{(1)}x_i^{(1)}+w^{(2)}x_i^{(2)}+&amp;hellip;+w^{(d)}x_i^{(d)}+b)$$ 其中$i=1,2,&amp;hellip;,N,$，$N$为样本数，$d$为输入样本的特征维度，训练集为$T={x_1,x_2,&amp;hellip;,x_N}$，$y_i \in {-1, +1}$，$+1$表示正样本，$-1$表示负样本。 感知器 感知器 计算简单的逻辑功能</description>
     </item>
     
   </channel>

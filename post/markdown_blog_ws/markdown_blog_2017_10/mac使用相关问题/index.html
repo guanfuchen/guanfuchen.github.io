@@ -170,6 +170,53 @@ q</p>
 
 <p><a href="https://apple.stackexchange.com/questions/28745/how-do-i-delete-all-terminal-mail">How do I delete all Terminal mail?</a></p>
 
+<hr />
+
+<h1 id="mac下修改截图">mac下修改截图</h1>
+
+<pre><code class="language-bash">sudo su
+cd /System/Library/CoreServices/SystemUIServer.app/Contents/Resources/English.lpro
+plutil -convert xml1 ScreenCapture.strings
+vim ScreenCapture.strings
+
+按照下述进行修改然后转换为原格式即可
+
+plutil -convert binary1 ScreenCapture.strings
+重启
+killall SystemUIServer
+</code></pre>
+
+<p>将下述修改：</p>
+
+<pre><code>修改前
+&lt;key&gt;%@ %@ at %@&lt;/key&gt;
+&lt;string&gt;%@ %@ at %@&lt;/string&gt;
+修改后
+&lt;key&gt;%@ %@ at %@&lt;/key&gt;
+&lt;string&gt;%@_%@_at_%@&lt;/string&gt;
+</code></pre>
+
+<p><a href="https://superuser.com/questions/339702/how-do-i-change-the-default-screenshot-name-in-os-x-lion#339725">How do I change the default screenshot name in OS X Lion?</a></p>
+
+<p><a href="https://apple.stackexchange.com/questions/251385/how-do-you-change-the-format-of-the-osx-screen-shot-file-name">How do you change the format of the OSX Screen Shot file name?</a></p>
+
+<p><a href="https://cnbin.github.io/blog/2015/06/05/geng-gai-os-x-mo-ren-de-jie-tu-ge-shi/">更改 OS X 默认的截图格式</a></p>
+
+<p><a href="http://blog.cnrainbird.com/index.php/2012/03/16/mac-os-x-screen-shot-chinese-name/">Mac OS X快捷键截图中文名的问题</a></p>
+
+<hr />
+
+<h1 id="mac修改截图路径">mac修改截图路径</h1>
+
+<pre><code class="language-bash">defaults write com.apple.screencapture location ~/GitHub/Quick/tuquan2/img_2018_4
+</code></pre>
+
+<hr />
+
+<h1 id="mac显示后缀名">mac显示后缀名</h1>
+
+<p><a href="https://support.apple.com/kb/PH6912?locale=en_US&amp;viewlocale=zh_CN">Mac OS X 10.6: 显示和隐藏文件扩展名</a></p>
+
         </article>
   </div>
 </section>
@@ -181,7 +228,7 @@ q</p>
     <div>
         <section id="datecount">
           <h4 id="date"> Wed Oct 25, 2017 </h4>
-          <h5 id="wc"> 100 Words </h5>
+          <h5 id="wc"> 200 Words </h5>
           <h5 id="readtime"> Read in about 1 Min </h5>
         </section>
         <ul id="categories">
@@ -258,7 +305,7 @@ q</p>
 
 </aside>
 
-<meta itemprop="wordCount" content="54">
+<meta itemprop="wordCount" content="133">
 <meta itemprop="datePublished" content="2017-10-25">
 <meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/mac%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
 

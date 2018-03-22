@@ -1,0 +1,728 @@
+
+
+
+
+
+
+<h1 id="神经网络-neural-network">神经网络（Neural Network）</h1>
+
+<h2 id="第四期分享会">第四期分享会</h2>
+
+<h2 id="汇报人-陈官富">汇报人：陈官富</h2>
+
+<h2 id="2018-3-23">2018.3.23</h2>
+
+<hr />
+
+
+
+<h1 id="引言">引言</h1>
+
+<p>神经网络被广泛应用在图像分类、图像分割、目标跟踪等领域
+<img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/2018-03-21_4.29.58.png" alt="35% 图像分割" /></p>
+
+<hr />
+
+<h1 id="引言-1">引言</h1>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/screen_2018-03-21_20.31.18.png" alt="50% 图像分类" /></p>
+
+<hr />
+
+<h1 id="引言-2">引言</h1>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/screen_2018-03-21_20.36.30.png" alt="图像分割" /></p>
+
+<hr />
+
+<h1 id="引言-3">引言</h1>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/screen_2018-03-21_20.38.19.png" alt="50% 网络架构" /></p>
+
+<hr />
+
+<h1 id="引言-4">引言</h1>
+
+<p>人工智能、机器学习、表示学习、深度学习和CNN之间的关系
+<img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/neural_network_figures_2.png" alt="35%" /></p>
+
+<hr />
+
+<h1 id="引言-5">引言</h1>
+
+<p>传统机器学习 VS 深度学习</p>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/neural_network_figures_1.png" alt="35%" /></p>
+
+<hr />
+
+<h1 id="引言-6">引言</h1>
+
+<p>典型的图像分类Pipeline</p>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/screen_2018-03-21_22.03.49.png" alt="" /></p>
+
+
+
+<hr />
+
+<h1 id="目录">目录</h1>
+
+<ul>
+<li>感知器（Perceptron）
+
+<ul>
+<li>梯度下降算法（Gradient Descent）</li>
+</ul></li>
+<li>多层感知器（MLP）
+
+<ul>
+<li>反向传播算法（Back Propogation）</li>
+</ul></li>
+<li>卷积神经网络（Convolution Neural Network）</li>
+<li>循环神经网络（Recurrent Neural Network）</li>
+</ul>
+
+<hr />
+
+<h1 id="感知器">感知器</h1>
+
+
+
+
+
+<hr />
+
+<h1 id="感知器-1">感知器</h1>
+
+
+
+<p>输入：样本的特征向量$x$
+输出：样本的类别$y \in {-1, +1}$
+模型：
+$$f(x)=sign(w \cdot x+b)$$
+$$sign(x)=\begin{cases}
+1&amp; if&amp; x&gt;0<br />
+0&amp; if&amp; x \leq 0
+\end{cases}$$
+其中$w$和$b$是感知器参数，$w$是权重（weight），$b$是偏置（bias），$sign$是符号函数。</p>
+
+<hr />
+
+<h1 id="感知器-2">感知器</h1>
+
+
+
+<p>$$y_i=sign(w^{(1)}x_i^{(1)}+w^{(2)}x_i^{(2)}+&hellip;+w^{(d)}x_i^{(d)}+b)$$
+其中$i=1,2,&hellip;,N,$，$N$为样本数，$d$为输入样本的特征维度，训练集为$T={x_1,x_2,&hellip;,x_N}$，$y_i \in {-1, +1}$，$+1$表示正样本，$-1$表示负样本。
+<img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/screen_2018-03-22_11.03.04.png" alt="40% 感知器模型" /></p>
+
+<hr />
+
+<h1 id="感知器-3">感知器</h1>
+
+
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/neural_network_figures_5.png" alt="50% 感知器模型" /></p>
+
+<hr />
+
+<h1 id="感知器-4">感知器</h1>
+
+
+
+<p>计算简单的逻辑功能</p>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/neural_network_figures_3.png" alt="50% 逻辑表示能力" /></p>
+
+<hr />
+
+<h1 id="感知器-5">感知器</h1>
+
+<p>感知器不能分割<strong>线性不可分</strong>的数据</p>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/screen_2018-03-22_10.49.57.png" alt="100% 逻辑功能图分割" /></p>
+
+<hr />
+
+<h1 id="感知器-6">感知器</h1>
+
+<ul>
+<li>线性可分（收敛）</li>
+<li>线性不可分（贪心算法）</li>
+<li>非线性可分（其他方法如SVM）</li>
+</ul>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/screen_2018-03-22_10.00.24.png" alt="数据线性可分" /></p>
+
+<hr />
+
+<h1 id="感知器-7">感知器</h1>
+
+
+
+<h2 id="感知器学习策略-线性可分">感知器学习策略（线性可分）</h2>
+
+<ul>
+<li>目标：求一个能够将训练集正实例点和负实例点完全正确分开的分离超平面。</li>
+<li>学习策略：损失函数极小化</li>
+<li>损失函数，其中$M$是误分类点的集合：
+$$L(w,b)=-\sum_{x_i \in M}{y_i(w \cdot x + b)}$$
+$$s.t.\ y_i(w \cdot x + b)&lt;0$$</li>
+</ul>
+
+<hr />
+
+<h1 id="感知器-8">感知器</h1>
+
+
+
+<h2 id="感知器学习策略-线性可分-1">感知器学习策略（线性可分）</h2>
+
+<p>损失函数：
+$$L(w,b)=-\sum_{x_i \in M}{y_i(w \cdot x + b)}$$
+$$s.t.\ y_i(w \cdot x + b)&lt;0$$</p>
+
+<hr />
+
+<h1 id="感知器-9">感知器</h1>
+
+
+
+<h2 id="感知器学习方法-线性可分">感知器学习方法（线性可分）</h2>
+
+<p>学习问题转换为损失函数极小化问题：
+$$\min<em>{w,b}L(w,b)=-\sum</em>{x_i \in M}{y_i(w \cdot x_i + b)}$$
+<strong>梯度下降法</strong>
+一次随机选取一个误分类点使其梯度下降，直至没有误分类点。</p>
+
+<hr />
+
+<h1 id="感知器-10">感知器</h1>
+
+
+
+<h2 id="梯度下降算法">梯度下降算法</h2>
+
+<p>最小化$C(v)$，$v=v_1,v_2,&hellip;,v_N$，不妨取$N=2$
+$$\Delta C \approx \frac{\partial{C}}{\partial{v_1}} \Delta{v_1} + \frac{\partial{C}}{\partial{v_2}} \Delta{v_2}$$</p>
+
+<p>定义$\Delta v = (\Delta v_1, \Delta v_2)^T$和$\nabla C = (\frac{\partial{C}}{\partial{v_1}}, \frac{\partial{C}}{\partial{v_2}})^T$
+上述式子简化为：
+$$\Delta C \approx \nabla C \cdot \Delta v$$
+</p>
+
+<hr />
+
+<h1 id="感知器-11">感知器</h1>
+
+
+
+<h2 id="梯度下降算法-1">梯度下降算法</h2>
+
+<p>$$\Delta C \approx \nabla C \cdot \Delta v$$
+$$if\ \Delta v = -\eta \nabla C$$
+$\Delta C \approx \nabla C \cdot \Delta v = \eta \nabla C \cdot \nabla C = -\eta ||\nabla C||^2 \leq 0$
+$$v \rightarrow v^{\prime} = v - \eta \nabla C$$
+其中$\eta$是一个超参数，这里表示学习率。</p>
+
+
+
+<hr />
+
+<h1 id="感知器-12">感知器</h1>
+
+
+
+<h2 id="梯度下降算法-2">梯度下降算法</h2>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/gradient_descent_example_1.gif" alt="70% 随机梯度下降算法" />
+<a href="http://10.14.42.229:8888/notebooks/gradient_descent/gradient_descent.ipynb">随机梯度下降算法代码示例</a></p>
+
+<hr />
+
+<h1 id="感知器-13">感知器</h1>
+
+
+
+<h2 id="感知器学习方法-线性可分-1">感知器学习方法（线性可分）</h2>
+
+<p>感知器梯度下降算法方法学习
+$$\min<em>{w,b}L(w,b)=-\sum</em>{x_i \in M}{y_i(w \cdot x<em>i + b)}$$
+$$w \leftarrow w-\eta \nabla</em>{w}{L(w,b)}$$
+$$b \leftarrow b-\eta \nabla_{b}{L(w,b)}$$</p>
+
+<hr />
+
+<h1 id="感知器-14">感知器</h1>
+
+
+
+<h2 id="感知器学习方法-线性可分-2">感知器学习方法（线性可分）</h2>
+
+<p>$$\min<em>{w,b}L(w,b)=-\sum</em>{x_i \in M}{y_i(w \cdot x<em>i + b)}$$
+求取损失函数$L(w,b)$对$w$和$b$的梯度：
+$$\nabla</em>{w}{L(w,b)}=-\sum_{x_i \in M} y_i x<em>i$$
+$$\nabla</em>{b}{L(w,b)}=-\sum_{x_i \in M} y_i$$</p>
+
+<hr />
+
+<h1 id="感知器-15">感知器</h1>
+
+
+
+<h2 id="感知器学习方法-线性可分-3">感知器学习方法（线性可分）</h2>
+
+<p>感知器学习算法：
+1.选取初值$w_0$，$b_0$
+2.在训练集中选取数据$(x_i,y_i)$
+3.如果$y_i(w \cdot x_i + b) \leq 0$
+$$w \leftarrow w+\eta y_i x_i$$
+$$b \leftarrow b+\eta y_i$$
+4.转至（2），直至训练集中没有误分类点</p>
+
+<hr />
+
+<h1 id="感知器-16">感知器</h1>
+
+<h2 id="感知器学习方法-线性可分-4">感知器学习方法（线性可分）</h2>
+
+
+
+<p><a href="http://10.14.42.229:8888/notebooks/perceptron/perceptron_custom.ipynb">感知器学习算法代码示例</a></p>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/screen_2018-03-22_11.03.05.png" alt="" /></p>
+
+<hr />
+
+<h1 id="感知器-17">感知器</h1>
+
+<h2 id="算法收敛性-线性可分">算法收敛性（线性可分）</h2>
+
+
+
+<p>课后题：
+证明略，可参考李航《统计学习方法》P47</p>
+
+<hr />
+
+
+
+<h1 id="感知器-18">感知器</h1>
+
+<h2 id="感知器学习算法-线性不可分">感知器学习算法（线性不可分）</h2>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/screen_2018-03-22_13.50.58.png" alt="60%" /></p>
+
+<hr />
+
+<h1 id="感知器-19">感知器</h1>
+
+<p>感知器学习算法（非线性贪心算法）：
+1.选取初值$w_0$，$b_0$
+2.在训练集中选取数据$(x_i,y_i)$
+3.如果$y_i(w \cdot x_i + b) \leq 0$
+$$\hat{w} \leftarrow w+\eta y_i x_i$$
+$$\hat{b} \leftarrow b+\eta y<em>i$$
+4.如果$L</em>{\hat{w}, \hat{b}}&lt;L_{w, b}$，更新$w=\hat{w},b=\hat{b}$，否则转至步骤（2），直至训练集中没有误分类点</p>
+
+<hr />
+
+<h1 id="感知器-20">感知器</h1>
+
+<p>总结：
+- 一种二类线性分类模型
+- 损失函数为误分类样例到分离超平的距离之和
+- 使用梯度下降算法学习
+- 使用贪心算法学习线性不可分数据</p>
+
+<hr />
+
+
+
+<h1 id="多层感知器">多层感知器</h1>
+
+
+
+<hr />
+
+
+
+<h1 id="多层感知器-1">多层感知器</h1>
+
+
+
+<p>单层感知器无法表示逻辑xor（异或）</p>
+
+<p>$$x^{(1)}\ xor\ x^{(2)}=(x^{(1)}\ or\ x^{(2)})\ and\ not(x^{(1)}\ and\ x^{(2)})$$</p>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/neural_network_figures_4.png" alt="70% 逻辑表示能力" /></p>
+
+<hr />
+
+
+
+<h1 id="多层感知器-2">多层感知器</h1>
+
+<h2 id="神经元">神经元</h2>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/neural_network_figures_6.png" alt="30% 神经元模型" /></p>
+
+<h6 id="其中-theta-x-frac-1-1-e-x-称为逻辑斯提函数-是一种常用的激活函数">其中$\theta(x)=\frac{1}{1+e^{(-x)}}$称为逻辑斯提函数，是一种常用的激活函数。</h6>
+
+<hr />
+
+
+
+<h1 id="多层感知器-3">多层感知器</h1>
+
+<h2 id="激活函数-sigmoid函数">激活函数（Sigmoid函数）</h2>
+
+<p>$$\theta(x)=\frac{1}{1+\exp(-x)}$$
+<img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/neural_network_figures_7.png" alt="120% center sigmoid函数" /></p>
+
+<hr />
+
+
+
+<h1 id="多层感知器-4">多层感知器</h1>
+
+<h2 id="激活函数-双曲正切函数">激活函数（双曲正切函数）</h2>
+
+<p>$$tanh(x)=2\theta(2x)-1$$
+<img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/neural_network_figures_9.png" alt="120% center 双曲正切函数" /></p>
+
+<hr />
+
+
+
+<h1 id="多层感知器-5">多层感知器</h1>
+
+<h2 id="激活函数-relu函数">激活函数（ReLU函数）</h2>
+
+<p>$$ReLU(x)=max(0,x)=\begin{cases}
+x&amp; if&amp; x \geq 0<br />
+0&amp; if&amp; x &lt; 0
+\end{cases}$$</p>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/neural_network_figures_8.png" alt="120% center ReLU函数" /></p>
+
+<hr />
+
+
+
+<h1 id="多层感知器-6">多层感知器</h1>
+
+<h2 id="激活函数-elu函数">激活函数（ELU函数）</h2>
+
+<p>$$ELU(x)=\begin{cases}
+x&amp; if&amp; x \geq 0<br />
+\lambda \cdot (\exp(x)-1)&amp; if&amp; x &lt; 0
+\end{cases}$$</p>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/neural_network_figures_10.png" alt="120% center ELU函数" /></p>
+
+<hr />
+
+
+
+<h1 id="多层感知器-7">多层感知器</h1>
+
+<h2 id="激活函数">激活函数</h2>
+
+<p>各个激活函数的比较可参考
+<a href="https://github.com/guanfuchen/statistics_model/tree/master/activation_function">https://github.com/guanfuchen/statistics_model/tree/master/activation_function</a></p>
+
+<hr />
+
+
+
+<h1 id="多层感知器-8">多层感知器</h1>
+
+<h2 id="神经元模型">神经元模型</h2>
+
+<p>神经元是多层感知器的基本单元，由线性单元（权重、偏置）和非线性激活函数（连续，感知器是不连续）组成。</p>
+
+<hr />
+
+
+
+<h1 id="多层感知器-9">多层感知器</h1>
+
+<p>基本组成结构：
+- 输入层
+- 隐藏层
+- 输出层</p>
+
+<hr />
+
+
+
+<h1 id="多层感知器-10">多层感知器</h1>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/neural_network_figures_11.png" alt="40% 多层感知器" /></p>
+
+<hr />
+
+
+
+<h1 id="多层感知器-11">多层感知器</h1>
+
+<h5 id="mnist数据集">MNIST数据集</h5>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/440px-MnistExamples.png" alt="150%" /></p>
+
+<hr />
+
+
+
+<h1 id="多层感知器-12">多层感知器</h1>
+
+<h5 id="mnist网络">MNIST网络</h5>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/screen_2018-03-22_15.24.03.png" alt="38%" /></p>
+
+<hr />
+
+
+
+<h3 id="多层感知器-13">多层感知器</h3>
+
+<ul>
+<li>权重$w_{jk}^{l}$，表示从第$(l-1)$层的第$k$个神经元到第$l$层的第$j$个神经元的链接上的权重。</li>
+<li>偏置$b_j^l$，表示在第$l$层第$j$个神经元的偏置</li>
+<li>激活值$a_j^l$，表示在第$l$层第$j$个神经元的激活值</li>
+<li>带权输入$z^l$，第$l$层神经网络激活前的值$z^l$，其中$z_j^l$表示第$l$层第$j$个神经元的激活函数的带权输入</li>
+<li>误差$\delta^l$，第$l$层网络的误差标记为$\delta^l$，$\delta_j^l$表示第$l$层第$j$个神经元上的误差，实际上就是代价函数对对应带权输入的偏导数$\partial{C} / \partial{z_j^l}$</li>
+</ul>
+
+<hr />
+
+
+
+<h1 id="多层感知器-14">多层感知器</h1>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/neural_network_figures_12.png" alt="38%" /></p>
+
+<hr />
+
+
+
+<h1 id="多层感知器-15">多层感知器</h1>
+
+<p>神经网络第$l$层的第$j$个神经元的激活值$a_j^l$：
+$$a<em>j^l=\sigma(\sum</em>{k}{w_{jk}^l a_j^{l-1} + b_j^l})$$
+矩阵表示为：
+$$a^l=\sigma(w^l a^{l-1} + b^l)$$</p>
+
+<p>初始化每一层的$w_{jk}^l$和$b_j^l$可以计算最后输出层，这个过程称为多层感知器的前向传播。</p>
+
+<hr />
+
+
+
+<h1 id="多层感知器-16">多层感知器</h1>
+
+<p>损失函数：
+$$C(w, b)=\frac{1}{2n}\sum_{x}||y(x)-a||^2$$
+其中$x$是输入向量，$y(x)$表示输入为$x$时最后得到的标签输出值，$a$表示多层感知器最后的输出值，这里使用均方差误差（使用交叉熵更好）。</p>
+
+<h5 id="梯度下降法求解">梯度下降法求解</h5>
+
+<p><strong>反向传播算法</strong>来加速梯度求解</p>
+
+<hr />
+
+
+
+<h3 id="多层感知器-17">多层感知器</h3>
+
+<h4 id="反向传播算法">反向传播算法</h4>
+
+<p>BP1 <strong>输出层误差的方程</strong>
+BP2 <strong>使用下一层的误差表示当前层的误差</strong>
+BP3 <strong>代价函数关于网络中任意偏置的改变率</strong>
+BP4 <strong>代价函数关于任何一个权重的改变率</strong>
+- （BP1） $\delta^L = \nabla_{a}{C} \odot \sigma^{\prime}(z^L)$
+- （BP2）$\delta^l = ((w^{l+1})^T \delta^{l+1})) \odot \delta^{\prime}(z^l)$
+- （BP3）$\frac{\partial{C}}{\partial{b_j^l}} = \delta<em>j^l$
+- （BP4）$\frac{\partial{C}}{\partial{w</em>{jk}}^l} = a_k^{l-1} \delta_j^l$</p>
+
+<hr />
+
+
+
+<h1 id="多层感知器-18">多层感知器</h1>
+
+<h4 id="反向传播算法bp1推导">反向传播算法BP1推导</h4>
+
+<p>（BP1）$\delta^L = \nabla_{a}{C} \odot \sigma^{\prime}(z^L)$
+$\delta_j^L = \frac{\partial{C}}{\partial{z_j^L}}  = \frac{\partial{C}}{\partial{a_j^L}} \frac{\partial{a_j^L}}{\partial{z_j^L}} = \frac{\partial{C}}{\partial{a_j^L}} \sigma^{\prime}(z_j^L)$</p>
+
+<hr />
+
+
+
+<h1 id="多层感知器-19">多层感知器</h1>
+
+<h4 id="反向传播算法bp2推导">反向传播算法BP2推导</h4>
+
+<p>（BP2）$\delta^l = ((w^{l+1})^T \delta^{l+1})) \odot \delta^{\prime}(z^l)$</p>
+
+<p>$\delta_j^l = \frac{\partial{C}}{\partial{z<em>j^l}} = \sum</em>{k}{\frac{\partial{C}}{\partial{z_k^{l+1}}} \frac{\partial{z_k^{l+1}}}{\partial{z<em>j^{l}}}} = \sum</em>{k}{\frac{\partial{z_k^{l+1}}}{\partial{z_j^{l}}} \delta_k^{l+1}}$</p>
+
+<p>$z<em>k^{l+1} = \sum</em>{j}{w_{kj}^{l+1} a_j^l + b<em>k^{l+1}} = \sum</em>{j}{w_{kj}^{l+1} \sigma(z_j^l) + b_k^{l+1}}$</p>
+
+<p>$\frac{\partial{z_k^{l+1}}}{\partial{z<em>j^{l}}} = w</em>{kj}^{l+1} \sigma^{\prime}(z_j^l)$</p>
+
+<p>$\delta<em>j^l = \sum</em>{k}{ w_{kj}^{l+1} \sigma^{\prime}(z_j^l) \delta_k^{l+1}}$</p>
+
+<hr />
+
+
+
+<h1 id="多层感知器-20">多层感知器</h1>
+
+<h4 id="反向传播算法bp3推导">反向传播算法BP3推导</h4>
+
+<p>（BP3）$\frac{\partial{C}}{\partial{b_j^l}} = \delta_j^l$
+$\frac{\partial{C}}{\partial{b_j^l}} = \frac{\partial{C}}{\partial{z_j^l}} \frac{\partial{z_j^l}}{\partial{b_j^l}} = \delta_j^l$</p>
+
+<hr />
+
+
+
+<h1 id="多层感知器-21">多层感知器</h1>
+
+<h4 id="反向传播算法bp4推导">反向传播算法BP4推导</h4>
+
+<p>（BP4）$\frac{\partial{C}}{\partial{w_{jk}^l}} = a_k^{l-1} \delta_j^l$</p>
+
+<p>$\frac{\partial{C}}{\partial{w<em>{jk}^l}} = \frac{\partial{C}}{\partial{z</em>{j}}^l} \frac{\partial{z<em>{j}}^l}{\partial{w</em>{jk}^l}}=a_k^{l-1} \delta_j^l$</p>
+
+<p>详细过程可参考
+<a href="https://github.com/guanfuchen/statistics_model/tree/master/deep_learning">https://github.com/guanfuchen/statistics_model/tree/master/deep_learning</a></p>
+
+<hr />
+
+
+
+<h1 id="多层感知器-22">多层感知器</h1>
+
+<p>根据BP1和BP2可以计算每一个神经元的误差$\delta_j^l$，根据BP3和BP4可以使用$\delta_j^l$计算$\frac{\partial{C}}{\partial{b<em>j^l}}$和$\frac{\partial{C}}{\partial{w</em>{jk}^l}}$，那么多层感知器的学习算法使用梯度下降法更新参数：</p>
+
+<p>$$w<em>{jk}^l \leftarrow w</em>{jk}^l-\eta \frac{\partial{C}}{\partial{w_{jk}^l}}$$
+$$b_j^l \leftarrow b_j^l-\eta \frac{\partial{C}}{\partial{b_j^l}}$$</p>
+
+<hr />
+
+
+
+<h1 id="多层感知器-23">多层感知器</h1>
+
+<p>代码参考
+<a href="http://10.14.42.229:8888/notebooks/deep_learning/deep_learning_sklearn.ipynb">http://10.14.42.229:8888/notebooks/deep_learning/deep_learning_sklearn.ipynb</a></p>
+
+<hr />
+
+<h1 id="卷积神经网络">卷积神经网络</h1>
+
+
+
+
+
+<hr />
+
+
+
+<h1 id="卷积神经网络-1">卷积神经网络</h1>
+
+<ul>
+<li>卷积层</li>
+<li>池化层</li>
+<li>全连接层</li>
+</ul>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/screen_2018-03-22_21.10.53.png" alt="90% 卷积神经网络LeNet" /></p>
+
+<hr />
+
+
+
+<h1 id="卷积神经网络-2">卷积神经网络</h1>
+
+<h5 id="卷积层">卷积层</h5>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/neural_network_figures_13.png" alt="35% 卷积层和全连接层" /></p>
+
+<hr />
+
+
+
+<h1 id="卷积神经网络-3">卷积神经网络</h1>
+
+<h5 id="卷积层-1">卷积层</h5>
+
+<p>全连接情况下：参数个数=$5*5*3*3=225$
+卷积情况下：参数个数=$3*3=9=0.04*225$
+<img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/neural_network_figures_14.gif" alt="100%" /></p>
+
+<hr />
+
+
+
+<h1 id="卷积神经网络-4">卷积神经网络</h1>
+
+<h5 id="卷积层-2">卷积层</h5>
+
+<p>对第$j$、$k$个神经元，输出为：
+$$\sigma(b+\sum_{l=0}^{k<em>h-1}\sum</em>{m=0}^{k<em>w-1}w</em>{l,m}a_{j+k, k+m})$$
+其中$k_h$、$k_w$分别为卷积核的高度和宽度，比如3*3卷积核</p>
+
+<hr />
+
+
+
+<h1 id="卷积神经网络-5">卷积神经网络</h1>
+
+<h5 id="池化层">池化层</h5>
+
+<ul>
+<li>最大池化层（Max Pooling）</li>
+<li>平均池化层（Avg Pooling）</li>
+</ul>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/screen_2018-03-22_21.46.32.png" alt="50%" /></p>
+
+<hr />
+
+
+
+<h1 id="卷积神经网络-6">卷积神经网络</h1>
+
+<h5 id="池化层-1">池化层</h5>
+
+<ul>
+<li>最大池化层（Max Pooling）</li>
+</ul>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/screen_2018-03-22_21.58.20.png" alt="40%" /></p>
+
+<hr />
+
+<h1 id="卷积神经网络-7">卷积神经网络</h1>
+
+<p>代码实现
+<a href="http://10.14.42.229:8888/notebooks/deep_learning/deep_learning_convolution.ipynb">http://10.14.42.229:8888/notebooks/deep_learning/deep_learning_convolution.ipynb</a></p>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/screen_2018-03-22_21.10.53.png" alt="90% 卷积神经网络LeNet" /></p>
+
+<hr />
+
+
+
+<h1 id="循环神经网络">循环神经网络</h1>
+
+<p>未完待续~~</p>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/neural_network_figures_14.jpg" alt="center" /></p>
