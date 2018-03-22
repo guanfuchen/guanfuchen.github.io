@@ -319,9 +319,11 @@ $$s.t.\ y_i(w \cdot x + b)&lt;0$$</p>
 
 <h2 id="感知器学习方法-线性可分">感知器学习方法（线性可分）</h2>
 
-<p>学习问题转换为损失函数极小化问题：
-$$\min<em>{w,b}L(w,b)=-\sum</em>{x_i \in M}{y_i(w \cdot x_i + b)}$$
-<strong>梯度下降法</strong>
+<p>学习问题转换为损失函数极小化问题：</p>
+
+<p>$$\min<em>{w,b} L(w,b)=-\sum</em>{x_i \in M}{y_i(w \cdot x_i + b)}$$</p>
+
+<p><strong>梯度下降法</strong>
 一次随机选取一个误分类点使其梯度下降，直至没有误分类点。</p>
 
 <hr />
@@ -378,8 +380,9 @@ $$v \rightarrow v^{\prime} = v - \eta \nabla C$$
 
 <h2 id="梯度下降算法-2">梯度下降算法</h2>
 
-<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/gradient_descent_example_1.gif" alt="70% 随机梯度下降算法" />
-<a href="http://10.14.42.229:8888/notebooks/gradient_descent/gradient_descent.ipynb">随机梯度下降算法代码示例</a></p>
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/gradient_descent_example_1.gif" alt="70% 随机梯度下降算法" /></p>
+
+<p><a href="http://10.14.42.229:8888/notebooks/gradient_descent/gradient_descent.ipynb">随机梯度下降算法代码示例</a></p>
 
 <hr />
 
@@ -1024,7 +1027,7 @@ $$\sigma(b+\sum_{l=0}^{k<em>h-1}\sum</em>{m=0}^{k<em>w-1}w</em>{l,m}a_{j+k, k+m}
 
 </aside>
 
-<meta itemprop="wordCount" content="554">
+<meta itemprop="wordCount" content="555">
 <meta itemprop="datePublished" content="2018-03-03">
 <meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_03/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%88%86%E4%BA%AB/">
 
@@ -1079,6 +1082,11 @@ fitText(document.getElementById('title'), 1)
 </html>
 
 
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
 <script type="text/javascript"
         src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>

@@ -133,6 +133,23 @@ publishDir = &quot;public&quot;
 
 <p><a href="https://gohugo.io/getting-started/configuration/">Configure Hugo</a></p>
 
+<h2 id="hugo行内公式">hugo行内公式</h2>
+
+<pre><code>&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+&lt;/script&gt;
+</code></pre>
+
+<p><a href="http://docs.mathjax.org/en/latest/start.html#tex-and-latex-input">Getting Started</a></p>
+
+<p><a href="https://butui.me/post/yet-best-math-formula-support-for-hugo-with-mathjax/">Hugo 静态博客中迄今为止最佳数学公式支持-利用 MathJax &amp; MMark</a></p>
+
+<p><a href="https://sakeven.me/2017/08/27/%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA-hugo-%E7%BD%91%E7%AB%99/">创建一个 Hugo 网站</a></p>
+
+<p><a href="https://yihui.name/cn/2017/04/mathjax-markdown/">MathJax 与 Markdown 的究极融合</a></p>
+
 <h2 id="spf13-com主题">spf13.com主题</h2>
 
 <p>其中修改如下所示，除了样式的修改，其中有一些由于GFW的原因，国内无法访问，替换内容如下</p>
@@ -261,7 +278,7 @@ publishDir = &quot;public&quot;
 
 </aside>
 
-<meta itemprop="wordCount" content="48">
+<meta itemprop="wordCount" content="72">
 <meta itemprop="datePublished" content="2017-10-24">
 <meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/blog_%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
 
@@ -316,6 +333,11 @@ fitText(document.getElementById('title'), 1)
 </html>
 
 
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
 <script type="text/javascript"
         src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
