@@ -6,10 +6,26 @@
     <description>Recent content in Posts on import python</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 26 Feb 2018 20:27:54 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 03 Mar 2018 23:38:00 +0800</lastBuildDate>
     
 	<atom:link href="https://guanfuchen.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>深度学习基础</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_03/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Sat, 03 Mar 2018 23:38:00 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_03/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/</guid>
+      <description>阅读书籍 Data-Science-books 收集了部分关于深度学习的书籍
+ 《深度学习》，Bengio和Goodfellow DeepLearningBookQA_cn 那些深度学习《面试》你可能需要知道的 斯坦福机器学习课程 《统计学习方法》，李航 lihang_book_algorithm 作者使用python实现了所有的算法 li_hang 李航书籍的PPT static_study 《统计学习方法》的读书笔记 统计学习方法：习题笔记 习题的笔记 返回主页 刘建平Pinard 博主整理了很多书上的内容，可以作为复习参考 《神经网络与深度学习》，吴岸城 《神经网络与深度学习》讲义 《神经网络与深度学习》讲义（Notes on Artificial Neural Networks and Deep Learning）从感知器到多层感知器到卷积网络 《机器学习》，周志华 机器学习：习题笔记（一） 提供了课后习题的相关思路 《斯坦福大学2014机器学习课程笔记》，Andrew Ng主讲，黄海广整理笔记 《凸优化》为什么凸优化这么重要？ 機器學習中的優化理論，需要學習哪些資料才能看懂？ 凸优化书籍推荐？ 《Neural Networks and Learning Machines》 機器學習基石上 (Machine Learning Foundations)&amp;mdash;Mathematical Foundations 机器学习资料大汇总 机器学习学习大纲 对于机器学习中常用的模型和数学知识进行了罗列，其中的知识介绍接近李航的统计学系方法，很有系统性，推荐。  相关博客 关于计算机视觉（随谈）
+参数调整 你有哪些deep learning（rnn、cnn）调参的经验？ 这篇文章对神经网络中常用的参数调整进行了介绍，非常有帮助。
+线性回归 推导过程
+反向传播 四个基本公式
+Backpropagation Algorithm
+反向传播算法
+Improving the way neural networks learn</description>
+    </item>
     
     <item>
       <title>LeetCode相关问题</title>
