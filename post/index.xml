@@ -6,10 +6,35 @@
     <description>Recent content in Posts on import python</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 03 Mar 2018 23:38:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 05 Apr 2018 11:06:19 +0800</lastBuildDate>
     
 	<atom:link href="https://guanfuchen.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>markdown_usage</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/markdown_usage/</link>
+      <pubDate>Thu, 05 Apr 2018 11:06:19 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/markdown_usage/</guid>
+      <description>Markdown简要指南 为什么使用Markdown Markdown是一种轻量级的标记语言，语法简洁，易导出为各种格式的文件，如PDF、HTML等。
+尽管有大量的文字处理软件出现，如Word、WPS等，但是这些工具都是需要使用可视化操作来完成字体的格式设置，图片的插入，而Markdown仅仅使用简单的几种标记就能实现这些操作，基于键盘都可以快速完成，实现了一种沉浸式的写作环境中。
+这种格式已经被GitHub、简书等大量采用，尤其对于GitHub，使用word编写的文档在git内每一次提交都是增量式提交一个新的文件，而Markdown格式的文档由于是纯文本内容，每一次变动都是增量式变动的内容，减小了仓库的大小，也有利于追踪每一次变更的内容。
+综上所述，使用Markdown具有如下优点： - 专注于文字内容，沉浸式写作。 - 易导出为PDF、HTML等格式的文档。 - 纯文本内容，易于Git仓库增量提交。 - 标记语法简洁。
+怎么样使用Markdown 不知道有没有安利到一些同学学习Markdown，大部分还未接触过Markdown的同学可以在简书中体验一下用Markdown来写技术博客的快感。那么接下来简要介绍Markdown的语法，完成常用的文字排版。详细文档可参考Markdown快速入门和Markdown详细入门
+标题 Markdown中总共有六级标题，在文字前加#号即可实现，其中#是一级标题，##是二级标题，以此类推，######是六级标题。
+# 一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题 ###### 六级标题  粗体 Markdown的粗体使用两个*包含一段文本表示。
+**粗体**  斜体 Markdown的*斜体*使用一个*包含一段文本表示。
+*斜体*  图片 图片是文本编辑中必不可少的，适当地添加图片能够美化文档。Markdown在如下括号内插入图片url即可。
+使用图床工具可以上传图片并生成一个图片url，安利一下七牛吧，不过免费的容量有限，另外也可以使用github建一个仓库，使用仓库中图片url也可以。
+![](http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/zju_logo.png)  链接 Markdown文本链接非常简单，在如下括号中插入链接url即可。
+[链接](https://github.com/)  代码 对于程序员来说，使用Markdown来书写技术博客，经常要插入代码，同时希望能高亮代码，插入代码同样简单，使用如下格式插入代码即可。
+` import os \`
+import os  部分Markdown渲染器支持不同格式的代码高亮，如下格式输入对应的代码语言即可。
+`python import os \`
+import os  分割线 markdown中插入分割线，需要另起一行，连续输入三个&amp;mdash;即可。
+---  列表 列表分为有序列表和无序列表，格式如下所示。</description>
+    </item>
     
     <item>
       <title>深度学习基础</title>

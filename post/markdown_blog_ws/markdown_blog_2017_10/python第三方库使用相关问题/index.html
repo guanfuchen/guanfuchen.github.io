@@ -289,6 +289,58 @@ ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 <p><a href="https://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/00141861202544241651579c69d4399a9aa135afef28c44000">map/reduce</a></p>
 
+<hr />
+
+<h1 id="eval的使用">eval的使用</h1>
+
+<p>eval将字符串当成有效的表达式来求值并返回计算结果。</p>
+
+<pre><code>在用python处理的输入问题
+L=list(eval(raw_input()))
+</code></pre>
+
+<p><a href="https://blog.csdn.net/zhanh1218/article/details/37562167">Python:eval的妙用和滥用</a></p>
+
+<hr />
+
+<h1 id="python多行输入">python多行输入</h1>
+
+<p>单行输入使用raw_input，多行使用多个raw_input即可。</p>
+
+<pre><code>str1 = raw_input()
+str2 = raw_input()
+str_count = str1.count(str2.lower()) + str1.count(str2.upper())
+print(str_count)
+</code></pre>
+
+<hr />
+
+<h1 id="python多组同时输入">python多组同时输入</h1>
+
+<pre><code># 输入：12\n43\n...
+import sys
+for line in sys.stdin:  # 使用for处理多个输入
+    print(line)
+</code></pre>
+
+<hr />
+
+<h1 id="牛客网python输入">牛客网python输入</h1>
+
+<pre><code>import sys
+try:
+    while True:
+        line = sys.stdin.readline().strip()
+        if line == '':
+            break
+        lines = line.split()
+        print int(lines[0]) + int(lines[1])
+except:
+    pass
+</code></pre>
+
+<p><a href="https://www.nowcoder.com/discuss/276">牛客网在线判题系统使用帮助</a></p>
+
         </article>
   </div>
 </section>
@@ -300,7 +352,7 @@ ImageFile.LOAD_TRUNCATED_IMAGES = True
     <div>
         <section id="datecount">
           <h4 id="date"> Thu Oct 26, 2017 </h4>
-          <h5 id="wc"> 300 Words </h5>
+          <h5 id="wc"> 400 Words </h5>
           <h5 id="readtime"> Read in about 2 Min </h5>
         </section>
         <ul id="categories">
@@ -377,7 +429,7 @@ ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 </aside>
 
-<meta itemprop="wordCount" content="256">
+<meta itemprop="wordCount" content="311">
 <meta itemprop="datePublished" content="2017-10-26">
 <meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/python%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
 

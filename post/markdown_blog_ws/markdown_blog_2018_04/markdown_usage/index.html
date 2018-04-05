@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="keywords" content="">
+
+ 
+<meta property="og:type" content="article"/>
+<meta property="og:description" content=""/>
+<meta property="og:title" content="markdown_usage : spf13.com"/>
+<meta property="og:site_name" content="spf13 is Steve Francia"/>
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="" />
+<meta property="og:image:height" content="" />
+<meta property="og:url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/markdown_usage/">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2018-04-05"/>
+<meta property="article:modified_time" content="2018-04-05"/>
+
+
+
+
+
+<meta name="twitter:card" content="summary">
+
+<meta name="twitter:site" content="@spf13">
+<meta name="twitter:title" content="markdown_usage : spf13.com">
+<meta name="twitter:creator" content="@spf13">
+<meta name="twitter:description" content="">
+<meta name="twitter:image:src" content="">
+<meta name="twitter:domain" content="spf13.com">
+
+
+
+    <base href="https://guanfuchen.github.io">
+    <title> markdown_usage - spf13.com </title>
+    <link rel="canonical" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/markdown_usage/">
+    
+
+    <link href='https://fonts.lug.ustc.edu.cn/css?family=Fjalla+One|Open+Sans:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://guanfuchen.github.io/static/css/style.css">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+</head>
+
+<body lang="en" itemscope itemtype="http://schema.org/Article">
+<header id="header">
+    
+      
+    
+    <div align="center">
+        <a href="https://guanfuchen.github.io">
+        <img src="https://guanfuchen.github.io/media/avatar.png">
+        </a>
+    </div>
+    <div align="center">guanfuchen</div>
+    <nav id="nav">
+            <ul id="mainnav">
+            <li>
+                <a href="https://guanfuchen.github.io/post/">
+                <span class="icon"> <i aria-hidden="true" class="icon-quill"></i></span>
+                <span> 博客 </span>
+            </a>
+            </li>
+            
+            
+                
+                
+            
+            
+            
+            
+                
+                
+            
+            
+            <li>
+            <a href="http://github.com/guanfuchen">
+                <span class="icon"> <i aria-hidden="true" class="icon-13"></i></span>
+                <span> 关于 </span>
+            </a>
+            </li>
+            <li>
+                <a href="https://guanfuchen.github.io/resume.pdf">
+                    <span class="icon"> <i aria-hidden="true" class="icon-console"></i></span>
+                    <span> 简历 </span>
+                </a>
+            </li>
+        </ul>
+
+    
+    </nav>
+</header>
+
+
+
+<section id="main">
+  <h1 itemprop="name" id="title">markdown_usage</h1>
+  <div>
+        <article itemprop="articleBody" id="content">
+           
+
+<!-- $theme: gaia -->
+
+<!-- *template: invert -->
+
+<h1 id="markdown简要指南">Markdown简要指南</h1>
+
+<hr />
+
+<h1 id="为什么使用markdown">为什么使用Markdown</h1>
+
+<p>Markdown是一种轻量级的标记语言，语法简洁，易导出为各种格式的文件，如PDF、HTML等。</p>
+
+<p>尽管有大量的文字处理软件出现，如Word、WPS等，但是这些工具都是需要使用可视化操作来完成字体的格式设置，图片的插入，而Markdown仅仅使用简单的几种标记就能实现这些操作，基于键盘都可以快速完成，实现了一种沉浸式的写作环境中。</p>
+
+<p>这种格式已经被GitHub、简书等大量采用，尤其对于GitHub，使用word编写的文档在git内每一次提交都是增量式提交一个新的文件，而Markdown格式的文档由于是纯文本内容，每一次变动都是增量式变动的内容，减小了仓库的大小，也有利于追踪每一次变更的内容。</p>
+
+<p>综上所述，使用Markdown具有如下优点：
+- 专注于文字内容，沉浸式写作。
+- 易导出为PDF、HTML等格式的文档。
+- 纯文本内容，易于Git仓库增量提交。
+- 标记语法简洁。</p>
+
+<hr />
+
+<h1 id="怎么样使用markdown">怎么样使用Markdown</h1>
+
+<p>不知道有没有安利到一些同学学习Markdown，大部分还未接触过Markdown的同学可以在简书中体验一下用Markdown来写技术博客的快感。那么接下来简要介绍Markdown的语法，完成常用的文字排版。详细文档可参考<a href="http://wowubuntu.com/markdown/basic.html">Markdown快速入门</a>和<a href="http://wowubuntu.com/markdown/#editor">Markdown详细入门</a></p>
+
+<h2 id="标题">标题</h2>
+
+<p>Markdown中总共有六级标题，在文字前加#号即可实现，其中#是一级标题，##是二级标题，以此类推，######是六级标题。</p>
+
+<pre><code># 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+###### 六级标题
+</code></pre>
+
+<h2 id="粗体">粗体</h2>
+
+<p>Markdown的<strong>粗体</strong>使用两个*包含一段文本表示。</p>
+
+<pre><code>**粗体**
+</code></pre>
+
+<h2 id="斜体">斜体</h2>
+
+<p>Markdown的*斜体*使用一个*包含一段文本表示。</p>
+
+<pre><code>*斜体*
+</code></pre>
+
+<h2 id="图片">图片</h2>
+
+<p>图片是文本编辑中必不可少的，适当地添加图片能够美化文档。Markdown在如下括号内插入图片url即可。</p>
+
+<p>使用图床工具可以上传图片并生成一个图片url，安利一下七牛吧，不过免费的容量有限，另外也可以使用github建一个仓库，使用仓库中图片url也可以。</p>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/zju_logo.png" alt="" /></p>
+
+<pre><code>![](http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/zju_logo.png)
+</code></pre>
+
+<h2 id="链接">链接</h2>
+
+<p>Markdown文本<a href="https://github.com/">链接</a>非常简单，在如下括号中插入链接url即可。</p>
+
+<pre><code>[链接](https://github.com/)
+</code></pre>
+
+<h2 id="代码">代码</h2>
+
+<p>对于程序员来说，使用Markdown来书写技术博客，经常要插入代码，同时希望能高亮代码，插入代码同样简单，使用如下格式插入代码即可。</p>
+
+<p>`<code>
+import os
+\</code>`</p>
+
+<pre><code>import os
+</code></pre>
+
+<p>部分Markdown渲染器支持不同格式的代码高亮，如下格式输入对应的代码语言即可。</p>
+
+<p>`<code>python
+import os
+\</code>`</p>
+
+<pre><code class="language-python">import os
+</code></pre>
+
+<h2 id="分割线">分割线</h2>
+
+<p>markdown中插入分割线，需要另起一行，连续输入三个&mdash;即可。</p>
+
+<pre><code>---
+</code></pre>
+
+<h2 id="列表">列表</h2>
+
+<p>列表分为有序列表和无序列表，格式如下所示。</p>
+
+<ul>
+<li>无序列表格式
+```</li>
+<li>方案一</li>
+<li>方案二</li>
+<li>方案三
+```</li>
+<li>有序列表格式
+```</li>
+<li>方案一</li>
+<li>方案二</li>
+<li>方案三
+```</li>
+</ul>
+
+<h2 id="引用">引用</h2>
+
+<p>引用格式标注文字为引用自其他地方，格式如下所示。</p>
+
+<blockquote>
+<p>有朋自远方来，不亦乐乎</p>
+</blockquote>
+
+<pre><code>&gt; 有朋自远方来，不亦乐乎
+</code></pre>
+
+<h2 id="表格">表格</h2>
+
+<p>Markdown中的表格相比于其他标记稍微复杂一点，个人在输入表格过程中也容易出错，建议大家将表格格式复制过来然后修改较好，具体格式如下所示。</p>
+
+<p>|学号|成绩|
+|-|-|
+|216320|100|
+|216321|101|</p>
+
+<pre><code>|学号|成绩|
+|-|-|
+|216320|100|
+|216321|101|
+</code></pre>
+
+<hr />
+
+<h1 id="markdown编辑环境">Markdown编辑环境</h1>
+
+<p>介绍完上述Markdown语法后，小伙伴们如果在记事本上试验了以后，发现并没有效果，请不要着急，Markdown格式的文本需要经过Markdown渲染软件后才能显示～～。这里推荐一下Marp软件，跨平台，同时支持用Markdown直接书写PPT，本文档就是用Marp书写的，另外之前用过的haroopad也是一款不错的软件，大家可以自行搜索。</p>
+
+<hr />
+
+<h1 id="参考链接">参考链接</h1>
+
+<p><a href="https://sspai.com/post/25137">认识与入门 Markdown</a></p>
+
+<p><a href="https://www.jianshu.com/p/q81RER">献给写作者的 Markdown 新手指南
+</a></p>
+
+<p><a href="https://www.zhihu.com/question/20409634">怎样引导新手使用 Markdown？</a></p>
+
+        </article>
+  </div>
+</section>
+
+
+
+<aside id="meta">
+
+    <div>
+        <section id="datecount">
+          <h4 id="date"> Thu Apr 5, 2018 </h4>
+          <h5 id="wc"> 200 Words </h5>
+          <h5 id="readtime"> Read in about 1 Min </h5>
+        </section>
+        <ul id="categories">
+          
+        </ul>
+        <ul id="tags">
+          
+        </ul>
+    </div>
+
+    <div>
+        <section id="prev">
+            &nbsp;
+        </section>
+        <section id="next">
+            &nbsp;<a class="next" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_03/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/">深度学习基础 <i class="icon-arrow-right"></i></a>
+        </section>
+    </div>
+
+    
+
+            
+            
+            
+            
+            
+
+            
+            
+                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                
+                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+        
+    
+    
+    
+                
+                
+            
+                                     
+                                     
+                                     
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+
+        
+
+</aside>
+
+<meta itemprop="wordCount" content="100">
+<meta itemprop="datePublished" content="2018-04-05">
+<meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/markdown_usage/">
+
+
+<aside id=comments>
+    <div><h2> Comments </h2></div>
+    <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "guanfuchen" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</aside>
+
+<footer>
+  <div>
+    <p>
+    &copy; 2017 <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">guanfuchen.</span></span>
+    Powered by <a href="http://gohugo.io">Hugo</a>.
+  </div>
+</footer>
+<script type="text/javascript">
+(function(){var j=function(a,b){return window.getComputedStyle?getComputedStyle(a).getPropertyValue(b):a.currentStyle[b]};var k=function(a,b,c){if(a.addEventListener)a.addEventListener(b,c,false);else a.attachEvent('on'+b,c)};var l=function(a,b){for(key in b)if(b.hasOwnProperty(key))a[key]=b[key];return a};window.fitText=function(d,e,f){var g=l({'minFontSize':-1/0,'maxFontSize':1/0},f);var h=function(a){var b=e||1;var c=function(){a.style.fontSize=Math.max(Math.min(a.clientWidth/(b*10),parseFloat(g.maxFontSize)),parseFloat(g.minFontSize))+'px'};c();k(window,'resize',c)};if(d.length)for(var i=0;i<d.length;i++)h(d[i]);else h(d);return d}})();
+fitText(document.getElementById('title'), 1)
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-7131036-1', 'spf13.com');
+  ga('require', 'linkid', 'linkid.js');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript"
+        src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>

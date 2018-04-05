@@ -921,7 +921,205 @@ $$\sigma(b+\sum_{l=0}^{k<em>h-1}\sum</em>{m=0}^{k<em>w-1}w</em>{l,m}a_{j+k, k+m}
 
 <hr />
 
+<!--
+CNN的反向传播和DNN（多层感知器）的反向传播推导有所不同，需要解决的是池化层和卷积层的反向传播，由于涉及到卷积操作，其中有对卷积求偏导数。这里假设池化层接在卷积层后面，首先计算池化层的梯度，然后计算卷积层的梯度。首先我们回顾一下多层感知器的反向传播算法。
+-->
+
 <h1 id="卷积神经网络-7">卷积神经网络</h1>
+
+<h5 id="反向传播">反向传播</h5>
+
+<p>多层感知器反向传播回顾：
+首先计算输出层的$\delta^L$：$\delta^L=\frac{\partial{C}}{a^L} \odot \sigma^{\prime}(z^L)$，然后利用数学归纳法利用$\delta^{l+1}$的值一步步的向前求出第$l$层的$\delta^l$，表达式为：$\delta^{l}=\delta^{l+1}\frac{\partial{z^{l+1}}}{\partial{z^l}}=(w^{l+1})^T\delta^{l+1}\odot\sigma^{\prime}(z^l)$，有了$\delta^l$的表达式，求出$W$，$b$的梯度表达式：
+$\frac{\partial{C}}{\partial{w^l}}=\frac{\partial{C}}{\partial{z^l}}\frac{\partial{z^l}}{\partial{w^l}}=\delta^{l}(a^{l-1})^T$以及$\frac{\partial{C}}{\partial{b^l}}=\frac{\partial{C}}{\partial{z^l}}\frac{\partial{z^l}}{\partial{b^l}}=\delta^{l}$</p>
+
+<p>可参考 <a href="https://www.cnblogs.com/pinard/p/6494810.html">卷积神经网络(CNN)反向传播算法</a></p>
+
+<hr />
+
+<!--
+-->
+
+<h1 id="卷积神经网络-8">卷积神经网络</h1>
+
+<h5 id="反向传播-1">反向传播</h5>
+
+<ul>
+<li>池化层反向传播</li>
+<li>卷积层反向传播</li>
+</ul>
+
+<hr />
+
+<!--
+前向传播时，池化层一般会用MAX或者Avg对输入进行池化，池化的区域大小已知。现在我们反过来，要从缩小后的误差还原前一次较大的区域。在反向传播时，首先会把$\delta^l$的所有子矩阵还原到池化前的大小，如果池化操作时MAX，那么把$\delta^l$的所有子矩阵的各个池化区域的值放在之前前向时记录的最大值的位置，其余记为0。如果是Avg，则把$\delta^l$的所有子矩阵的各个池化区域的值取平均后放在还原后的子矩阵位置，这个过程称为上采样。
+-->
+
+<h1 id="卷积神经网络-9">卷积神经网络</h1>
+
+<h5 id="反向传播-2">反向传播</h5>
+
+<h5 id="池化层反向传播">池化层反向传播</h5>
+
+<ul>
+<li>误差上采样upsample</li>
+<li>上采样upsample进行BP</li>
+</ul>
+
+<p>例子，池化为2x2
+$$
+\delta_k^l=(
+  \begin{matrix}
+   2 &amp; 8 <br />
+   4 &amp; 6
+  \end{matrix}
+)
+$$</p>
+
+<hr />
+
+<!--
+-->
+
+<h1 id="卷积神经网络-10">卷积神经网络</h1>
+
+<h5 id="反向传播-3">反向传播</h5>
+
+<h5 id="池化层反向传播-1">池化层反向传播</h5>
+
+<p>$$
+\delta_k^l=(
+  \begin{matrix}
+   2 &amp; 8 <br />
+   4 &amp; 6
+  \end{matrix}
+)
+$$
+还原
+$$
+\left{
+  \begin{matrix}
+   0 &amp; 0 &amp; 0 &amp; 0<br />
+   0 &amp; 2 &amp; 8 &amp; 0<br />
+   0 &amp; 4 &amp; 6 &amp; 0<br />
+   0 &amp; 0 &amp; 0 &amp; 0
+  \end{matrix}
+\right}
+$$</p>
+
+<hr />
+
+<!--
+假设我们之前在前向传播时记录的最大值位置分别时左上，右下，右上，左下，那么转换后的矩阵为
+-->
+
+<h5 id="卷积神经网络-11">卷积神经网络</h5>
+
+<h5 id="池化层反向传播-2">池化层反向传播</h5>
+
+<p>$$
+\left{
+  \begin{matrix}
+   0 &amp; 0 &amp; 0 &amp; 0<br />
+   0 &amp; 2 &amp; 8 &amp; 0<br />
+   0 &amp; 4 &amp; 6 &amp; 0<br />
+   0 &amp; 0 &amp; 0 &amp; 0
+  \end{matrix}
+\right}
+$$
+最大池化：
+$$
+\left{
+  \begin{matrix}
+   2 &amp; 0 &amp; 0 &amp; 0<br />
+   0 &amp; 0 &amp; 0 &amp; 8<br />
+   0 &amp; 4 &amp; 0 &amp; 0<br />
+   0 &amp; 0 &amp; 6 &amp; 0
+  \end{matrix}
+\right}
+$$</p>
+
+<hr />
+
+<!--
+平均池化则比较简单，进行平均化填入即可
+-->
+
+<h5 id="卷积神经网络-12">卷积神经网络</h5>
+
+<h5 id="池化层反向传播-3">池化层反向传播</h5>
+
+<p>$$
+\left{
+  \begin{matrix}
+   0 &amp; 0 &amp; 0 &amp; 0<br />
+   0 &amp; 2 &amp; 8 &amp; 0<br />
+   0 &amp; 4 &amp; 6 &amp; 0<br />
+   0 &amp; 0 &amp; 0 &amp; 0
+  \end{matrix}
+\right}
+$$
+平均池化：
+$$
+\left{
+  \begin{matrix}
+   0.5 &amp; 0.5 &amp; 2 &amp; 2<br />
+   0.5 &amp; 0.5 &amp; 2 &amp; 2<br />
+   1 &amp; 1 &amp; 1.5 &amp; 1.5<br />
+   1 &amp; 1 &amp; 1.5 &amp; 1.5
+  \end{matrix}
+\right}
+$$</p>
+
+<hr />
+
+<!--
+获得上采样后，利用上采样可以求得误差，带入可得这一层的误差即为误差上采样
+-->
+
+<h5 id="卷积神经网络-13">卷积神经网络</h5>
+
+<h5 id="池化层反向传播-4">池化层反向传播</h5>
+
+<p>$\delta_k^{l-1}=\frac{\partial{C}}{\partial{a_k^{l-1}}}\frac{a_k^{l-1}}{z_k^{l-1}}=upsample(\delta_k^l) \odot \sigma^{\prime}(z_k^{l-1})$</p>
+
+<hr />
+
+<!--
+接下来我们介绍卷积层的BP算法。推导式子和多层感知器类似，区别在于对于含有卷积的式子求导时，卷积核被旋转了180度。即式子中的rot180，翻转180度的意思是上下翻转一次，接着左右在翻转一次。这边为什么旋转180度大家可以自行推导一遍，这里不在赘述。这个公式就是反向传播的核心，接下来使用权重和偏置关于误差的关系即可
+-->
+
+<h5 id="卷积神经网络-14">卷积神经网络</h5>
+
+<h5 id="卷积层反向传播">卷积层反向传播</h5>
+
+<p>卷积层的前向传播公式：
+$a^l=\sigma(z_l)=\sigma(a^{l-1}*w^l+b^l)$
+$\delta^{l}=\delta^{l+1}\frac{\partial{z^{l+1}}}{\partial{z^l}}$，推导出$\frac{\partial{z^{l+1}}}{\partial{z^l}}$即可
+$z^l=a^{l-1} * w^l +b^l=\sigma(z^{l-1} * w^l)+b^l$
+$\delta^{l-1}=\delta^{l}\frac{\partial{z^{l}}}{\partial{z^{l-1}}}=\delta^{l}*rot180(w^l)\odot\sigma^{\prime}(z^{l-1})$</p>
+
+<p>*rot180*表示对一个矩阵翻转，上下翻转一次，左右翻转一次</p>
+
+<hr />
+
+<!--
+接下来我们介绍卷积层的BP算法。推导式子和多层感知器类似，区别在于对于含有卷积的式子求导时，卷积核被旋转了180度。即式子中的rot180，翻转180度的意思是上下翻转一次，接着左右在翻转一次。这边为什么旋转180度大家可以自行推导一遍，这里不在赘述。这个公式就是反向传播的核心，接下来使用权重和偏置关于误差的关系即可
+-->
+
+<h5 id="卷积神经网络-15">卷积神经网络</h5>
+
+<h5 id="卷积层反向传播-1">卷积层反向传播</h5>
+
+<p>推导$w$和$b$的梯度
+$z^l=a^{l-1} * w^l +b^l=\sigma(z^{l-1} * w^l)+b^l$
+$\frac{\partial{C}}{\partial{w^l}}=\frac{\partial{C}}{\partial{z^l}}\frac{\partial{z^l}}{\partial{w^l}}=\delta^{l} * rot180(a^{l-1})$</p>
+
+<p>$\frac{\partial{C}}{\partial{b^l}}=\sum<em>{u,v}(\delta^l)</em>{u,v}$</p>
+
+<hr />
+
+<h1 id="卷积神经网络-16">卷积神经网络</h1>
 
 <p>代码实现
 <a href="http://10.14.42.229:8888/notebooks/deep_learning/deep_learning_convolution.ipynb">http://10.14.42.229:8888/notebooks/deep_learning/deep_learning_convolution.ipynb</a></p>
@@ -939,6 +1137,33 @@ $$\sigma(b+\sum_{l=0}^{k<em>h-1}\sum</em>{m=0}^{k<em>w-1}w</em>{l,m}a_{j+k, k+m}
 
 <p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/neural_network_figures_14.jpg" alt="center" /></p>
 
+<hr />
+
+<!--
+上一讲王昕讲的SVM推导部分，详细推导了一遍，如果上一讲没有弄清楚，可以参考一下
+-->
+
+<h1 id="svm推导">SVM推导</h1>
+
+<p><a href="https://github.com/guanfuchen/statistics_model/tree/master/svm">SVM推导</a></p>
+
+<h2 id="问题">问题</h2>
+
+<p>不借助深度学习框架用python中的numpy实现一个CNN框架（包括前向传播，反向传播）</p>
+
+<hr />
+
+<h1 id="参考资料">参考资料</h1>
+
+<ul>
+<li>Jake Bouvrie. “Notes on Convolutional Neural Networks”</li>
+<li>马春鹏译. 《模式识别与机器学习》</li>
+<li>李航. 《统计学习方法》</li>
+<li>周志华. 《机器学习》</li>
+<li>Bengio. 《深度学习》</li>
+<li>Michael Nielsen. 《Neural Networks and Deep Learning》</li>
+</ul>
+
         </article>
   </div>
 </section>
@@ -950,8 +1175,8 @@ $$\sigma(b+\sum_{l=0}^{k<em>h-1}\sum</em>{m=0}^{k<em>w-1}w</em>{l,m}a_{j+k, k+m}
     <div>
         <section id="datecount">
           <h4 id="date"> Sat Mar 3, 2018 </h4>
-          <h5 id="wc"> 600 Words </h5>
-          <h5 id="readtime"> Read in about 3 Min </h5>
+          <h5 id="wc"> 900 Words </h5>
+          <h5 id="readtime"> Read in about 4 Min </h5>
         </section>
         <ul id="categories">
           
@@ -1027,7 +1252,7 @@ $$\sigma(b+\sum_{l=0}^{k<em>h-1}\sum</em>{m=0}^{k<em>w-1}w</em>{l,m}a_{j+k, k+m}
 
 </aside>
 
-<meta itemprop="wordCount" content="555">
+<meta itemprop="wordCount" content="836">
 <meta itemprop="datePublished" content="2018-03-03">
 <meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_03/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%88%86%E4%BA%AB/">
 
