@@ -6,10 +6,19 @@
     <description>Recent content on import python</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Apr 2018 11:06:19 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 08 Apr 2018 14:11:30 +0800</lastBuildDate>
     
 	<atom:link href="https://guanfuchen.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>背包问题</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Sun, 08 Apr 2018 14:11:30 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/</guid>
+      <description>参考链接 背包问题 本文将背包问题阐述地较好，可以作为参考。</description>
+    </item>
     
     <item>
       <title>markdown_usage</title>
@@ -43,13 +52,12 @@ import os  分割线 markdown中插入分割线，需要另起一行，连续输
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_03/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/</guid>
       <description>阅读书籍 Data-Science-books 收集了部分关于深度学习的书籍
- 《深度学习》，Bengio和Goodfellow DeepLearningBookQA_cn 那些深度学习《面试》你可能需要知道的 斯坦福机器学习课程 《统计学习方法》，李航 lihang_book_algorithm 作者使用python实现了所有的算法 li_hang 李航书籍的PPT static_study 《统计学习方法》的读书笔记 统计学习方法：习题笔记 习题的笔记 返回主页 刘建平Pinard 博主整理了很多书上的内容，可以作为复习参考 《神经网络与深度学习》，吴岸城 《神经网络与深度学习》讲义 《神经网络与深度学习》讲义（Notes on Artificial Neural Networks and Deep Learning）从感知器到多层感知器到卷积网络 《机器学习》，周志华 机器学习：习题笔记（一） 提供了课后习题的相关思路 《斯坦福大学2014机器学习课程笔记》，Andrew Ng主讲，黄海广整理笔记 《凸优化》为什么凸优化这么重要？ 機器學習中的優化理論，需要學習哪些資料才能看懂？ 凸优化书籍推荐？ 《Neural Networks and Learning Machines》 機器學習基石上 (Machine Learning Foundations)&amp;mdash;Mathematical Foundations 机器学习资料大汇总 机器学习学习大纲 对于机器学习中常用的模型和数学知识进行了罗列，其中的知识介绍接近李航的统计学系方法，很有系统性，推荐。  相关博客 关于计算机视觉（随谈）
+ 《深度学习》，Bengio和Goodfellow DeepLearningBookQA_cn 那些深度学习《面试》你可能需要知道的 斯坦福机器学习课程 《统计学习方法》，李航 lihang_book_algorithm 作者使用python实现了所有的算法 li_hang 李航书籍的PPT static_study 《统计学习方法》的读书笔记 统计学习方法：习题笔记 习题的笔记 返回主页 刘建平Pinard 博主整理了很多书上的内容，可以作为复习参考 《神经网络与深度学习》，吴岸城 《神经网络与深度学习》讲义 《神经网络与深度学习》讲义（Notes on Artificial Neural Networks and Deep Learning）从感知器到多层感知器到卷积网络 《机器学习》，周志华 机器学习：习题笔记（一） 提供了课后习题的相关思路 《斯坦福大学2014机器学习课程笔记》，Andrew Ng主讲，黄海广整理笔记 《凸优化》为什么凸优化这么重要？ 機器學習中的優化理論，需要學習哪些資料才能看懂？ 凸优化书籍推荐？ 《Neural Networks and Learning Machines》 機器學習基石上 (Machine Learning Foundations)&amp;mdash;Mathematical Foundations 机器学习资料大汇总 机器学习学习大纲 对于机器学习中常用的模型和数学知识进行了罗列，其中的知识介绍接近李航的统计学系方法，很有系统性，推荐。 分布式 ecosystem 使用分布式技术来搭建深度学习框架。  相关博客 关于计算机视觉（随谈）
+火光摇曳 腾讯rickjin大神部门的分享博客。
 参数调整 你有哪些deep learning（rnn、cnn）调参的经验？ 这篇文章对神经网络中常用的参数调整进行了介绍，非常有帮助。
 线性回归 推导过程
 反向传播 四个基本公式
-Backpropagation Algorithm
-反向传播算法
-Improving the way neural networks learn</description>
+Backpropagation Algorithm</description>
     </item>
     
     <item>
@@ -1399,6 +1407,102 @@ git中submodule的路径 # vim .gitmodules [submodule &amp;quot;hugo_ws/mysite/c
 表示最优化满足如下条件： $$\nabla f(x,y)=\lambda \nabla (g(x,y)-c)$$ 即最优化点满足两个函数的法向量相同，如下构造拉格朗日乘子： $$L(x,y,\lambda)=f(x,y)+\lambda (g(x,y)-c)$$
 多个等式约束的拉格朗日乘子法 将单一等式约束的拉格朗日乘子法扩展即可： $$min{(x, y)}{f(x,y)}$$ $$s.t.\ g{i}(x,y)=0, i=1,2,&amp;hellip;,N$$ $$L(x,y,\lambda)=f(x,y)+\sum{i=1}^{N}{\lambda{i} g_{i}(x,y)}$$
 广义拉格朗日乘子法 $$min{(x, y)}{f(x,y)}$$ $$s.t.\ g{i}(x,y)=0, i=1,2,&amp;hellip;,N$$ $$h{i}(x,y)&amp;lt;=0, i=1,2,&amp;hellip;,M$$ 构造广义拉格朗日乘子法 $$L(x,y,\alpha,\beta)=f(x,y)+\sum{i=1}^{N}{\alpha{i} g{i}(x,y)}+\sum{i=1}^{M}{\beta{i} h{i}(x,y)}$$ 满足如下KKT条件即可求得最优解： - 法向量相同 $$\nabla L(x,y,\alpha,\beta)=0$$ - 基本条件 $$g{i}(x,y)=0, i=1,2,&amp;hellip;,N$$ $$h_{i}(x,y)&amp;lt;=0, i=1,2,&amp;hellip;,M$$ - 不等约束系数非负 $$\beta_i&amp;gt;=0, i=1,2,&amp;hellip;,M$$ - 不等约束和系数其中一个为0 $$\beta_i h_i(x,y)=0, i=1,2,&amp;hellip;,M$$</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/git_usage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/git_usage/</guid>
+      <description>git使用简介 为什么使用git git在程序员中的地位就好像图书管理员对于读者来说，管理了代码、文档的修改。相比于中心式的版本控制系统，git是基于分布式版本控制，每一个仓库都能完整地追踪修改。
+git的发展历程不得不提Linus和Linux，随着Linux代码的增加，Linus手动管理代码难度越来越大，社区也越来越不满这种低效地管理方式。尽管当时已经有不少优秀的集中式的版本控制系统，但是Linus不屑于使用这种系统（集中式的版本控制系统不但速度慢，而且必须联网才能使用）。然后Linus使用了一个商业的版本控制系统BitKeeper，该公司为了表达对开源的支持、尊重，授权给Linux社区免费试用。但是随后社区大牛试图对BitKeeper进行反向工程，被BitKeeper公司获悉后收回授权。此时不得不佩服大牛就是大牛，Linus花了两周时间就完成了git这个分布式版本控制系统，并且成功地部署了Linux代码的版本控制。在这之后，越来越多的开源项目使用git作为版本控制系统，甚至GitHub公司免费提供了git作为版本控制系统的云管理仓库。
+怎么样使用git 安装git 请参阅各自系统安装git的文档。
+安装git后配置用户名和邮箱。
+git config --global user.name &amp;quot;Name&amp;quot; git config --global user.email &amp;quot;Email&amp;quot;  创建版本库 首先创建一个目录作为版本库的根目录，在该目录下使用git init .初始化该目录为版本库，此时版本库为空，目录会增加一个隐藏目录.git，该目录是git用来进行版本管理的目录，切记随意增加修改内容。
+添加文件到版本库 首先创建一个文件ReadMe.md，输入内容第一次提交，然后输入命令git add ReadMe.md，此时文件ReadMe.md被提交到git的暂存区内stage。最后输入git commit -m &amp;quot;第一次提交&amp;quot;才将文件修改记录到git仓库中。
+查看版本库状态 使用git status可以查看版本库提交、未提交、合并、未合并等状态。
+查看文件修改内容 使用git diff ReadMe.md可以查看ReadMe.md的修改。
+查看版本库提交日志 使用git log可以查看当前版本库历史提交日志，包括提交时间、提交注释、提交日志ID。
+回退版本库 使用git reset --hard Head~1表示回退到上一版本，git reset --hard Head~n表示回退到上n版本。进行回退操作以后，回退ID后的修改都丢失了，此时如果知道最近的提交ID，那么通过git reset --hard 3628164可以 重新还原，其中3628164表示待还原的版本的ID。如果忘记了待还原的版本的ID，可以通过使用git reflog查看先前记录的版本的ID。
+撤销修改 使用git checkout -- ReadMe.md可以撤销当前对文件的修改，如果此时暂存区中存在修改增加的版本，那么还原到当前，如果不存在那么文件内容还原到最近一次提交的内容，总之就是最近的一次提交。
+如果想彻底丢弃当前工作区和暂存区中的文件内容，使用git reset HEAD ReadMe.md可以完成此功能。
+删除文件 文件删除后可使用git rm ReadMe.md直接在git控制系统中删除ReadMe.md。
+创建与合并分支 git checkout -b dev创建dev分支，在dev分支中修改ReadMe.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/gpu%E5%B9%B6%E8%A1%8C%E8%BF%90%E7%AE%97/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/gpu%E5%B9%B6%E8%A1%8C%E8%BF%90%E7%AE%97/</guid>
+      <description>GPU 第五节课 名词解释  FLOPS 每秒钟能运行的浮点运算 GLOPS 每秒钟能运行的G浮点运算 TLOPS 每秒钟能运行的T浮点运算  为什么需要GPU  应用的需求越来越高 计算机技术由应用驱动 Application Driven  应用场景，石油勘探、气象预报
+GPU（Graphic Processing Unit）
+GPU是一个异构多处理器芯片，包含shader、工作分配器、输入、输出等。
+执行单元（Execute shader），包含数据、ALU和执行上下文（Execution Context）
+CPU类型的内核，数据缓存、OOO、分支预测器、存储器的管理单元。
+通过CPU思考如何加速： - 思路一 精简（slimming down），去除某些组件加快运行速度。 - 思路二 2个核，同时执行2个程序片元，同时并行。4个核，同时执行4个程序片元。以此类推，增加核的数目，同时执行的程序片元也进行增加。指令流共享，多个程序片元共享指令流。 - 思路三 增加ALU、SIMD，增加的ALU可以单指令处理多数据。
+经过以上的思路，改进的处理单元。
+16核8ALU可以完成128个程序片元同时执行。
+停滞问题的解决思路： - 大量的独立片元相互切换 - 通过片元切换来掩藏延迟</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%92%8C%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%92%8C%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/</guid>
+      <description>概率论和数理统计 主要在记录公开课【公开课】概率论与数理统计（浙江大学）学习内容。
+第一课 对“随机”有足够的认识，对“数据”有足够的兴趣。
+ 对“随机”有足够的认识，即能随时随地用“随机”的观点去观察、看待、处理周围的事物。如：探索物理、化学或生物学中随机现象的规律性。 对“数据”有兴趣、有感觉，即要善于发现、善于利用、善于处理周围的数据。如：从网购票据发现有价值的信息。
+ 第二课 样本空间和随机现象
+确定性现象，不确定性现象
+ 对随机现象的观察、记录、实验统称为随机试验。它具有以下特性： - 可以在相同条件下重复进行； - 事先知道所有可能出现的结果； - 进行试验前并不知道哪个试验结果会发生。
+ 样本空间 定义：随机试验的所有可能结果构成的集合称为样本空间，记为$S={e}$。S中的元素称为样本点。
+随机事件 定义：样本空间S的子集A称为随机事件A，简称事件A。当且仅当A中的某个样本点发生称事件A发生。事件A的表示可用集合，也可以用语言来表示。
+必然事件 定义：如果把S看作事件，则每次试验S总是发生，所以S称为必然事件。
+基本事件 定义：如果事件只含有一个样本点，称其为基本事件。
+不可能事件： 定义：如果事件</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%9A%84%E6%9C%AC%E8%B4%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%9A%84%E6%9C%AC%E8%B4%A8/</guid>
+      <description>线性代数的本质 1 序言 矩阵乘法（matrix multiplication）、行列式（determinant）、叉积（cross products）
+为什么叉积和行列式有所关联？
+特征值究竟代表了什么？（eigen value）
+数值计算和几何直观
+2 向量是什么 物理学上，向量=方向和大小
+计算机专业，向量=数字列表
+数学专业，向量的运算，向量加法和向量数乘，线性代数中，向量都是以原点为起点。
+向量的数乘和向量的加法
+直观的图形解释可以查看动画
+3 线性组合和基 向量坐标中有两个特别的向量，$\hat{i}$和$\hat{j}$，二维空间中的向量都可以使用这两个基向量表示。另外除了这两个特殊的向量，对于任何两个不共线的向量，也可以表示二维空间中的任意向量。
+向量的张成表示向量的线性组合能表示的空间组合。
+线性相关的向量不对向量的张成有任何贡献，只有线性无关的向量才能增加向量的张成。
+空间的一组基（span）的严格定义：张成该空间的一个线性无关向量的集合。
+4 矩阵与线性变换 线性变换的概念以及它和矩阵的关系。变换意味着输入、输出。
+向量的变换可以转换为向量对于一个变换矩阵的乘积。
+如果变换矩阵中的元素是线性相关的，那么变换后的维度将会降低。
+从线性变换的角度来思考矩阵乘法、行列式、基变换和特征值。
+5 矩阵乘法与矩阵变换 线性变换由基向量的变换决定。矩阵相乘的几何意义就是两个线性变换相继作用。函数复合时f(g(x))和矩阵MN都是需要从右向左进行变换的。
+6 三维空间中的线性变换 三维空间中的线性变换和二维空间中的线性变换类似，可以看作是$\hat{i}$、$\hat{j}$和$\hat{k}$的变换即可。
+7 行列式 行列式测量了对变换影响的程度，二维空间中的变换矩阵的行列式表示了变换面积的大小。
+如果一个矩阵的行列式是0，那么这个矩阵所代表的变换将空间压缩到更小的维度下。
+另外行列式也可能是负数，这意味着变换旋转了180度。
+三维空间中的变换矩阵的行列式表示了变换体积的大小。三维空间中的变换矩阵的行列式为0意味着将三维空间压缩到二维空间、线或者点。三维空间中的变换矩阵为负数，表示和右手定理不符合。
+8 逆矩阵、列空间与零空间 高斯消元法
+逆变换来解释方程解，$Ax=b$等价于$x=A^{-1}b$，求解过程$A^{-1}Ax=A^{-1}b$，如果$det(A) \neq 0$，但是$det(A) = 0$，那么矩阵的逆不存在，解依然存在。
+变换为平面的情况下，矩阵的秩为2，变换为直线的情况下，矩阵的秩为1，变换为点的情况下，矩阵的秩为0。这里秩（Rank）代表了变换后的空间的维数。对于3维空间，秩小于3那么空间被压缩了。
+不管是一条直线、一个平面还是三维空间，所有可能的变换结果的集合，称为矩阵的列向量。所以更精确的秩的定义是列空间的维数。满秩，列空间与秩相等。零向量。
+9 非方阵 $2x3$的非方阵将3维空间变换到2维空间，$3x2$的非方阵将2维空间变换到3维空间中。
+10 点积与对偶性 点积（dot products）。点积的理解为对偶性。
+11 叉积 12 叉积（线性变换） 13 参考链接 【官方双语/合集】线性代数的本质 - 系列合集</description>
     </item>
     
   </channel>

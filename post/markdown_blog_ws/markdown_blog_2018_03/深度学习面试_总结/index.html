@@ -213,11 +213,30 @@ $$\ln{\frac{y}{1-y}}=w^Tx+b$$</p>
 <p>逻辑回归BP推导
 <img src="https://pic1.zhimg.com/80/v2-8ae29e91788891ab67b966e243f86476_hd.jpg" alt="" /></p>
 
+<p>令$h_w(x)=\frac{1}{1+e^{-w^T x}}$，其中$w=(w_0, w_1, \cdots, w_d)^T$，$x=(1, x^1, \cdots, x^d)^T$，$X=(x_1, x_2, \cdots, x_N)$，共有$N$个样本，$d$维特征，$LR$中的$Sigmoid$函数导数$h_w(x)^{\prime}=h_w(x)(1-h<em>w(x))$。其中代价函数如下所示：
+$J(w)=-\frac{1}{N}\sum</em>{i=1}^{N}(y_i \log h_w(x_i)+(1-y_i) \log (1-h_w(x_i)))$
+$\frac{\partial{J(w)}}{w<em>j}=-\frac{1}{N}\sum</em>{i=1}^{N}(y_i \frac{1}{ h_w(x_i)}-(1-y_i) \frac{1}{(1-h_w(x_i))})\frac{\partial{h_w(x_i)}}{\partial{w<em>j}}$
+$=-\frac{1}{N}\sum</em>{i=1}^{N}(y_i \frac{1}{ h_w(x_i)}-(1-y_i) \frac{1}{(1-h_w(x_i))})h_w(x_i)(1-h_w(w_i))\frac{\partial{w^T x}}{\partial{w<em>j}}$
+$=-\frac{1}{N}\sum</em>{i=1}^{N}(y_i \frac{1}{ h_w(x_i)}-(1-y_i) \frac{1}{(1-h_w(x_i))})h_w(x_i)(1-h_w(w_i))x<em>i^j$
+$=-\frac{1}{N}\sum</em>{i=1}^{N}(y_i (1-h_w(x_i))-(1-y_i) h_w(x_i))x<em>i^j$
+$=-\frac{1}{N}\sum</em>{i=1}^{N}(y_i - h_w(x_i))x<em>i^j$
+$=\frac{1}{N}\sum</em>{i=1}^{N}(h_w(x_i)-y_i)x_i^j$
+使用梯度下降算法更新：
+$w_j=w<em>j-\alpha \frac{1}{N}\sum</em>{i=1}^{N}(h_w(x_i)-y_i)x_i^j$
+矩阵形式为：
+$w=w-\alpha \frac{1}{N}X^T(h_w(X)-y)$</p>
+
+<p><a href="http://www.cnblogs.com/arachis/p/LR.html">逻辑回归（LR）总结复习</a> 推导主要参考这个博客。</p>
+
+<p><a href="https://www.cnblogs.com/pinard/p/6029432.html">逻辑回归原理小结</a> 刘建平的博客，依旧是参考的重点。</p>
+
+<p><a href="https://blog.csdn.net/richard_more/article/details/52764559###;">LR深入理解</a></p>
+
 <h3 id="逻辑回归的正则化">逻辑回归的正则化</h3>
 
 <p>正则化是符合奥卡姆剃刀(Occam’s razor)原理的：在所有可能选择的模型中，能够很好地解释已知数据并且十分简单的才是最好的模型。正则化项是为了防止模型容量大，而数据样本小，从而导致模型将不属于泛化特征而属于训练集本身的特征学习到了，从而虽然在训练集上表现较好但是在测试集上表现极差，即泛化能力降低，产生过拟合。正则化通过增加对某种表达式的偏好程度来减小模型的复杂度，从而达到简单化同时泛化能力强的效果，常用的正则化有L1正则化、L2正则化</p>
 
-<p>L1正则化和L2正则化可以看做是损失函数的惩罚项。所谓『惩罚』是指对损失函数中的某些参数做一些限制。对于线性回归模型，使用L1正则化的模型建叫做Lasso回归，使用L2正则化的模型叫做Ridge回归（岭回归）。
+<p>L1正则化和L2正则化可以看做是损失函数的惩罚项。所谓『惩罚』是指对损失函数中的某些参数做一些限制。对于线性回归模型，使用L1正则化的模型叫做Lasso回归，使用L2正则化的模型叫做Ridge回归（岭回归）。
 - L1正则化
 L1正则化是指权值向量w中各个元素的绝对值之和，通常表示为$||w||_1$
 L1正则化可以产生稀疏权值矩阵，即产生一个稀疏模型，可以用于特征选择
@@ -225,6 +244,8 @@ L1正则化可以产生稀疏权值矩阵，即产生一个稀疏模型，可以
 - L2正则化
 L2正则化是指权值向量w中各个元素的平方和然后再求平方根（可以看到Ridge回归的L2正则化项有平方符号），通常表示为$||w||_2$
 L2正则化可以防止模型过拟合（overfitting）；一定程度上，L1也可以防止过拟合</p>
+
+<p>L1正则化使得解稀疏，L2正则化通过使解趋近于0而不是等于0达到提升泛化能力的目的。</p>
 
 <p><a href="http://blog.csdn.net/richard_more/article/details/52764559">LR深入理解</a>
 <a href="http://blog.csdn.net/keycxl/article/details/78623930">关于LR的总结</a> 其中包括了逻辑回归的相关问题，值得一看
@@ -240,24 +261,33 @@ L2正则化可以防止模型过拟合（overfitting）；一定程度上，L1�
 
 <ul>
 <li>dropout
-在第一种近似下，Dropout可以被认为是集成大量深层神 经网络的实用Bagging方法。Dropout提供了一种廉价的Bagging集成近似，能够训练和 评估指数级数量的神经网络。Bagging是一种集成方法，dropout相当于各个不同的集成公用一个模型进行了参数共享，一般作为分类器最后一层全联接之后，超参数一般取之为0.5</li>
+在第一种近似下，Dropout可以被认为是集成大量深层神经网络的使用Bagging方法。Dropout提供了一种廉价的Bagging集成近似，能够训练和评估指数级数量的神经网络。Bagging是一种集成方法，dropout相当于各个不同的集成共用一个模型进行了参数共享，一般作为分类器最后一层全联接之后，超参数一般取之为0.5。</li>
 <li>regularization 正则化
 包括L2正则化、L1正则化</li>
 <li>bagging集成方法
-Bagging(bootstrap aggregating)是通过结合几个模型降低泛化误差的技术 (Breiman, 1994)。主要想法是分别训练几个不同的模型，然后让所有模型表决测 试样例的输出。这是机器学习中常规策略的一个例子，被称为模型平均(model averaging)。采用这种策略的技术被称为集成方法。</li>
+Bagging(bootstrap aggregating)是通过结合几个模型降低泛化误差的技术 (Breiman, 1994)。主要想法是分别训练几个不同的模型，然后让所有模型表决测试样例的输出。这是机器学习中常规策略的一个例子，被称为模型平均(model averaging)。采用这种策略的技术被称为集成方法。</li>
 <li>batch normalization BN
 批规范化，即在每次SGD时，通过mini-batch来对相应的activation做规范化操作，使得结果（输出信号各个维度）的均值为0，方差为1。
 算法本质原理：在网络的每一层输入的时候，又插入了一个归一化层，也就是先做一个归一化处理，然后再进入网络的下一层。不过文献归一化层，可不像我们想象的那么简单，它是一个可学习、有参数的网络层。
-使用变换重构，在不破坏上一层网络的特征分布的前提下进行归一化，引入了可学习参数γ、β，这就是算法关键之处，核心是先对原数据进行变化</li>
+使用变换重构，在不破坏上一层网络的特征分布的前提下进行归一化，引入了可学习参数γ、β，这就是算法关键之处，核心是先对原数据进行变化。</li>
 </ul>
 
 <p>batch normation的原理
 <img src="https://pic2.zhimg.com/80/9ad70be49c408d464c71b8e9a006d141_hd.jpg" alt="" /></p>
 
 <p>batch normation的BP
-<img src="https://pic1.zhimg.com/80/beb44145200caafe24fe88e7480e9730_hd.jpg" alt="" />
-- early stopping
-即在每一个epoch结束时（一个epoch即对所有训练数据的一轮遍历）计算 validation data的accuracy，当accuracy不再提高时，就停止训练。这是很自然的做法，因为accuracy不再提高了，训练下去也没用。这样做能防止overfitting。</p>
+<img src="https://pic1.zhimg.com/80/beb44145200caafe24fe88e7480e9730_hd.jpg" alt="" /></p>
+
+<p><a href="https://buptldy.github.io/2016/08/18/2016-08-18-Batch_Normalization/">Implementation of Batch Normalization Layer</a> 对Batch Normalization介绍较好</p>
+
+<p><a href="http://www.xieqiang.site/2017/08/07/batch-normalization/">Deep Learning 之 batch normalization</a></p>
+
+<p><a href="https://morvanzhou.github.io/tutorials/machine-learning/ML-intro/3-08-batch-normalization/">批标准化 (Batch Normalization)</a></p>
+
+<ul>
+<li>early stopping
+即在每一个epoch结束时（一个epoch即对所有训练数据的一轮遍历）计算 validation data的accuracy，当accuracy不再提高时，就停止训练。这是很自然的做法，因为accuracy不再提高了，训练下去也没用。这样做能防止overfitting。</li>
+</ul>
 
 <p><a href="http://blog.csdn.net/u012162613/article/details/44265967">机器学习算法中如何选取超参数：学习速率、正则项系数、minibatch size</a></p>
 
@@ -278,12 +308,14 @@ Bagging(bootstrap aggregating)是通过结合几个模型降低泛化误差的�
 
 <p>1、LR和SVM都可以处理分类问题，且一般都用于处理线性二分类问题（在改进的情况下可以处理多分类问题）</p>
 
-<p>2、两个方法都可以增加不同的正则化项，如l1、l2等等。所以在很多实验中，两种算法的结果是很接近的。
+<p>2、两个方法都可以增加不同的正则化项，如L1、L2等等。所以在很多实验中，两种算法的结果是很接近的。
 区别： 1、LR是参数模型，SVM是非参数模型。
-2、从目标函数来看，区别在于逻辑回归采用的是logistical loss，SVM采用的是hinge loss.这两个损失函数的目的都是增加对分类影响较大的数据点的权重，减少与分类关系较小的数据点的权重。
+2、从目标函数来看，区别在于逻辑回归采用的是logistical loss对数损失函数（$\sum{-ylogP(y|x)}$），SVM采用的是hinge loss合叶函数$\sum_{i=1}^{N}[1-y_i(w x<em>i +b)]</em>+$，这个损失仅仅在正数的时候有损失，即outilers的情况损失。这两个损失函数的目的都是增加对分类影响较大的数据点的权重，减少与分类关系较小的数据点的权重。
 3、SVM的处理方法是只考虑support vectors，也就是和分类最相关的少数点，去学习分类器。而逻辑回归通过非线性映射，大大减小了离分类平面较远的点的权重，相对提升了与分类最相关的数据点的权重。
 4、逻辑回归相对来说模型更简单，好理解，特别是大规模线性分类时比较方便。而SVM的理解和优化相对来说复杂一些，SVM转化为对偶问题后,分类只需要计算与少数几个支持向量的距离,这个在进行复杂核函数计算时优势很明显,能够大大简化模型和计算。
 5、logic 能做的 svm能做，但可能在准确率上有问题，svm能做的logic有的做不了。</p>
+
+<p><a href="https://www.deeplearn.me/1788.html">为什么逻辑回归比线性回归要好？</a></p>
 
 <h2 id="softmax推导过程">softmax推导过程</h2>
 
@@ -310,33 +342,44 @@ $$Loss=-\sum_i{y_i \ln a_i}$$</p>
 <p>卷积过程如下
 <img src="https://raw.githubusercontent.com/vdumoulin/conv_arithmetic/master/gif/no_padding_no_strides.gif" alt="" /></p>
 
-<p>装置卷积过程如下，存在补0操作
+<p>转置卷积过程如下，存在补0操作
 <img src="https://raw.githubusercontent.com/vdumoulin/conv_arithmetic/master/gif/no_padding_no_strides_transposed.gif" alt="" /></p>
 
 <p><a href="http://blog.csdn.net/u014722627/article/details/60574260">深度学习卷积网络中反卷积/转置卷积的理解 transposed conv/deconv</a>
 <a href="https://www.zhihu.com/question/43609045">如何理解深度学习中的deconvolution networks？</a></p>
 
+<p><a href="http://collamark.com/mark/142893s">如何理解深度学习中的deconvolution networks？ - 知乎</a></p>
+
+<blockquote>
+<p>转置卷积和卷积的对应关系可以理解为正向卷积为0 padding，那么转置卷积就是full padding。
+公式关系为正向卷积s=1,p=0那么转置卷积的k&rsquo;=k,s&rsquo;=s,p&rsquo;=k-1,转置卷积的输出尺寸</p>
+</blockquote>
+
+<p><a href="https://buptldy.github.io/2016/10/29/2016-10-29-deconv/">Transposed Convolution, Fractionally Strided Convolution or Deconvolution</a> 本文讲解转置卷积最为清楚。</p>
+
 <h2 id="反向传播过程">反向传播过程</h2>
+
+<p>BP算法的核心，是误差反向传播，通过递推式子计算每一层的误差（BP1-BP2），根据误差计算每一层参数的梯度（BP3-BP4）。</p>
 
 <h2 id="densenet实现">densenet实现</h2>
 
 <h2 id="sgd-中-s-stochastic-代表什么">SGD 中 S(stochastic)代表什么</h2>
 
-<p>mini-batch和Full-batch</p>
+<p>mini-batch和Full-batch，GD梯度下降指的是full-batch，而S随机梯度下降指的是mini-batch（设置batch_size）。</p>
 
 <h2 id="监督学习-迁移学习-半监督学习-弱监督学习-非监督学习">监督学习／迁移学习／半监督学习／弱监督学习／非监督学习？</h2>
 
 <ul>
-<li>监督学习：给定标签的训练集进行学习</li>
-<li>迁移学习：某一训练集训练的权值使用微调的方式作为另一个数据集的初始训练权值进行学习</li>
-<li>半监督学习：部分训练集有标签，大量训练集无标签</li>
-<li>弱监督学习：给定的标签不是完全对应于最后的标签，比如像素级分割学习，给定的标签仅仅是图像类别或者物体的bounding box，而不是最后的标签类别图</li>
+<li>监督学习：给定标签的训练集进行学习。</li>
+<li>迁移学习：某一训练集训练的权值使用微调的方式作为另一个数据集的初始训练权值进行学习。</li>
+<li>半监督学习：部分训练集有标签，大量训练集无标签。</li>
+<li>弱监督学习：给定的标签不是完全对应于最后的标签，比如像素级分割学习，给定的标签仅仅是图像类别或者物体的bounding box，而不是最后的标签类别图。</li>
 <li>非监督学习：无标签学习，比如聚类，KNN聚类等</li>
 </ul>
 
 <h2 id="激活函数">激活函数</h2>
 
-<p>Sigmond／Tanh／ReLU以及ReLU线性整理的变种，比如PReLU和LReLU，解决了ReLU负半区神经死亡的问题
+<p>Sigmoid／Tanh（双曲正切函数）／ReLU以及ReLU线性整理的变种，比如PReLU和LReLU，解决了ReLU负半区神经死亡的问题
 Sigmoid：
 <img src="http://cs231n.github.io/assets/nn1/sigmoid.jpeg" alt="" />
 - 缺点：会有梯度弥散、不是关于原点对称、计算exp比较耗时
@@ -352,9 +395,9 @@ ReLU：
 
 <h2 id="用过哪些dl的library呀">用过哪些DL的library呀?</h2>
 
-<p>pytorch、tensorflow、caffe、keras、thenao</p>
+<p>pytorch、tensorflow、caffe、keras、thenao，这些DL库的<strong>优缺点。</strong></p>
 
-<h2 id="现在的dl-的state-of-art-model有哪些呀">现在的DL 的state of art model有哪些呀?</h2>
+<h2 id="现在的dl的state-of-art-model有哪些呀">现在的DL的state of art model有哪些呀?</h2>
 
 <p>2012 AlexNet
 2013 ZFNet
@@ -369,9 +412,9 @@ ReLU：
 <h2 id="损失函数">损失函数</h2>
 
 <p>常见的损失函数Cross-Entropy / MSE／KL散度
-其中KL散度和Cross-Entropy是信息论中的相关损失度量，KL散度的最小化等价于Cross-Entropy交叉熵的最小化，另外MSE是均方根最小误差</p>
+其中KL散度和Cross-Entropy是信息论中的相关损失度量，KL散度的最小化等价于Cross-Entropy交叉熵的最小化，另外MSE是均方根最小误差。通常Cross-Entropy交叉熵损失函数应用在分类模型中，而MSE均方差误差应用在回归问题中。</p>
 
-<p><img src="chenguanfuqq.gitee.io/tuquan/img_2018_3/loss_function.png" alt="" /></p>
+<p><img src="https://chenguanfuqq.gitee.io/tuquan/img_2018_3/loss_function.png" alt="" /></p>
 
 <p><a href="https://plushunter.github.io/2017/07/08/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95%E7%B3%BB%E5%88%97%EF%BC%8824%EF%BC%89%EF%BC%9A%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0/">机器学习算法系列（24）：机器学习中的损失函数</a> 损失函数总结的非常好，值得根据这个目录进行总结。</p>
 
@@ -381,7 +424,7 @@ ReLU：
 
 <p>CNN抓住此共性的手段主要有四个：局部连接／权值共享／池化操作／多层次结构。</p>
 
-<p>局部连接使网络可以提取数据的局部特征；权值共享大大降低了网络的训练难度，一个Filter只提取一个特征，在整个图片（或者语音／文本） 中进行卷积；池化操作与多层次结构一起，实现了数据的降维，将低层次的局部特征组合成为较高层次的特征，从而对整个图片进行表示。如下图：</p>
+<p>局部连接使网络可以提取数据的局部特征；权值共享大大降低了网络的训练难度，一个Filter只提取一个特征，在整个图片（或者语音／文本） 中进行卷积；池化操作与多层次结构一起，实现了数据的降维，将低层次的局部特征组合成为较高层次的特征，从而对整个图片进行表示。</p>
 
 <h2 id="什麽样的资料集不适合用深度学习">什麽样的资料集不适合用深度学习?</h2>
 
@@ -400,13 +443,15 @@ ReLU：
 
 <h2 id="用贝叶斯机率说明dropout的原理">用贝叶斯机率说明Dropout的原理</h2>
 
+<p>TODO</p>
+
 <h2 id="什麽造成梯度消失问题-推导一下">什麽造成梯度消失问题? 推导一下</h2>
 
 <p>神经网络的训练中，通过改变神经元的权重，使网络的输出值尽可能逼近标签以降低误差值，训练普遍使用BP算法，核心思想是，计算出输出与标签间的损失函数值，然后计算其相对于每个神经元的梯度，进行权值的迭代。</p>
 
-<p>梯度消失会造成权值更新缓慢，模型训练难度增加。造成梯度消失的一个原因是，许多激活函数将输出值挤压在很小的区间内，在激活函数两端较大范围的定义域内梯度为0。造成学习停止。常见的比如sigmoid函数，在x较大或较小时，梯度就很小了，而ReLU线性整流函数的导数不存在这种问题，它的导数除了0处为1</p>
+<p>梯度消失会造成权值更新缓慢，模型训练难度增加。造成梯度消失的一个原因是，许多激活函数将输出值挤压在很小的区间内，在激活函数两端较大范围的定义域内梯度为0。造成学习停止。常见的比如sigmoid函数，在x较大或较小时，梯度就很小了，而ReLU线性整流函数的导数不存在这种问题，它的导数除了0处为1。</p>
 
-<p>梯度消失：这本质上是由于激活函数的选择导致的， 最简单的sigmoid函数为例，在函数的两端梯度求导结果非常小（饱和区），导致后向传播过程中由于多次用到激活函数的导数值使得整体的乘积梯度结果变得越来越小，也就出现了梯度消失的现象。</p>
+<p>梯度消失：这本质上是由于激活函数的选择导致的， 最简单的sigmoid函数为例，在函数的两端梯度求导结果非常小（饱和区），导致反向传播过程中由于多次用到激活函数的导数值使得整体的乘积梯度结果变得越来越小，也就出现了梯度消失的现象。考虑BP4，权值的更新依赖于激活函数的导数，如果激活函数的导数过小，梯度将更新缓慢甚至不在更新。</p>
 
 <h2 id="什麽造成梯度爆炸问题-推导一下">什麽造成梯度爆炸问题? 推导一下</h2>
 
@@ -414,9 +459,8 @@ ReLU：
 
 <h2 id="weights-initialization-不同的方式-造成的后果-为什么会造成这样的结果">Weights Initialization. 不同的方式，造成的后果。为什么会造成这样的结果。</h2>
 
-<p>权值初始化</p>
-
-<p>主要还是标准初始化作为一个最基本的模型，其中Xavier和He等初始化都是修改了正态初始化中的stdev和均匀分布中的scale
+<p>权值初始化
+主要还是标准初始化作为一个最基本的模型，其中Xavier和He等初始化都是修改了正态初始化中的stdev和均匀分布中的scale，标准初始化即减均值，除标准差的z-score方法。
 - 标准初始化
   - 标准正态初始化
   - 标准均匀初始化
@@ -427,30 +471,53 @@ ReLU：
   - He正态初始化
   - He均匀初始化</p>
 
+<p>权值初始化的方法主要有：常量初始化、高斯分布初始化、positive-unitball初始化、均匀分布初始化、Xavier初始化、MSRA初始化、双线性初始化。</p>
+
+<p><a href="https://blog.csdn.net/u013989576/article/details/76215989">神经网络中权值初始化的方法 2</a></p>
+
+<p><a href="https://www.cnblogs.com/lindaxin/p/8027283.html">神经网络中权值初始化的方法</a></p>
+
+<p><a href="http://www.cnblogs.com/yinheyi/p/6165716.html">caffe中权值初始化方法</a> 不仅介绍了权值初始化，同时也给出了caffe中的代码实现。</p>
+
 <h2 id="自动编码器">自动编码器</h2>
 
-<p>自编码器(autoencoder)是神经网络的一种，经过训练后能尝试将输入复制到输出。自编码器(autoencoder)内部有一个隐藏层h，可以产生编码(code)表示 输入。该网络可以看作由两部分组成:一个由函数$h=f(x)$表示的编码器和一个生 成重构的解码器$r=g(h)$。</p>
+<p>自编码器(autoencoder)是神经网络的一种，经过训练后能尝试将输入复制到输出。自编码器(autoencoder)内部有一个隐藏层h，可以产生编码(code)表示输入。该网络可以看作由两部分组成:一个由函数$h=f(x)$表示的编码器和一个生成重构的解码器$r=g(h)$。</p>
 
-<p>如果一个自编码器只是简单地 学会将处处设置为$g(f(x))=x$，那么这个自编码器就没什么特别的用处。相反，我 们不应该将自编码器设计成输入到输出完全相等。这通常需要向自编码器强加一些 约束，使它只能近似地复制，并只能复制与训练数据相似的输入。这些约束强制模 型考虑输入数据的哪些部分需要被优先复制，因此它往往能学习到数据的有用特性。</p>
+<p>如果一个自编码器只是简单地学会将处处设置为$g(f(x))=x$，那么这个自编码器就没什么特别的用处。相反，我们不应该将自编码器设计成输入到输出完全相等。这通常需要向自编码器强加一些约束，使它只能近似地复制，并只能复制与训练数据相似的输入。这些约束强制模型考虑输入数据的哪些部分需要被优先复制，因此它往往能学习到数据的有用特性。</p>
+
+<p><a href="http://www.cnblogs.com/taojake-ML/p/6475422.html">自动编码器</a> 介绍了各种不同的自动编码器，值得深入学习。</p>
+
+<p><a href="https://blog.csdn.net/zouxy09/article/details/8775524">Deep Learning（深度学习）学习笔记整理系列之（四）</a></p>
 
 <h2 id="优化算法">优化算法</h2>
+
+<p>TODO</p>
 
 <h2 id="rnn原理">RNN原理</h2>
 
 <p>在普通的全连接网络或CNN中，每层神经元的信号只能向上一层传播，样本的处理在各个时刻独立，因此又被成为前向神经网络(Feed-forward+Neural+Networks)。而在RNN中，神经元的输出可以在下一个时间戳直接作用到自身，即第i层神经元在m时刻的输入，除了（i-1）层神经元在该时刻的输出外，还包括其自身在（m-1）时刻的输出。所以叫循环神经网络。</p>
 
-<p>类似于控制科学理论中的状态方程</p>
+<p>类似于控制科学理论中的状态方程。</p>
 
 <h2 id="rnn-lstm-gru区别">RNN、LSTM、GRU区别</h2>
 
 <p>RNN引入了循环的概念，但是在实际过程中却出现了初始信息随时间消失的问题，即长期依赖（Long-Term Dependencies）问题，所以引入了LSTM。
-LSTM：因为LSTM有进有出且当前的cell informaton是通过input gate控制之后叠加的，RNN是叠乘，因此LSTM可以防止梯度消失或者爆炸。推导forget gate，input gate，cell state， hidden information等因为LSTM有进有出且当前的cell informaton是通过input gate控制之后叠加的，RNN是叠乘，因此LSTM可以防止梯度消失或者爆炸的变化是关键，GRU是LSTM的变体，将忘记门和输入们合成了一个单一的更新门。</p>
+LSTM：因为LSTM有进有出且当前的cell informaton是通过input gate控制之后叠加的，RNN是叠乘，因此LSTM可以防止梯度消失或者爆炸。主要组件forget gate，input gate，cell state，GRU是LSTM的变体，将忘记门（forget gate）和输入门（input gate）合成了一个单一的更新门（update gate）。</p>
 
 <p><img src="http://upload-images.jianshu.io/upload_images/42741-dd3d241fa44a71c0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /></p>
 
 <h2 id="lstm防止梯度弥散和爆炸">LSTM防止梯度弥散和爆炸</h2>
 
 <p>LSTM用加和的方式取代了乘积，使得很难出现梯度弥散。但是相应的更大的几率会出现梯度爆炸，但是可以通过给梯度加门限解决这一问题。</p>
+
+<h2 id="xgboost">xgboost</h2>
+
+<p>TODO
+主要是随机森林中的应用，提升精度。</p>
+
+<p><a href="https://cosx.org/2015/03/xgboost/">xgboost: 速度快效果好的 boosting 模型</a></p>
+
+<p><a href="https://www.jianshu.com/p/7e0e2d66b3d4">Kaggle 神器 xgboost</a></p>
 
 <h2 id="gan">GAN</h2>
 
@@ -468,13 +535,51 @@ LSTM：因为LSTM有进有出且当前的cell informaton是通过input gate控�
 <p>当K值大的时候， 我们会有更少的Bias(偏差), 更多的Variance。可以考虑为接近batch_size=1的情况，那么个体之间的方差肯定更大了，但是Bias会减小
 当K值小的时候， 我们会有更多的Bias(偏差), 更少的Variance。可以考虑为几乎为full_batch_size进行切分，数据量大的情况下方差肯定小了，但是偏差会增加。</p>
 
-<p>Error可以理解为在测试数据上跑出来的不准确率 ，即为 (1-准确率)。</p>
+<ul>
+<li>K值大的时候，分割的样本数小，所以样本内的Bias小（样本之间的差距），样本间的Variance大。</li>
+<li>K值小的时候，分割的样本数大，所以样本内的Bias大（样本之间的差距），样本间的Variance小。</li>
+</ul>
 
-<p>在训练数据上面，我们可以进行交叉验证(Cross-Validation)。
-一种方法叫做K-fold Cross Validation (K折交叉验证), K折交叉验证，初始采样分割成K个子样本，一个单独的子样本被保留作为验证模型的数据，其他K-1个样本用来训练。交叉验证重复K次，每个子样本验证一次，平均K次的结果或者使用其它结合方式，最终得到一个单一估测。</p>
+<p>Error可以理解为在测试数据上跑出来的不准确率 ，即为 (1-准确率)。</p>
 
 <p>当K值大的时候， 我们会有更少的Bias(偏差), 更多的Variance。
 当K值小的时候， 我们会有更多的Bias(偏差), 更少的Variance。</p>
+
+<p><img src="http://liuchengxu.org/blog-cn/assets/images/posts/bias-variance.png" alt="" /></p>
+
+<p>想当然地，我们希望偏差与方差越小越好，但实际并非如此。一般来说，偏差与方差是有冲突的，称为偏差-方差窘境 (bias-variance dilemma)。</p>
+
+<blockquote>
+<p>准确是两个概念。准是 bias 小，确是 variance 小。准确是相对概念，因为 bias-variance tradeoff。
+——Liam Huang</p>
+</blockquote>
+
+<p>在机器学习领域，人们总是希望使自己的模型尽可能准确地描述数据背后的真实规律。通俗所言的「准确」，其实就是误差小。在领域中，排除人为失误，人们一般会遇到三种误差来源：随机误差、偏差和方差。偏差和方差又与「欠拟合」及「过拟合」紧紧联系在一起。由于随机误差是不可消除的，所以此篇我们讨论在偏差和方差之间的权衡（Bias-Variance Tradeoff）。</p>
+
+<p>欠拟合
+当模型处于欠拟合状态时，根本的办法是增加模型复杂度。我们一般有以下一些办法：</p>
+
+<ul>
+<li>增加模型的迭代次数；</li>
+<li>更换描述能力更强的模型；</li>
+<li>生成更多特征供训练使用；</li>
+<li>降低正则化水平。</li>
+</ul>
+
+<p>过拟合
+当模型处于过拟合状态时，根本的办法是降低模型复杂度。我们则有以下一些武器：</p>
+
+<ul>
+<li>扩增训练集；</li>
+<li>减少训练使用的特征的数量；</li>
+<li>提高正则化水平。</li>
+</ul>
+
+<p>均方误差为偏差的平方+协方差+随机误差，随机误差不可消除</p>
+
+<p><a href="https://liam0205.me/2017/03/25/bias-variance-tradeoff/">谈谈 Bias-Variance Tradeoff</a></p>
+
+<p><a href="http://liuchengxu.org/blog-cn/posts/bias-variance/">偏差与方差</a> 介绍偏差与方差较为清楚。</p>
 
 <p><a href="https://www.zhihu.com/question/27068705">机器学习中的Bias(偏差)，Error(误差)，和Variance(方差)有什么区别和联系？</a></p>
 
@@ -547,11 +652,31 @@ $$P(y=0|x)=\frac{e^{w_2^T x+b_2}}{e^{w_1^T x+b_1}+e^{w_2^T x+b_2}}=\frac{e^{(w_2
 
 <p><a href="https://blog.nex3z.com/2017/05/02/sigmoid-%E5%87%BD%E6%95%B0%E5%92%8C-softmax-%E5%87%BD%E6%95%B0%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E5%85%B3%E7%B3%BB/">Sigmoid 函数和 Softmax 函数的区别和关系</a></p>
 
+<h1 id="如何通俗易懂地解释-协方差-与-相关系数-的概念">如何通俗易懂地解释「协方差」与「相关系数」的概念？</h1>
+
+<p><a href="https://www.zhihu.com/question/20852004">如何通俗易懂地解释「协方差」与「相关系数」的概念？</a></p>
+
+<h1 id="总结-bias-偏差-error-误差-variance-方差-及cv-交叉验证">总结：Bias(偏差)，Error(误差)，Variance(方差)及CV(交叉验证)</h1>
+
+<p><a href="https://blog.csdn.net/molu_chase/article/details/78333197">总结：Bias(偏差)，Error(误差)，Variance(方差)及CV(交叉验证)</a></p>
+
+<p><a href="https://www.zhihu.com/question/27068705">机器学习中的Bias(偏差)，Error(误差)，和Variance(方差)有什么区别和联系？</a></p>
+
+<p><a href="https://mqshen.gitbooks.io/prml/Chapter3/bias_variance_decomposition.html">prml偏置与方差</a></p>
+
+<p><a href="http://www.cnblogs.com/runner-ljt/p/4802985.html">Bias and Variance 偏置和方差</a></p>
+
 <h1 id="相关面试总结资料">相关面试总结资料</h1>
 
 <p><a href="http://blog.csdn.net/woaidapaopao/article/details/77806273">面试笔试整理3：深度学习机器学习面试问题准备（必会）</a></p>
 
 <p><a href="https://www.zhihu.com/question/23259302/answer/219153454">如何准备机器学习工程师的面试 ？</a></p>
+
+<p><a href="https://zhuanlan.zhihu.com/p/31978113">BAT机器学习面试1000题系列（156-160题）</a></p>
+
+<p><a href="https://www.julyedu.com/question/index">七月在线 AI刷题</a></p>
+
+<p><a href="http://frankchen.xyz/2017/02/18/Deep-Learning-Interview/">Deep Learning Interview</a> 作者整理了深度学习面试的相关问题。</p>
 
 <h1 id="未整理">未整理</h1>
 
@@ -568,7 +693,7 @@ $$P(y=0|x)=\frac{e^{w_2^T x+b_2}}{e^{w_1^T x+b_1}+e^{w_2^T x+b_2}}=\frac{e^{(w_2
     <div>
         <section id="datecount">
           <h4 id="date"> Mon Jan 1, 0001 </h4>
-          <h5 id="wc"> 500 Words </h5>
+          <h5 id="wc"> 600 Words </h5>
           <h5 id="readtime"> Read in about 3 Min </h5>
         </section>
         <ul id="categories">
@@ -584,7 +709,7 @@ $$P(y=0|x)=\frac{e^{w_2^T x+b_2}}{e^{w_1^T x+b_1}+e^{w_2^T x+b_2}}=\frac{e^{(w_2
             &nbsp;<a class="previous" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_03/gaia/"><i class="icon-arrow-left"></i> </a><br>
         </section>
         <section id="next">
-            &nbsp;
+            &nbsp;<a class="next" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/git_usage/"> <i class="icon-arrow-right"></i></a>
         </section>
     </div>
 
@@ -645,7 +770,7 @@ $$P(y=0|x)=\frac{e^{w_2^T x+b_2}}{e^{w_1^T x+b_1}+e^{w_2^T x+b_2}}=\frac{e^{(w_2
 
 </aside>
 
-<meta itemprop="wordCount" content="457">
+<meta itemprop="wordCount" content="594">
 <meta itemprop="datePublished" content="0001-01-01">
 <meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_03/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E9%9D%A2%E8%AF%95_%E6%80%BB%E7%BB%93/">
 

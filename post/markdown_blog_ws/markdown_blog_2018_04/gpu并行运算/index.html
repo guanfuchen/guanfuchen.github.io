@@ -15,16 +15,16 @@
  
 <meta property="og:type" content="article"/>
 <meta property="og:description" content=""/>
-<meta property="og:title" content="markdown_usage : spf13.com"/>
+<meta property="og:title" content=" : spf13.com"/>
 <meta property="og:site_name" content="spf13 is Steve Francia"/>
 <meta property="og:image" content="" />
 <meta property="og:image:type" content="image/jpeg" />
 <meta property="og:image:width" content="" />
 <meta property="og:image:height" content="" />
-<meta property="og:url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/markdown_usage/">
+<meta property="og:url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/gpu%E5%B9%B6%E8%A1%8C%E8%BF%90%E7%AE%97/">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2018-04-05"/>
-<meta property="article:modified_time" content="2018-04-05"/>
+<meta property="article:published_time" content="0001-01-01"/>
+<meta property="article:modified_time" content="0001-01-01"/>
 
 
 
@@ -33,7 +33,7 @@
 <meta name="twitter:card" content="summary">
 
 <meta name="twitter:site" content="@spf13">
-<meta name="twitter:title" content="markdown_usage : spf13.com">
+<meta name="twitter:title" content=" : spf13.com">
 <meta name="twitter:creator" content="@spf13">
 <meta name="twitter:description" content="">
 <meta name="twitter:image:src" content="">
@@ -42,8 +42,8 @@
 
 
     <base href="https://guanfuchen.github.io">
-    <title> markdown_usage - spf13.com </title>
-    <link rel="canonical" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/markdown_usage/">
+    <title>  - spf13.com </title>
+    <link rel="canonical" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/gpu%E5%B9%B6%E8%A1%8C%E8%BF%90%E7%AE%97/">
     
 
     <link href='https://fonts.lug.ustc.edu.cn/css?family=Fjalla+One|Open+Sans:300' rel='stylesheet' type='text/css'>
@@ -105,171 +105,58 @@
 
 
 <section id="main">
-  <h1 itemprop="name" id="title">markdown_usage</h1>
+  <h1 itemprop="name" id="title"></h1>
   <div>
         <article itemprop="articleBody" id="content">
            
 
-<!-- $theme: gaia -->
-
-<!-- *template: invert -->
-
-<h1 id="markdown简要指南">Markdown简要指南</h1>
+<h1 id="gpu">GPU</h1>
 
 <hr />
 
-<h1 id="为什么使用markdown">为什么使用Markdown</h1>
+<h1 id="第五节课">第五节课</h1>
 
-<p>Markdown是一种轻量级的标记语言，语法简洁，易导出为各种格式的文件，如PDF、HTML等。</p>
-
-<p>尽管有大量的文字处理软件出现，如Word、WPS等，但是这些工具都是需要使用可视化操作来完成字体的格式设置，图片的插入，而Markdown仅仅使用简单的几种标记就能实现这些操作，基于键盘都可以快速完成，实现了一种沉浸式的写作环境中。</p>
-
-<p>这种格式已经被GitHub、简书等大量采用，尤其对于GitHub，使用word编写的文档在git内每一次提交都是增量式提交一个新的文件，而Markdown格式的文档由于是纯文本内容，每一次变动都是增量式变动的内容，减小了仓库的大小，也有利于追踪每一次变更的内容。</p>
-
-<p>综上所述，使用Markdown具有如下优点：
-- 专注于文字内容，沉浸式写作。
-- 易导出为PDF、HTML等格式的文档。
-- 纯文本内容，易于Git仓库增量提交。
-- 标记语法简洁。</p>
-
-<hr />
-
-<h1 id="怎么样使用markdown">怎么样使用Markdown</h1>
-
-<p>不知道有没有安利到一些同学学习Markdown，大部分还未接触过Markdown的同学可以在简书中体验一下用Markdown来写技术博客的快感。那么接下来简要介绍Markdown的语法，完成常用的文字排版。详细文档可参考<a href="http://wowubuntu.com/markdown/basic.html">Markdown快速入门</a>和<a href="http://wowubuntu.com/markdown/#editor">Markdown详细入门</a></p>
-
-<h2 id="标题">标题</h2>
-
-<p>Markdown中总共有六级标题，在文字前加#号即可实现，其中#是一级标题，##是二级标题，以此类推，######是六级标题。</p>
-
-<pre><code># 一级标题
-## 二级标题
-### 三级标题
-#### 四级标题
-##### 五级标题
-###### 六级标题
-</code></pre>
-
-<h2 id="粗体">粗体</h2>
-
-<p>Markdown的<strong>粗体</strong>使用两个*包含一段文本表示。</p>
-
-<pre><code>**粗体**
-</code></pre>
-
-<h2 id="斜体">斜体</h2>
-
-<p>Markdown的*斜体*使用一个*包含一段文本表示。</p>
-
-<pre><code>*斜体*
-</code></pre>
-
-<h2 id="图片">图片</h2>
-
-<p>图片是文本编辑中必不可少的，适当地添加图片能够美化文档。Markdown在如下括号内插入图片url即可。</p>
-
-<p>使用图床工具可以上传图片并生成一个图片url，安利一下七牛吧，不过免费的容量有限，另外也可以使用github建一个仓库，使用仓库中图片url也可以。</p>
-
-<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/zju_logo.png" alt="" /></p>
-
-<pre><code>![](http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/zju_logo.png)
-</code></pre>
-
-<h2 id="链接">链接</h2>
-
-<p>Markdown文本<a href="https://github.com/">链接</a>非常简单，在如下括号中插入链接url即可。</p>
-
-<pre><code>[链接](https://github.com/)
-</code></pre>
-
-<h2 id="代码">代码</h2>
-
-<p>对于程序员来说，使用Markdown来书写技术博客，经常要插入代码，同时希望能高亮代码，插入代码同样简单，使用如下格式插入代码即可。</p>
-
-<p>`<code>
-import os
-\</code>`</p>
-
-<pre><code>import os
-</code></pre>
-
-<p>部分Markdown渲染器支持不同格式的代码高亮，如下格式输入对应的代码语言即可。</p>
-
-<p>`<code>python
-import os
-\</code>`</p>
-
-<pre><code class="language-python">import os
-</code></pre>
-
-<h2 id="分割线">分割线</h2>
-
-<p>markdown中插入分割线，需要另起一行，连续输入三个&mdash;即可。</p>
-
-<pre><code>---
-</code></pre>
-
-<h2 id="列表">列表</h2>
-
-<p>列表分为有序列表和无序列表，格式如下所示。</p>
+<h2 id="名词解释">名词解释</h2>
 
 <ul>
-<li>无序列表格式
-```</li>
-<li>方案一</li>
-<li>方案二</li>
-<li>方案三
-```</li>
-<li>有序列表格式
-```</li>
-<li>方案一</li>
-<li>方案二</li>
-<li>方案三
-```</li>
+<li>FLOPS 每秒钟能运行的浮点运算</li>
+<li>GLOPS 每秒钟能运行的G浮点运算</li>
+<li>TLOPS 每秒钟能运行的T浮点运算</li>
 </ul>
 
-<h2 id="引用">引用</h2>
+<h2 id="为什么需要gpu">为什么需要GPU</h2>
 
-<p>引用格式标注文字为引用自其他地方，格式如下所示。</p>
+<ul>
+<li>应用的需求越来越高</li>
+<li>计算机技术由应用驱动</li>
+<li>Application Driven</li>
+</ul>
 
-<blockquote>
-<p>有朋自远方来，不亦乐乎</p>
-</blockquote>
+<p>应用场景，石油勘探、气象预报</p>
 
-<pre><code>&gt; 有朋自远方来，不亦乐乎
-</code></pre>
+<p>GPU（Graphic Processing Unit）</p>
 
-<h2 id="表格">表格</h2>
+<p>GPU是一个异构多处理器芯片，包含shader、工作分配器、输入、输出等。</p>
 
-<p>Markdown中的表格相比于其他标记稍微复杂一点，个人在输入表格过程中也容易出错，建议大家将表格格式复制过来然后修改较好，具体格式如下所示。</p>
+<p>执行单元（Execute shader），包含数据、ALU和执行上下文（Execution Context）</p>
 
-<p>|学号|成绩|
-|-|-|
-|216320|100|
-|216321|101|</p>
+<p>CPU类型的内核，数据缓存、OOO、分支预测器、存储器的管理单元。</p>
 
-<pre><code>|学号|成绩|
-|-|-|
-|216320|100|
-|216321|101|
-</code></pre>
+<p>通过CPU思考如何加速：
+- 思路一
+精简（slimming down），去除某些组件加快运行速度。
+- 思路二
+2个核，同时执行2个程序片元，同时并行。4个核，同时执行4个程序片元。以此类推，增加核的数目，同时执行的程序片元也进行增加。指令流共享，多个程序片元共享指令流。
+- 思路三
+增加ALU、SIMD，增加的ALU可以单指令处理多数据。</p>
 
-<hr />
+<p>经过以上的思路，改进的处理单元。</p>
 
-<h1 id="markdown编辑环境">Markdown编辑环境</h1>
+<p>16核8ALU可以完成128个程序片元同时执行。</p>
 
-<p>介绍完上述Markdown语法后，小伙伴们如果在记事本上试验了以后，发现并没有效果，请不要着急，Markdown格式的文本需要经过Markdown渲染软件后才能显示～～。这里推荐一下Marp软件，跨平台，同时支持用Markdown直接书写PPT，本文档就是用Marp书写的，另外之前用过的haroopad也是一款不错的软件，大家可以自行搜索。</p>
-
-<hr />
-
-<h1 id="参考链接">参考链接</h1>
-
-<p><a href="https://sspai.com/post/25137">认识与入门 Markdown</a></p>
-
-<p><a href="https://www.jianshu.com/p/q81RER">献给写作者的 Markdown 新手指南
-</a></p>
-
-<p><a href="https://www.zhihu.com/question/20409634">怎样引导新手使用 Markdown？</a></p>
+<p>停滞问题的解决思路：
+- 大量的独立片元相互切换
+- 通过片元切换来掩藏延迟</p>
 
         </article>
   </div>
@@ -281,8 +168,8 @@ import os
 
     <div>
         <section id="datecount">
-          <h4 id="date"> Thu Apr 5, 2018 </h4>
-          <h5 id="wc"> 200 Words </h5>
+          <h4 id="date"> Mon Jan 1, 0001 </h4>
+          <h5 id="wc"> 100 Words </h5>
           <h5 id="readtime"> Read in about 1 Min </h5>
         </section>
         <ul id="categories">
@@ -295,10 +182,10 @@ import os
 
     <div>
         <section id="prev">
-            &nbsp;<a class="previous" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/"><i class="icon-arrow-left"></i> 背包问题</a><br>
+            &nbsp;<a class="previous" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/git_usage/"><i class="icon-arrow-left"></i> </a><br>
         </section>
         <section id="next">
-            &nbsp;<a class="next" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_03/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/">深度学习基础 <i class="icon-arrow-right"></i></a>
+            &nbsp;<a class="next" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%92%8C%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/"> <i class="icon-arrow-right"></i></a>
         </section>
     </div>
 
@@ -359,9 +246,9 @@ import os
 
 </aside>
 
-<meta itemprop="wordCount" content="100">
-<meta itemprop="datePublished" content="2018-04-05">
-<meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/markdown_usage/">
+<meta itemprop="wordCount" content="41">
+<meta itemprop="datePublished" content="0001-01-01">
+<meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/gpu%E5%B9%B6%E8%A1%8C%E8%BF%90%E7%AE%97/">
 
 
 <aside id=comments>
