@@ -353,6 +353,22 @@ except:
 
 <p><a href="https://github.com/sympy/sympy">sympy</a></p>
 
+<hr />
+
+<h1 id="python抽象类">python抽象类</h1>
+
+<pre><code class="language-python">import abc
+
+class BasePizza(object):
+    __metaclass__  = abc.ABCMeta
+
+    @abc.abstractmethod
+    def get_radius(self):
+         &quot;&quot;&quot;Method that should do something.&quot;&quot;&quot;
+</code></pre>
+
+<p><a href="https://foofish.net/guide-python-static-class-abstract-methods.html">如何在Python中正确使用static、class、abstract方法</a></p>
+
         </article>
   </div>
 </section>
@@ -441,7 +457,7 @@ except:
 
 </aside>
 
-<meta itemprop="wordCount" content="316">
+<meta itemprop="wordCount" content="333">
 <meta itemprop="datePublished" content="2017-10-26">
 <meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/python%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
 
