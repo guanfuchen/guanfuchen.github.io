@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="keywords" content="">
+
+ 
+<meta property="og:type" content="article"/>
+<meta property="og:description" content=""/>
+<meta property="og:title" content="循环神经网络_分享 : spf13.com"/>
+<meta property="og:site_name" content="spf13 is Steve Francia"/>
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="" />
+<meta property="og:image:height" content="" />
+<meta property="og:url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C_%E5%88%86%E4%BA%AB/">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2018-04-19"/>
+<meta property="article:modified_time" content="2018-04-19"/>
+
+
+
+
+
+<meta name="twitter:card" content="summary">
+
+<meta name="twitter:site" content="@spf13">
+<meta name="twitter:title" content="循环神经网络_分享 : spf13.com">
+<meta name="twitter:creator" content="@spf13">
+<meta name="twitter:description" content="">
+<meta name="twitter:image:src" content="">
+<meta name="twitter:domain" content="spf13.com">
+
+
+
+    <base href="https://guanfuchen.github.io">
+    <title> 循环神经网络_分享 - spf13.com </title>
+    <link rel="canonical" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C_%E5%88%86%E4%BA%AB/">
+    
+
+    <link href='https://fonts.lug.ustc.edu.cn/css?family=Fjalla+One|Open+Sans:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://guanfuchen.github.io/static/css/style.css">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+</head>
+
+<body lang="en" itemscope itemtype="http://schema.org/Article">
+<header id="header">
+    
+      
+    
+    <div align="center">
+        <a href="https://guanfuchen.github.io">
+        <img src="https://guanfuchen.github.io/media/avatar.png">
+        </a>
+    </div>
+    <div align="center">guanfuchen</div>
+    <nav id="nav">
+            <ul id="mainnav">
+            <li>
+                <a href="https://guanfuchen.github.io/post/">
+                <span class="icon"> <i aria-hidden="true" class="icon-quill"></i></span>
+                <span> 博客 </span>
+            </a>
+            </li>
+            
+            
+                
+                
+            
+            
+            
+            
+                
+                
+            
+            
+            <li>
+            <a href="http://github.com/guanfuchen">
+                <span class="icon"> <i aria-hidden="true" class="icon-13"></i></span>
+                <span> 关于 </span>
+            </a>
+            </li>
+            <li>
+                <a href="https://guanfuchen.github.io/resume.pdf">
+                    <span class="icon"> <i aria-hidden="true" class="icon-console"></i></span>
+                    <span> 简历 </span>
+                </a>
+            </li>
+        </ul>
+
+    
+    </nav>
+</header>
+
+
+
+<section id="main">
+  <h1 itemprop="name" id="title">循环神经网络_分享</h1>
+  <div>
+        <article itemprop="articleBody" id="content">
+           
+
+<hr />
+
+<!-- $theme: gaia -->
+
+<!-- *template: invert -->
+
+<h1 id="循环神经网络">循环神经网络</h1>
+
+<h2 id="第七期分享会">第七期分享会</h2>
+
+<h2 id="汇报人-陈官富">汇报人：陈官富</h2>
+
+<h2 id="2018-4-20">2018.4.20</h2>
+
+<hr />
+
+<!--
+首先回顾一下上一次分享的内容，主要包括了感知器、多层感知器、卷积神经网络的模型，基于梯度下降法的学习和反向传播算法，这次主要讲解RNN相关。
+-->
+
+<!-- page_number: true -->
+
+<h1 id="回顾">回顾</h1>
+
+<ul>
+<li>感知器（Perceptron）
+
+<ul>
+<li>梯度下降算法（Gradient Descent）</li>
+</ul></li>
+<li>多层感知器（MLP）
+
+<ul>
+<li>反向传播算法（Back Propogation）</li>
+</ul></li>
+<li>卷积神经网络（Convolution Neural Network）</li>
+<li><strong>循环神经网络（Recurrent Neural Network）</strong></li>
+</ul>
+
+<hr />
+
+<!--
+之前介绍的多层感知器和卷积神经网络都是输入层、隐藏层、输出层顺序堆叠，层内没有联系，而循环神经网络在隐藏层内存在联系，存储先前的数据，可以处理时序数据，比如语言建模和文本生成、机器翻译、语音识别、产生图像描述。
+-->
+
+<h1 id="结构">结构</h1>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/rnn_cnn_diff.png" alt="80% CNN和RNN区别图" /></p>
+
+<p><strong>黑色方块表示单个时间步的延迟。</strong></p>
+
+<hr />
+
+<!--
+以下是循环神经网络展开图。
+-->
+
+<h1 id="结构-1">结构</h1>
+
+<p>输入：$(x_1, x_2,\cdots,x<em>T)$
+隐藏：$(h</em>{0}, h_1,\cdots,h<em>T)$
+输出：$(o</em>{1}, o_2,\cdots,o_T)$</p>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/rnn_unflod.png" alt="100% 循环神经网络展开图" /></p>
+
+<hr />
+
+<!--
+循环神经网络不通的输入输出结构可以应用在不同的领域。
+如下输出个数和输入个数相同，类似结构可以应用在视频预测中，输入为视频帧，输出为下一时刻视频帧。
+-->
+
+<h1 id="结构-2">结构</h1>
+
+<p>应用：<strong>视频预测</strong>
+输入：many
+输出：many</p>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/rnn_many_to_many_video_predict.png" alt="60% rnn_many_to_many" /></p>
+
+<hr />
+
+<!--
+循环神经网络不同的输入输出结构可以应用在不同的领域。
+如下输出个数和输入个数相同，类似结构可以应用在视频预测中，输入为视频帧，输出为下一时刻视频帧。
+-->
+
+<h1 id="结构-3">结构</h1>
+
+<p>应用：<strong>视频预测</strong></p>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/video_predict.gif" alt="200% 视频预测" /></p>
+
+<hr />
+
+<!--
+循环神经网络不同的输入输出结构可以应用在不同的领域。
+如下输入个数一个，输出个数多个，类似结构可以应用在图像描述文本生成中，输入为一张图像，输出为对图像的描述文本。
+-->
+
+<h1 id="结构-4">结构</h1>
+
+<p>应用：<strong>图像描述</strong>
+输入：one
+输出：many</p>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/rnn_one_to_many_image_describing.png" alt="60% 循环神经网络展开图" /></p>
+
+<hr />
+
+<!--
+循环神经网络不同的输入输出结构可以应用在不同的领域。
+-->
+
+<h1 id="结构-5">结构</h1>
+
+<p>应用：<strong>图像描述</strong>
+<img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/screen_2018-04-19_15.04.48.png" alt="50%" /></p>
+
+<hr />
+
+<!--
+循环神经网络不同的输入输出结构可以应用在不同的领域。
+如下输入个数多个，输出个数一个，类似结构可以应用在影评情感分析中，输入为影评文本，输出为影评的情感分析结果（好评，差评）。
+-->
+
+<h1 id="结构-6">结构</h1>
+
+<p>应用：<strong>影评情感分析</strong>
+输入：many
+输出：one</p>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/rnn_many_to_one_emotional.png" alt="60% 循环神经网络展开图" /></p>
+
+<hr />
+
+<!--
+循环神经网络不通的输入输出结构可以应用在不同的领域。
+如下输入个数多个，输出个数多个，类似结构可以应用在机器翻译中，输入为英文文本，输出为中文翻译。
+-->
+
+<h1 id="结构-7">结构</h1>
+
+<p>应用：<strong>机器翻译</strong>
+输入：many
+输出：many</p>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/rnn_many_to_many_machine_learning.png" alt="60% 循环神经网络展开图" /></p>
+
+<hr />
+
+<!--
+循环神经网络不通的输入输出结构可以应用在不同的领域。
+如下输入个数多个，输出个数多个，类似结构可以应用在机器翻译中，输入为英文文本，输出为中文翻译。
+-->
+
+<h1 id="结构-8">结构</h1>
+
+<p>应用：<strong>机器翻译</strong></p>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/machine_translate.png" alt="" /></p>
+
+<hr />
+
+<h1 id="目录">目录</h1>
+
+<ul>
+<li>RNN（Recurrent Neural Network）
+
+<ul>
+<li>模型结构</li>
+<li>BPTT算法（Back Propagation Through Time）</li>
+<li>RNN变体</li>
+</ul></li>
+<li>LSTM（Long Short Term Mermory）
+
+<ul>
+<li>模型结构</li>
+<li>BPTT算法（Back Propagation Through Time）</li>
+</ul></li>
+<li>Application</li>
+</ul>
+
+<hr />
+
+<!-- $theme: gaia -->
+
+<!-- *template: invert -->
+
+<h1 id="rnn">RNN</h1>
+
+<hr />
+
+<h1 id="rnn-模型结构">RNN（模型结构）</h1>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/rnn_unflod_uvw.png" alt="50%" /></p>
+
+<hr />
+
+<!--
+从上述可以看到RNN的特点是在不同的时间内共享U、V、W、b、c参数，和CNN类比，使用卷积核共享参数，极大地减小了训练参数，同时增强了泛化能力。
+-->
+
+<h1 id="rnn-模型结构-1">RNN（模型结构）</h1>
+
+<p>模型前向传播：</p>
+
+<p>$h_t=\tanh(U \cdot x<em>t + W \cdot h</em>{t-1}+b)$
+$o_t=V \cdot h_t+c$
+$\hat{y}_t=softmax(o_t)$
+$L<em>t = -\sum</em>{j}y_t^{(j)}\log{\hat{y}<em>t^{(j)}}$
+$L=\sum</em>{t=1}^{\tau}L_t$</p>
+
+<hr />
+
+<!--
+-->
+
+<h1 id="rnn-bptt算法">RNN（BPTT算法）</h1>
+
+<p>通过前向传播，最终得到了$\hat{y}_t$，不断减小$L$来训练模型。同样使用<strong>梯度下降算法</strong>来减小L，即求取$\frac{\partial{L}}{\partial{U}}$、$\frac{\partial{L}}{\partial{W}}$、$\frac{\partial{L}}{\partial{b}}$、$\frac{\partial{L}}{\partial{V}}$和$\frac{\partial{L}}{\partial{C}}$。</p>
+
+<p>$U=U-\eta \frac{\partial{L}}{\partial{U}}$
+$W=W-\eta \frac{\partial{L}}{\partial{W}}$
+$b=b-\eta \frac{\partial{L}}{\partial{b}}$
+$V=V-\eta \frac{\partial{L}}{\partial{V}}$
+$c=c-\eta \frac{\partial{L}}{\partial{c}}$</p>
+
+<hr />
+
+<!--
+首先计算V和c
+-->
+
+<h1 id="rnn-bptt算法-1">RNN（BPTT算法）</h1>
+
+<p>$h_t=\tanh(U \cdot x<em>t + W \cdot h</em>{t-1}+b)$
+$o_t=V \cdot h_t+c$
+$\hat{y}_t=softmax(o_t)$
+$L<em>t = -\sum</em>{j}y_t^{(j)}\log{\hat{y}<em>t^{(j)}}$
+$L=\sum</em>{t=1}^{\tau}L_t$</p>
+
+<p>计算$\frac{\partial{L}}{\partial{V}}$和$\frac{\partial{L}}{\partial{c}}$：
+$\frac{\partial{L}}{\partial{V}}=\sum_{t=1}^{\tau}\frac{\partial{L<em>t}}{\partial{V}}=\sum</em>{t=1}^{\tau}\frac{\partial{L_t}}{\partial{o_t}}\frac{\partial{o<em>t}}{\partial{V}}=\sum</em>{t=1}^{\tau}(\hat{y}_t-y_t)h_t^T$</p>
+
+<p>$\frac{\partial{L}}{\partial{c}}=\sum_{t=1}^{\tau}\frac{\partial{L<em>t}}{\partial{c}}=\sum</em>{t=1}^{\tau}\frac{\partial{L_t}}{\partial{o_t}}\frac{\partial{o<em>t}}{\partial{c}}=\sum</em>{t=1}^{\tau}(\hat{y}_t-y_t)$</p>
+
+<hr />
+
+<!--
+U、V、W由于循环迭代的原因较难求，这里将偏导数转换为通过对h的导数求取。
+-->
+
+<h1 id="rnn-bptt算法-2">RNN（BPTT算法）</h1>
+
+<p>$h_t=\tanh(U \cdot x<em>t + W \cdot h</em>{t-1}+b)$
+$o_t=V \cdot h_t+c$
+$\hat{y}_t=softmax(o_t)$
+$L<em>t = -\sum</em>{j}y_t^{(j)}\log{\hat{y}<em>t^{(j)}}$
+$L=\sum</em>{t=1}^{\tau}L_t$</p>
+
+<p>这里以计算$\frac{\partial{L}}{\partial{U}}$为例：
+$\frac{\partial{L}}{\partial{U}}=\sum_{t=1}^{\tau}\frac{\partial{L}}{\partial{h_t}}\frac{\partial{h_t}}{\partial{U}}$
+令$\delta_t = \frac{\partial{L}}{\partial{h_t}}$，那么问题转换为求取$\delta_t$。
+$\delta_t=\frac{\partial{L}}{\partial{o_t}}\frac{\partial{o_t}}{\partial{h<em>t}}+\frac{\partial{L}}{\partial{h</em>{t+1}}}\frac{\partial{h_{t+1}}}{\partial{h_t}}$</p>
+
+<hr />
+
+<!--
+将计算U的偏导数通过对h的导数求得。
+-->
+
+<h1 id="rnn-bptt算法-3">RNN（BPTT算法）</h1>
+
+<p>$h_t=\tanh(U \cdot x<em>t + W \cdot h</em>{t-1}+b)$
+$o_t=V \cdot h_t+c$
+$\hat{y}_t=softmax(o_t)$
+$L<em>t = -\sum</em>{j}y_t^{(j)}\log{\hat{y}<em>t^{(j)}}$
+$L=\sum</em>{t=1}^{\tau}L_t$</p>
+
+<p>$\delta_t=\frac{\partial{L}}{\partial{o_t}}\frac{\partial{o_t}}{\partial{h<em>t}}+\frac{\partial{L}}{\partial{h</em>{t+1}}}\frac{\partial{h_{t+1}}}{\partial{h_t}}$
+$\frac{\partial{L}}{\partial{o_t}}=\hat{y}_t-y_t$
+$\frac{\partial{o_t}}{\partial{h<em>t}}=V$
+$\frac{\partial{h</em>{t+1}}}{\partial{h<em>t}}=W diag(1-(h</em>{t+1})^2)$</p>
+
+<hr />
+
+<!--
+将计算U的偏导数通过对h的导数求得。
+-->
+
+<h1 id="rnn-bptt算法-4">RNN（BPTT算法）</h1>
+
+<p>$\delta_t=\frac{\partial{L}}{\partial{o_t}}\frac{\partial{o_t}}{\partial{h<em>t}}+\frac{\partial{L}}{\partial{h</em>{t+1}}}\frac{\partial{h_{t+1}}}{\partial{h_t}}$
+$\frac{\partial{L}}{\partial{o_t}}=\hat{y}_t-y_t$
+$\frac{\partial{o_t}}{\partial{h<em>t}}=V$
+$\frac{\partial{h</em>{t+1}}}{\partial{h<em>t}}=W diag(1-(h</em>{t+1})^2)$</p>
+
+<p>递推式：
+$\delta_t=V^T(\hat{y}_t-y<em>t)+W^T \delta</em>{t+1} diag(1-(h_{t+1})^2)$</p>
+
+<p>递推起始值：
+$\delta<em>{\tau}=V^T(\hat{y}</em>{\tau}-y_{\tau})$</p>
+
+<hr />
+
+<!--
+将计算U的偏导数通过对h的导数求得。
+-->
+
+<h1 id="rnn-bptt算法-5">RNN（BPTT算法）</h1>
+
+<p>$h_t=\tanh(U \cdot x<em>t + W \cdot h</em>{t-1}+b)$
+$o_t=V \cdot h_t+c$</p>
+
+<p>$\frac{\partial{L}}{\partial{U}}=\sum_{t=1}^{\tau}\frac{\partial{L}}{\partial{h_t}}\frac{\partial{h<em>t}}{\partial{U}}=\sum</em>{t=1}^{\tau} diag(1-h_t^2) \delta_t x<em>t^T$
+$\frac{\partial{L}}{\partial{W}}=\sum</em>{t=1}^{\tau}\frac{\partial{L}}{\partial{h_t}}\frac{\partial{h<em>t}}{\partial{W}}=\sum</em>{t=1}^{\tau} diag(1-h_t^2) \delta<em>t h</em>{t-1}^T$
+$\frac{\partial{L}}{\partial{b}}=\sum_{t=1}^{\tau}\frac{\partial{L}}{\partial{h_t}}\frac{\partial{h<em>t}}{\partial{b}}=\sum</em>{t=1}^{\tau} diag(1-h_t^2) \delta_t$</p>
+
+<hr />
+
+<!--
+RNN反向传播算法（BPTT）总结。
+-->
+
+<h1 id="rnn-bptt算法-6">RNN（BPTT算法）</h1>
+
+<p>首先计算最后时刻的误差$\delta_{\tau}$，通过误差递推公式求取$\delta_t$，通过各个训练参数和$\delta_t$的关系计算相应的偏导数。</p>
+
+<p>$\delta<em>{\tau}=V^T(\hat{y}</em>{\tau}-y_{\tau})$
+$\delta_t=V^T(\hat{y}_t-y<em>t)+W^T \delta</em>{t+1} diag(1-(h<em>{t+1})^2)$
+$\frac{\partial{L}}{\partial{U}}=\sum</em>{t=1}^{\tau} diag(1-h_t^2) \delta_t x<em>t^T$
+$\frac{\partial{L}}{\partial{W}}=\sum</em>{t=1}^{\tau} diag(1-h_t^2) \delta<em>t h</em>{t-1}^T$
+$\frac{\partial{L}}{\partial{b}}=\sum_{t=1}^{\tau} diag(1-h_t^2) \delta<em>t$
+$\frac{\partial{L}}{\partial{V}}=\sum</em>{t=1}^{\tau}(\hat{y}_t-y_t)h<em>t^T$
+$\frac{\partial{L}}{\partial{c}}=\sum</em>{t=1}^{\tau}(\hat{y}_t-y_t)$</p>
+
+<hr />
+
+<!--
+RNN反向传播算法（BPTT）显示了RNN存在的问题。
+在前馈网络或循环网络中，当计算图变得极深时，神经网络优化算法会面临的一个难题就是长期依赖问题——经过许多阶段传播后的梯度倾向于消失（大部分情况）或爆炸（很少，但对优化过程影响很大），即：变深的结构使模型丧失了学习到先前信息的能力，让优化变得极其困难。因为循环网络要在很长时间序列的各个时刻重复应用相同操作来构建非常深的计算图，并且模型参数共享，这使问题更加凸显。
+解决方法，对于梯度消失，主要是因为网络层数太多，太深，导致梯度无法传播，本质是激活函数的饱和性；对于梯度爆炸，可以使用gradient clipping方法缓解。这两个问题都是由于梯度是指数级别增加所致，LSTM和GRU等模型通过改变记忆单元解决梯度爆炸和梯度消失这两个问题。
+-->
+
+<h1 id="rnn-挑战">RNN（挑战）</h1>
+
+<p>递推公式显示了随着网络层数增加，RNN存在<strong>梯度爆炸</strong>和<strong>梯度消失</strong>这两个问题。</p>
+
+<p>$\delta<em>{\tau}=V^T(\hat{y}</em>{\tau}-y_{\tau})$
+$\delta_t=V^T(\hat{y}_t-y<em>t)+W^T \delta</em>{t+1} diag(1-(h_{t+1})^2)$</p>
+
+<p>$||\delta<em>t|| \le ||W^T \delta</em>{t+1} diag(1-h<em>{t+1}^2)|| \le ||\delta</em>{\tau}|| ||\beta||^{t-\tau}$，如果$||\beta|| \le 1$，那么前面层的梯度接近于0，导致梯度消失；反之，前面层的梯度随着层数指数级别增加，导致梯度爆炸。</p>
+
+<hr />
+
+<!--
+RNN其他变体，主要的两种变体有方向上可以双向，深度上可以增加，常见的比如双向RNN，深度RNN。有些情况下，当前的输出不只依赖于之前的序列元素，还可能依赖之后的序列元素。双向RNN可以看成是两个反向的RNN叠加。
+-->
+
+<h6 id="rnn-rnn变体">RNN（RNN变体）</h6>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/bi_rnn.png" alt="40%" /></p>
+
+<hr />
+
+<!--
+-->
+
+<h6 id="rnn-rnn变体-1">RNN（RNN变体）</h6>
+
+<h6 id="双向rnn">双向RNN</h6>
+
+<p>模型前向传播：</p>
+
+<p>$h_t=\tanh(U_h \cdot x_t + W<em>h \cdot h</em>{t-1}+b<em>h)$
+$g</em>{t}=\tanh(U_g \cdot x_t + W<em>g \cdot g</em>{t+1}+b_g)$
+$o_t=V_h \cdot h_t+V_g \cdot g_t+c$
+$\hat{y}_t=softmax(o_t)$
+$L<em>t = -\sum</em>{j}y_t^{(j)}\log{\hat{y}<em>t^{(j)}}$
+$L=\sum</em>{t=1}^{\tau}L_t$</p>
+
+<hr />
+
+<!--
+深度RNN可以看成多个hidden层的叠加。
+-->
+
+<h6 id="rnn-rnn变体-2">RNN（RNN变体）</h6>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/deep_rnn.png" alt="40%" /></p>
+
+<hr />
+
+<!--
+-->
+
+<h6 id="rnn-rnn变体-3">RNN（RNN变体）</h6>
+
+<h6 id="深度rnn">深度RNN</h6>
+
+<p>模型前向传播：</p>
+
+<p>$h_t=\tanh(V_g \cdot g_t + W<em>h \cdot h</em>{t-1}+b<em>h)$
+$g</em>{t}=\tanh(V_f \cdot f_t + W<em>g \cdot g</em>{t-1}+b<em>g)$
+$f</em>{t}=\tanh(U \cdot x_t + W<em>f \cdot f</em>{t-1}+b_f)$
+$o_t=V_h \cdot h_t+c$
+$\hat{y}_t=softmax(o_t)$
+$L<em>t = -\sum</em>{j}y_t^{(j)}\log{\hat{y}<em>t^{(j)}}$
+$L=\sum</em>{t=1}^{\tau}L_t$</p>
+
+<hr />
+
+<!-- $theme: gaia -->
+
+<!-- *template: invert -->
+
+<h1 id="lstm">LSTM</h1>
+
+<hr />
+
+<!--
+LSTM通过改造内部记忆单元解决梯度消失和梯度爆炸这两个问题。
+-->
+
+<h6 id="lstm-rnn结构">LSTM（RNN结构）</h6>
+
+<p>$h_t=\tanh(U \cdot x<em>t + W \cdot h</em>{t-1}+b)$</p>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/rnn_simple_1.png" alt="80%" /></p>
+
+<hr />
+
+<!--
+LSTM通过改造内部记忆单元解决梯度消失和梯度爆炸这两个问题。
+-->
+
+<h6 id="lstm-lstm结构">LSTM（LSTM结构）</h6>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/rnn_forward_math.png" alt="45%" /></p>
+
+<hr />
+
+<h6 id="lstm-lstm结构-1">LSTM（LSTM结构）</h6>
+
+<p>$z<em>t = [h</em>{t-1}, x_t]$
+$f_t=\sigma(W_f \cdot z_t+b_f)$
+$i_t=\sigma(W_i \cdot z_t+b_i)$
+$\bar{C}_t=\tanh(W_C \cdot z_t+b_C)$
+$C_t=f<em>t * C</em>{t-1}+i_t * \bar{C}_t$
+$o_t=\sigma(W_o \cdot z_t+b_o)$
+$h_t=o_t * \tanh(C_t)$
+$v_t=W_v \cdot h_t+b_v$
+$\bar{y<em>t}=softmax(v)$
+$L(y,\bar{y}) = -\sum</em>{t=1}^{\tau}{\sum<em>{j}{y</em>{tj}\log{\bar{y}_{tj}}}}$</p>
+
+<hr />
+
+<h6 id="lstm-bptt算法">LSTM（BPTT算法）</h6>
+
+<p>计算$t=\tau$时刻的$\frac{\partial{L}}{\partial{C<em>{\tau}}}$和$\frac{\partial{L}}{\partial{h</em>{\tau}}}$，然后通过递推公式计算$\frac{\partial{L}}{\partial{C<em>{t}}}$和$\frac{\partial{L}}{\partial{h</em>{t}}}$。
+$\frac{\partial{L}}{\partial{h_{\tau}}}=W<em>v^T \cdot (y</em>{\tau}-\bar{y_{\tau}})$</p>
+
+<p>$\frac{\partial{L}}{\partial{C<em>{\tau}}}=\frac{\partial{L}}{\partial{h</em>{\tau}}}<em>o_{\tau}</em>(1-\tanh^2{C_{\tau}})$</p>
+
+<p>前一时刻和后一时刻之间的递推关系：</p>
+
+<p>$\frac{\partial{L}}{\partial{h_{t}}}=W<em>v^T \cdot (y</em>{t}-\bar{y}_{t})$</p>
+
+<p>$\frac{\partial{L}}{\partial{C<em>{t}}}=\frac{\partial{L}}{\partial{h</em>{t}}}<em>o_{t}</em>(1-\tanh^2{C<em>{t}})+f</em>{t+1}*\frac{\partial{L}}{\partial{C_{t+1}}}$</p>
+
+<hr />
+
+<h6 id="lstm-bptt算法-1">LSTM（BPTT算法）</h6>
+
+<p>$\mathrm{d}W<em>v=\sum</em>{t=1}^{\tau}(y_t-\bar{y_t}) \cdot h_t^T$
+$\mathrm{d}b<em>v=\sum</em>{t=1}^{\tau}(y_t-\bar{y_t})$
+$\mathrm{d}W<em>o=\sum</em>{t=1}^{\tau}\frac{\partial{L}}{\partial{h_{t}}}*\tanh{C_t}<em>o_t</em>(1-o_t) \cdot z_t^T$
+$\mathrm{d}b<em>o=\sum</em>{t=1}^{\tau}\frac{\partial{L}}{\partial{h_{t}}}*\tanh{C_t}<em>o_t</em>(1-o_t)$
+$\mathrm{d}W<em>f=\sum</em>{t=1}^{\tau}\frac{\partial{L}}{\partial{C<em>{t}}}*C</em>{t-1}<em>f_t</em>(1-f_t) \cdot z_t^T$
+$\mathrm{d}b<em>f=\sum</em>{t=1}^{\tau}\frac{\partial{L}}{\partial{C<em>{t}}}*C</em>{t-1}<em>f_t</em>(1-f_t)$
+$\mathrm{d}W<em>C=\sum</em>{t=1}^{\tau}\frac{\partial{L}}{\partial{C_{t}}}<em>i_t</em>(1-\tanh^2(\bar{C_t})) \cdot z_t^T$
+$\mathrm{d}b<em>C=\sum</em>{t=1}^{\tau}\frac{\partial{L}}{\partial{C_{t}}}<em>i_t</em>(1-\tanh^2(\bar{C_t}))$
+$\mathrm{d}W<em>i=\sum</em>{t=1}^{\tau}\frac{\partial{L}}{\partial{C_{t}}}<em>i_t</em>(1-i_t)*\bar{C_t} \cdot z^T$
+$\mathrm{d}b<em>i=\sum</em>{t=1}^{\tau}\frac{\partial{L}}{\partial{C_{t}}}<em>i_t</em>(1-i_t)*\bar{C_t}$</p>
+
+<hr />
+
+<h6 id="lstm-lstm变体">LSTM（LSTM变体）</h6>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/lstm_peephole.png" alt="" /></p>
+
+<hr />
+
+<h6 id="lstm-lstm变体-1">LSTM（LSTM变体）</h6>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/lstm_gru.png" alt="" /></p>
+
+<hr />
+
+<!-- $theme: gaia -->
+
+<!-- *template: invert -->
+
+<h1 id="application">Application</h1>
+
+<hr />
+
+<h6 id="application-写代码">Application（写代码）</h6>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/screen_2018-04-19_22.25.23.png" alt="75%" /></p>
+
+<hr />
+
+<h6 id="application-写论文">Application（写论文）</h6>
+
+<p><img src="http://karpathy.github.io/assets/rnn/latex3.jpeg" alt="100%" /></p>
+
+<hr />
+
+<h6 id="application-编曲">Application（编曲）</h6>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=300 height=86 src="http://music.163.com/outchain/player?type=2&id=25706282&auto=0&height=66"></iframe>
+
+<p><a href="http://konstilackner.github.io/LSTM-RNN-Melody-Composer-Website/">LSTM RNN Music Composition</a></p>
+
+<p><a href="http://www.hexahedria.com/2015/08/03/composing-music-with-recurrent-neural-networks/">Composing Music With Recurrent Neural Networks</a></p>
+
+<hr />
+
+<h6 id="application-1">Application</h6>
+
+<p>输入文本训练，输出类似词法。</p>
+
+<p><a href="https://gist.github.com/karpathy/d4dee566867f8291f086">min-char-rnn.py代码</a></p>
+
+        </article>
+  </div>
+</section>
+
+
+
+<aside id="meta">
+
+    <div>
+        <section id="datecount">
+          <h4 id="date"> Thu Apr 19, 2018 </h4>
+          <h5 id="wc"> 400 Words </h5>
+          <h5 id="readtime"> Read in about 2 Min </h5>
+        </section>
+        <ul id="categories">
+          
+        </ul>
+        <ul id="tags">
+          
+        </ul>
+    </div>
+
+    <div>
+        <section id="prev">
+            &nbsp;
+        </section>
+        <section id="next">
+            &nbsp;<a class="next" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/">背包问题 <i class="icon-arrow-right"></i></a>
+        </section>
+    </div>
+
+    
+
+            
+            
+            
+            
+            
+
+            
+            
+                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                
+                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+        
+    
+    
+    
+                
+                
+            
+                                     
+                                     
+                                     
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+
+        
+
+</aside>
+
+<meta itemprop="wordCount" content="384">
+<meta itemprop="datePublished" content="2018-04-19">
+<meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C_%E5%88%86%E4%BA%AB/">
+
+
+<aside id=comments>
+    <div><h2> Comments </h2></div>
+    <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "guanfuchen" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</aside>
+
+<footer>
+  <div>
+    <p>
+    &copy; 2017 <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">guanfuchen.</span></span>
+    Powered by <a href="http://gohugo.io">Hugo</a>.
+  </div>
+</footer>
+<script type="text/javascript">
+(function(){var j=function(a,b){return window.getComputedStyle?getComputedStyle(a).getPropertyValue(b):a.currentStyle[b]};var k=function(a,b,c){if(a.addEventListener)a.addEventListener(b,c,false);else a.attachEvent('on'+b,c)};var l=function(a,b){for(key in b)if(b.hasOwnProperty(key))a[key]=b[key];return a};window.fitText=function(d,e,f){var g=l({'minFontSize':-1/0,'maxFontSize':1/0},f);var h=function(a){var b=e||1;var c=function(){a.style.fontSize=Math.max(Math.min(a.clientWidth/(b*10),parseFloat(g.maxFontSize)),parseFloat(g.minFontSize))+'px'};c();k(window,'resize',c)};if(d.length)for(var i=0;i<d.length;i++)h(d[i]);else h(d);return d}})();
+fitText(document.getElementById('title'), 1)
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-7131036-1', 'spf13.com');
+  ga('require', 'linkid', 'linkid.js');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript"
+        src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>

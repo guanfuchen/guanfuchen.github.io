@@ -6,10 +6,27 @@
     <description>Recent content on import python</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Apr 2018 14:11:30 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 19 Apr 2018 13:57:22 +0800</lastBuildDate>
     
 	<atom:link href="https://guanfuchen.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>循环神经网络_分享</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C_%E5%88%86%E4%BA%AB/</link>
+      <pubDate>Thu, 19 Apr 2018 13:57:22 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C_%E5%88%86%E4%BA%AB/</guid>
+      <description>循环神经网络 第七期分享会 汇报人：陈官富 2018.4.20 回顾  感知器（Perceptron）  梯度下降算法（Gradient Descent）  多层感知器（MLP）  反向传播算法（Back Propogation）  卷积神经网络（Convolution Neural Network） 循环神经网络（Recurrent Neural Network）  结构 黑色方块表示单个时间步的延迟。
+结构 输入：$(x_1, x_2,\cdots,xT)$ 隐藏：$(h{0}, h_1,\cdots,hT)$ 输出：$(o{1}, o_2,\cdots,o_T)$
+结构 应用：视频预测 输入：many 输出：many
+结构 应用：视频预测
+结构 应用：图像描述 输入：one 输出：many
+结构 应用：图像描述 结构 应用：影评情感分析 输入：many 输出：one
+结构 应用：机器翻译 输入：many 输出：many
+结构 应用：机器翻译
+目录  RNN（Recurrent Neural Network）  模型结构 BPTT算法（Back Propagation Through Time） RNN变体  LSTM（Long Short Term Mermory）  模型结构 BPTT算法（Back Propagation Through Time）  Application  RNN RNN（模型结构） RNN（模型结构） 模型前向传播：</description>
+    </item>
     
     <item>
       <title>背包问题</title>
