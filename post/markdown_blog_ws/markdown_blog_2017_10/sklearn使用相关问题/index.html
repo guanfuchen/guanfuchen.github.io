@@ -128,6 +128,20 @@
 
 <p><a href="http://www.cnblogs.com/chaosimple/p/4153167.html">关于使用sklearn进行数据预处理 —— 归一化/标准化/正则化</a></p>
 
+<hr />
+
+<h1 id="使用joblib持久化sklearn模型">使用joblib持久化sklearn模型</h1>
+
+<pre><code>from sklearn.externals import joblib
+# 序列化操作
+joblib.dump(model,'model.pkl')
+
+# 反序列化操作
+model = joblib.load('model.pkl')
+</code></pre>
+
+<p><a href="http://myg0u.com/python/2015/04/28/%E5%B0%86sklearn%E6%A8%A1%E5%9E%8B%E6%8C%81%E4%B9%85%E5%8C%96.html">使用joblib持久化sklearn模型</a></p>
+
         </article>
   </div>
 </section>
@@ -216,7 +230,7 @@
 
 </aside>
 
-<meta itemprop="wordCount" content="9">
+<meta itemprop="wordCount" content="23">
 <meta itemprop="datePublished" content="2017-10-31">
 <meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/sklearn%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
 

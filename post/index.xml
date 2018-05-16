@@ -6,27 +6,10 @@
     <description>Recent content in Posts on import python</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 19 Apr 2018 13:57:22 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 08 Apr 2018 14:11:30 +0800</lastBuildDate>
     
 	<atom:link href="https://guanfuchen.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>循环神经网络_分享</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C_%E5%88%86%E4%BA%AB/</link>
-      <pubDate>Thu, 19 Apr 2018 13:57:22 +0800</pubDate>
-      
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C_%E5%88%86%E4%BA%AB/</guid>
-      <description>循环神经网络 第七期分享会 汇报人：陈官富 2018.4.20 回顾  感知器（Perceptron）  梯度下降算法（Gradient Descent）  多层感知器（MLP）  反向传播算法（Back Propogation）  卷积神经网络（Convolution Neural Network） 循环神经网络（Recurrent Neural Network）  结构 黑色方块表示单个时间步的延迟。
-结构 输入：$(x_1, x_2,\cdots,xT)$ 隐藏：$(h{0}, h_1,\cdots,hT)$ 输出：$(o{1}, o_2,\cdots,o_T)$
-结构 应用：视频预测 输入：many 输出：many
-结构 应用：视频预测
-结构 应用：图像描述 输入：one 输出：many
-结构 应用：图像描述 结构 应用：影评情感分析 输入：many 输出：one
-结构 应用：机器翻译 输入：many 输出：many
-结构 应用：机器翻译
-目录  RNN（Recurrent Neural Network）  模型结构 BPTT算法（Back Propagation Through Time） RNN变体  LSTM（Long Short Term Mermory）  模型结构 BPTT算法（Back Propagation Through Time）  Application  RNN RNN（模型结构） RNN（模型结构） 模型前向传播：</description>
-    </item>
     
     <item>
       <title>背包问题</title>
@@ -69,12 +52,10 @@ import os  分割线 markdown中插入分割线，需要另起一行，连续输
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_03/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/</guid>
       <description>阅读书籍 Data-Science-books 收集了部分关于深度学习的书籍
- 《深度学习》，Bengio和Goodfellow DeepLearningBookQA_cn 那些深度学习《面试》你可能需要知道的 斯坦福机器学习课程 《统计学习方法》，李航 lihang_book_algorithm 作者使用python实现了所有的算法 li_hang 李航书籍的PPT static_study 《统计学习方法》的读书笔记 统计学习方法：习题笔记 习题的笔记 返回主页 刘建平Pinard 博主整理了很多书上的内容，可以作为复习参考 《神经网络与深度学习》，吴岸城 《神经网络与深度学习》讲义 《神经网络与深度学习》讲义（Notes on Artificial Neural Networks and Deep Learning）从感知器到多层感知器到卷积网络 《机器学习》，周志华 机器学习：习题笔记（一） 提供了课后习题的相关思路 《斯坦福大学2014机器学习课程笔记》，Andrew Ng主讲，黄海广整理笔记 《凸优化》为什么凸优化这么重要？ 機器學習中的優化理論，需要學習哪些資料才能看懂？ 凸优化书籍推荐？ 《Neural Networks and Learning Machines》 機器學習基石上 (Machine Learning Foundations)&amp;mdash;Mathematical Foundations 机器学习资料大汇总 机器学习学习大纲 对于机器学习中常用的模型和数学知识进行了罗列，其中的知识介绍接近李航的统计学系方法，很有系统性，推荐。 分布式 ecosystem 使用分布式技术来搭建深度学习框架。  相关博客 关于计算机视觉（随谈）
+Coursera 上有哪些课程值得推荐？ 其中关于机器学习课程的值得一看，尤其是数学知识相关。
+ 《深度学习》，Bengio和Goodfellow DeepLearningBookQA_cn 那些深度学习《面试》你可能需要知道的 斯坦福机器学习课程 《统计学习方法》，李航 lihang_book_algorithm 作者使用python实现了所有的算法 li_hang 李航书籍的PPT static_study 《统计学习方法》的读书笔记 统计学习方法：习题笔记 习题的笔记 返回主页 刘建平Pinard 博主整理了很多书上的内容，可以作为复习参考 《神经网络与深度学习》，吴岸城 《神经网络与深度学习》讲义 《神经网络与深度学习》讲义（Notes on Artificial Neural Networks and Deep Learning）从感知器到多层感知器到卷积网络 《机器学习》，周志华 机器学习：习题笔记（一） 提供了课后习题的相关思路 《斯坦福大学2014机器学习课程笔记》，Andrew Ng主讲，黄海广整理笔记 《凸优化》为什么凸优化这么重要？ 機器學習中的優化理論，需要學習哪些資料才能看懂？ 凸优化书籍推荐？ 《Neural Networks and Learning Machines》 機器學習基石上 (Machine Learning Foundations)&amp;mdash;Mathematical Foundations 机器学习资料大汇总 机器学习学习大纲 对于机器学习中常用的模型和数学知识进行了罗列，其中的知识介绍接近李航的统计学系方法，很有系统性，推荐。 分布式 ecosystem 使用分布式技术来搭建深度学习框架。 高等微積分 高等微積分 台大老师讲解的微积分，非常棒。  相关博客 关于计算机视觉（随谈）
 火光摇曳 腾讯rickjin大神部门的分享博客。
-参数调整 你有哪些deep learning（rnn、cnn）调参的经验？ 这篇文章对神经网络中常用的参数调整进行了介绍，非常有帮助。
-线性回归 推导过程
-反向传播 四个基本公式
-Backpropagation Algorithm</description>
+参数调整 你有哪些deep learning（rnn、cnn）调参的经验？ 这篇文章对神经网络中常用的参数调整进行了介绍，非常有帮助。</description>
     </item>
     
     <item>
@@ -389,9 +370,15 @@ Fire Detection with Computer Vision</description>
       <pubDate>Sun, 26 Nov 2017 10:37:09 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/tensorflow%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
-      <description>相关教程 tensorflow-mnist-tutorial 以漫画的形式使用Tensorflow进行教学
+      <description>相关教程 tensorflow-mnist-tutorial 以漫画的形式使用Tensorflow进行教学。
+TensorFlow-Examples 使用tensorflow完成的机器学习和深度学习模块。
+相关描述 如何看待tensorflow新出的eager模式？ 介绍了TensorFlow中eager动态图语言。
 tensorboard相关说明 tensorboard中的数据可以下载，启动左侧的下载即可。
-# 启动tensorboard，默认端口6006 tensorboard --logdir=checkpoints --port 6007  tensorflow model使用问题 # protoc版本为3.3才可以 /usr/local/protoc/bin/protoc object_detection/protos/*.proto --python_out=.  How to fix the bug “Expected &amp;ldquo;required&amp;rdquo;, &amp;ldquo;optional&amp;rdquo;, or &amp;ldquo;repeated&amp;rdquo;.”？</description>
+# 启动tensorboard，默认端口6006 tensorboard --logdir=checkpoints --port 6007  tensorflow model使用问题 # protoc版本为3.3才可以 /usr/local/protoc/bin/protoc object_detection/protos/*.proto --python_out=.  How to fix the bug “Expected &amp;ldquo;required&amp;rdquo;, &amp;ldquo;optional&amp;rdquo;, or &amp;ldquo;repeated&amp;rdquo;.”？
+TesorFlow使用GPU GPU资源释放，首先使用nvidia-smi查看pid，对应的高使用pid结束进程即可。
+使用 GPU
+TensorFlow中设置GPU
+Tensorflow 学习笔记（七） ———— 多GPU操作</description>
     </item>
     
     <item>
@@ -1005,7 +992,8 @@ numpy.hstack</description>
       <description>sklearn参考资料 sklearn是机器学习中较为常用的一个python库，其中有大量可用的机器学习方法可以直接使用，具体参考其文档sklearn英文文档，同时社区也有人提供了中文文档scikit-learn机器学习库中文文档翻译项目，scikit-learn中文文档
 sklearn中的数据预处理 机器学习中大部分数据在训练前都需要进行数据预处理，比如原图像像素值为0-255，需要将像素转换为-1-1便于分类器训练等等。
 StandardScaler StandardScaler
-关于使用sklearn进行数据预处理 —— 归一化/标准化/正则化</description>
+关于使用sklearn进行数据预处理 —— 归一化/标准化/正则化
+使用joblib持久化sklearn模型 from sklearn.externals import joblib # 序列化操作 joblib.dump(model,&#39;model.pkl&#39;) # 反序列化操作 model = joblib.load(&#39;model.pkl&#39;)  使用joblib持久化sklearn模型</description>
     </item>
     
     <item>
@@ -1275,6 +1263,8 @@ atom设置代理 # 设置socks5代理 apm config set http-proxy socks5:127.0.0.1
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/pytorch%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>pytorch安装 Ubuntu下安装 pip install http://download.pytorch.org/whl/cu75/torch-0.2.0.post3-cp27-cp27mu-manylinux1_x86_64.whl pip install torchvision  Ubuntu 17.04 安装 pytorch and pytorchvision
 相关描述 PyTorch, a year in&amp;hellip;. pytorch发布一年的总结
+新手如何入门pytorch？ 知乎上关于pytorch的相关学习建议，非常有参考价值。
+PyTorch到底好用在哪里? 比较了PyTorch和TensorFlow的优缺点。
 博客资料 pytorch学习笔记（二）：gradient 介绍pytorch中Variable的grad相应计算，说明了optim的引入原因，梯度清零的原因（梯度的累加），Variable保存了tensor和grad，真正计算的仍然是内部的tensor。
 pytorch教程 PyTorchZeroToAll
 Awesome-pytorch-list 这是pytorch-list的awesome系统，其中的资料可以参考学习一下
@@ -1284,7 +1274,7 @@ pytorch官网
 pytorch工程github
 PyTorch中文文档
 Welcome to PyTorch Tutorials
-pytorch-tutorial
+pytorch-tutorial 这篇教程实现了很多经典模型，值得参考。
 莫烦PyTorch
 PyTorch-Tutorial
 #2.3 Activation Function 激励函数 (PyTorch tutorial 神经网络 教学)
@@ -1296,9 +1286,7 @@ pytorch-examples
 吐血整理：PyTorch项目代码与资源列表 | 资源下载
 GAN入门实践（二）&amp;ndash;Pytorch实现
 DiscoGAN-pytorch
-the-incredible-pytorch 本仓库收集了相关的pytorch项目
-pytorchvision使用相关 pytorchvision是torch中用来简化对image的相关操作，其中包含了对大量常用数据集的一个简化操作，下面具体的操作可以参考torch_vision_cifar10 这个代码中主要介绍了dataset的用法以及transform对图像的预处理的用法，然后还有就是dataloader将图像按照batch_size分类的方法将图像按照batch的方法随机筛选图像作为数据集，每一次next都会返回batch_size的训练数据集。
-超简单！pytorch入门教程（四）：准备图片数据集</description>
+the-incredible-pytorch 本仓库收集了相关的pytorch项目</description>
     </item>
     
     <item>

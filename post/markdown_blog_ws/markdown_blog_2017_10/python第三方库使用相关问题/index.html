@@ -369,6 +369,48 @@ class BasePizza(object):
 
 <p><a href="https://foofish.net/guide-python-static-class-abstract-methods.html">如何在Python中正确使用static、class、abstract方法</a></p>
 
+<hr />
+
+<h1 id="rgb2hex">rgb2hex</h1>
+
+<pre><code class="language-python">def rgb2hex(r,g,b):
+    hex = &quot;#{:02x}{:02x}{:02x}&quot;.format(r,g,b)
+    return hex
+def hex2rgb(hexcode):
+    rgb = tuple(map(ord,hexcode[1:].decode('hex')))
+    return rgb
+</code></pre>
+
+<p><a href="http://www.psychocodes.in/rgb-to-hex-conversion-and-hex-to-rgb-conversion-in-python.html">RGB to Hex Conversion and Hex to RGB Conversion in python</a></p>
+
+<hr />
+
+<h1 id="替换某一个值-超过最大值">替换某一个值（超过最大值）</h1>
+
+<pre><code>np.putmask(a, a &gt;= m, m - 1)
+</code></pre>
+
+<p><a href="https://stackoverflow.com/questions/5495573/replacing-values-greater-than-a-limit-in-a-numpy-array">Replacing values greater than a limit in a numpy array</a></p>
+
+<hr />
+
+<h1 id="添加椒盐噪声">添加椒盐噪声</h1>
+
+<pre><code>import skimage
+
+img_src_noise_rgb = skimage.util.random_noise(img_src_rgb, mode='salt')
+img_src_noise_rgb = (img_src_noise_rgb * 255).round().astype(np.uint8)
+</code></pre>
+
+<hr />
+
+<h1 id="获取文件名">获取文件名</h1>
+
+<pre><code class="language-python">os.path.splitext(os.path.basename(neg_path))[0]
+</code></pre>
+
+<p><a href="https://stackoverflow.com/questions/678236/how-to-get-the-filename-without-the-extension-from-a-path-in-python">How to get the filename without the extension from a path in Python?</a></p>
+
         </article>
   </div>
 </section>
@@ -380,7 +422,7 @@ class BasePizza(object):
     <div>
         <section id="datecount">
           <h4 id="date"> Thu Oct 26, 2017 </h4>
-          <h5 id="wc"> 400 Words </h5>
+          <h5 id="wc"> 500 Words </h5>
           <h5 id="readtime"> Read in about 2 Min </h5>
         </section>
         <ul id="categories">
@@ -457,7 +499,7 @@ class BasePizza(object):
 
 </aside>
 
-<meta itemprop="wordCount" content="333">
+<meta itemprop="wordCount" content="404">
 <meta itemprop="datePublished" content="2017-10-26">
 <meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/python%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
 

@@ -128,6 +128,10 @@ pip install torchvision
 
 <p><a href="http://pytorch.org/2018/01/19/a-year-in.html?utm_campaign=Revue%20newsletter&amp;utm_medium=Newsletter&amp;utm_source=The%20Wild%20Week%20in%20AI">PyTorch, a year in&hellip;.</a> pytorch发布一年的总结</p>
 
+<p><a href="https://www.zhihu.com/question/55720139">新手如何入门pytorch？</a> 知乎上关于pytorch的相关学习建议，非常有参考价值。</p>
+
+<p><a href="https://www.zhihu.com/question/65578911">PyTorch到底好用在哪里?</a> 比较了PyTorch和TensorFlow的优缺点。</p>
+
 <hr />
 
 <h1 id="博客资料">博客资料</h1>
@@ -159,7 +163,7 @@ pip install torchvision
 
 <p><a href="http://pytorch.org/tutorials/">Welcome to PyTorch Tutorials</a></p>
 
-<p><a href="https://github.com/yunjey/pytorch-tutorial">pytorch-tutorial</a></p>
+<p><a href="https://github.com/yunjey/pytorch-tutorial">pytorch-tutorial</a> 这篇教程实现了很多经典模型，值得参考。</p>
 
 <p><a href="https://morvanzhou.github.io/tutorials/machine-learning/torch/">莫烦PyTorch</a></p>
 
@@ -250,6 +254,15 @@ torch.Size([1, 1, 12, 12])
 # sha256sum resnet18-5c106cde.pth
 # 5c106cde386e87d4033832f2996f5493238eda96ccf559d1d62760c4de0613f8
 state_dict = torch.utils.model_zoo.load_url('https://s3.amazonaws.com/pytorch/models/resnet18-5c106cde.pth')
+</code></pre>
+
+<hr />
+
+<h2 id="pytorch增加一个维度">pytorch增加一个维度</h2>
+
+<p>numpy中使用np.newaxis即可，pytorch使用None表示。</p>
+
+<pre><code>
 </code></pre>
 
 <hr />
@@ -367,7 +380,7 @@ make_dot_from_trace(trace)
 
 </aside>
 
-<meta itemprop="wordCount" content="175">
+<meta itemprop="wordCount" content="182">
 <meta itemprop="datePublished" content="2017-10-25">
 <meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/pytorch%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
 
