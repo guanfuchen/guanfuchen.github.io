@@ -418,16 +418,6 @@ Convolutional-Neural-Network-Compression-Survey
     </item>
     
     <item>
-      <title>FLATTENED_CONVOLUTIONAL_NEURAL_NETWORKS_FOR_FEEDFORWARD_ACCELERATION论文阅读</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/flattened_convolutional_neural_networks_for_feedforward_acceleration%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
-      <pubDate>Fri, 01 Dec 2017 12:06:42 +0800</pubDate>
-      
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_12/flattened_convolutional_neural_networks_for_feedforward_acceleration%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
-      <description>论文资料 Flattened Convolutional Neural Networks for Feedforward Acceleration
-相关描述 本文提出了对CNN网络卷积操作的改进增加网络前向推导速度。</description>
-    </item>
-    
-    <item>
       <title>Fully_Context Aware_Video_Prediction论文阅读</title>
       <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/fully_context-aware_video_prediction%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
       <pubDate>Wed, 29 Nov 2017 12:57:49 +0800</pubDate>
@@ -469,15 +459,6 @@ Fire Detection with Computer Vision</description>
     </item>
     
     <item>
-      <title>SegFlow:_Joint_Learning_for_Video_Object_Segmentation_and_Optical_Flow论文阅读</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/segflow_joint_learning_for_video_object_segmentation_and_optical_flow%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
-      <pubDate>Mon, 27 Nov 2017 20:46:41 +0800</pubDate>
-      
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/segflow_joint_learning_for_video_object_segmentation_and_optical_flow%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
-      <description>论文资料 SegFlow: Joint Learning for Video Object Segmentation and Optical Flow 论文 项目</description>
-    </item>
-    
-    <item>
       <title>音乐相关资料</title>
       <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E9%9F%B3%E4%B9%90%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</link>
       <pubDate>Sun, 26 Nov 2017 20:13:01 +0800</pubDate>
@@ -493,16 +474,6 @@ Fire Detection with Computer Vision</description>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E7%BD%91%E7%BB%9C%E5%8E%8B%E7%BC%A9%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</guid>
       <description>相关论文  EIE: Efficient Inference Engine on Compressed Deep Neural Network 论文 代码 将AlexNet网络大小从233MB减少到了8.9MB DeepRebirth: Accelerating Deep Neural Network Execution on Mobile Devices 论文 三星研究院加速深度学习的方法  博客资料  DeepRebirth——通过融合加速网络  网络参数大小 convnet-burden 包含了主流模型的参数大小</description>
-    </item>
-    
-    <item>
-      <title>VPGNet:_Vanishing_Point_Guided_Network_for_Lane_and_Road_Marking_Detection_and_Recognition论文阅读</title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/vpgnet_vanishing_point_guided_network_for_lane_and_road_marking_detection_and_recognition%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
-      <pubDate>Sun, 26 Nov 2017 20:07:58 +0800</pubDate>
-      
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/vpgnet_vanishing_point_guided_network_for_lane_and_road_marking_detection_and_recognition%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
-      <description> 论文资料 VPGNet: Vanishing Point Guided Network for Lane and Road Marking Detection and Recognition 论文 VPGNet 三星研究院的文章
-运行效果 </description>
     </item>
     
     <item>
@@ -559,7 +530,7 @@ Tensorflow 学习笔记（七） ———— 多GPU操作</description>
     </item>
     
     <item>
-      <title>Convolutional_LSTM_Network:_A_Machine_Learning_Approach_for_Precipitation_Nowcasting论文阅读</title>
+      <title>Convolutional_LSTM论文阅读</title>
       <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/convolutional_lstm_network_a_machine_learning_approach_for_precipitation_nowcasting%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
       <pubDate>Thu, 23 Nov 2017 02:58:32 +0800</pubDate>
       
@@ -638,7 +609,7 @@ dex2jar</description>
     </item>
     
     <item>
-      <title>CortexNet:_a_Generic_Network_Family_for_Robust_Visual_Temporal_Representations论文阅读</title>
+      <title>CortexNet论文阅读</title>
       <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/cortexnet_a_generic_network_family_for_robust_visual_temporal_representations%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
       <pubDate>Wed, 15 Nov 2017 21:57:14 +0800</pubDate>
       
@@ -791,7 +762,7 @@ AdversarialNetsPapers 这是github上搜集的关于对抗生成网络相关论�
     </item>
     
     <item>
-      <title>Deep_Predictive_Coding_Networks_for_Video_Prediction_and_Unsupervised_Learning论文阅读</title>
+      <title>PredNet论文阅读</title>
       <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/deep_predictive_coding_networks_for_video_prediction_and_unsupervised_learning%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
       <pubDate>Sun, 12 Nov 2017 15:18:56 +0800</pubDate>
       
