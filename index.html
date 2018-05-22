@@ -112,7 +112,7 @@
       <div class="post-meta">Tue, May 22, 2018 -  Read in 1 Min </div>
     </header>
 
-    百度云加速 破解百度云限速.md
+    百度云加速 破解百度云限速
     <footer>
         <a href='https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_05/%E5%B8%B8%E8%A7%81%E5%8A%A0%E9%80%9F%E4%B8%8B%E8%BD%BD/'><nobr>Read more →</nobr></a>
     </footer>
@@ -161,6 +161,149 @@
     
         <article class="post">
     <header>
+      <h2><a href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/git_usage/">git_usage </a> </h2>
+      <div class="post-meta">Sun, Apr 8, 2018 -  Read in 1 Min </div>
+    </header>
+
+    git使用简介 为什么使用git git在程序员中的地位就好像图书管理员对于读者来说，管理了代码、文档的修改。相比于中心式的版本控制系统，git是基于分布式版本控制，每一个仓库都能完整地追踪修改。
+git的发展历程不得不提Linus和Linux，随着Linux代码的增加，Linus手动管理代码难度越来越大，社区也越来越不满这种低效地管理方式。尽管当时已经有不少优秀的集中式的版本控制系统，但是Linus不屑于使用这种系统（集中式的版本控制系统不但速度慢，而且必须联网才能使用）。然后Linus使用了一个商业的版本控制系统BitKeeper，该公司为了表达对开源的支持、尊重，授权给Linux社区免费试用。但是随后社区大牛试图对BitKeeper进行反向工程，被BitKeeper公司获悉后收回授权。此时不得不佩服大牛就是大牛，Linus花了两周时间就完成了git这个分布式版本控制系统，并且成功地部署了Linux代码的版本控制。在这之后，越来越多的开源项目使用git作为版本控制系统，甚至GitHub公司免费提供了git作为版本控制系统的云管理仓库。
+怎么样使用git 安装git 请参阅各自系统安装git的文档。
+安装git后配置用户名和邮箱。
+git config --global user.name &quot;Name&quot; git config --global user.email &quot;Email&quot;  创建版本库 首先创建一个目录作为版本库的根目录，在该目录下使用git init .初始化该目录为版本库，此时版本库为空，目录会增加一个隐藏目录.git，该目录是git用来进行版本管理的目录，切记随意增加修改内容。
+添加文件到版本库 首先创建一个文件ReadMe.md，输入内容第一次提交，然后输入命令git add ReadMe.md，此时文件ReadMe.md被提交到git的暂存区内stage。最后输入git commit -m &quot;第一次提交&quot;才将文件修改记录到git仓库中。
+查看版本库状态 使用git status可以查看版本库提交、未提交、合并、未合并等状态。
+查看文件修改内容 使用git diff ReadMe.md可以查看ReadMe.md的修改。
+查看版本库提交日志 使用git log可以查看当前版本库历史提交日志，包括提交时间、提交注释、提交日志ID。
+回退版本库 使用git reset --hard Head~1表示回退到上一版本，git reset --hard Head~n表示回退到上n版本。进行回退操作以后，回退ID后的修改都丢失了，此时如果知道最近的提交ID，那么通过git reset --hard 3628164可以 重新还原，其中3628164表示待还原的版本的ID。如果忘记了待还原的版本的ID，可以通过使用git reflog查看先前记录的版本的ID。
+撤销修改 使用git checkout -- ReadMe.md可以撤销当前对文件的修改，如果此时暂存区中存在修改增加的版本，那么还原到当前，如果不存在那么文件内容还原到最近一次提交的内容，总之就是最近的一次提交。
+如果想彻底丢弃当前工作区和暂存区中的文件内容，使用git reset HEAD ReadMe.md可以完成此功能。
+删除文件 文件删除后可使用git rm ReadMe.md直接在git控制系统中删除ReadMe.md。
+创建与合并分支 git checkout -b dev创建dev分支，在dev分支中修改ReadMe.
+    <footer>
+        <a href='https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/git_usage/'><nobr>Read more →</nobr></a>
+    </footer>
+</article>
+
+    
+        <article class="post">
+    <header>
+      <h2><a href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/gpu%E5%B9%B6%E8%A1%8C%E8%BF%90%E7%AE%97/">gpu并行运算 </a> </h2>
+      <div class="post-meta">Sun, Apr 8, 2018 -  Read in 1 Min </div>
+    </header>
+
+    GPU 第五节课 名词解释  FLOPS 每秒钟能运行的浮点运算 GLOPS 每秒钟能运行的G浮点运算 TLOPS 每秒钟能运行的T浮点运算  为什么需要GPU  应用的需求越来越高 计算机技术由应用驱动 Application Driven  应用场景，石油勘探、气象预报
+GPU（Graphic Processing Unit）
+GPU是一个异构多处理器芯片，包含shader、工作分配器、输入、输出等。
+执行单元（Execute shader），包含数据、ALU和执行上下文（Execution Context）
+CPU类型的内核，数据缓存、OOO、分支预测器、存储器的管理单元。
+通过CPU思考如何加速： - 思路一 精简（slimming down），去除某些组件加快运行速度。 - 思路二 2个核，同时执行2个程序片元，同时并行。4个核，同时执行4个程序片元。以此类推，增加核的数目，同时执行的程序片元也进行增加。指令流共享，多个程序片元共享指令流。 - 思路三 增加ALU、SIMD，增加的ALU可以单指令处理多数据。
+经过以上的思路，改进的处理单元。
+16核8ALU可以完成128个程序片元同时执行。
+停滞问题的解决思路： - 大量的独立片元相互切换 - 通过片元切换来掩藏延迟
+    <footer>
+        <a href='https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/gpu%E5%B9%B6%E8%A1%8C%E8%BF%90%E7%AE%97/'><nobr>Read more →</nobr></a>
+    </footer>
+</article>
+
+    
+        <article class="post">
+    <header>
+      <h2><a href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%92%8C%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/">概率论和数理统计 </a> </h2>
+      <div class="post-meta">Sun, Apr 8, 2018 -  Read in 1 Min </div>
+    </header>
+
+    概率论和数理统计 主要在记录公开课【公开课】概率论与数理统计（浙江大学）学习内容。
+第一课 对“随机”有足够的认识，对“数据”有足够的兴趣。
+ 对“随机”有足够的认识，即能随时随地用“随机”的观点去观察、看待、处理周围的事物。如：探索物理、化学或生物学中随机现象的规律性。 对“数据”有兴趣、有感觉，即要善于发现、善于利用、善于处理周围的数据。如：从网购票据发现有价值的信息。
+ 第二课 样本空间和随机现象
+确定性现象，不确定性现象
+ 对随机现象的观察、记录、实验统称为随机试验。它具有以下特性： - 可以在相同条件下重复进行； - 事先知道所有可能出现的结果； - 进行试验前并不知道哪个试验结果会发生。
+ 样本空间 定义：随机试验的所有可能结果构成的集合称为样本空间，记为$S={e}$。S中的元素称为样本点。
+随机事件 定义：样本空间S的子集A称为随机事件A，简称事件A。当且仅当A中的某个样本点发生称事件A发生。事件A的表示可用集合，也可以用语言来表示。
+必然事件 定义：如果把S看作事件，则每次试验S总是发生，所以S称为必然事件。
+基本事件 定义：如果事件只含有一个样本点，称其为基本事件。
+不可能事件： 定义：如果事件
+参考资料 stat-cookbook 统计相关的cookbook。
+概率论与数理统计 公式（全） 其中有概率论和数理统计的所有公式。
+《统计思维：程序员数学之概率统计》书籍阅读。
+[学习资料]概率论与数理统计 其中包括了概率论和数理统计相关的PPT。
+Probabilistic Systems Analysis and Applied Probability
+2. Introduction to Statistics (cont.) MIT年轻老师的公开课，比较快，喜欢复古的可以看1. Probability Models and Axioms，有种和上线性代数那个风格类似的感觉【英字】MIT公开课 概率论国内，其课件Probabilistic Systems Analysis and Applied Probability
+关于概率论主干课程的训练
+StatsLearning Lect1/2b 111213 v2 统计学中ESL的youtube课程。
+    <footer>
+        <a href='https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%92%8C%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/'><nobr>Read more →</nobr></a>
+    </footer>
+</article>
+
+    
+        <article class="post">
+    <header>
+      <h2><a href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_03/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E9%9D%A2%E8%AF%95_%E6%80%BB%E7%BB%93/">深度学习面试_总结 </a> </h2>
+      <div class="post-meta">Sun, Apr 8, 2018 -  Read in 3 Min </div>
+    </header>
+
+    简要介绍SVM 支持向量机，因其英文名为support vector machine，故一般简称SVM，通俗来讲，它是一种二分类模型，基本模型定义为特征空间上的间隔最大的线性分类器，学习策略便是间隔最大化，最终可转化为一个凸二次规划问题的求解。其中支持向量是满足$|w^Tx+b|=1$的点，除了支持向量外所有的点满足$y|w^Tx+b|&gt;=1$。这种方式得到的模型能够用来处理线性的情况，通过引入核函数将扩展到非线性情况下。
+事实上，大部分时候数据并不是线性可分的，这个时候满足这样条件的超平面就根本不存在。在上文中，我们已经了解到了SVM处理线性可分的情况，那对于非线性的数据SVM咋处理呢？对于非线性的情况，SVM 的处理方法是选择一个核函数，通过将数据映射到高维空间，来解决在原始空间中线性不可分的问题。 具体来说，在线性不可分的情况下，支持向量机首先在低维空间中完成计算，然后通过核函数将输入空间映射到高维特征空间，最终在高维特征空间中构造出最优分离超平面，从而把平面上本身不好分的非线性数据分开。
+核函数将原先的公式用非线性变换$\phi$转换，首先使用一个非线性映射将数据变换到一个特征空间F，然后在特征空间使用线性学习器分类。 $$f(x,y)=w^Tx+b$$ $$f(x,y)=w^T\phi(x)+b$$
+常用核函数： - 多项式核函数 $$k(x_1,x_2)=(+R)^d$$ - 高斯核函数 $$k(x_1,x_2)=\exp(-\frac{||x_1-x_2||}{2\theta^2})$$ - 线性核函数
+上述证明都是基于不存在outilers的情况下，但是实际过程中，在最大间隔间中存在outilers，此时引入松弛变量来处理，也就是酱outilers中的点也加入到Loss中，其中C为松弛变量。
+主要构造不等式约束的拉格朗日乘子法，然后用对偶方式将minmax转换为maxmin的方式进行求解。
+拉格朗日乘子法、KKT条件 拉格朗日乘子法：
+单一等式约束的拉格朗日乘子法： $$min_{(x, y)}{f(x,y)}$$ $$s.t.\ g(x,y)=c$$
+表示最优化满足如下条件： $$\nabla f(x,y)=\lambda \nabla (g(x,y)-c)$$ 即最优化点满足两个函数的法向量相同，如下构造拉格朗日乘子： $$L(x,y,\lambda)=f(x,y)+\lambda (g(x,y)-c)$$
+多个等式约束的拉格朗日乘子法 将单一等式约束的拉格朗日乘子法扩展即可： $$min{(x, y)}{f(x,y)}$$ $$s.t.\ g{i}(x,y)=0, i=1,2,&hellip;,N$$ $$L(x,y,\lambda)=f(x,y)+\sum{i=1}^{N}{\lambda{i} g_{i}(x,y)}$$
+广义拉格朗日乘子法 $$min{(x, y)}{f(x,y)}$$ $$s.t.\ g{i}(x,y)=0, i=1,2,&hellip;,N$$ $$h{i}(x,y)&lt;=0, i=1,2,&hellip;,M$$ 构造广义拉格朗日乘子法 $$L(x,y,\alpha,\beta)=f(x,y)+\sum{i=1}^{N}{\alpha{i} g{i}(x,y)}+\sum{i=1}^{M}{\beta{i} h{i}(x,y)}$$ 满足如下KKT条件即可求得最优解： - 法向量相同 $$\nabla L(x,y,\alpha,\beta)=0$$ - 基本条件 $$g{i}(x,y)=0, i=1,2,&hellip;,N$$ $$h_{i}(x,y)&lt;=0, i=1,2,&hellip;,M$$ - 不等约束系数非负 $$\beta_i&gt;=0, i=1,2,&hellip;,M$$ - 不等约束和系数其中一个为0 $$\beta_i h_i(x,y)=0, i=1,2,&hellip;,M$$
+    <footer>
+        <a href='https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_03/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E9%9D%A2%E8%AF%95_%E6%80%BB%E7%BB%93/'><nobr>Read more →</nobr></a>
+    </footer>
+</article>
+
+    
+        <article class="post">
+    <header>
+      <h2><a href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%9A%84%E6%9C%AC%E8%B4%A8/">线性代数的本质 </a> </h2>
+      <div class="post-meta">Sun, Apr 8, 2018 -  Read in 1 Min </div>
+    </header>
+
+    线性代数的本质 1 序言 矩阵乘法（matrix multiplication）、行列式（determinant）、叉积（cross products）
+为什么叉积和行列式有所关联？
+特征值究竟代表了什么？（eigen value）
+数值计算和几何直观
+2 向量是什么 物理学上，向量=方向和大小
+计算机专业，向量=数字列表
+数学专业，向量的运算，向量加法和向量数乘，线性代数中，向量都是以原点为起点。
+向量的数乘和向量的加法
+直观的图形解释可以查看动画
+3 线性组合和基 向量坐标中有两个特别的向量，$\hat{i}$和$\hat{j}$，二维空间中的向量都可以使用这两个基向量表示。另外除了这两个特殊的向量，对于任何两个不共线的向量，也可以表示二维空间中的任意向量。
+向量的张成表示向量的线性组合能表示的空间组合。
+线性相关的向量不对向量的张成有任何贡献，只有线性无关的向量才能增加向量的张成。
+空间的一组基（span）的严格定义：张成该空间的一个线性无关向量的集合。
+4 矩阵与线性变换 线性变换的概念以及它和矩阵的关系。变换意味着输入、输出。
+向量的变换可以转换为向量对于一个变换矩阵的乘积。
+如果变换矩阵中的元素是线性相关的，那么变换后的维度将会降低。
+从线性变换的角度来思考矩阵乘法、行列式、基变换和特征值。
+5 矩阵乘法与矩阵变换 线性变换由基向量的变换决定。矩阵相乘的几何意义就是两个线性变换相继作用。函数复合时f(g(x))和矩阵MN都是需要从右向左进行变换的。
+6 三维空间中的线性变换 三维空间中的线性变换和二维空间中的线性变换类似，可以看作是$\hat{i}$、$\hat{j}$和$\hat{k}$的变换即可。
+7 行列式 行列式测量了对变换影响的程度，二维空间中的变换矩阵的行列式表示了变换面积的大小。
+如果一个矩阵的行列式是0，那么这个矩阵所代表的变换将空间压缩到更小的维度下。
+另外行列式也可能是负数，这意味着变换旋转了180度。
+三维空间中的变换矩阵的行列式表示了变换体积的大小。三维空间中的变换矩阵的行列式为0意味着将三维空间压缩到二维空间、线或者点。三维空间中的变换矩阵为负数，表示和右手定理不符合。
+8 逆矩阵、列空间与零空间 高斯消元法
+逆变换来解释方程解，$Ax=b$等价于$x=A^{-1}b$，求解过程$A^{-1}Ax=A^{-1}b$，如果$det(A) \neq 0$，但是$det(A) = 0$，那么矩阵的逆不存在，解依然存在。
+变换为平面的情况下，矩阵的秩为2，变换为直线的情况下，矩阵的秩为1，变换为点的情况下，矩阵的秩为0。这里秩（Rank）代表了变换后的空间的维数。对于3维空间，秩小于3那么空间被压缩了。
+不管是一条直线、一个平面还是三维空间，所有可能的变换结果的集合，称为矩阵的列向量。所以更精确的秩的定义是列空间的维数。满秩，列空间与秩相等。零向量。
+9 非方阵 $2x3$的非方阵将3维空间变换到2维空间，$3x2$的非方阵将2维空间变换到3维空间中。
+10 点积与对偶性 点积（dot products）。点积的理解为对偶性。
+11 叉积 12 叉积（线性变换） 13 参考链接 【官方双语/合集】线性代数的本质 - 系列合集
+    <footer>
+        <a href='https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%9A%84%E6%9C%AC%E8%B4%A8/'><nobr>Read more →</nobr></a>
+    </footer>
+</article>
+
+    
+        <article class="post">
+    <header>
       <h2><a href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/">背包问题 </a> </h2>
       <div class="post-meta">Sun, Apr 8, 2018 -  Read in 1 Min </div>
     </header>
@@ -168,104 +311,6 @@
     参考链接 背包问题 本文将背包问题阐述地较好，可以作为参考。
     <footer>
         <a href='https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/'><nobr>Read more →</nobr></a>
-    </footer>
-</article>
-
-    
-        <article class="post">
-    <header>
-      <h2><a href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/markdown_usage/">markdown_usage </a> </h2>
-      <div class="post-meta">Thu, Apr 5, 2018 -  Read in 1 Min </div>
-    </header>
-
-    Markdown简要指南 为什么使用Markdown Markdown是一种轻量级的标记语言，语法简洁，易导出为各种格式的文件，如PDF、HTML等。
-尽管有大量的文字处理软件出现，如Word、WPS等，但是这些工具都是需要使用可视化操作来完成字体的格式设置，图片的插入，而Markdown仅仅使用简单的几种标记就能实现这些操作，基于键盘都可以快速完成，实现了一种沉浸式的写作环境中。
-这种格式已经被GitHub、简书等大量采用，尤其对于GitHub，使用word编写的文档在git内每一次提交都是增量式提交一个新的文件，而Markdown格式的文档由于是纯文本内容，每一次变动都是增量式变动的内容，减小了仓库的大小，也有利于追踪每一次变更的内容。
-综上所述，使用Markdown具有如下优点： - 专注于文字内容，沉浸式写作。 - 易导出为PDF、HTML等格式的文档。 - 纯文本内容，易于Git仓库增量提交。 - 标记语法简洁。
-怎么样使用Markdown 不知道有没有安利到一些同学学习Markdown，大部分还未接触过Markdown的同学可以在简书中体验一下用Markdown来写技术博客的快感。那么接下来简要介绍Markdown的语法，完成常用的文字排版。详细文档可参考Markdown快速入门和Markdown详细入门
-标题 Markdown中总共有六级标题，在文字前加#号即可实现，其中#是一级标题，##是二级标题，以此类推，######是六级标题。
-# 一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题 ###### 六级标题  粗体 Markdown的粗体使用两个*包含一段文本表示。
-**粗体**  斜体 Markdown的*斜体*使用一个*包含一段文本表示。
-*斜体*  图片 图片是文本编辑中必不可少的，适当地添加图片能够美化文档。Markdown在如下括号内插入图片url即可。
-使用图床工具可以上传图片并生成一个图片url，安利一下七牛吧，不过免费的容量有限，另外也可以使用github建一个仓库，使用仓库中图片url也可以。
-![](http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/zju_logo.png)  链接 Markdown文本链接非常简单，在如下括号中插入链接url即可。
-[链接](https://github.com/)  代码 对于程序员来说，使用Markdown来书写技术博客，经常要插入代码，同时希望能高亮代码，插入代码同样简单，使用如下格式插入代码即可。
-` import os \`
-import os  部分Markdown渲染器支持不同格式的代码高亮，如下格式输入对应的代码语言即可。
-`python import os \`
-import os  分割线 markdown中插入分割线，需要另起一行，连续输入三个&mdash;即可。
----  列表 列表分为有序列表和无序列表，格式如下所示。
-    <footer>
-        <a href='https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/markdown_usage/'><nobr>Read more →</nobr></a>
-    </footer>
-</article>
-
-    
-        <article class="post">
-    <header>
-      <h2><a href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_03/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/">深度学习基础 </a> </h2>
-      <div class="post-meta">Sat, Mar 3, 2018 -  Read in 1 Min </div>
-    </header>
-
-    阅读书籍 Data-Science-books 收集了部分关于深度学习的书籍
-Coursera 上有哪些课程值得推荐？ 其中关于机器学习课程的值得一看，尤其是数学知识相关。
- 《深度学习》，Bengio和Goodfellow DeepLearningBookQA_cn 那些深度学习《面试》你可能需要知道的 deepLearningBook-Notes相关读书笔记 斯坦福机器学习课程 《统计学习方法》，李航 lihang_book_algorithm 作者使用python实现了所有的算法 li_hang 李航书籍的PPT static_study 《统计学习方法》的读书笔记 统计学习方法：习题笔记 习题的笔记 返回主页 刘建平Pinard 博主整理了很多书上的内容，可以作为复习参考 《神经网络与深度学习》，吴岸城 《神经网络与深度学习》讲义 《神经网络与深度学习》讲义（Notes on Artificial Neural Networks and Deep Learning）从感知器到多层感知器到卷积网络 《机器学习》，周志华 机器学习：习题笔记（一） 提供了课后习题的相关思路 《斯坦福大学2014机器学习课程笔记》，Andrew Ng主讲，黄海广整理笔记 《凸优化》为什么凸优化这么重要？ 機器學習中的優化理論，需要學習哪些資料才能看懂？ 凸优化书籍推荐？ 《Neural Networks and Learning Machines》 機器學習基石上 (Machine Learning Foundations)&mdash;Mathematical Foundations 机器学习资料大汇总 机器学习学习大纲 对于机器学习中常用的模型和数学知识进行了罗列，其中的知识介绍接近李航的统计学系方法，很有系统性，推荐。 分布式 ecosystem 使用分布式技术来搭建深度学习框架。 高等微積分 高等微積分 台大老师讲解的微积分，非常棒。 《Machine Learning in Action》书籍阅读，可以在apachecn中的MachineLearning书籍中找到。  相关博客 关于计算机视觉（随谈）
-火光摇曳 腾讯rickjin大神部门的分享博客。
-    <footer>
-        <a href='https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_03/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/'><nobr>Read more →</nobr></a>
-    </footer>
-</article>
-
-    
-        <article class="post">
-    <header>
-      <h2><a href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_03/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%88%86%E4%BA%AB/">神经网络分享 </a> </h2>
-      <div class="post-meta">Sat, Mar 3, 2018 -  Read in 4 Min </div>
-    </header>
-
-    神经网络（Neural Network） 第四期分享会 汇报人：陈官富 2018.3.23 引言 神经网络被广泛应用在图像分类、图像分割、目标跟踪等领域 引言 引言 引言 引言 人工智能、机器学习、表示学习、深度学习和CNN之间的关系 引言 传统机器学习 VS 深度学习
-引言 典型的图像分类Pipeline
-多层感知机-卷积神经网络**），感知器可以实现简单的分类操作，由**感知器**组成的一个**多层感知机**（MLP）能够表示更大的假设空间（学习能力更强），实现权值共享的多层感知机也就是卷积神经网络，减少了训练的参数，极大地加快了训练，增强了上下文信息建模能力，从而被广泛应用在图像、语音等二维数据上。 -- 目录  感知器（Perceptron）  梯度下降算法（Gradient Descent）  多层感知器（MLP）  反向传播算法（Back Propogation）  卷积神经网络（Convolution Neural Network） 循环神经网络（Recurrent Neural Network）  感知器 感知器 输入：样本的特征向量$x$ 输出：样本的类别$y \in {-1, +1}$ 模型： $$f(x)=sign(w \cdot x+b)$$ $$sign(x)=\begin{cases} 1&amp; if&amp; x&gt;0
-0&amp; if&amp; x \leq 0 \end{cases}$$ 其中$w$和$b$是感知器参数，$w$是权重（weight），$b$是偏置（bias），$sign$是符号函数。
-感知器 $$y_i=sign(w^{(1)}x_i^{(1)}+w^{(2)}x_i^{(2)}+&hellip;+w^{(d)}x_i^{(d)}+b)$$ 其中$i=1,2,&hellip;,N,$，$N$为样本数，$d$为输入样本的特征维度，训练集为$T={x_1,x_2,&hellip;,x_N}$，$y_i \in {-1, +1}$，$+1$表示正样本，$-1$表示负样本。 感知器 感知器 计算简单的逻辑功能
-    <footer>
-        <a href='https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_03/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%88%86%E4%BA%AB/'><nobr>Read more →</nobr></a>
-    </footer>
-</article>
-
-    
-        <article class="post">
-    <header>
-      <h2><a href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_02/leetcode%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">LeetCode相关问题 </a> </h2>
-      <div class="post-meta">Mon, Feb 26, 2018 -  Read in 1 Min </div>
-    </header>
-
-    鸡汤 LeetCode 刷题指南（一）：为什么要刷题 对leetcode的评价非常客观
-常用算法 并查集(Union-Find)算法介绍
-LeetCode 解题报告(684，685)-并查集介绍及应用
-遗留问题 725. Split Linked List in Parts
-654. Maximum Binary Tree 题目大意： 给定无重复的数组。一棵最大树定义如下： 从数组中挑选最大的数字作为根 挑选左半数组中最大的数字作为左子树的根 挑选右半数组中最大的数字作为右子树的根 递归此过程。
-# Definition for a binary tree node. # class TreeNode(object): # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution(object): def constructMaximumBinaryTree(self, nums): &quot;&quot;&quot; :type nums: List[int] :rtype: TreeNode &quot;&quot;&quot; if not nums: return None maxn = max(nums) idx = nums.
-    <footer>
-        <a href='https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_02/leetcode%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/'><nobr>Read more →</nobr></a>
-    </footer>
-</article>
-
-    
-        <article class="post">
-    <header>
-      <h2><a href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_02/kmp%E7%AE%97%E6%B3%95%E7%9B%B8%E5%85%B3/">KMP算法相关 </a> </h2>
-      <div class="post-meta">Mon, Feb 26, 2018 -  Read in 2 Min </div>
-    </header>
-
-    相关资料 可参考大话数据结构中串的一节KMP匹配 Algorithm Implementation/String searching/Knuth-Morris-Pratt pattern matcher 字符串匹配的KMP算法 主要参考大神阮一峰进行学习的，下面均来自于其博客。 The Knuth-Morris-Pratt Algorithm in my own words
-核心思路是将比较过的位置不要继续进行比较，其中使用《部分匹配表》（Partial Match Table）既可以解决这个问题。已知空格与D不匹配时，前面六个字符&rdquo;ABCDAB&rdquo;是匹配的。查表可知，最后一个匹配字符B对应的&rdquo;部分匹配值&rdquo;为2，因此按照下面的公式算出向后移动的位数：
-移动位数 = 已匹配的字符数 - 对应的部分匹配值 因为 6 - 2 等于4，所以将搜索词向后移动4位。  下面介绍《部分匹配表》是如何产生的。
-首先，要了解两个概念：&rdquo;前缀&rdquo;和&rdquo;后缀&rdquo;。 &ldquo;前缀&rdquo;指除了最后一个字符以外，一个字符串的全部头部组合；&rdquo;后缀&rdquo;指除了第一个字符以外，一个字符串的全部尾部组合。
-&ldquo;部分匹配值&rdquo;就是&rdquo;前缀&rdquo;和&rdquo;后缀&rdquo;的最长的共有元素的长度。以&rdquo;ABCDABD&rdquo;为例，
-　－　&quot;A&quot;的前缀和后缀都为空集，共有元素的长度为0； －　&quot;AB&quot;的前缀为[A]，后缀为[B]，共有元素的长度为0； －　&quot;ABC&quot;的前缀为[A, AB]，后缀为[BC, C]，共有元素的长度0； －　&quot;ABCD&quot;的前缀为[A, AB, ABC]，后缀为[BCD, CD, D]，共有元素的长度为0； －　&quot;ABCDA&quot;的前缀为[A, AB, ABC, ABCD]，后缀为[BCDA, CDA, DA, A]，共有元素为&quot;A&quot;，长度为1； －　&quot;ABCDAB&quot;的前缀为[A, AB, ABC, ABCD, ABCDA]，后缀为[BCDAB, CDAB, DAB, AB, B]，共有元素为&quot;AB&quot;，长度为2； －　&quot;ABCDABD&quot;的前缀为[A, AB, ABC, ABCD, ABCDA, ABCDAB]，后缀为[BCDABD, CDABD, DABD, ABD, BD, D]，共有元素的长度为0。  &ldquo;部分匹配&rdquo;的实质是，有时候，字符串头部和尾部会有重复。比如，&rdquo;ABCDAB&rdquo;之中有两个&rdquo;AB&rdquo;，那么它的&rdquo;部分匹配值&rdquo;就是2（&rdquo;AB&rdquo;的长度）。搜索词移动的时候，第一个&rdquo;AB&rdquo;向后移动4位（字符串长度-部分匹配值），就可以来到第二个&rdquo;AB&rdquo;的位置。
-    <footer>
-        <a href='https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_02/kmp%E7%AE%97%E6%B3%95%E7%9B%B8%E5%85%B3/'><nobr>Read more →</nobr></a>
     </footer>
 </article>
 
