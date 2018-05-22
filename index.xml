@@ -21,6 +21,34 @@
     </item>
     
     <item>
+      <title>风格迁移相关问题</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E9%A3%8E%E6%A0%BC%E8%BF%81%E7%A7%BB%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Fri, 18 May 2018 16:06:12 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E9%A3%8E%E6%A0%BC%E8%BF%81%E7%A7%BB%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
+      <description>相关资料 pytorch-fast-neural-style-mobilenetV2 使用mobilenet进行风格迁移。</description>
+    </item>
+    
+    <item>
+      <title>目标检测相关问题</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Fri, 18 May 2018 16:00:30 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
+      <description>本仓库主要用来记录目标检测方面的相关技术。
+相关资料 YOLO_v3_tutorial_from_scratch YOLO实现教程（PyTorch），值得深入，How to implement a YOLO (v3) object detector from scratch in PyTorch: Part 1网页教程。</description>
+    </item>
+    
+    <item>
+      <title>搜索资源整理</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_05/%E6%90%9C%E7%B4%A2%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/</link>
+      <pubDate>Fri, 18 May 2018 10:16:08 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_05/%E6%90%9C%E7%B4%A2%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/</guid>
+      <description>搜索相关 TORRENTKITTY 搜索神器。</description>
+    </item>
+    
+    <item>
       <title>背包问题</title>
       <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/</link>
       <pubDate>Sun, 08 Apr 2018 14:11:30 +0800</pubDate>
@@ -62,9 +90,8 @@ import os  分割线 markdown中插入分割线，需要另起一行，连续输
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_03/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/</guid>
       <description>阅读书籍 Data-Science-books 收集了部分关于深度学习的书籍
 Coursera 上有哪些课程值得推荐？ 其中关于机器学习课程的值得一看，尤其是数学知识相关。
- 《深度学习》，Bengio和Goodfellow DeepLearningBookQA_cn 那些深度学习《面试》你可能需要知道的 斯坦福机器学习课程 《统计学习方法》，李航 lihang_book_algorithm 作者使用python实现了所有的算法 li_hang 李航书籍的PPT static_study 《统计学习方法》的读书笔记 统计学习方法：习题笔记 习题的笔记 返回主页 刘建平Pinard 博主整理了很多书上的内容，可以作为复习参考 《神经网络与深度学习》，吴岸城 《神经网络与深度学习》讲义 《神经网络与深度学习》讲义（Notes on Artificial Neural Networks and Deep Learning）从感知器到多层感知器到卷积网络 《机器学习》，周志华 机器学习：习题笔记（一） 提供了课后习题的相关思路 《斯坦福大学2014机器学习课程笔记》，Andrew Ng主讲，黄海广整理笔记 《凸优化》为什么凸优化这么重要？ 機器學習中的優化理論，需要學習哪些資料才能看懂？ 凸优化书籍推荐？ 《Neural Networks and Learning Machines》 機器學習基石上 (Machine Learning Foundations)&amp;mdash;Mathematical Foundations 机器学习资料大汇总 机器学习学习大纲 对于机器学习中常用的模型和数学知识进行了罗列，其中的知识介绍接近李航的统计学系方法，很有系统性，推荐。 分布式 ecosystem 使用分布式技术来搭建深度学习框架。 高等微積分 高等微積分 台大老师讲解的微积分，非常棒。  相关博客 关于计算机视觉（随谈）
-火光摇曳 腾讯rickjin大神部门的分享博客。
-参数调整 你有哪些deep learning（rnn、cnn）调参的经验？ 这篇文章对神经网络中常用的参数调整进行了介绍，非常有帮助。</description>
+ 《深度学习》，Bengio和Goodfellow DeepLearningBookQA_cn 那些深度学习《面试》你可能需要知道的 deepLearningBook-Notes相关读书笔记 斯坦福机器学习课程 《统计学习方法》，李航 lihang_book_algorithm 作者使用python实现了所有的算法 li_hang 李航书籍的PPT static_study 《统计学习方法》的读书笔记 统计学习方法：习题笔记 习题的笔记 返回主页 刘建平Pinard 博主整理了很多书上的内容，可以作为复习参考 《神经网络与深度学习》，吴岸城 《神经网络与深度学习》讲义 《神经网络与深度学习》讲义（Notes on Artificial Neural Networks and Deep Learning）从感知器到多层感知器到卷积网络 《机器学习》，周志华 机器学习：习题笔记（一） 提供了课后习题的相关思路 《斯坦福大学2014机器学习课程笔记》，Andrew Ng主讲，黄海广整理笔记 《凸优化》为什么凸优化这么重要？ 機器學習中的優化理論，需要學習哪些資料才能看懂？ 凸优化书籍推荐？ 《Neural Networks and Learning Machines》 機器學習基石上 (Machine Learning Foundations)&amp;mdash;Mathematical Foundations 机器学习资料大汇总 机器学习学习大纲 对于机器学习中常用的模型和数学知识进行了罗列，其中的知识介绍接近李航的统计学系方法，很有系统性，推荐。 分布式 ecosystem 使用分布式技术来搭建深度学习框架。 高等微積分 高等微積分 台大老师讲解的微积分，非常棒。 《Machine Learning in Action》书籍阅读，可以在apachecn中的MachineLearning书籍中找到。  相关博客 关于计算机视觉（随谈）
+火光摇曳 腾讯rickjin大神部门的分享博客。</description>
     </item>
     
     <item>
@@ -1345,7 +1372,7 @@ mac下修改截图 sudo su cd /System/Library/CoreServices/SystemUIServer.app/Co
       <pubDate>Wed, 25 Oct 2017 00:06:46 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/%E6%97%A5%E5%B8%B8%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E9%9B%86%E5%90%88/</guid>
-      <description> 计算机视觉项目  Flipkart的视觉搜索和推荐系统 fk-visual-search Where to Buy It: Matching Street Clothing Photos in Online Shops  deep-learning-models使用keras的深度学习模型 deep-learning-models mx-maskrcnn使用MXNet实现的RCNN A MXNet implementation of Mask R-CNN mx-maskrcnn StackGAN-v2 StackGAN-v2  语音项目  以85％的准确度击败Google的音频reCaptcha uncaptcha  机器人SLAM项目  DynSLAM动态环境下的SLAM 动态环境下同步定位与映射SLAM硕士论文，分别重构静态环境和动态对象（如汽车）。 DynSLAM: Simultaneous Localization and Mapping in Dynamic Environments   加强学习  增强学习调研报告 Deep Reinforcement Learning survey  </description>
+      <description>计算机视觉项目  Flipkart的视觉搜索和推荐系统 fk-visual-search Where to Buy It: Matching Street Clothing Photos in Online Shops  deep-learning-models使用keras的深度学习模型 deep-learning-models mx-maskrcnn使用MXNet实现的RCNN A MXNet implementation of Mask R-CNN mx-maskrcnn StackGAN-v2 StackGAN-v2  语音项目  以85％的准确度击败Google的音频reCaptcha uncaptcha  机器人SLAM项目  DynSLAM动态环境下的SLAM 动态环境下同步定位与映射SLAM硕士论文，分别重构静态环境和动态对象（如汽车）。 DynSLAM: Simultaneous Localization and Mapping in Dynamic Environments   加强学习  增强学习调研报告 Deep Reinforcement Learning survey  ML 面向机器学习的特征工程 翻译面向机器学习的特征工程这本书。</description>
     </item>
     
     <item>
@@ -1478,7 +1505,15 @@ CPU类型的内核，数据缓存、OOO、分支预测器、存储器的管理�
 随机事件 定义：样本空间S的子集A称为随机事件A，简称事件A。当且仅当A中的某个样本点发生称事件A发生。事件A的表示可用集合，也可以用语言来表示。
 必然事件 定义：如果把S看作事件，则每次试验S总是发生，所以S称为必然事件。
 基本事件 定义：如果事件只含有一个样本点，称其为基本事件。
-不可能事件： 定义：如果事件</description>
+不可能事件： 定义：如果事件
+参考资料 stat-cookbook 统计相关的cookbook。
+概率论与数理统计 公式（全） 其中有概率论和数理统计的所有公式。
+《统计思维：程序员数学之概率统计》书籍阅读。
+[学习资料]概率论与数理统计 其中包括了概率论和数理统计相关的PPT。
+Probabilistic Systems Analysis and Applied Probability
+2. Introduction to Statistics (cont.) MIT年轻老师的公开课，比较快，喜欢复古的可以看1. Probability Models and Axioms，有种和上线性代数那个风格类似的感觉【英字】MIT公开课 概率论国内，其课件Probabilistic Systems Analysis and Applied Probability
+关于概率论主干课程的训练
+StatsLearning Lect1/2b 111213 v2 统计学中ESL的youtube课程。</description>
     </item>
     
     <item>
