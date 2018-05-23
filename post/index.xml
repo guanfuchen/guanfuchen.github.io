@@ -1509,8 +1509,7 @@ Hugo静态网站生成器中文教程
       <description>git相关使用问题 记录git使用中遇到的一些trick
 untracked working tree file git reset --hard HEAD git clean -f -d git pull  untracked working tree file
 git增加submodule git submodule add git@gitee.com:chenguanfu/markdown_blog_ws.git markdown_blog_ws  git中submodule的更新 这里貌似只能先把master克隆下来，然后设置每一个submodule的remote地址
-git clone git@gitee.com:chenguanfu/blog_ws.git cd blog_ws git submodule foreach git pull git submodule update git submodule update --init --recursive  Git Submodule 用法筆記
-git中submodule的路径 # vim .gitmodules [submodule &amp;quot;hugo_ws/mysite/content/post/markdown_blog_ws&amp;quot;] path = hugo_ws/mysite/content/post/markdown_blog_ws url = git@gitee.com:chenguanfu/markdown_blog_ws.git [submodule &amp;quot;hugo_ws/mysite/public&amp;quot;] path = hugo_ws/mysite/public url = git@gitee.</description>
+git clone git@gitee.com:chenguanfu/blog_ws.git cd blog_ws git submodule foreach git pull git submodule update git submodule update --init --recursive cd public &amp;amp;&amp;amp; git checkout master cd content/post/markdown_blog_ws/ &amp;amp;&amp;amp; git checkout master cd guanfuchen.github.io &amp;amp;&amp;amp; git checkout master  Git Submodule 用法筆記</description>
     </item>
     
     <item>
