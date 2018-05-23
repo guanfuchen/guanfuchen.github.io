@@ -15,16 +15,16 @@
  
 <meta property="og:type" content="article"/>
 <meta property="og:description" content=""/>
-<meta property="og:title" content="Git_usage_problem : spf13.com"/>
+<meta property="og:title" content=" : spf13.com"/>
 <meta property="og:site_name" content="spf13 is Steve Francia"/>
 <meta property="og:image" content="" />
 <meta property="og:image:type" content="image/jpeg" />
 <meta property="og:image:width" content="" />
 <meta property="og:image:height" content="" />
-<meta property="og:url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/git%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
+<meta property="og:url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_05/ros%E5%AF%BC%E8%88%AA%E8%B0%83%E8%AF%95/">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2017-10-24"/>
-<meta property="article:modified_time" content="2017-10-24"/>
+<meta property="article:published_time" content="0001-01-01"/>
+<meta property="article:modified_time" content="0001-01-01"/>
 
 
 
@@ -33,7 +33,7 @@
 <meta name="twitter:card" content="summary">
 
 <meta name="twitter:site" content="@spf13">
-<meta name="twitter:title" content="Git_usage_problem : spf13.com">
+<meta name="twitter:title" content=" : spf13.com">
 <meta name="twitter:creator" content="@spf13">
 <meta name="twitter:description" content="">
 <meta name="twitter:image:src" content="">
@@ -42,8 +42,8 @@
 
 
     <base href="https://guanfuchen.github.io">
-    <title> Git_usage_problem - spf13.com </title>
-    <link rel="canonical" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/git%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
+    <title>  - spf13.com </title>
+    <link rel="canonical" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_05/ros%E5%AF%BC%E8%88%AA%E8%B0%83%E8%AF%95/">
     
 
     <link href='https://fonts.lug.ustc.edu.cn/css?family=Fjalla+One|Open+Sans:300' rel='stylesheet' type='text/css'>
@@ -105,85 +105,98 @@
 
 
 <section id="main">
-  <h1 itemprop="name" id="title">Git_usage_problem</h1>
+  <h1 itemprop="name" id="title"></h1>
   <div>
         <article itemprop="articleBody" id="content">
            
 
-<hr />
+<h1 id="ros导航调试">ROS导航调试</h1>
 
-<h1 id="git相关使用问题">git相关使用问题</h1>
+<p>明天试试blank_map.yaml和blank_map.pgm，参考<a href="https://github.com/pirobot/ros-by-example/blob/master/rbx_vol_1/rbx1_nav/maps/blank_map.yaml">blank_map.yaml</a></p>
 
-<p>记录git使用中遇到的一些trick</p>
+<p>提供了p3at机器人的footprint。</p>
 
-<hr />
-
-<h1 id="untracked-working-tree-file">untracked working tree file</h1>
-
-<pre><code class="language-bash">git reset --hard HEAD
-git clean -f -d
-git pull
-</code></pre>
-
-<p><a href="http://blog.csdn.net/xzongyuan/article/details/9212253">untracked working tree file</a></p>
-
-<hr />
-
-<h1 id="git增加submodule">git增加submodule</h1>
-
-<pre><code class="language-bash">git submodule add git@gitee.com:chenguanfu/markdown_blog_ws.git markdown_blog_ws
+<pre><code>footprint: [ [0.3302, -0.0508], [0.254, -0.0508], [0.254, -0.254], [-0.254, -0.254], [-0.254, 0.254], [0.254, 0.254], [0.254, 0.0508], [0.3302, 0.0508] ]
 </code></pre>
 
 <hr />
 
-<h1 id="git中submodule的更新">git中submodule的更新</h1>
+<h1 id="baselocalplanner配置">BaseLocalPlanner配置</h1>
 
-<p>这里貌似只能先把master克隆下来，然后设置每一个submodule的remote地址</p>
-
-<pre><code class="language-bash">git clone git@gitee.com:chenguanfu/blog_ws.git
-cd blog_ws
-git submodule foreach git pull
-git submodule update
-
-git submodule update --init --recursive
-</code></pre>
-
-<p><a href="http://blog.chh.tw/posts/git-submodule/">Git Submodule 用法筆記</a></p>
+<p>base_local_planner_params.yaml，修改xy_goal_tolerance和yaw_goal_tolerance容忍度，降低目标精度。</p>
 
 <hr />
 
-<h1 id="git中submodule的路径">git中submodule的路径</h1>
+<h1 id="全局配置">全局配置</h1>
 
-<pre><code class="language-bash"># vim .gitmodules
-[submodule &quot;hugo_ws/mysite/content/post/markdown_blog_ws&quot;]
-        path = hugo_ws/mysite/content/post/markdown_blog_ws
-        url = git@gitee.com:chenguanfu/markdown_blog_ws.git
-[submodule &quot;hugo_ws/mysite/public&quot;]
-        path = hugo_ws/mysite/public
-        url = git@gitee.com:chenguanfu/blog_ws_public.git
+<p>全局配置时静态图为true，也就是地图不随着改变。</p>
+
+<pre><code>plugins:
+    - {name: static_layer,            type: &quot;costmap_2d::StaticLayer&quot;}
+    - {name: obstacle_layer,          type: &quot;costmap_2d::VoxelLayer&quot;}
+    - {name: inflation_layer,         type: &quot;costmap_2d::InflationLayer&quot;}
 </code></pre>
 
 <hr />
 
-<h1 id="git-add相关区别">git add相关区别</h1>
+<h1 id="本地配置">本地配置</h1>
 
-<pre><code># git add -u表示添加修改的文件，而git add .表示添加修改的文件和新文件，但不包括删除的文件，git add -A表示所有的文件
+<p>本地配置时静态图为false，也就是地图随着局部更新。
+<strong>降低分辨率</strong></p>
+
+<pre><code># 增加静态层和障碍物层
+plugins:
+   - {name: static_layer,        type: &quot;costmap_2d::StaticLayer&quot;}
+   - {name: obstacle_layer,      type: &quot;costmap_2d::ObstacleLayer&quot;}
 </code></pre>
-
-<p><a href="https://www.cnblogs.com/skura23/p/5859243.html">git add -A 和 git add . 的区别</a></p>
 
 <hr />
 
-<h1 id="git-fork同步">git fork同步</h1>
+<h1 id="参考资料">参考资料</h1>
 
-<pre><code class="language-bash">git remote add upstream XXX
-# 拉取最新信息
-git fetch upstream
-# 合并git信息
-git merge upstream/master
-</code></pre>
+<p><a href="http://wiki.ros.org/gmapping">gmapping</a></p>
 
-<p><a href="https://jinlong.github.io/2015/10/12/syncing-a-fork/">如何同步 Github fork 出来的分支</a></p>
+<p><a href="http://wiki.ros.org/slam_gmapping">slam_gmapping</a></p>
+
+<p><a href="https://blog.csdn.net/EAIBOT/article/details/51542721">ROS的坐标系TF</a></p>
+
+<p><a href="http://wiki.ros.org/ROSARIA">ROSARIA</a></p>
+
+<p><a href="http://wiki.ros.org/dwa_local_planner">dwa_local_planner</a> 另一个路径规划。</p>
+
+<p><a href="http://wiki.ros.org/base_local_planner">base_local_planner</a> 这是base路径规划。</p>
+
+<p><a href="https://blog.csdn.net/flyinsilence/article/details/51854123">ROS里基本坐标系的理解：map,odom,base_link,base_laser</a></p>
+
+<p><a href="https://github.com/allenh1/p2os/blob/master/p2os_launch/launch/navigation-pioneer-3at.launch">navigation-pioneer-3at.launch</a>，整个工程参考<a href="https://github.com/allenh1/p2os/blob/master/p2os_launch/launch/base_local_planner_params.yaml">p2os</a></p>
+
+<p><a href="https://blog.csdn.net/sunyoop/article/details/78216242">导航中的robot footprint和各种radius</a></p>
+
+<p><a href="https://github.com/rst-tu-dortmund/teb_local_planner_tutorials">teb_local_planner_tutorials</a></p>
+
+<p><a href="https://answers.ros.org/question/197023/navigation-resolution-of-global-costmap/">Navigation: Resolution of Global Costmap</a></p>
+
+<p><a href="https://blog.csdn.net/heyijia0327/article/details/42241831">ROS 教程之 navigation ：在 catkin 环境下创建costmap layer plugin</a></p>
+
+<p><a href="http://wiki.ros.org/costmap_2d/Tutorials">costmap_2d教程</a></p>
+
+<p><a href="http://wiki.ros.org/costmap_2d">costmap_2d文档</a></p>
+
+<p><a href="https://stevenshi.me/2017/07/10/ros-intermediate-tutorial-1/">ROS中级一 配置并使用ROS导航功能包集 最初级导航</a></p>
+
+<p><a href="https://github.com/chenxingzhe/laser_map">laser_map配置</a> 其他人的配置导航实例。</p>
+
+<p><a href="http://wiki.ros.org/rqt_reconfigure">rqt_reconfigure</a> rqt参数配置。</p>
+
+<p><a href="https://www.ncnynl.com/archives/201708/1905.html">ROS与navigation教程-teb_local_planner介绍</a></p>
+
+<p><a href="http://wiki.ros.org/teb_local_planner/Tutorials/Frequently%20Asked%20Questions">Computation time teb局部规划计算时间缩小参数调整</a></p>
+
+<p><a href="https://answers.ros.org/question/252530/static-global-map-updating/">Static global map updating</a></p>
+
+<p><a href="http://wiki.ros.org/teb_local_planner/Tutorials/Setup%20and%20test%20Optimization">Setup and test Optimization</a></p>
+
+<p><a href="http://wiki.ros.org/teb_local_planner">teb_local_planner</a></p>
 
         </article>
   </div>
@@ -195,7 +208,7 @@ git merge upstream/master
 
     <div>
         <section id="datecount">
-          <h4 id="date"> Tue Oct 24, 2017 </h4>
+          <h4 id="date"> Mon Jan 1, 0001 </h4>
           <h5 id="wc"> 200 Words </h5>
           <h5 id="readtime"> Read in about 1 Min </h5>
         </section>
@@ -209,10 +222,10 @@ git merge upstream/master
 
     <div>
         <section id="prev">
-            &nbsp;<a class="previous" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/blog_%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/"><i class="icon-arrow-left"></i> Blog_使用相关问题</a><br>
+            &nbsp;<a class="previous" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/git%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/"><i class="icon-arrow-left"></i> Git_usage_problem</a><br>
         </section>
         <section id="next">
-            &nbsp;<a class="next" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_05/ros%E5%AF%BC%E8%88%AA%E8%B0%83%E8%AF%95/"> <i class="icon-arrow-right"></i></a>
+            &nbsp;
         </section>
     </div>
 
@@ -273,9 +286,9 @@ git merge upstream/master
 
 </aside>
 
-<meta itemprop="wordCount" content="108">
-<meta itemprop="datePublished" content="2017-10-24">
-<meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/git%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
+<meta itemprop="wordCount" content="107">
+<meta itemprop="datePublished" content="0001-01-01">
+<meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_05/ros%E5%AF%BC%E8%88%AA%E8%B0%83%E8%AF%95/">
 
 
 <aside id=comments>
