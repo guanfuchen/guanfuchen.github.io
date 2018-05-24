@@ -6,10 +6,20 @@
     <description>Recent content on import python</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 May 2018 15:04:21 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 24 May 2018 14:01:14 +0800</lastBuildDate>
     
 	<atom:link href="https://guanfuchen.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>视觉里程计</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_05/%E8%A7%86%E8%A7%89%E9%87%8C%E7%A8%8B%E8%AE%A1/</link>
+      <pubDate>Thu, 24 May 2018 14:01:14 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_05/%E8%A7%86%E8%A7%89%E9%87%8C%E7%A8%8B%E8%AE%A1/</guid>
+      <description> 概述 添加视觉里程计相关知识整理。
+相关资料  monoVO-python一个用python实现单目视觉里程计的项目。  </description>
+    </item>
     
     <item>
       <title>常见加速下载</title>
@@ -634,12 +644,12 @@ torch实现的RNN结构 ni = 1; nh = 8; no = 1; len = 3 h0 = nn.</description>
     </item>
     
     <item>
-      <title>机器学习课程收集</title>
+      <title>机器学习课程</title>
       <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AF%BE%E7%A8%8B%E6%94%B6%E9%9B%86/</link>
       <pubDate>Wed, 15 Nov 2017 16:44:14 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AF%BE%E7%A8%8B%E6%94%B6%E9%9B%86/</guid>
-      <description> 机器学习课程收集  Machine Learning: 2014-2015 该课程讲义和视频都有，非常适合学习，同时其中穿插了torch的编程，课程大作业也是使用torch来完成，可以用来作为torch的学习。 大作业示例代码 该代码仓库放置了大作业的代码，可以作为参考。 深度学习如何入门？ 知乎中也有提到这个课程  机器学习书籍收集  Pattern Recognition and Machine Learning 机器学习领域必看书之一，提供python代码PRML，提供了notebook进行学习。  </description>
+      <description> 机器学习课程收集  Machine Learning: 2014-2015 该课程讲义和视频都有，非常适合学习，同时其中穿插了torch的编程，课程大作业也是使用torch来完成，可以用来作为torch的学习。 大作业示例代码 该代码仓库放置了大作业的代码，可以作为参考。 深度学习如何入门？ 知乎中也有提到这个课程 machine-learning udacity上整理的机器学习课程项目，其中有对应的中文版cn-machine-learning。 [TODO] ml-videos 下一个目标将这个清单中的视频基本过一遍。  机器学习书籍收集  Pattern Recognition and Machine Learning 机器学习领域必看书之一，提供python代码PRML，提供了notebook进行学习。  </description>
     </item>
     
     <item>
