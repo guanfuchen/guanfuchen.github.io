@@ -6,10 +6,30 @@
     <description>Recent content in Posts on import python</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 May 2018 14:01:14 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 29 May 2018 11:42:27 +0800</lastBuildDate>
     
 	<atom:link href="https://guanfuchen.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Caffe资料</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_05/caffe%E8%B5%84%E6%96%99/</link>
+      <pubDate>Tue, 29 May 2018 11:42:27 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_05/caffe%E8%B5%84%E6%96%99/</guid>
+      <description> 相关资料 记录caffe相关学习和模型。
+ caffe-model  </description>
+    </item>
+    
+    <item>
+      <title>学习率总结</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_05/%E5%AD%A6%E4%B9%A0%E7%8E%87%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Tue, 29 May 2018 10:37:12 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_05/%E5%AD%A6%E4%B9%A0%E7%8E%87%E6%80%BB%E7%BB%93/</guid>
+      <description> 相关资料 记录深度学习中学习率相关资料。
+ Learning-Rate 实现了常见的学习率论文。 Cyclical Learning Rates for Training Neural Networks 对应的pytorch实现pytorch.cyclic.learning.rate 如何在 PyTorch 中设定学习率衰减（learning rate decay） lr_scheduler.py pytorch中学习率的调整策略。  </description>
+    </item>
     
     <item>
       <title>视觉里程计</title>
@@ -27,7 +47,8 @@
       <pubDate>Tue, 22 May 2018 15:04:21 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_05/%E5%B8%B8%E8%A7%81%E5%8A%A0%E9%80%9F%E4%B8%8B%E8%BD%BD/</guid>
-      <description>百度云加速 破解百度云限速</description>
+      <description>百度云加速 破解百度云限速
+BaiduPCS-Go 好用的第三方下载工具，下载速度能达到1M多，应用简单，登陆后和服务器一样的操作，可以切换路径，同时直接下载。</description>
     </item>
     
     <item>
@@ -45,8 +66,8 @@
       <pubDate>Fri, 18 May 2018 16:00:30 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
-      <description>本仓库主要用来记录目标检测方面的相关技术。
-相关资料 YOLO_v3_tutorial_from_scratch YOLO实现教程（PyTorch），值得深入，How to implement a YOLO (v3) object detector from scratch in PyTorch: Part 1网页教程。</description>
+      <description> 本仓库主要用来记录目标检测方面的相关技术。
+相关资料  YOLO_v3_tutorial_from_scratch YOLO实现教程（PyTorch），值得深入，How to implement a YOLO (v3) object detector from scratch in PyTorch: Part 1网页教程。 deformable-convolution-pytorch 使用了deformable卷积进行目标检测。  </description>
     </item>
     
     <item>
@@ -223,8 +244,7 @@ import os  分割线 markdown中插入分割线，需要另起一行，连续输
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_03/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/</guid>
       <description>阅读书籍 Data-Science-books 收集了部分关于深度学习的书籍
 Coursera 上有哪些课程值得推荐？ 其中关于机器学习课程的值得一看，尤其是数学知识相关。
- 《深度学习》，Bengio和Goodfellow DeepLearningBookQA_cn 那些深度学习《面试》你可能需要知道的 deepLearningBook-Notes相关读书笔记 斯坦福机器学习课程 《统计学习方法》，李航 lihang_book_algorithm 作者使用python实现了所有的算法 li_hang 李航书籍的PPT static_study 《统计学习方法》的读书笔记 统计学习方法：习题笔记 习题的笔记 返回主页 刘建平Pinard 博主整理了很多书上的内容，可以作为复习参考 《神经网络与深度学习》，吴岸城 《神经网络与深度学习》讲义 《神经网络与深度学习》讲义（Notes on Artificial Neural Networks and Deep Learning）从感知器到多层感知器到卷积网络 《机器学习》，周志华 机器学习：习题笔记（一） 提供了课后习题的相关思路 《斯坦福大学2014机器学习课程笔记》，Andrew Ng主讲，黄海广整理笔记 《凸优化》为什么凸优化这么重要？ 機器學習中的優化理論，需要學習哪些資料才能看懂？ 凸优化书籍推荐？ 《Neural Networks and Learning Machines》 機器學習基石上 (Machine Learning Foundations)&amp;mdash;Mathematical Foundations 机器学习资料大汇总 机器学习学习大纲 对于机器学习中常用的模型和数学知识进行了罗列，其中的知识介绍接近李航的统计学系方法，很有系统性，推荐。 分布式 ecosystem 使用分布式技术来搭建深度学习框架。 高等微積分 高等微積分 台大老师讲解的微积分，非常棒。 《Machine Learning in Action》书籍阅读，可以在apachecn中的MachineLearning书籍中找到。  相关博客 关于计算机视觉（随谈）
-火光摇曳 腾讯rickjin大神部门的分享博客。</description>
+ 《深度学习》，Bengio和Goodfellow DeepLearningBookQA_cn 那些深度学习《面试》你可能需要知道的 deepLearningBook-Notes相关读书笔记 斯坦福机器学习课程 《统计学习方法》，李航 lihang_book_algorithm 作者使用python实现了所有的算法 li_hang 李航书籍的PPT static_study 《统计学习方法》的读书笔记 统计学习方法：习题笔记 习题的笔记 返回主页 刘建平Pinard 博主整理了很多书上的内容，可以作为复习参考 《神经网络与深度学习》，吴岸城 《神经网络与深度学习》讲义 《神经网络与深度学习》讲义（Notes on Artificial Neural Networks and Deep Learning）从感知器到多层感知器到卷积网络 《机器学习》，周志华 机器学习：习题笔记（一） 提供了课后习题的相关思路 《斯坦福大学2014机器学习课程笔记》，Andrew Ng主讲，黄海广整理笔记 《凸优化》为什么凸优化这么重要？ 機器學習中的優化理論，需要學習哪些資料才能看懂？ 凸优化书籍推荐？ 《Neural Networks and Learning Machines》 機器學習基石上 (Machine Learning Foundations)&amp;mdash;Mathematical Foundations 机器学习资料大汇总 机器学习学习大纲 对于机器学习中常用的模型和数学知识进行了罗列，其中的知识介绍接近李航的统计学系方法，很有系统性，推荐。 分布式 ecosystem 使用分布式技术来搭建深度学习框架。 高等微積分 高等微積分 台大老师讲解的微积分，非常棒。 《Machine Learning in Action》书籍阅读，可以在apachecn中的MachineLearning书籍中找到。 Learn_Deep_Learning_in_6_Weeks llSourcell的课程slides，包括CNN、RNN和GAN。  相关博客 关于计算机视觉（随谈）</description>
     </item>
     
     <item>
@@ -501,7 +521,8 @@ Fire Detection with Computer Vision</description>
       <pubDate>Sun, 26 Nov 2017 19:57:10 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E5%A2%9E%E5%BC%BA%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
-      <description>相关教程 train-robot-arm-from-scratch 莫烦的新教程，关于深度学习的，可以fork一下</description>
+      <description> 相关教程 train-robot-arm-from-scratch 莫烦的新教程，关于深度学习的，可以fork一下
+相关资料  ReinforcementZeroToAll  </description>
     </item>
     
     <item>
@@ -756,7 +777,7 @@ DEEP PREDICTIVE CODING NETWORKS FOR VIDEO PREDICTION AND UNSUPERVISED LEARNING �
 MoCoGAN: Decomposing Motion and Content for Video Generation
 从论文Generating Videos with Scene Dynamics跟踪到，该论文中提到的论文都可以好好研究，与视频预测相关。
 e-lab references 这是e-lab实验室对相关研究的文章收集，可以作为无监督学习预测视频的参考。
- Unsupervised Learning of Video Representations using LSTMs 代码 Learning to Generate Long-term Future via Hierarchical Prediction 项目主页 代码 Parallel multi-dimensional LSTM, with application to fast biomedical volumetric image segmentation 论文 和ConvLSTM一样拓展了FCLSTM从而捕捉了空间-时间关系。 Decomposing Motion and Content for Natural Video Sequence Prediction 主页 代码 Learning to linearize under uncertainty Action-conditional video prediction using deep networks in atari games Unsupervised learning of visual structure using predictive generative networks Two-stream convolutional networks for action recognition in videos 双流视频预测 Convolutional Two-Stream Network Fusion for Video Action Recognition 主页 代码 双流视频预测，同时编码空间和时间信息（光流） TS-LSTM and Temporal-Inception: Exploiting Spatiotemporal Dynamics for Activity Recognition Long-term Temporal Convolutions for Action Recognition 论文 主页 代码 Video Scene Parsing with Predictive Feature Learning Semantic Video Segmentation by Gated Recurrent Flow Propagation 论文  相关IDEA  能否使用安卓的视频数据+传感器数据来进行数据集的收集，并且同时进行视频预测和语义分割。 能使用视频预测技术对NBA篮球的动作进行预测   相关开源项目  e-lab e-lab实验室中实现了很多视频预测的模型，大部分使用torch或者pytorch。Welcome to e-Lab!</description>
+ Unsupervised Learning of Video Representations using LSTMs 代码 Learning to Generate Long-term Future via Hierarchical Prediction 项目主页 代码 Parallel multi-dimensional LSTM, with application to fast biomedical volumetric image segmentation 论文 和ConvLSTM一样拓展了FCLSTM从而捕捉了空间-时间关系。 Decomposing Motion and Content for Natural Video Sequence Prediction 主页 代码 Learning to linearize under uncertainty Action-conditional video prediction using deep networks in atari games Unsupervised learning of visual structure using predictive generative networks Two-stream convolutional networks for action recognition in videos 双流视频预测 Convolutional Two-Stream Network Fusion for Video Action Recognition 主页 代码 双流视频预测，同时编码空间和时间信息（光流） TS-LSTM and Temporal-Inception: Exploiting Spatiotemporal Dynamics for Activity Recognition Long-term Temporal Convolutions for Action Recognition 论文 主页 代码 Video Scene Parsing with Predictive Feature Learning Semantic Video Segmentation by Gated Recurrent Flow Propagation 论文 Stochastic Adversarial Video Prediction 论文 使用对抗生成网络进行视频预测。  相关IDEA  能否使用安卓的视频数据+传感器数据来进行数据集的收集，并且同时进行视频预测和语义分割。 能使用视频预测技术对NBA篮球的动作进行预测   相关开源项目  e-lab e-lab实验室中实现了很多视频预测的模型，大部分使用torch或者pytorch。Welcome to e-Lab!</description>
     </item>
     
     <item>
@@ -768,7 +789,9 @@ e-lab references 这是e-lab实验室对相关研究的文章收集，可以作�
       <description>论文资料 Generative Adversarial Networks Conditional Generative Adversarial Nets Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks NIPS 2016 Tutorial: Generative Adversarial Networks
 博客资料 Generative Adversarial Networks (GANs) in 50 lines of code (PyTorch) 4.6 GAN 生成对抗网络 (PyTorch tutorial 神经网络 教学)
 AdversarialNetsPapers 这是github上搜集的关于对抗生成网络相关论文
-代码相关 pytorch-generative-adversarial-networks</description>
+代码相关 pytorch-generative-adversarial-networks
+ganhacks nips2016中关于训练GAN网络的资料。
+the-gan-zoo 其中包括了大量的GAN。</description>
     </item>
     
     <item>
@@ -830,7 +853,8 @@ Semantic Segmentation for Aerial / Satellite Images with Convolutional Neural Ne
 slides
 videos
 AI Conference Deadlines AI Conference Deadlines
-计算机视觉相关同行  赵恒爽 The Chinese University of Hong Kong(CUHK)博士生，从PSPNet网络检索到，同时在valse中有他分享的视频资源，主要讲解PSPNet和CINet。valse 赵恒爽分享  Computer Vision领域相关资料 [Computer Vision Literature Review]()https://github.com/jinwchoi/computer_vision_literature_review
+计算机视觉相关同行  赵恒爽 The Chinese University of Hong Kong(CUHK)博士生，从PSPNet网络检索到，同时在valse中有他分享的视频资源，主要讲解PSPNet和CINet。valse 赵恒爽分享  Computer Vision领域相关资料 Computer Vision Literature Review
+daily-paper-computer-vision
 视频 Andrew Rabinovich - Then, Now, Tomorrow: Neural Networks for Computer Vision 这是UberNet的作者对神经网络在当时，现在，将来的一个oral，其中主要介绍了将来会将不同的task结合训练，也就是所谓的Multi Task Learning。
 Deep Learning for Computer Vision Andrej Karpathy对深度学习的发展做了一个简单的介绍，从Hubel到LeCun到AlexNet到VGGNet到GoogleNet到ResNet等等，同时也提到了卷积、池化de等等
 Recurrent Neural Networks (RNN) and Long Short-Term Memory (LSTM) 通过一个例子将LSTM的原理深入浅出得讲解，从RNN开始，然后引入select gates，ignore gates和forget gates到最后的LSTM网络。
@@ -888,9 +912,12 @@ PSPNet caffe
       <description>论文资料 ENet: A Deep Neural Network Architecture for Real-Time Semantic Segmentation
 博客资料 【CV-Semantic Segmentation】ENet阅读笔记 简单描述整体论文内容，推荐指数**
 语义分割论文-ENet 对ENet中相关内容的提取，推荐指数***
+Exploring semantic segmentation with deep learning
 代码实现 ENet-caffe
 ENet pytorch model.py
 ENet-training torch
+PyTorch-ENet: My introduction to PyTorch
+PyTorch-ENet 对应的pytorch实现。
 ENet-caffe运行相关 # 测试分割结果 python scripts/test_segmentation.py --model prototxts/enet_deploy_final.prototxt --weights enet_weights_zoo/cityscapes_weights.caffemodel --colours scripts/cityscapes19.png --input_image example_image/munich_000000_000019_leftImg8bit.png --out_dir example_image/  测试结果
 相关描述 ENet网络运行速度较快，在I5处理器上每帧运行时间为2s左右，在Titan X上可以达到实时分割的效果。</description>
     </item>
@@ -924,7 +951,8 @@ class UNetEnc(nn.Module): def __init__(self, in_channels, features, out_channels
       <pubDate>Sun, 05 Nov 2017 10:19:27 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%BB%9C%E5%88%9D%E5%A7%8B%E5%8C%96trick/</guid>
-      <description>网络权重初始化 Initialization of deep networks</description>
+      <description> 网络权重初始化 TODO
+ Initialization of deep networks nninit pytorch中常见的初始化策略，包括uniform、normal、constant、xavier_uniform、xavier_normal、kaiming_uniform、kaiming_normal、orthogonal、sparse等。  </description>
     </item>
     
     <item>
@@ -1072,14 +1100,14 @@ openssl相关 openssl version -a sudo add-apt-repository ppa:0k53d-karl-f830m/op
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>综述 主要参考这篇博客Semantic Segmentation using Fully Convolutional Networks over the years其中列举了从FCN网络开始的最新的语义分割网络的相关论文和实现。这篇博客同时提供了一篇综述A Review on Deep Learning Techniques Applied to Semantic Segmentation，下面是列举的实现的文中语义分割的pytorch代码实现： pytorch-semseg
+Exploring semantic segmentation with deep learning 这篇文章也列举了很多语义分割网络结构。
 SemanticSegmentation_DL 这是github上一个科研作者一直更新的语义分割相关论文列表，可以参考。 推荐指数 *****
 下文中也有分类好的语义分割网络论文 2015-10-09-segmentation.md
 A Review on Deep Learning Techniques Applied to Semantic Segmentation 该论文主要介绍了基于深度学习进行语义分割的相关方法，具有一定的参考价值，下面是翻译的文章。
 综述论文翻译：A Review on Deep Learning Techniques Applied to Semantic Segmentation
 Computer Vision for Autonomous Vehicles: Problems, Datasets and State-of-the-Art Kitti提供的综述文章，其中一章语义分割可以细看
 Kitti 综述文章可视化导航
-该文章主要是在空中使用深度学习进行语义分割 Deep Learning for Semantic Segmentation of Aerial Imagery
-SemanticSegmentation_DL 该博客整理了相关语义分割的论文和代码。</description>
+该文章主要是在空中使用深度学习进行语义分割 Deep Learning for Semantic Segmentation of Aerial Imagery</description>
     </item>
     
     <item>
@@ -1133,7 +1161,8 @@ numpy.hstack</description>
 sklearn中的数据预处理 机器学习中大部分数据在训练前都需要进行数据预处理，比如原图像像素值为0-255，需要将像素转换为-1-1便于分类器训练等等。
 StandardScaler StandardScaler
 关于使用sklearn进行数据预处理 —— 归一化/标准化/正则化
-使用joblib持久化sklearn模型 from sklearn.externals import joblib # 序列化操作 joblib.dump(model,&#39;model.pkl&#39;) # 反序列化操作 model = joblib.load(&#39;model.pkl&#39;)  使用joblib持久化sklearn模型</description>
+使用joblib持久化sklearn模型 from sklearn.externals import joblib # 序列化操作 joblib.dump(model,&#39;model.pkl&#39;) # 反序列化操作 model = joblib.load(&#39;model.pkl&#39;)  使用joblib持久化sklearn模型
+可视化 yellowbrick sklearn可视化。</description>
     </item>
     
     <item>
@@ -1467,7 +1496,7 @@ Mac怎么更改文件夹图标，Mac更改文件夹图标
 mac下terminal主题 osx-terminal-themes
 mac下terminal删除mail mail delete * q
 How do I delete all Terminal mail?
-mac下修改截图 sudo su cd /System/Library/CoreServices/SystemUIServer.app/Contents/Resources/English.lpro plutil -convert xml1 ScreenCapture.strings vim ScreenCapture.strings 按照下述进行修改然后转换为原格式即可 plutil -convert binary1 ScreenCapture.</description>
+mac下修改截图 sudo su cd /System/Library/CoreServices/SystemUIServer.app/Contents/Resources/English.lproj plutil -convert xml1 ScreenCapture.strings vim ScreenCapture.strings 按照下述进行修改然后转换为原格式即可 plutil -convert binary1 ScreenCapture.</description>
     </item>
     
     <item>
@@ -1476,7 +1505,8 @@ mac下修改截图 sudo su cd /System/Library/CoreServices/SystemUIServer.app/Co
       <pubDate>Wed, 25 Oct 2017 00:06:46 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/%E6%97%A5%E5%B8%B8%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E9%9B%86%E5%90%88/</guid>
-      <description>计算机视觉项目  Flipkart的视觉搜索和推荐系统 fk-visual-search Where to Buy It: Matching Street Clothing Photos in Online Shops  deep-learning-models使用keras的深度学习模型 deep-learning-models mx-maskrcnn使用MXNet实现的RCNN A MXNet implementation of Mask R-CNN mx-maskrcnn StackGAN-v2 StackGAN-v2  语音项目  以85％的准确度击败Google的音频reCaptcha uncaptcha  机器人SLAM项目  DynSLAM动态环境下的SLAM 动态环境下同步定位与映射SLAM硕士论文，分别重构静态环境和动态对象（如汽车）。 DynSLAM: Simultaneous Localization and Mapping in Dynamic Environments   加强学习  增强学习调研报告 Deep Reinforcement Learning survey  ML 面向机器学习的特征工程 翻译面向机器学习的特征工程这本书。</description>
+      <description>开源IDEA 记录自身开源相关IDEA。 - 做一个用深度学习进行pdf paper重命名的工具。
+计算机视觉项目  Flipkart的视觉搜索和推荐系统 fk-visual-search Where to Buy It: Matching Street Clothing Photos in Online Shops  deep-learning-models使用keras的深度学习模型 deep-learning-models mx-maskrcnn使用MXNet实现的RCNN A MXNet implementation of Mask R-CNN mx-maskrcnn StackGAN-v2 StackGAN-v2  语音项目  以85％的准确度击败Google的音频reCaptcha uncaptcha  机器人SLAM项目  DynSLAM动态环境下的SLAM 动态环境下同步定位与映射SLAM硕士论文，分别重构静态环境和动态对象（如汽车）。 DynSLAM: Simultaneous Localization and Mapping in Dynamic Environments   加强学习  增强学习调研报告 Deep Reinforcement Learning survey  ML 面向机器学习的特征工程 翻译面向机器学习的特征工程这本书。</description>
     </item>
     
     <item>
