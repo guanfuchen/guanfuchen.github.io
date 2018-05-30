@@ -121,6 +121,19 @@
 
 <hr />
 
+<h1 id="pip设置镜像">pip设置镜像</h1>
+
+<pre><code>vim ~/.pip/pip.conf
+[global]
+trusted-host =  mirrors.aliyun.com
+index-url = https://mirrors.aliyun.com/pypi/simple
+disable-pip-version-check = True # 取消pip更新提醒
+</code></pre>
+
+<p><a href="https://stackoverflow.com/questions/46288847/how-to-suppress-pip-upgrade-warning">How to suppress pip upgrade warning?</a></p>
+
+<hr />
+
 <h1 id="pip安装package">pip安装package</h1>
 
 <pre><code class="language-bash">pip install XXX
@@ -224,7 +237,7 @@ pip install XXX==
 
 </aside>
 
-<meta itemprop="wordCount" content="53">
+<meta itemprop="wordCount" content="74">
 <meta itemprop="datePublished" content="2017-10-25">
 <meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/pip%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
 

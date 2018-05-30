@@ -67,7 +67,7 @@ BaiduPCS-Go 好用的第三方下载工具，下载速度能达到1M多，应用
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description> 本仓库主要用来记录目标检测方面的相关技术。
-相关资料  YOLO_v3_tutorial_from_scratch YOLO实现教程（PyTorch），值得深入，How to implement a YOLO (v3) object detector from scratch in PyTorch: Part 1网页教程。 deformable-convolution-pytorch 使用了deformable卷积进行目标检测。  </description>
+相关资料  YOLO_v3_tutorial_from_scratch YOLO实现教程（PyTorch），值得深入，How to implement a YOLO (v3) object detector from scratch in PyTorch: Part 1网页教程。 deformable-convolution-pytorch 使用了deformable卷积进行目标检测。 PytorchSSD pytorch实现的SSD目标检测，pytorch-ssd。 mAP 目标检测度量mAP。  </description>
     </item>
     
     <item>
@@ -522,7 +522,7 @@ Fire Detection with Computer Vision</description>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E5%A2%9E%E5%BC%BA%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description> 相关教程 train-robot-arm-from-scratch 莫烦的新教程，关于深度学习的，可以fork一下
-相关资料  ReinforcementZeroToAll  </description>
+相关资料  ReinforcementZeroToAll ptan reinforcement learning toolkit for pytorch  </description>
     </item>
     
     <item>
@@ -918,6 +918,7 @@ ENet pytorch model.py
 ENet-training torch
 PyTorch-ENet: My introduction to PyTorch
 PyTorch-ENet 对应的pytorch实现。
+TensorFlow-ENet
 ENet-caffe运行相关 # 测试分割结果 python scripts/test_segmentation.py --model prototxts/enet_deploy_final.prototxt --weights enet_weights_zoo/cityscapes_weights.caffemodel --colours scripts/cityscapes19.png --input_image example_image/munich_000000_000019_leftImg8bit.png --out_dir example_image/  测试结果
 相关描述 ENet网络运行速度较快，在I5处理器上每帧运行时间为2s左右，在Titan X上可以达到实时分割的效果。</description>
     </item>
@@ -1404,6 +1405,7 @@ pycharm启动后总是不停的updating indices&amp;hellip;indexing?</descriptio
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/pip%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>pip设置代理 pip --proxy 127.0.0.1:8123 install requests  让 pip 走代理
+pip设置镜像 vim ~/.pip/pip.conf [global] trusted-host = mirrors.aliyun.com index-url = https://mirrors.aliyun.com/pypi/simple disable-pip-version-check = True # 取消pip更新提醒  How to suppress pip upgrade warning?
 pip安装package pip install XXX # 更新python package pip install XXX -U # 重新安装XXX pip install --upgrade --force-reinstall XXX # 搜索可安装的python package版本version pip install XXX==  Can I force pip to reinstall the current version?
 Python and pip, list all versions of a package that&amp;rsquo;s available?</description>
     </item>
@@ -1506,7 +1508,7 @@ mac下修改截图 sudo su cd /System/Library/CoreServices/SystemUIServer.app/Co
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/%E6%97%A5%E5%B8%B8%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E9%9B%86%E5%90%88/</guid>
       <description>开源IDEA 记录自身开源相关IDEA。 - 做一个用深度学习进行pdf paper重命名的工具。
-计算机视觉项目  Flipkart的视觉搜索和推荐系统 fk-visual-search Where to Buy It: Matching Street Clothing Photos in Online Shops  deep-learning-models使用keras的深度学习模型 deep-learning-models mx-maskrcnn使用MXNet实现的RCNN A MXNet implementation of Mask R-CNN mx-maskrcnn StackGAN-v2 StackGAN-v2  语音项目  以85％的准确度击败Google的音频reCaptcha uncaptcha  机器人SLAM项目  DynSLAM动态环境下的SLAM 动态环境下同步定位与映射SLAM硕士论文，分别重构静态环境和动态对象（如汽车）。 DynSLAM: Simultaneous Localization and Mapping in Dynamic Environments   加强学习  增强学习调研报告 Deep Reinforcement Learning survey  ML 面向机器学习的特征工程 翻译面向机器学习的特征工程这本书。</description>
+计算机视觉项目  Flipkart的视觉搜索和推荐系统 fk-visual-search Where to Buy It: Matching Street Clothing Photos in Online Shops  deep-learning-models使用keras的深度学习模型 deep-learning-models mx-maskrcnn使用MXNet实现的RCNN A MXNet implementation of Mask R-CNN mx-maskrcnn StackGAN-v2 StackGAN-v2 pytorch-cv 收集了Pose Estimation、Object Detection、Semantic Segmentation、Image Classification等领域的pytorch实现。  语音项目  以85％的准确度击败Google的音频reCaptcha uncaptcha  机器人SLAM项目  DynSLAM动态环境下的SLAM 动态环境下同步定位与映射SLAM硕士论文，分别重构静态环境和动态对象（如汽车）。 DynSLAM: Simultaneous Localization and Mapping in Dynamic Environments   加强学习  增强学习调研报告 Deep Reinforcement Learning survey  ML 面向机器学习的特征工程 翻译面向机器学习的特征工程这本书。</description>
     </item>
     
     <item>
