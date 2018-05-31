@@ -428,6 +428,24 @@ img_src_noise_rgb = (img_src_noise_rgb * 255).round().astype(np.uint8)
 
 <p><a href="https://github.com/bndr/pipreqs">pipreqs</a></p>
 
+<hr />
+
+<h1 id="python中gray到rgb">python中gray到rgb</h1>
+
+<pre><code class="language-python">img = np.array([[1, 2], [3, 4]])
+stacked_img = np.stack((img,)*3, -1)
+print(stacked_img)
+</code></pre>
+
+<p><a href="https://stackoverflow.com/questions/40119743/convert-a-grayscale-image-to-a-3-channel-image">convert a grayscale image to a 3-channel image</a></p>
+
+<hr />
+
+<h1 id="计算工程代码量">计算工程代码量</h1>
+
+<pre><code class="language-bash">find . -name '*.py' | xargs wc -l
+</code></pre>
+
         </article>
   </div>
 </section>
@@ -440,7 +458,7 @@ img_src_noise_rgb = (img_src_noise_rgb * 255).round().astype(np.uint8)
         <section id="datecount">
           <h4 id="date"> Thu Oct 26, 2017 </h4>
           <h5 id="wc"> 500 Words </h5>
-          <h5 id="readtime"> Read in about 2 Min </h5>
+          <h5 id="readtime"> Read in about 3 Min </h5>
         </section>
         <ul id="categories">
           
@@ -516,7 +534,7 @@ img_src_noise_rgb = (img_src_noise_rgb * 255).round().astype(np.uint8)
 
 </aside>
 
-<meta itemprop="wordCount" content="411">
+<meta itemprop="wordCount" content="440">
 <meta itemprop="datePublished" content="2017-10-26">
 <meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/python%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
 
