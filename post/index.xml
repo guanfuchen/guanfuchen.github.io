@@ -6,10 +6,19 @@
     <description>Recent content in Posts on import python</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 29 May 2018 11:42:27 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 05 Jun 2018 14:08:48 +0800</lastBuildDate>
     
 	<atom:link href="https://guanfuchen.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bash用法</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_05/bash%E7%94%A8%E6%B3%95/</link>
+      <pubDate>Tue, 05 Jun 2018 14:08:48 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_05/bash%E7%94%A8%E6%B3%95/</guid>
+      <description>判断文件夹是否存在 if [ ! -d &amp;quot;FOLD&amp;quot; ]; then echo &amp;quot;FOLD not exist&amp;quot; fi  shell bash判断文件或文件夹是否存在</description>
+    </item>
     
     <item>
       <title>Caffe资料</title>
