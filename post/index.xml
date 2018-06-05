@@ -67,7 +67,7 @@ BaiduPCS-Go 好用的第三方下载工具，下载速度能达到1M多，应用
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description> 本仓库主要用来记录目标检测方面的相关技术。
-相关资料  YOLO_v3_tutorial_from_scratch YOLO实现教程（PyTorch），值得深入，How to implement a YOLO (v3) object detector from scratch in PyTorch: Part 1网页教程。 deformable-convolution-pytorch 使用了deformable卷积进行目标检测。 PytorchSSD pytorch实现的SSD目标检测，pytorch-ssd。 mAP 目标检测度量mAP。 RefineDet Single-Shot Refinement Neural Network for Object Detection。 PeleeNet 移动设备上实时的目标检测网络。  博客资料  目标检测网络之 YOLOv3  </description>
+相关资料  YOLO_v3_tutorial_from_scratch YOLO实现教程（PyTorch），值得深入，How to implement a YOLO (v3) object detector from scratch in PyTorch: Part 1网页教程。 deformable-convolution-pytorch 使用了deformable卷积进行目标检测。 PytorchSSD pytorch实现的SSD目标检测，pytorch-ssd。 mAP 目标检测度量mAP。  </description>
     </item>
     
     <item>
@@ -738,7 +738,7 @@ How to stop the iPython notebook to run the command line, run only python code</
       <pubDate>Tue, 14 Nov 2017 00:56:20 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/spatial_transformer_networks%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
-      <description>论文资料 Spatial Transformer Networks 代码 tps_stn_pytorch Spatial Transformer Network的pytorch实现。
+      <description>论文资料 Spatial Transformer Networks 代码
 相关博客 Spatial Transformer Networks 阅读笔记</description>
     </item>
     
@@ -786,10 +786,12 @@ e-lab references 这是e-lab实验室对相关研究的文章收集，可以作�
       <pubDate>Mon, 13 Nov 2017 00:48:20 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E6%B7%B1%E5%B1%82%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</guid>
-      <description> 论文资料 Generative Adversarial Networks Conditional Generative Adversarial Nets Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks NIPS 2016 Tutorial: Generative Adversarial Networks
+      <description>论文资料 Generative Adversarial Networks Conditional Generative Adversarial Nets Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks NIPS 2016 Tutorial: Generative Adversarial Networks
 博客资料 Generative Adversarial Networks (GANs) in 50 lines of code (PyTorch) 4.6 GAN 生成对抗网络 (PyTorch tutorial 神经网络 教学)
 AdversarialNetsPapers 这是github上搜集的关于对抗生成网络相关论文
-代码相关  pytorch-generative-adversarial-networks ganhacks nips2016中关于训练GAN网络的资料。 the-gan-zoo 其中包括了大量的GAN。 Self-Attention-GAN SAGAN的pytorch实现。  </description>
+代码相关 pytorch-generative-adversarial-networks
+ganhacks nips2016中关于训练GAN网络的资料。
+the-gan-zoo 其中包括了大量的GAN。</description>
     </item>
     
     <item>
@@ -975,7 +977,6 @@ TFFRCNN
 py-faster-rcnn
 faster_rcnn_pytorch
 Faster RCNN anchor_target_layer.py
-simple-faster-rcnn-pytorch 简化版本的pytorch faster rcnn实现。
 RCNN RCNN算法的原理较为简单，首先通过Selective Search提取图像Bouding Box（大约2000个），输入CNN网络（AlexNet预先训练作为特征提取层类似与将候选区域做一个sift的特征提取），然后将fc7特征输入SVM分类器中训练21个label的结果。
 训练完 CNN 后，我们就可以通过它提取物体的特征了。这里使用 fc7 层输出的 4096 维的向量作为特征。
 对于每一类物体，我们要训练一个二分类的 SVM 模型，由 SVM 来判断矩形区域内是否有物体存在。SVM 的训练数据是 CNN 提取的特征向量，对应的 label 和上面一样分为 21 类。与 CNN 不同的是，我们重新调整了 IoU 的阈值。在 CNN 中，我们将 &amp;gt;= 0.</description>
@@ -1329,7 +1330,7 @@ web permissions &amp;quot;webRequest&amp;quot;, &amp;quot;webRequestBlocking&amp
       <pubDate>Thu, 26 Oct 2017 23:48:08 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/python%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
-      <description>书籍  full-speed-python  python导入 测试代码尽量在上层目录中
+      <description>python导入 测试代码尽量在上层目录中
 Python绝对导入
 How to fix “Attempted relative import in non-package” even with init.py
 How to fix “Attempted relative import in non-package” even with init.py
@@ -1338,7 +1339,8 @@ Python 的 import 机制
 feed更新 使用feedparser解析feed
 import feedparser feed_url = &amp;quot;http://export.arxiv.org/rss/cs.CV&amp;quot; feed_class = feedparser.parse(feed_url) print feed_class[&#39;feed&#39;][&#39;title&#39;] print len(feed_class[&#39;entries&#39;]) entry0 = feed_class[&#39;entries&#39;][0] # print(entry0.summary) print(entry0.title) # print(entry0.author) entry0.keys() entry0.title  feedparser
 showing list item in python
-Newsbeuter Newsbeuter是ubuntu下的一款feed阅读器，下述命令可以定时刷新feed，设置存储路径，阅览的文章可以存储在本地，默认存储路径为~，设置存储路径为~/GitHub/Quick/newsbeuter，首先在命令行中输入:set save-path ~/GitHub/Quick/newsbeuter，然后按下s即可存储文章。</description>
+Newsbeuter Newsbeuter是ubuntu下的一款feed阅读器，下述命令可以定时刷新feed，设置存储路径，阅览的文章可以存储在本地，默认存储路径为~，设置存储路径为~/GitHub/Quick/newsbeuter，首先在命令行中输入:set save-path ~/GitHub/Quick/newsbeuter，然后按下s即可存储文章。
+crontab -e /usr/bin/newsbeuter -x reload ls ~/.</description>
     </item>
     
     <item>
