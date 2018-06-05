@@ -1552,22 +1552,5 @@ git增加submodule git submodule add git@gitee.com:chenguanfu/markdown_blog_ws.g
 git clone git@gitee.com:chenguanfu/blog_ws.git cd blog_ws git submodule foreach git pull git submodule update git submodule update --init --recursive cd public &amp;amp;&amp;amp; git checkout master cd content/post/markdown_blog_ws/ &amp;amp;&amp;amp; git checkout master cd guanfuchen.github.io &amp;amp;&amp;amp; git checkout master  Git Submodule 用法筆記</description>
     </item>
     
-    <item>
-      <title></title>
-      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_05/ros%E5%AF%BC%E8%88%AA%E8%B0%83%E8%AF%95/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_05/ros%E5%AF%BC%E8%88%AA%E8%B0%83%E8%AF%95/</guid>
-      <description>ROS导航调试 明天试试blank_map.yaml和blank_map.pgm，参考blank_map.yaml
-提供了p3at机器人的footprint。
-footprint: [ [0.3302, -0.0508], [0.254, -0.0508], [0.254, -0.254], [-0.254, -0.254], [-0.254, 0.254], [0.254, 0.254], [0.254, 0.0508], [0.3302, 0.0508] ]  BaseLocalPlanner配置 base_local_planner_params.yaml，修改xy_goal_tolerance和yaw_goal_tolerance容忍度，降低目标精度。
-全局配置 全局配置时静态图为true，也就是地图不随着改变。
-plugins: - {name: static_layer, type: &amp;quot;costmap_2d::StaticLayer&amp;quot;} - {name: obstacle_layer, type: &amp;quot;costmap_2d::VoxelLayer&amp;quot;} - {name: inflation_layer, type: &amp;quot;costmap_2d::InflationLayer&amp;quot;}  本地配置 本地配置时静态图为false，也就是地图随着局部更新。 降低分辨率
-# 增加静态层和障碍物层 plugins: - {name: static_layer, type: &amp;quot;costmap_2d::StaticLayer&amp;quot;} - {name: obstacle_layer, type: &amp;quot;costmap_2d::ObstacleLayer&amp;quot;}  图像相关 由于图像数据量较大，同时ROS网络带宽问题，考虑增加多个路由（无人机和无人车自身WI-FI不稳定）级联。
-ManagingPlugins image_transport中相关插件。
-rqt_image_view 针对rqt的插件image_view。
-rqt_gui rosrun rqt_gui rqt_gui可视化rqt相关参数以及image_view等其他插件接口。</description>
-    </item>
-    
   </channel>
 </rss>
