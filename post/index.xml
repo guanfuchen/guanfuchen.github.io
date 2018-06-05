@@ -6,10 +6,21 @@
     <description>Recent content in Posts on import python</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 05 Jun 2018 14:08:48 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 05 Jun 2018 14:39:49 +0800</lastBuildDate>
     
 	<atom:link href="https://guanfuchen.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Magick用法</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_05/magick%E7%94%A8%E6%B3%95/</link>
+      <pubDate>Tue, 05 Jun 2018 14:39:49 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_05/magick%E7%94%A8%E6%B3%95/</guid>
+      <description>概述 记录Image Magick常用命令。
+SVG to PNG convert tmp.svg tmp.png  缩放图片 convert hugo.png -resize 20% hugo.png  参考资料 How to convert a SVG to a PNG with Image Magick?
+ImageMagick v6 Examples</description>
+    </item>
     
     <item>
       <title>Bash用法</title>

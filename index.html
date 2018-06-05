@@ -108,6 +108,21 @@
     
         <article class="post">
     <header>
+      <h2><a href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_05/magick%E7%94%A8%E6%B3%95/">Magick用法 </a> </h2>
+      <div class="post-meta">Tue, Jun 5, 2018 -  Read in 1 Min </div>
+    </header>
+
+    概述 记录Image Magick常用命令。
+SVG to PNG convert tmp.svg tmp.png  缩放图片 convert hugo.png -resize 20% hugo.png  参考资料 How to convert a SVG to a PNG with Image Magick?
+ImageMagick v6 Examples
+    <footer>
+        <a href='https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_05/magick%E7%94%A8%E6%B3%95/'><nobr>Read more →</nobr></a>
+    </footer>
+</article>
+
+    
+        <article class="post">
+    <header>
       <h2><a href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_05/bash%E7%94%A8%E6%B3%95/">Bash用法 </a> </h2>
       <div class="post-meta">Tue, Jun 5, 2018 -  Read in 1 Min </div>
     </header>
@@ -237,27 +252,6 @@ git config --global user.name &quot;Name&quot; git config --global user.email &q
 创建与合并分支 git checkout -b dev创建dev分支，在dev分支中修改ReadMe.
     <footer>
         <a href='https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/git_usage/'><nobr>Read more →</nobr></a>
-    </footer>
-</article>
-
-    
-        <article class="post">
-    <header>
-      <h2><a href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/gpu%E5%B9%B6%E8%A1%8C%E8%BF%90%E7%AE%97/">gpu并行运算 </a> </h2>
-      <div class="post-meta">Sun, Apr 8, 2018 -  Read in 1 Min </div>
-    </header>
-
-    GPU 第五节课 名词解释  FLOPS 每秒钟能运行的浮点运算 GLOPS 每秒钟能运行的G浮点运算 TLOPS 每秒钟能运行的T浮点运算  为什么需要GPU  应用的需求越来越高 计算机技术由应用驱动 Application Driven  应用场景，石油勘探、气象预报
-GPU（Graphic Processing Unit）
-GPU是一个异构多处理器芯片，包含shader、工作分配器、输入、输出等。
-执行单元（Execute shader），包含数据、ALU和执行上下文（Execution Context）
-CPU类型的内核，数据缓存、OOO、分支预测器、存储器的管理单元。
-通过CPU思考如何加速： - 思路一 精简（slimming down），去除某些组件加快运行速度。 - 思路二 2个核，同时执行2个程序片元，同时并行。4个核，同时执行4个程序片元。以此类推，增加核的数目，同时执行的程序片元也进行增加。指令流共享，多个程序片元共享指令流。 - 思路三 增加ALU、SIMD，增加的ALU可以单指令处理多数据。
-经过以上的思路，改进的处理单元。
-16核8ALU可以完成128个程序片元同时执行。
-停滞问题的解决思路： - 大量的独立片元相互切换 - 通过片元切换来掩藏延迟
-    <footer>
-        <a href='https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_04/gpu%E5%B9%B6%E8%A1%8C%E8%BF%90%E7%AE%97/'><nobr>Read more →</nobr></a>
     </footer>
 </article>
 
