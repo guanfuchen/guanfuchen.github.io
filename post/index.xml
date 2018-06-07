@@ -6,10 +6,20 @@
     <description>Recent content in Posts on import python</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 05 Jun 2018 14:39:49 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 06 Jun 2018 09:41:05 +0800</lastBuildDate>
     
 	<atom:link href="https://guanfuchen.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>深度估计</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_06/%E6%B7%B1%E5%BA%A6%E4%BC%B0%E8%AE%A1/</link>
+      <pubDate>Wed, 06 Jun 2018 09:41:05 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_06/%E6%B7%B1%E5%BA%A6%E4%BC%B0%E8%AE%A1/</guid>
+      <description> 参考资料 收集使用deep learning方法来估计深度的论文。
+ PSMNet Pyramid Stereo Matching Network (CVPR2018)  </description>
+    </item>
     
     <item>
       <title>Magick用法</title>
@@ -77,7 +87,9 @@ BaiduPCS-Go 好用的第三方下载工具，下载速度能达到1M多，应用
       <pubDate>Fri, 18 May 2018 16:06:12 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E9%A3%8E%E6%A0%BC%E8%BF%81%E7%A7%BB%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
-      <description>相关资料 pytorch-fast-neural-style-mobilenetV2 使用mobilenet进行风格迁移。</description>
+      <description> 相关资料  pytorch-fast-neural-style-mobilenetV2 使用mobilenet进行风格迁移。
+ Style_Migration_For_Artistic_Font_With_CNN 艺术字风格迁移。
+  </description>
     </item>
     
     <item>
@@ -86,8 +98,8 @@ BaiduPCS-Go 好用的第三方下载工具，下载速度能达到1M多，应用
       <pubDate>Fri, 18 May 2018 16:00:30 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
-      <description> 本仓库主要用来记录目标检测方面的相关技术。
-相关资料  YOLO_v3_tutorial_from_scratch YOLO实现教程（PyTorch），值得深入，How to implement a YOLO (v3) object detector from scratch in PyTorch: Part 1网页教程。 deformable-convolution-pytorch 使用了deformable卷积进行目标检测。 PytorchSSD pytorch实现的SSD目标检测，pytorch-ssd。 mAP 目标检测度量mAP。 RefineDet Single-Shot Refinement Neural Network for Object Detection。 PeleeNet 移动设备上实时的目标检测网络。 darknet_ros darknet在ROS中的包装。  博客资料  目标检测网络之 YOLOv3  </description>
+      <description>本仓库主要用来记录目标检测方面的相关技术。
+相关资料  YOLO_v3_tutorial_from_scratch YOLO实现教程（PyTorch），值得深入，How to implement a YOLO (v3) object detector from scratch in PyTorch: Part 1网页教程。 deformable-convolution-pytorch 使用了deformable卷积进行目标检测。 PytorchSSD pytorch实现的SSD目标检测，pytorch-ssd。 mAP 目标检测度量mAP。 RefineDet Single-Shot Refinement Neural Network for Object Detection。 PeleeNet 移动设备上实时的目标检测网络。 darknet_ros darknet在ROS中的包装。 A Review of Object Detection Based on Convolutional Neural Network综述类文章，比较浅显。 SSD: Single Shot MultiBox Detector  博客资料  目标检测网络之 YOLOv3 目标检测算法总结 非常好的一篇目标检测算法综述博客。 弄懂目标检测（Faster R-CNN）？看这篇就够了！ 对于faster RCNN中的每一个结构的讲解十分详细。 Object detection: an overview in the age of Deep Learning 一系列博客，很好地介绍了目标检测的历史。  FPN  fpn.</description>
     </item>
     
     <item>
@@ -875,7 +887,14 @@ Semantic Segmentation for Aerial / Satellite Images with Convolutional Neural Ne
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/sppnet%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
       <description>论文资料 Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition
-博客资料 SPPNet-引入空间金字塔池化改进RCNN</description>
+sppnet-pytorch pytorch对sppnet空间金字塔池化的实现。
+SPP_net
+keras-spp
+博客资料 SPPNet-引入空间金字塔池化改进RCNN
+空间金字塔池化(Spatial Pyramid Pooling, SPP)原理和代码实现(Pytorch)
+利用pytorch复现spatial pyramid pooling层
+Upside and downside of Spatial Pyramid Pooling
+使用 Spatial Pyramid Pooling 让 CNN 接受可变尺寸的图像</description>
     </item>
     
     <item>
