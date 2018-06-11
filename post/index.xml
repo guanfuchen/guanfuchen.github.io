@@ -6,10 +6,41 @@
     <description>Recent content in Posts on import python</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 06 Jun 2018 09:41:05 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 08 Jun 2018 15:18:46 +0800</lastBuildDate>
     
 	<atom:link href="https://guanfuchen.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>YOLO总结</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_06/yolo%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Fri, 08 Jun 2018 15:18:46 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_06/yolo%E6%80%BB%E7%BB%93/</guid>
+      <description>概述 将目标检测算法YOLO详细进行解析。
+相关资料  YAD2K YAD2K: Yet Another Darknet 2 Keras YOLO-pytorch  darkent darknet是作者开源的YOLO实现框架，纯CPP实现。
+mac下安装 无opencv直接make即可，使用opencv可视化结果需编译opencv=1（Makefile）。
+brew install opencv@2 # 修改Makefile中 #LDFLAGS+= `pkg-config --libs opencv` #COMMON+= `pkg-config --cflags opencv` LDFLAGS+= `pkg-config --libs /usr/local/opt/opencv@2/lib/pkgconfig/opencv.pc` COMMON+= `pkg-config --cflags /usr/local/opt/opencv@2/lib/pkgconfig/opencv.pc`  Cant make the YOLO when OPENCV=1 Ubuntu 17.10</description>
+    </item>
+    
+    <item>
+      <title>行人检测</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_06/%E8%A1%8C%E4%BA%BA%E6%A3%80%E6%B5%8B/</link>
+      <pubDate>Fri, 08 Jun 2018 14:47:27 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_06/%E8%A1%8C%E4%BA%BA%E6%A3%80%E6%B5%8B/</guid>
+      <description> 概述 行人检测作为目标检测的一个speical case，在研究中也有大量具体的方法，本文主要收集常用的行人检测数据集和方法。
+相关资料  Ten Years of Pedestrian Detection, What Have We Learned，10年行人检测方面的综述类文章。  博客资料  2015-10-27-pedestrian-detection.md  </description>
+    </item>
+    
+    <item>
+      <title>电子书收集</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_06/%E7%94%B5%E5%AD%90%E4%B9%A6%E6%94%B6%E9%9B%86/</link>
+      <pubDate>Thu, 07 Jun 2018 23:03:07 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_06/%E7%94%B5%E5%AD%90%E4%B9%A6%E6%94%B6%E9%9B%86/</guid>
+      <description> 编程相关  studyFiles 其中包括git，go，js，node，python等等编程电子书。  </description>
+    </item>
     
     <item>
       <title>深度估计</title>
@@ -42,6 +73,17 @@ ImageMagick v6 Examples</description>
     </item>
     
     <item>
+      <title>Pyqt用法</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_05/pyqt%E7%94%A8%E6%B3%95/</link>
+      <pubDate>Thu, 31 May 2018 10:15:29 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_05/pyqt%E7%94%A8%E6%B3%95/</guid>
+      <description> qt 在qt和qtcreator下载qtcreator。
+mac安装qt Mac下Qt的环境搭建
+参考资料  qtawesome pyqt中图形化的字体。  </description>
+    </item>
+    
+    <item>
       <title>Caffe资料</title>
       <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_05/caffe%E8%B5%84%E6%96%99/</link>
       <pubDate>Tue, 29 May 2018 11:42:27 +0800</pubDate>
@@ -68,7 +110,7 @@ ImageMagick v6 Examples</description>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_05/%E8%A7%86%E8%A7%89%E9%87%8C%E7%A8%8B%E8%AE%A1/</guid>
       <description> 概述 添加视觉里程计相关知识整理。
-相关资料  monoVO-python一个用python实现单目视觉里程计的项目。  </description>
+相关资料  monoVO-python一个用python实现单目视觉里程计的项目。 Joint-VO-SF  </description>
     </item>
     
     <item>
@@ -99,7 +141,7 @@ BaiduPCS-Go 好用的第三方下载工具，下载速度能达到1M多，应用
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>本仓库主要用来记录目标检测方面的相关技术。
-相关资料  YOLO_v3_tutorial_from_scratch YOLO实现教程（PyTorch），值得深入，How to implement a YOLO (v3) object detector from scratch in PyTorch: Part 1网页教程。 deformable-convolution-pytorch 使用了deformable卷积进行目标检测。 PytorchSSD pytorch实现的SSD目标检测，pytorch-ssd。 mAP 目标检测度量mAP。 RefineDet Single-Shot Refinement Neural Network for Object Detection。 PeleeNet 移动设备上实时的目标检测网络。 darknet_ros darknet在ROS中的包装。 A Review of Object Detection Based on Convolutional Neural Network综述类文章，比较浅显。 SSD: Single Shot MultiBox Detector  博客资料  目标检测网络之 YOLOv3 目标检测算法总结 非常好的一篇目标检测算法综述博客。 弄懂目标检测（Faster R-CNN）？看这篇就够了！ 对于faster RCNN中的每一个结构的讲解十分详细。 Object detection: an overview in the age of Deep Learning 一系列博客，很好地介绍了目标检测的历史。  FPN  fpn.</description>
+相关资料  YOLO_v3_tutorial_from_scratch YOLO实现教程（PyTorch），值得深入，How to implement a YOLO (v3) object detector from scratch in PyTorch: Part 1网页教程。 deformable-convolution-pytorch 使用了deformable卷积进行目标检测。 PytorchSSD pytorch实现的SSD目标检测，pytorch-ssd。 mAP 目标检测度量mAP。 RefineDet Single-Shot Refinement Neural Network for Object Detection。 PeleeNet 移动设备上实时的目标检测网络。 darknet_ros darknet在ROS中的包装。 A Review of Object Detection Based on Convolutional Neural Network综述类文章，比较浅显。 SSD: Single Shot MultiBox Detector Focal Loss for Dense Object Detection 对应代码keras-retinanet  博客资料  目标检测网络之 YOLOv3 目标检测算法总结 非常好的一篇目标检测算法综述博客。 弄懂目标检测（Faster R-CNN）？看这篇就够了！ 对于faster RCNN中的每一个结构的讲解十分详细。 Object detection: an overview in the age of Deep Learning 一系列博客，很好地介绍了目标检测的历史。 YOLO升级版：YOLOv2和YOLO9000解析  FPN  fpn.</description>
     </item>
     
     <item>
@@ -838,7 +880,7 @@ e-lab references 这是e-lab实验室对相关研究的文章收集，可以作�
       <description> 论文资料 Generative Adversarial Networks Conditional Generative Adversarial Nets Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks NIPS 2016 Tutorial: Generative Adversarial Networks
 博客资料 Generative Adversarial Networks (GANs) in 50 lines of code (PyTorch) 4.6 GAN 生成对抗网络 (PyTorch tutorial 神经网络 教学)
 AdversarialNetsPapers 这是github上搜集的关于对抗生成网络相关论文
-代码相关  pytorch-generative-adversarial-networks ganhacks nips2016中关于训练GAN网络的资料。 the-gan-zoo 其中包括了大量的GAN。 Self-Attention-GAN SAGAN的pytorch实现。  </description>
+代码相关  pytorch-generative-adversarial-networks ganhacks nips2016中关于训练GAN网络的资料。 the-gan-zoo 其中包括了大量的GAN。 Self-Attention-GAN SAGAN的pytorch实现。 keras-adversarial 使用keras实现的常用keras生成对抗网络。  </description>
     </item>
     
     <item>
@@ -1227,7 +1269,8 @@ StandardScaler StandardScaler
       <pubDate>Tue, 31 Oct 2017 14:25:50 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E9%9B%86%E5%8F%91%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
-      <description>视频预测数据集 video-understanding-dataset 视频理解数据集收集，可以参考部分
+      <description>概述 本仓库主要收集计算机视觉相关领域的常用数据集。 - CV Datasets on the web cvpapers提供的分类好的常用计算机视觉数据集网站，包括detection，classification，recognition等等。 - ComputerVisionDatasets 作者提供的常用数据集；
+视频预测数据集 video-understanding-dataset 视频理解数据集收集，可以参考部分
 Moving MNIST Moving MNIST
 Moving MNIST包含了10000序列，每一个序列在64x64帧中包含了20个长度显示2个数字运动。
 UCF101 UCF101 - Action Recognition Data Set
@@ -1511,7 +1554,7 @@ pytorch-examples
 吐血整理：PyTorch项目代码与资源列表 | 资源下载
 GAN入门实践（二）&amp;ndash;Pytorch实现
 DiscoGAN-pytorch
-the-incredible-pytorch 本仓库收集了相关的pytorch项目</description>
+the-incredible-pytorch 本仓库收集了相关的pytorch项目。</description>
     </item>
     
     <item>
@@ -1562,7 +1605,7 @@ mac下修改截图 sudo su cd /System/Library/CoreServices/SystemUIServer.app/Co
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/%E6%97%A5%E5%B8%B8%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E9%9B%86%E5%90%88/</guid>
       <description>开源IDEA 记录自身开源相关IDEA。 - 做一个用深度学习进行pdf paper重命名的工具。
-计算机视觉项目  Flipkart的视觉搜索和推荐系统 fk-visual-search Where to Buy It: Matching Street Clothing Photos in Online Shops  deep-learning-models使用keras的深度学习模型 deep-learning-models mx-maskrcnn使用MXNet实现的RCNN A MXNet implementation of Mask R-CNN mx-maskrcnn StackGAN-v2 StackGAN-v2 pytorch-cv 收集了Pose Estimation、Object Detection、Semantic Segmentation、Image Classification等领域的pytorch实现。  语音项目  以85％的准确度击败Google的音频reCaptcha uncaptcha  机器人SLAM项目  DynSLAM动态环境下的SLAM 动态环境下同步定位与映射SLAM硕士论文，分别重构静态环境和动态对象（如汽车）。 DynSLAM: Simultaneous Localization and Mapping in Dynamic Environments   加强学习  增强学习调研报告 Deep Reinforcement Learning survey  ML 面向机器学习的特征工程 翻译面向机器学习的特征工程这本书。</description>
+计算机视觉项目  Flipkart的视觉搜索和推荐系统 fk-visual-search Where to Buy It: Matching Street Clothing Photos in Online Shops  deep-learning-models使用keras的深度学习模型 deep-learning-models mx-maskrcnn使用MXNet实现的RCNN A MXNet implementation of Mask R-CNN mx-maskrcnn StackGAN-v2 StackGAN-v2 pytorch-cv 收集了Pose Estimation、Object Detection、Semantic Segmentation、Image Classification等领域的pytorch实现。 captcha_break 验证码识别。  语音项目  以85％的准确度击败Google的音频reCaptcha uncaptcha  机器人SLAM项目  DynSLAM动态环境下的SLAM 动态环境下同步定位与映射SLAM硕士论文，分别重构静态环境和动态对象（如汽车）。 DynSLAM: Simultaneous Localization and Mapping in Dynamic Environments   加强学习  增强学习调研报告 Deep Reinforcement Learning survey  ML 面向机器学习的特征工程 翻译面向机器学习的特征工程这本书。</description>
     </item>
     
     <item>
