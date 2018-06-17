@@ -116,6 +116,7 @@
 
 <ul>
 <li><a href="https://github.com/joaoventura/full-speed-python">full-speed-python</a></li>
+<li><a href="https://github.com/faif/python-patterns">python-patterns</a> A collection of design patterns/idioms in Python使用Python注意的涉及模式。</li>
 </ul>
 
 <hr />
@@ -466,6 +467,37 @@ except e:
 
 <p><a href="http://www.runoob.com/python/python-exceptions.html">Python 异常处理</a></p>
 
+<hr />
+
+<h1 id="时序相关工具包">时序相关工具包</h1>
+
+<p><a href="https://github.com/MaxBenChrist/awesome_time_series_in_python">awesome_time_series_in_python</a></p>
+
+<hr />
+
+<h1 id="随机生成颜色">随机生成颜色</h1>
+
+<pre><code>import random
+
+def colors(n):
+  ret = []
+  r = int(random.random() * 256)
+  g = int(random.random() * 256)
+  b = int(random.random() * 256)
+  step = 256 / n
+  for i in range(n):
+    r += step
+    g += step
+    b += step
+    r = int(r) % 256
+    g = int(g) % 256
+    b = int(b) % 256
+    ret.append((r,g,b))
+  return ret
+</code></pre>
+
+<p><a href="https://www.quora.com/How-do-I-generate-n-visually-distinct-RGB-colours-in-Python">How do I generate n visually distinct RGB colours in Python?</a></p>
+
         </article>
   </div>
 </section>
@@ -477,7 +509,7 @@ except e:
     <div>
         <section id="datecount">
           <h4 id="date"> Thu Oct 26, 2017 </h4>
-          <h5 id="wc"> 500 Words </h5>
+          <h5 id="wc"> 600 Words </h5>
           <h5 id="readtime"> Read in about 3 Min </h5>
         </section>
         <ul id="categories">
@@ -554,7 +586,7 @@ except e:
 
 </aside>
 
-<meta itemprop="wordCount" content="450">
+<meta itemprop="wordCount" content="530">
 <meta itemprop="datePublished" content="2017-10-26">
 <meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/python%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
 

@@ -6,10 +6,19 @@
     <description>Recent content on import python</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Jun 2018 15:18:46 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 16 Jun 2018 09:38:23 +0800</lastBuildDate>
     
 	<atom:link href="https://guanfuchen.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SSD目标检测</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_06/ssd%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/</link>
+      <pubDate>Sat, 16 Jun 2018 09:38:23 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_06/ssd%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/</guid>
+      <description> 相关资料  Understanding SSD MultiBox — Real-Time Object Detection In Deep Learning 没有涉及数学原理解释SSD目标检测。 caffe SSD 原论文使用的代码。 SSD-Tensorflow 使用Tensorflow实现的SSD算法。 ssd_eccv2016_slide.pdf 解释SSD工作的演示PPT。  </description>
+    </item>
     
     <item>
       <title>YOLO总结</title>
@@ -89,8 +98,8 @@ mac安装qt Mac下Qt的环境搭建
       <pubDate>Tue, 29 May 2018 11:42:27 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_05/caffe%E8%B5%84%E6%96%99/</guid>
-      <description> 相关资料 记录caffe相关学习和模型。
- caffe-model  </description>
+      <description>安装 MacOSX brew install -vd snappy leveldb gflags glog szip lmdb # need the homebrew science source for OpenCV and hdf5 brew tap homebrew/science brew install hdf5 opencv # with Python pycaffe needs dependencies built from source brew install --build-from-source --with-python -vd protobuf brew install --build-from-source -vd boost boost-python # without Python the usual installation suffices brew install protobuf boost  OS X Installation
+以下是常见问题： - fatal error: &amp;lsquo;numpy/arrayobject.h&amp;rsquo; file not found，这是因为无法找到np路径</description>
     </item>
     
     <item>
@@ -104,13 +113,13 @@ mac安装qt Mac下Qt的环境搭建
     </item>
     
     <item>
-      <title>视觉里程计</title>
+      <title>视觉里程计和SLAM</title>
       <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_05/%E8%A7%86%E8%A7%89%E9%87%8C%E7%A8%8B%E8%AE%A1/</link>
       <pubDate>Thu, 24 May 2018 14:01:14 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_05/%E8%A7%86%E8%A7%89%E9%87%8C%E7%A8%8B%E8%AE%A1/</guid>
-      <description> 概述 添加视觉里程计相关知识整理。
-相关资料  monoVO-python一个用python实现单目视觉里程计的项目。 Joint-VO-SF  </description>
+      <description> 概述 添加视觉里程计和slam相关知识整理。
+相关资料  monoVO-python一个用python实现单目视觉里程计的项目。 Joint-VO-SF slam-python 用python学习rgbd-slam系列. limo 激光单目视觉里程计。 MVision 其中有大量SLAM相关的资料。  </description>
     </item>
     
     <item>
@@ -129,9 +138,7 @@ BaiduPCS-Go 好用的第三方下载工具，下载速度能达到1M多，应用
       <pubDate>Fri, 18 May 2018 16:06:12 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E9%A3%8E%E6%A0%BC%E8%BF%81%E7%A7%BB%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
-      <description> 相关资料  pytorch-fast-neural-style-mobilenetV2 使用mobilenet进行风格迁移。
- Style_Migration_For_Artistic_Font_With_CNN 艺术字风格迁移。
-  </description>
+      <description> 相关资料  pytorch-fast-neural-style-mobilenetV2 使用mobilenet进行风格迁移。 Style_Migration_For_Artistic_Font_With_CNN 艺术字风格迁移。 Deep Photo Style Transfer和对应代码deep-photo-styletransfer Neural-Style-Transfer-Papers 收集了大量风格迁移的论文，可以作为综述参考。  </description>
     </item>
     
     <item>
@@ -141,7 +148,7 @@ BaiduPCS-Go 好用的第三方下载工具，下载速度能达到1M多，应用
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>本仓库主要用来记录目标检测方面的相关技术。
-相关资料  YOLO_v3_tutorial_from_scratch YOLO实现教程（PyTorch），值得深入，How to implement a YOLO (v3) object detector from scratch in PyTorch: Part 1网页教程。 deformable-convolution-pytorch 使用了deformable卷积进行目标检测。 PytorchSSD pytorch实现的SSD目标检测，pytorch-ssd。 mAP 目标检测度量mAP。 RefineDet Single-Shot Refinement Neural Network for Object Detection。 PeleeNet 移动设备上实时的目标检测网络。 darknet_ros darknet在ROS中的包装。 A Review of Object Detection Based on Convolutional Neural Network综述类文章，比较浅显。 SSD: Single Shot MultiBox Detector Focal Loss for Dense Object Detection 对应代码keras-retinanet  博客资料  目标检测网络之 YOLOv3 目标检测算法总结 非常好的一篇目标检测算法综述博客。 弄懂目标检测（Faster R-CNN）？看这篇就够了！ 对于faster RCNN中的每一个结构的讲解十分详细。 Object detection: an overview in the age of Deep Learning 一系列博客，很好地介绍了目标检测的历史。 YOLO升级版：YOLOv2和YOLO9000解析  FPN  fpn.</description>
+相关资料  YOLO_v3_tutorial_from_scratch YOLO实现教程（PyTorch），值得深入，How to implement a YOLO (v3) object detector from scratch in PyTorch: Part 1网页教程。 deformable-convolution-pytorch 使用了deformable卷积进行目标检测。 PytorchSSD pytorch实现的SSD目标检测，pytorch-ssd。 mAP 目标检测度量mAP。 RefineDet Single-Shot Refinement Neural Network for Object Detection。 PeleeNet 移动设备上实时的目标检测网络。 darknet_ros darknet在ROS中的包装。 A Review of Object Detection Based on Convolutional Neural Network综述类文章，比较浅显。 SSD: Single Shot MultiBox Detector Focal Loss for Dense Object Detection 对应代码keras-retinanet，pytorch-retinanet Speed/accuracy trade-offs for modern convolutional object detectors Focal Loss for Dense Object Detection以及对应的代码keras-retinanet Relation Networks for Object Detection 微软亚研院目标检测文章和对应代码Relation-Networks-for-Object-Detection。  博客资料  目标检测网络之 YOLOv3 目标检测算法总结 非常好的一篇目标检测算法综述博客。 弄懂目标检测（Faster R-CNN）？看这篇就够了！ 对于faster RCNN中的每一个结构的讲解十分详细。 Object detection: an overview in the age of Deep Learning 一系列博客，很好地介绍了目标检测的历史。 YOLO升级版：YOLOv2和YOLO9000解析 Understanding SSD MultiBox — Real-Time Object Detection In Deep Learning Object-Detection-Development 作者收集了很多目标检测方面的论文资料。 整理读研期间用过、改进过、写过的代码 作者主要专注于目标检测，可以参考。 Deep-learning-object-detection-links.</description>
     </item>
     
     <item>
@@ -335,7 +342,7 @@ rqt_gui rosrun rqt_gui rqt_gui可视化rqt相关参数以及image_view等其他�
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_03/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/</guid>
       <description>阅读书籍 Data-Science-books 收集了部分关于深度学习的书籍
 Coursera 上有哪些课程值得推荐？ 其中关于机器学习课程的值得一看，尤其是数学知识相关。
- 《深度学习》，Bengio和Goodfellow DeepLearningBookQA_cn 那些深度学习《面试》你可能需要知道的 deepLearningBook-Notes相关读书笔记 斯坦福机器学习课程 《统计学习方法》，李航 lihang_book_algorithm 作者使用python实现了所有的算法 li_hang 李航书籍的PPT static_study 《统计学习方法》的读书笔记 统计学习方法：习题笔记 习题的笔记 返回主页 刘建平Pinard 博主整理了很多书上的内容，可以作为复习参考 《神经网络与深度学习》，吴岸城 《神经网络与深度学习》讲义 《神经网络与深度学习》讲义（Notes on Artificial Neural Networks and Deep Learning）从感知器到多层感知器到卷积网络 《机器学习》，周志华 机器学习：习题笔记（一） 提供了课后习题的相关思路 《斯坦福大学2014机器学习课程笔记》，Andrew Ng主讲，黄海广整理笔记 《凸优化》为什么凸优化这么重要？ 機器學習中的優化理論，需要學習哪些資料才能看懂？ 凸优化书籍推荐？ 《Neural Networks and Learning Machines》 機器學習基石上 (Machine Learning Foundations)&amp;mdash;Mathematical Foundations 机器学习资料大汇总 机器学习学习大纲 对于机器学习中常用的模型和数学知识进行了罗列，其中的知识介绍接近李航的统计学系方法，很有系统性，推荐。 分布式 ecosystem 使用分布式技术来搭建深度学习框架。 高等微積分 高等微積分 台大老师讲解的微积分，非常棒。 《Machine Learning in Action》书籍阅读，可以在apachecn中的MachineLearning书籍中找到。 Learn_Deep_Learning_in_6_Weeks llSourcell的课程slides，包括CNN、RNN和GAN。  相关博客 关于计算机视觉（随谈）</description>
+ 《深度学习》，Bengio和Goodfellow DeepLearningBookQA_cn 那些深度学习《面试》你可能需要知道的 deepLearningBook-Notes相关读书笔记 斯坦福机器学习课程 《统计学习方法》，李航 lihang_book_algorithm 作者使用python实现了所有的算法 li_hang 李航书籍的PPT static_study 《统计学习方法》的读书笔记 统计学习方法：习题笔记 习题的笔记 返回主页 刘建平Pinard 博主整理了很多书上的内容，可以作为复习参考 《神经网络与深度学习》，吴岸城 《神经网络与深度学习》讲义 《神经网络与深度学习》讲义（Notes on Artificial Neural Networks and Deep Learning）从感知器到多层感知器到卷积网络 《机器学习》，周志华 机器学习：习题笔记（一） 提供了课后习题的相关思路 《斯坦福大学2014机器学习课程笔记》，Andrew Ng主讲，黄海广整理笔记 《凸优化》为什么凸优化这么重要？ 機器學習中的優化理論，需要學習哪些資料才能看懂？ 凸优化书籍推荐？ 《Neural Networks and Learning Machines》 機器學習基石上 (Machine Learning Foundations)&amp;mdash;Mathematical Foundations 机器学习资料大汇总 机器学习学习大纲 对于机器学习中常用的模型和数学知识进行了罗列，其中的知识介绍接近李航的统计学系方法，很有系统性，推荐。 分布式 ecosystem 使用分布式技术来搭建深度学习框架。 高等微積分 高等微積分 台大老师讲解的微积分，非常棒。 《Machine Learning in Action》书籍阅读，可以在apachecn中的MachineLearning书籍中找到。 Learn_Deep_Learning_in_6_Weeks llSourcell的课程slides，包括CNN、RNN和GAN。 Theories of Deep Learning (STATS 385) deep learning背后的数学原理，deeplearning-math.</description>
     </item>
     
     <item>
@@ -565,7 +572,12 @@ Convolutional-Neural-Network-Compression-Survey
       <pubDate>Tue, 28 Nov 2017 11:34:10 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/opencv%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E8%AF%B4%E6%98%8E/</guid>
-      <description>HSV颜色空间 相关文档示例 learning_2017_11/hsv_detection/hsv_color_show.ipynb
+      <description>安装 Mac安装 这里以2.4.9为例，安装过程中出现以下问题。
+  在MacOS10.10安装OpenCV2.4.10遇到的问题和解决办法
+Mac平台下openCV的搭建(Xcode + openCV 2.4.10)
+Build opencv 2.4.10 on Mac 10.10.3 failed
+fatal error: &amp;lsquo;QTKit/QTKit.h&amp;rsquo; file not found when I build OpenCV on mac
+HSV颜色空间 相关文档示例 learning_2017_11/hsv_detection/hsv_color_show.ipynb
 Fire Detection with Computer Vision</description>
     </item>
     
@@ -761,7 +773,7 @@ torch实现的RNN结构 ni = 1; nh = 8; no = 1; len = 3 h0 = nn.</description>
       <pubDate>Wed, 15 Nov 2017 16:44:14 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AF%BE%E7%A8%8B%E6%94%B6%E9%9B%86/</guid>
-      <description> 机器学习课程收集  Machine Learning: 2014-2015 该课程讲义和视频都有，非常适合学习，同时其中穿插了torch的编程，课程大作业也是使用torch来完成，可以用来作为torch的学习。 大作业示例代码 该代码仓库放置了大作业的代码，可以作为参考。 深度学习如何入门？ 知乎中也有提到这个课程 machine-learning udacity上整理的机器学习课程项目，其中有对应的中文版cn-machine-learning。 [TODO] ml-videos 下一个目标将这个清单中的视频基本过一遍。  机器学习书籍收集  Pattern Recognition and Machine Learning 机器学习领域必看书之一，提供python代码PRML，提供了notebook进行学习。  </description>
+      <description> 相关资料  3D-Machine-Learning 3D相关的机器学习资源。  机器学习课程收集  Machine Learning: 2014-2015 该课程讲义和视频都有，非常适合学习，同时其中穿插了torch的编程，课程大作业也是使用torch来完成，可以用来作为torch的学习。 大作业示例代码 该代码仓库放置了大作业的代码，可以作为参考。 深度学习如何入门？ 知乎中也有提到这个课程 machine-learning udacity上整理的机器学习课程项目，其中有对应的中文版cn-machine-learning。 [TODO] ml-videos 下一个目标将这个清单中的视频基本过一遍。  机器学习书籍收集  Pattern Recognition and Machine Learning 机器学习领域必看书之一，提供python代码PRML，提供了notebook进行学习。  </description>
     </item>
     
     <item>
@@ -877,8 +889,7 @@ e-lab references 这是e-lab实验室对相关研究的文章收集，可以作�
       <pubDate>Mon, 13 Nov 2017 00:48:20 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E6%B7%B1%E5%B1%82%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</guid>
-      <description> 论文资料 Generative Adversarial Networks Conditional Generative Adversarial Nets Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks NIPS 2016 Tutorial: Generative Adversarial Networks
-博客资料 Generative Adversarial Networks (GANs) in 50 lines of code (PyTorch) 4.6 GAN 生成对抗网络 (PyTorch tutorial 神经网络 教学)
+      <description> 论文资料  Generative Adversarial Networks Conditional Generative Adversarial Nets Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks NIPS 2016 Tutorial: Generative Adversarial Networks StarGAN: Unified Generative Adversarial Networks for Multi-Domain Image-to-Image Translation 同时pytorch代码StarGAN 实现了一定模版的图像转换（生气，开心和恐惧）  博客资料 Generative Adversarial Networks (GANs) in 50 lines of code (PyTorch) 4.6 GAN 生成对抗网络 (PyTorch tutorial 神经网络 教学)
 AdversarialNetsPapers 这是github上搜集的关于对抗生成网络相关论文
 代码相关  pytorch-generative-adversarial-networks ganhacks nips2016中关于训练GAN网络的资料。 the-gan-zoo 其中包括了大量的GAN。 Self-Attention-GAN SAGAN的pytorch实现。 keras-adversarial 使用keras实现的常用keras生成对抗网络。  </description>
     </item>
@@ -996,7 +1007,8 @@ fb.resnet.torch
 Pyramid Scene Parsing Network主页
 网络结构 结果示例 代码实现 pspnet-pytorch
 PSPNet caffe
-代码分析 import torch from torch import nn from torch.nn import functional as F import extractors class PSPModule(nn.Module): def __init__(self, features, out_features=1024, sizes=(1, 2, 3, 6)): super().__init__() # PSP池化模块，尺度为1,2,3,6分别为分辨率降低1,2,3,6 self.stages = [] self.stages = nn.ModuleList([self._make_stage(features, size) for size in sizes]) # 将concat所有的特征层，包括4种尺度的PSP以及原先的输入 self.bottleneck = nn.Conv2d(features * (len(sizes) + 1), out_features, kernel_size=1) self.relu = nn.ReLU() def _make_stage(self, features, size): prior = nn.</description>
+PSPNet-TF-Reproduce PSPNet的tensorflow实现。
+代码分析 import torch from torch import nn from torch.nn import functional as F import extractors class PSPModule(nn.Module): def __init__(self, features, out_features=1024, sizes=(1, 2, 3, 6)): super().__init__() # PSP池化模块，尺度为1,2,3,6分别为分辨率降低1,2,3,6 self.stages = [] self.stages = nn.ModuleList([self._make_stage(features, size) for size in sizes]) # 将concat所有的特征层，包括4种尺度的PSP以及原先的输入 self.bottleneck = nn.Conv2d(features * (len(sizes) + 1), out_features, kernel_size=1) self.relu = nn.</description>
     </item>
     
     <item>
@@ -1065,6 +1077,7 @@ class UNetEnc(nn.Module): def __init__(self, in_channels, features, out_channels
 深度学习论文笔记：Faster R-CNN
 深度学习实践经验：用Faster R-CNN训练行人检测数据集Caltech——准备工作
 fasterRCNN详解
+Object Detection and Classification using R-CNNs 非常需要深入了解的博客。
 代码实现 技术上将RPN网络和Fast R-CNN网络结合到了一起，将RPN获取到的proposal直接连到ROI pooling层，是一个CNN网络实现端到端目标检测的框架。
 RCNN的思路最为简单，首先使用Selective Search将图像的目标候选区域筛选出来，然后通过使用ImageNet网络将候选区域的特征提取出来并作为SVM的特征进行训练，分类得到是否是目标。
 边框回归（Bouding Box Regression）：是对RegionProposal进行纠正的线性回归算法，目的是为了让Region Proposal提取到的窗口与目标窗口（Ground Truth）更加吻合。
@@ -1074,9 +1087,9 @@ py-faster-rcnn
 faster_rcnn_pytorch
 Faster RCNN anchor_target_layer.py
 simple-faster-rcnn-pytorch 简化版本的pytorch faster rcnn实现。
+Faster R-CNN CPU环境搭建 在CPU下实现faster RCNN，对应的代码faster-rcnn-cpu Faster RCNN CPU模式下进行训练 py-faster-rcnn。
 RCNN RCNN算法的原理较为简单，首先通过Selective Search提取图像Bouding Box（大约2000个），输入CNN网络（AlexNet预先训练作为特征提取层类似与将候选区域做一个sift的特征提取），然后将fc7特征输入SVM分类器中训练21个label的结果。
-训练完 CNN 后，我们就可以通过它提取物体的特征了。这里使用 fc7 层输出的 4096 维的向量作为特征。
-对于每一类物体，我们要训练一个二分类的 SVM 模型，由 SVM 来判断矩形区域内是否有物体存在。SVM 的训练数据是 CNN 提取的特征向量，对应的 label 和上面一样分为 21 类。与 CNN 不同的是，我们重新调整了 IoU 的阈值。在 CNN 中，我们将 &amp;gt;= 0.</description>
+训练完 CNN 后，我们就可以通过它提取物体的特征了。这里使用 fc7 层输出的 4096 维的向量作为特征。</description>
     </item>
     
     <item>
@@ -1361,9 +1374,10 @@ jQuery.get()</description>
       <pubDate>Sun, 29 Oct 2017 11:38:05 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/brew%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
-      <description>brew搜索软件 brew search node
+      <description> brew搜索软件 brew search node
 leafnode node node@0.10 node@4 node@6 nodeenv llnode node-build node@0.12 node@5 nodebrew nodenv  MAC使用HOMEBREW安装指定版本NODEJS
-brew install node@6</description>
+brew install node@6
+brew缓存目录 $(brew --cache)  </description>
     </item>
     
     <item>
@@ -1428,7 +1442,7 @@ web permissions &amp;quot;webRequest&amp;quot;, &amp;quot;webRequestBlocking&amp
       <pubDate>Thu, 26 Oct 2017 23:48:08 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/python%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
-      <description>书籍  full-speed-python  python导入 测试代码尽量在上层目录中
+      <description>书籍  full-speed-python python-patterns A collection of design patterns/idioms in Python使用Python注意的涉及模式。  python导入 测试代码尽量在上层目录中
 Python绝对导入
 How to fix “Attempted relative import in non-package” even with init.py
 How to fix “Attempted relative import in non-package” even with init.py
@@ -1436,8 +1450,7 @@ Python 的 import 机制
 结构化您的工程
 feed更新 使用feedparser解析feed
 import feedparser feed_url = &amp;quot;http://export.arxiv.org/rss/cs.CV&amp;quot; feed_class = feedparser.parse(feed_url) print feed_class[&#39;feed&#39;][&#39;title&#39;] print len(feed_class[&#39;entries&#39;]) entry0 = feed_class[&#39;entries&#39;][0] # print(entry0.summary) print(entry0.title) # print(entry0.author) entry0.keys() entry0.title  feedparser
-showing list item in python
-Newsbeuter Newsbeuter是ubuntu下的一款feed阅读器，下述命令可以定时刷新feed，设置存储路径，阅览的文章可以存储在本地，默认存储路径为~，设置存储路径为~/GitHub/Quick/newsbeuter，首先在命令行中输入:set save-path ~/GitHub/Quick/newsbeuter，然后按下s即可存储文章。</description>
+showing list item in python</description>
     </item>
     
     <item>
@@ -1492,7 +1505,9 @@ sudo launchctl load /Library/LaunchAgents/local.privoxy.plist # 查看系统是�
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/pycharm%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>pycharm index慢 打开pycharm的工程，由于工程下有很多数据，pycharm默认会索引数据，导致工程打开较慢，此时需要将这些与代码无关的索引目录加入到工程的excluded目录下。
-pycharm启动后总是不停的updating indices&amp;hellip;indexing?</description>
+pycharm启动后总是不停的updating indices&amp;hellip;indexing?
+查看array pycharm调试debug只能查看array或者dataframe。
+Viewing as Array or DataFrame</description>
     </item>
     
     <item>
@@ -1543,7 +1558,7 @@ pytorch工程github
 PyTorch中文文档
 Welcome to PyTorch Tutorials
 pytorch-tutorial 这篇教程实现了很多经典模型，值得参考。
-莫烦PyTorch
+莫烦PyTorch，其公开了使用Tensorflow构建计算机视觉的教程仓库Tensorflow-Computer-Vision-Tutorial。
 PyTorch-Tutorial
 #2.3 Activation Function 激励函数 (PyTorch tutorial 神经网络 教学)
 pytorch-examples

@@ -112,12 +112,52 @@
 
 <hr />
 
+<h2 id="安装">安装</h2>
+
+<h3 id="macosx">MacOSX</h3>
+
+<pre><code>brew install -vd snappy leveldb gflags glog szip lmdb
+# need the homebrew science source for OpenCV and hdf5
+brew tap homebrew/science
+brew install hdf5 opencv
+# with Python pycaffe needs dependencies built from source
+brew install --build-from-source --with-python -vd protobuf
+brew install --build-from-source -vd boost boost-python
+# without Python the usual installation suffices
+brew install protobuf boost
+</code></pre>
+
+<p><a href="http://caffe.berkeleyvision.org/install_osx.html">OS X Installation</a></p>
+
+<p>以下是常见问题：
+- fatal error: &lsquo;numpy/arrayobject.h&rsquo; file not found，这是因为无法找到np路径</p>
+
+<pre><code>import numpy as np
+np.get_include()
+修改如下：
+# We need to be able to find Python.h and numpy/arrayobject.h.
+PYTHON_INCLUDE := /usr/include/python2.7 \
+/usr/local/lib/python2.7/site-packages/numpy/core/include
+</code></pre>
+
+<p><a href="https://blog.csdn.net/lkj345/article/details/51298586">Mac下配置Caffe的Python接口</a></p>
+
+<hr />
+
 <h2 id="相关资料">相关资料</h2>
 
 <p>记录caffe相关学习和模型。</p>
 
 <ul>
 <li><a href="https://github.com/soeaver/caffe-model">caffe-model</a></li>
+</ul>
+
+<hr />
+
+<h2 id="caffe2">caffe2</h2>
+
+<ul>
+<li><a href="https://github.com/leonardvandriel/caffe2_cpp_tutorial">caffe2_cpp_tutorial</a></li>
 </ul>
 
         </article>
@@ -208,7 +248,7 @@
 
 </aside>
 
-<meta itemprop="wordCount" content="3">
+<meta itemprop="wordCount" content="99">
 <meta itemprop="datePublished" content="2018-05-29">
 <meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_05/caffe%E8%B5%84%E6%96%99/">
 
