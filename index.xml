@@ -6,10 +6,22 @@
     <description>Recent content on import python</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 16 Jun 2018 09:38:23 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 19 Jun 2018 15:18:46 +0800</lastBuildDate>
     
 	<atom:link href="https://guanfuchen.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>专利撰写问题</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_06/%E4%B8%93%E5%88%A9%E6%92%B0%E5%86%99%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</link>
+      <pubDate>Tue, 19 Jun 2018 15:18:46 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_06/%E4%B8%93%E5%88%A9%E6%92%B0%E5%86%99%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</guid>
+      <description>专利撰写问题汇总及专利检索培训-1 问题汇总及案例分析 一、形式问题
+ 引用关系单一  新手建议从权利要求开始写，老手可能从一个问题的说明书开始，发散思路。
+ 权利要求书中的技术名词前后不一致。 权利要求书中中作出的修改，未在说明书摘要或说明书中修改。  问题汇总及案例分析 二、实质性问题 * 区分“非必要技术特征”和“必要技术特征” 主要是区分清楚什么是“非必要技术特征” * 定义技术名词时主要“上位概念”的应用 * 权利要求书中不要出现商业性宣传用语 * 数量范围、作用等技术标定的描述性词，作用特征模糊
+专利检索查新常识  IPC分类号 国际分类法是一种国际通用的管理和利用专利文献的工具  IPC分类号可以用来进行竞争对手分析。</description>
+    </item>
     
     <item>
       <title>SSD目标检测</title>
@@ -69,7 +81,9 @@ brew install opencv@2 # 修改Makefile中 #LDFLAGS+= `pkg-config --libs opencv` 
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_05/magick%E7%94%A8%E6%B3%95/</guid>
       <description>概述 记录Image Magick常用命令。
 SVG to PNG convert tmp.svg tmp.png  缩放图片 convert hugo.png -resize 20% hugo.png  参考资料 How to convert a SVG to a PNG with Image Magick?
-ImageMagick v6 Examples</description>
+ImageMagick v6 Examples
+pdf to gif mkdir fun-with-im cd fun-with-im curl -o slides.pdf http://phyletica.org/downloads/dpp-3-slides.pdf 将pdf转换为png convert -density 600 slides.pdf -strip -resize @1048576 PNG8:slide-%02d.png 然后将png转换为gif convert -layers OptimizePlus -delay 75 slide-0?.png slide-1[01234].png -delay 300 slide-1[567].png -loop 0 slides.gif  思路是将pdf转换为png，然后将png转换为gif。
+Converting PDF slides to animated GIFs and videos with ImageMagick</description>
     </item>
     
     <item>
@@ -148,7 +162,7 @@ BaiduPCS-Go 好用的第三方下载工具，下载速度能达到1M多，应用
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>本仓库主要用来记录目标检测方面的相关技术。
-相关资料  YOLO_v3_tutorial_from_scratch YOLO实现教程（PyTorch），值得深入，How to implement a YOLO (v3) object detector from scratch in PyTorch: Part 1网页教程。 deformable-convolution-pytorch 使用了deformable卷积进行目标检测。 PytorchSSD pytorch实现的SSD目标检测，pytorch-ssd。 mAP 目标检测度量mAP。 RefineDet Single-Shot Refinement Neural Network for Object Detection。 PeleeNet 移动设备上实时的目标检测网络。 darknet_ros darknet在ROS中的包装。 A Review of Object Detection Based on Convolutional Neural Network综述类文章，比较浅显。 SSD: Single Shot MultiBox Detector Focal Loss for Dense Object Detection 对应代码keras-retinanet，pytorch-retinanet Speed/accuracy trade-offs for modern convolutional object detectors Focal Loss for Dense Object Detection以及对应的代码keras-retinanet Relation Networks for Object Detection 微软亚研院目标检测文章和对应代码Relation-Networks-for-Object-Detection。  博客资料  目标检测网络之 YOLOv3 目标检测算法总结 非常好的一篇目标检测算法综述博客。 弄懂目标检测（Faster R-CNN）？看这篇就够了！ 对于faster RCNN中的每一个结构的讲解十分详细。 Object detection: an overview in the age of Deep Learning 一系列博客，很好地介绍了目标检测的历史。 YOLO升级版：YOLOv2和YOLO9000解析 Understanding SSD MultiBox — Real-Time Object Detection In Deep Learning Object-Detection-Development 作者收集了很多目标检测方面的论文资料。 整理读研期间用过、改进过、写过的代码 作者主要专注于目标检测，可以参考。 Deep-learning-object-detection-links.</description>
+相关资料  YOLO_v3_tutorial_from_scratch YOLO实现教程（PyTorch），值得深入，How to implement a YOLO (v3) object detector from scratch in PyTorch: Part 1网页教程。 deformable-convolution-pytorch 使用了deformable卷积进行目标检测。 PytorchSSD pytorch实现的SSD目标检测，pytorch-ssd。 mAP 目标检测度量mAP。 RefineDet Single-Shot Refinement Neural Network for Object Detection。 PeleeNet 移动设备上实时的目标检测网络。 darknet_ros darknet在ROS中的包装。 A Review of Object Detection Based on Convolutional Neural Network综述类文章，比较浅显。 SSD: Single Shot MultiBox Detector Focal Loss for Dense Object Detection 对应代码keras-retinanet，pytorch-retinanet Speed/accuracy trade-offs for modern convolutional object detectors Focal Loss for Dense Object Detection以及对应的代码keras-retinanet Relation Networks for Object Detection 微软亚研院目标检测文章和对应代码Relation-Networks-for-Object-Detection。 HistoryObjectRecognition 非常好的显示目标检测的pdf，The Modern History of Object Recognition。 CheXNet-with-localization Weakly Supervised Learning for Findings Detection in Medical Images。  博客资料  目标检测网络之 YOLOv3 目标检测算法总结 非常好的一篇目标检测算法综述博客。 弄懂目标检测（Faster R-CNN）？看这篇就够了！ 对于faster RCNN中的每一个结构的讲解十分详细。 Object detection: an overview in the age of Deep Learning 一系列博客，很好地介绍了目标检测的历史。 YOLO升级版：YOLOv2和YOLO9000解析 Understanding SSD MultiBox — Real-Time Object Detection In Deep Learning Object-Detection-Development 作者收集了很多目标检测方面的论文资料。 整理读研期间用过、改进过、写过的代码 作者主要专注于目标检测，可以参考。 Deep-learning-object-detection-links.</description>
     </item>
     
     <item>
