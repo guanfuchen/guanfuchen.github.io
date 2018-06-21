@@ -6,10 +6,19 @@
     <description>Recent content in Posts on import python</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 19 Jun 2018 15:18:46 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 20 Jun 2018 10:40:56 +0800</lastBuildDate>
     
 	<atom:link href="https://guanfuchen.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>图像检索</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_06/%E5%9B%BE%E5%83%8F%E6%A3%80%E7%B4%A2/</link>
+      <pubDate>Wed, 20 Jun 2018 10:40:56 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_06/%E5%9B%BE%E5%83%8F%E6%A3%80%E7%B4%A2/</guid>
+      <description> 相关资料  cnnimageretrieval-pytorch对应的项目主页CNN Image Retrieval  </description>
+    </item>
     
     <item>
       <title>专利撰写问题</title>
@@ -162,7 +171,7 @@ BaiduPCS-Go 好用的第三方下载工具，下载速度能达到1M多，应用
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>本仓库主要用来记录目标检测方面的相关技术。
-相关资料  YOLO_v3_tutorial_from_scratch YOLO实现教程（PyTorch），值得深入，How to implement a YOLO (v3) object detector from scratch in PyTorch: Part 1网页教程。 deformable-convolution-pytorch 使用了deformable卷积进行目标检测。 PytorchSSD pytorch实现的SSD目标检测，pytorch-ssd。 mAP 目标检测度量mAP。 RefineDet Single-Shot Refinement Neural Network for Object Detection。 PeleeNet 移动设备上实时的目标检测网络。 darknet_ros darknet在ROS中的包装。 A Review of Object Detection Based on Convolutional Neural Network综述类文章，比较浅显。 SSD: Single Shot MultiBox Detector Focal Loss for Dense Object Detection 对应代码keras-retinanet，pytorch-retinanet Speed/accuracy trade-offs for modern convolutional object detectors Focal Loss for Dense Object Detection以及对应的代码keras-retinanet Relation Networks for Object Detection 微软亚研院目标检测文章和对应代码Relation-Networks-for-Object-Detection。 HistoryObjectRecognition 非常好的显示目标检测的pdf，The Modern History of Object Recognition。 CheXNet-with-localization Weakly Supervised Learning for Findings Detection in Medical Images。  博客资料  目标检测网络之 YOLOv3 目标检测算法总结 非常好的一篇目标检测算法综述博客。 弄懂目标检测（Faster R-CNN）？看这篇就够了！ 对于faster RCNN中的每一个结构的讲解十分详细。 Object detection: an overview in the age of Deep Learning 一系列博客，很好地介绍了目标检测的历史。 YOLO升级版：YOLOv2和YOLO9000解析 Understanding SSD MultiBox — Real-Time Object Detection In Deep Learning Object-Detection-Development 作者收集了很多目标检测方面的论文资料。 整理读研期间用过、改进过、写过的代码 作者主要专注于目标检测，可以参考。 Deep-learning-object-detection-links.</description>
+相关资料  YOLO_v3_tutorial_from_scratch YOLO实现教程（PyTorch），值得深入，How to implement a YOLO (v3) object detector from scratch in PyTorch: Part 1网页教程。 deformable-convolution-pytorch 使用了deformable卷积进行目标检测。 PytorchSSD pytorch实现的SSD目标检测，pytorch-ssd。 mAP 目标检测度量mAP。 RefineDet Single-Shot Refinement Neural Network for Object Detection。 PeleeNet 移动设备上实时的目标检测网络。 Pelee移动设备上实时的目标检测系统，相关论文。 darknet_ros darknet在ROS中的包装。 A Review of Object Detection Based on Convolutional Neural Network综述类文章，比较浅显。 SSD: Single Shot MultiBox Detector Focal Loss for Dense Object Detection 对应代码keras-retinanet，pytorch-retinanet Speed/accuracy trade-offs for modern convolutional object detectors Focal Loss for Dense Object Detection以及对应的代码keras-retinanet Relation Networks for Object Detection 微软亚研院目标检测文章和对应代码Relation-Networks-for-Object-Detection。 HistoryObjectRecognition 非常好的显示目标检测的pdf，The Modern History of Object Recognition。 CheXNet-with-localization Weakly Supervised Learning for Findings Detection in Medical Images。  博客资料  目标检测网络之 YOLOv3 目标检测算法总结 非常好的一篇目标检测算法综述博客。 弄懂目标检测（Faster R-CNN）？看这篇就够了！ 对于faster RCNN中的每一个结构的讲解十分详细。 Object detection: an overview in the age of Deep Learning 一系列博客，很好地介绍了目标检测的历史。 YOLO升级版：YOLOv2和YOLO9000解析 Understanding SSD MultiBox — Real-Time Object Detection In Deep Learning Object-Detection-Development 作者收集了很多目标检测方面的论文资料。 整理读研期间用过、改进过、写过的代码 作者主要专注于目标检测，可以参考。 Deep-learning-object-detection-links.</description>
     </item>
     
     <item>
@@ -1297,6 +1306,7 @@ StandardScaler StandardScaler
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E9%9B%86%E5%8F%91%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>概述 本仓库主要收集计算机视觉相关领域的常用数据集。 - CV Datasets on the web cvpapers提供的分类好的常用计算机视觉数据集网站，包括detection，classification，recognition等等。 - ComputerVisionDatasets 作者提供的常用数据集；
+数据集增强方法 AutoAugment
 视频预测数据集 video-understanding-dataset 视频理解数据集收集，可以参考部分
 Moving MNIST Moving MNIST
 Moving MNIST包含了10000序列，每一个序列在64x64帧中包含了20个长度显示2个数字运动。
