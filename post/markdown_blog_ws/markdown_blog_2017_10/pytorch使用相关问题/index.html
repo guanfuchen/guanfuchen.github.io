@@ -118,6 +118,8 @@
 
 <pre><code class="language-bash">pip install http://download.pytorch.org/whl/cu75/torch-0.2.0.post3-cp27-cp27mu-manylinux1_x86_64.whl
 pip install torchvision
+使用conda安装
+conda install pytorch torchvision -c pytorch
 </code></pre>
 
 <p><a href="http://www.linuxidc.com/Linux/2017-05/143803.htm">Ubuntu 17.04 安装 pytorch and pytorchvision</a></p>
@@ -329,6 +331,35 @@ summary(your_model, input_size=(channels, H, W))
 
 <p><a href="https://github.com/pytorch/tnt">tnt</a></p>
 
+<hr />
+
+<h1 id="torch测试模型">torch测试模型</h1>
+
+<p>使用torch测试模型，需要使用<code>model.eval</code>，否则BatchNorm会导致奇怪的结果。</p>
+
+<p><a href="https://discuss.pytorch.org/t/torchvision-pretrained-resnet-was-not-trained-well/16869">Torchvision pretrained resnet was not trained well?</a></p>
+
+<hr />
+
+<h1 id="常见issue">常见issue</h1>
+
+<hr />
+
+<pre><code>model = model.double()
+</code></pre>
+
+<p><a href="https://stackoverflow.com/questions/49407303/runtimeerror-expected-object-of-type-torch-doubletensor-but-found-type-torch-fl">RuntimeError: Expected object of type torch.DoubleTensor but found type torch.FloatTensor for argument #2 &lsquo;weight&rsquo;</a></p>
+
+<p><a href="https://github.com/pytorch/pytorch/issues/2138">RuntimeError: expected Double tensor (got Float tensor)</a></p>
+
+<hr />
+
+<h1 id="high-level的训练神经网络插件ignite">high level的训练神经网络插件ignite</h1>
+
+<p>pytorch社区开源的ignite是帮助在pytorch中快速简洁的训练神经网络，设计模式类似于keras的ModelCheckPoint等等。</p>
+
+<p><a href="https://github.com/pytorch/ignite">ignite</a></p>
+
         </article>
   </div>
 </section>
@@ -341,7 +372,7 @@ summary(your_model, input_size=(channels, H, W))
         <section id="datecount">
           <h4 id="date"> Wed Oct 25, 2017 </h4>
           <h5 id="wc"> 300 Words </h5>
-          <h5 id="readtime"> Read in about 1 Min </h5>
+          <h5 id="readtime"> Read in about 2 Min </h5>
         </section>
         <ul id="categories">
           
@@ -417,7 +448,7 @@ summary(your_model, input_size=(channels, H, W))
 
 </aside>
 
-<meta itemprop="wordCount" content="211">
+<meta itemprop="wordCount" content="256">
 <meta itemprop="datePublished" content="2017-10-25">
 <meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/pytorch%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
 

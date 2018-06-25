@@ -171,7 +171,7 @@ BaiduPCS-Go 好用的第三方下载工具，下载速度能达到1M多，应用
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>本仓库主要用来记录目标检测方面的相关技术。
-相关资料  YOLO_v3_tutorial_from_scratch YOLO实现教程（PyTorch），值得深入，How to implement a YOLO (v3) object detector from scratch in PyTorch: Part 1网页教程。 deformable-convolution-pytorch 使用了deformable卷积进行目标检测。 PytorchSSD pytorch实现的SSD目标检测，pytorch-ssd。 mAP 目标检测度量mAP。 RefineDet Single-Shot Refinement Neural Network for Object Detection。 PeleeNet 移动设备上实时的目标检测网络。 Pelee移动设备上实时的目标检测系统，相关论文。 darknet_ros darknet在ROS中的包装。 A Review of Object Detection Based on Convolutional Neural Network综述类文章，比较浅显。 SSD: Single Shot MultiBox Detector Focal Loss for Dense Object Detection 对应代码keras-retinanet，pytorch-retinanet Speed/accuracy trade-offs for modern convolutional object detectors Focal Loss for Dense Object Detection以及对应的代码keras-retinanet Relation Networks for Object Detection 微软亚研院目标检测文章和对应代码Relation-Networks-for-Object-Detection。 HistoryObjectRecognition 非常好的显示目标检测的pdf，The Modern History of Object Recognition。 CheXNet-with-localization Weakly Supervised Learning for Findings Detection in Medical Images。  博客资料  目标检测网络之 YOLOv3 目标检测算法总结 非常好的一篇目标检测算法综述博客。 弄懂目标检测（Faster R-CNN）？看这篇就够了！ 对于faster RCNN中的每一个结构的讲解十分详细。 Object detection: an overview in the age of Deep Learning 一系列博客，很好地介绍了目标检测的历史。 YOLO升级版：YOLOv2和YOLO9000解析 Understanding SSD MultiBox — Real-Time Object Detection In Deep Learning Object-Detection-Development 作者收集了很多目标检测方面的论文资料。 整理读研期间用过、改进过、写过的代码 作者主要专注于目标检测，可以参考。 Deep-learning-object-detection-links.</description>
+相关资料  YOLO_v3_tutorial_from_scratch YOLO实现教程（PyTorch），值得深入，How to implement a YOLO (v3) object detector from scratch in PyTorch: Part 1网页教程。 deformable-convolution-pytorch 使用了deformable卷积进行目标检测。 PytorchSSD pytorch实现的SSD目标检测，pytorch-ssd。 mAP 目标检测度量mAP。 RefineDet Single-Shot Refinement Neural Network for Object Detection。 PeleeNet 移动设备上实时的目标检测网络。 Pelee移动设备上实时的目标检测系统，相关论文。 darknet_ros darknet在ROS中的包装。 A Review of Object Detection Based on Convolutional Neural Network综述类文章，比较浅显。 SSD: Single Shot MultiBox Detector Focal Loss for Dense Object Detection 对应代码keras-retinanet，pytorch-retinanet Speed/accuracy trade-offs for modern convolutional object detectors Focal Loss for Dense Object Detection以及对应的代码keras-retinanet Relation Networks for Object Detection 微软亚研院目标检测文章和对应代码Relation-Networks-for-Object-Detection。 HistoryObjectRecognition 非常好的显示目标检测的pdf，The Modern History of Object Recognition。 CheXNet-with-localization Weakly Supervised Learning for Findings Detection in Medical Images。 SNIPER: Efficient Multi-Scale Training 作者同时也提供了SSH人脸检测器的代码。 menpodetect menpo github组织上提供了大量人脸相关的工程，包含了AAM、SDM、CLM等等。  博客资料  目标检测网络之 YOLOv3 目标检测算法总结 非常好的一篇目标检测算法综述博客。 弄懂目标检测（Faster R-CNN）？看这篇就够了！ 对于faster RCNN中的每一个结构的讲解十分详细。 Object detection: an overview in the age of Deep Learning 一系列博客，很好地介绍了目标检测的历史。 YOLO升级版：YOLOv2和YOLO9000解析 Understanding SSD MultiBox — Real-Time Object Detection In Deep Learning Object-Detection-Development 作者收集了很多目标检测方面的论文资料。 整理读研期间用过、改进过、写过的代码 作者主要专注于目标检测，可以参考。 Deep-learning-object-detection-links.</description>
     </item>
     
     <item>
@@ -1568,7 +1568,7 @@ atom设置代理 # 设置socks5代理 apm config set http-proxy socks5:127.0.0.1
       <pubDate>Wed, 25 Oct 2017 12:50:09 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/pytorch%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
-      <description>pytorch安装 Ubuntu下安装 pip install http://download.pytorch.org/whl/cu75/torch-0.2.0.post3-cp27-cp27mu-manylinux1_x86_64.whl pip install torchvision  Ubuntu 17.04 安装 pytorch and pytorchvision
+      <description>pytorch安装 Ubuntu下安装 pip install http://download.pytorch.org/whl/cu75/torch-0.2.0.post3-cp27-cp27mu-manylinux1_x86_64.whl pip install torchvision 使用conda安装 conda install pytorch torchvision -c pytorch  Ubuntu 17.04 安装 pytorch and pytorchvision
 相关描述 PyTorch, a year in&amp;hellip;. pytorch发布一年的总结
 新手如何入门pytorch？ 知乎上关于pytorch的相关学习建议，非常有参考价值。
 PyTorch到底好用在哪里? 比较了PyTorch和TensorFlow的优缺点。
@@ -1588,12 +1588,7 @@ PyTorch-Tutorial
 pytorch-examples
 训练神经网络
 PyTorch 中文网
-PyTorch深度学习：60分钟入门(Translation)
-pytorch-examples
-吐血整理：PyTorch项目代码与资源列表 | 资源下载
-GAN入门实践（二）&amp;ndash;Pytorch实现
-DiscoGAN-pytorch
-the-incredible-pytorch 本仓库收集了相关的pytorch项目。</description>
+PyTorch深度学习：60分钟入门(Translation)</description>
     </item>
     
     <item>
