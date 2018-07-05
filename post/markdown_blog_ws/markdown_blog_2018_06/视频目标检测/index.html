@@ -15,16 +15,16 @@
  
 <meta property="og:type" content="article"/>
 <meta property="og:description" content=""/>
-<meta property="og:title" content="Docker : spf13.com"/>
+<meta property="og:title" content="视频目标检测 : spf13.com"/>
 <meta property="og:site_name" content="spf13 is Steve Francia"/>
 <meta property="og:image" content="" />
 <meta property="og:image:type" content="image/jpeg" />
 <meta property="og:image:width" content="" />
 <meta property="og:image:height" content="" />
-<meta property="og:url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_06/docker/">
+<meta property="og:url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_06/%E8%A7%86%E9%A2%91%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2018-07-04"/>
-<meta property="article:modified_time" content="2018-07-04"/>
+<meta property="article:published_time" content="2018-07-05"/>
+<meta property="article:modified_time" content="2018-07-05"/>
 
 
 
@@ -33,7 +33,7 @@
 <meta name="twitter:card" content="summary">
 
 <meta name="twitter:site" content="@spf13">
-<meta name="twitter:title" content="Docker : spf13.com">
+<meta name="twitter:title" content="视频目标检测 : spf13.com">
 <meta name="twitter:creator" content="@spf13">
 <meta name="twitter:description" content="">
 <meta name="twitter:image:src" content="">
@@ -42,8 +42,8 @@
 
 
     <base href="https://guanfuchen.github.io">
-    <title> Docker - spf13.com </title>
-    <link rel="canonical" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_06/docker/">
+    <title> 视频目标检测 - spf13.com </title>
+    <link rel="canonical" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_06/%E8%A7%86%E9%A2%91%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/">
     
 
     <link href='https://fonts.lug.ustc.edu.cn/css?family=Fjalla+One|Open+Sans:300' rel='stylesheet' type='text/css'>
@@ -105,18 +105,43 @@
 
 
 <section id="main">
-  <h1 itemprop="name" id="title">Docker</h1>
+  <h1 itemprop="name" id="title">视频目标检测</h1>
   <div>
         <article itemprop="articleBody" id="content">
            
 
 <hr />
 
-<h2 id="参考资料">参考资料</h2>
+<h2 id="相关资料">相关资料</h2>
 
 <ul>
-<li><a href="http://www.runoob.com/docker/docker-architecture.html">Docker 架构</a> 菜鸟上关于<a href="https://www.tutorialspoint.com/docker/index.htm">docker教程</a>的翻译。</li>
+<li><a href="https://arxiv.org/pdf/1604.02532.pdf">T-CNN: Tubelets with Convolutional Neural Networks for Object Detection from Videos</a> <a href="https://github.com/myfavouritekk/vdetlib">vdetlib相关代码</a></li>
+<li>Seq-NMS for Video Object Detection</li>
+<li>DeepID-Net: multi-stage and deformable deep convolutional neural networks for object detection</li>
+<li>Spatio-Temporal Closed-Loop Object Detection</li>
+<li>Object Detection in Videos with Tubelet Proposal Networks</li>
 </ul>
+
+<hr />
+
+<h2 id="相关博客">相关博客</h2>
+
+<ul>
+<li><a href="https://blog.csdn.net/linolzhang/article/details/74999644">基于视频的目标检测</a> T-CNN网络的中文文档。</li>
+</ul>
+
+<hr />
+
+<h2 id="相关描述">相关描述</h2>
+
+<blockquote>
+<p>目标检测在图像处理领域有着非常大的占比，过去两年，深度学习在Detection的持续发力，为这个领域带来了变革式的发展：一方面，从 RCNN 到 Fast RCNN，再到 Faster RCNN，不断刷新 mAP；</p>
+
+<p>另一方面，SSD、YOLO 则是将性能提高到一个非常高的帧率。
+对于视频来讲，相邻帧目标之间存在 明显的上下文关系，这种关系在技术上的表现就是 Tracking，研究过跟踪的童鞋都应该知道 经典算法 TLD，通过 Tracking-Learning-Detection 学习目标的帧间变换，并进行 Location。</p>
+
+<p>基于视频的目标检测 要解决的是同样的问题，因为 变形、遮挡、运动Blur 等因素导致目标 在 中间帧无法检测到（Appearence 发生很大变化），可以从下图看到，基于 still-image 的方法在某些帧的检测置信度很低。</p>
+</blockquote>
 
         </article>
   </div>
@@ -128,7 +153,7 @@
 
     <div>
         <section id="datecount">
-          <h4 id="date"> Wed Jul 4, 2018 </h4>
+          <h4 id="date"> Thu Jul 5, 2018 </h4>
           <h5 id="wc"> 100 Words </h5>
           <h5 id="readtime"> Read in about 1 Min </h5>
         </section>
@@ -142,10 +167,10 @@
 
     <div>
         <section id="prev">
-            &nbsp;<a class="previous" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_06/%E8%A7%86%E9%A2%91%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/"><i class="icon-arrow-left"></i> 视频目标检测</a><br>
+            &nbsp;
         </section>
         <section id="next">
-            &nbsp;<a class="next" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_06/detectron/">Detectron <i class="icon-arrow-right"></i></a>
+            &nbsp;<a class="next" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_06/docker/">Docker <i class="icon-arrow-right"></i></a>
         </section>
     </div>
 
@@ -206,9 +231,9 @@
 
 </aside>
 
-<meta itemprop="wordCount" content="4">
-<meta itemprop="datePublished" content="2018-07-04">
-<meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_06/docker/">
+<meta itemprop="wordCount" content="72">
+<meta itemprop="datePublished" content="2018-07-05">
+<meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_06/%E8%A7%86%E9%A2%91%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/">
 
 
 <aside id=comments>

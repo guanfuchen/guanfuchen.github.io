@@ -24,8 +24,8 @@
 <meta property="og:image:height" content="" />
 <meta property="og:url" content="https://guanfuchen.github.io/">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2018-07-04"/>
-<meta property="article:modified_time" content="2018-07-04"/>
+<meta property="article:published_time" content="2018-07-05"/>
+<meta property="article:modified_time" content="2018-07-05"/>
 
 
 
@@ -108,11 +108,26 @@
     
         <article class="post">
     <header>
+      <h2><a href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_06/%E8%A7%86%E9%A2%91%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/">视频目标检测 </a> </h2>
+      <div class="post-meta">Thu, Jul 5, 2018 -  Read in 1 Min </div>
+    </header>
+
+    相关资料  T-CNN: Tubelets with Convolutional Neural Networks for Object Detection from Videos vdetlib相关代码 Seq-NMS for Video Object Detection DeepID-Net: multi-stage and deformable deep convolutional neural networks for object detection Spatio-Temporal Closed-Loop Object Detection Object Detection in Videos with Tubelet Proposal Networks  相关博客  基于视频的目标检测 T-CNN网络的中文文档。  相关描述  目标检测在图像处理领域有着非常大的占比，过去两年，深度学习在Detection的持续发力，为这个领域带来了变革式的发展：一方面，从 RCNN 到 Fast RCNN，再到 Faster RCNN，不断刷新 mAP；
+另一方面，SSD、YOLO 则是将性能提高到一个非常高的帧率。 对于视频来讲，相邻帧目标之间存在 明显的上下文关系，这种关系在技术上的表现就是 Tracking，研究过跟踪的童鞋都应该知道 经典算法 TLD，通过 Tracking-Learning-Detection 学习目标的帧间变换，并进行 Location。
+基于视频的目标检测 要解决的是同样的问题，因为 变形、遮挡、运动Blur 等因素导致目标 在 中间帧无法检测到（Appearence 发生很大变化），可以从下图看到，基于 still-image 的方法在某些帧的检测置信度很低。
+    <footer>
+        <a href='https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_06/%E8%A7%86%E9%A2%91%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/'><nobr>Read more →</nobr></a>
+    </footer>
+</article>
+
+    
+        <article class="post">
+    <header>
       <h2><a href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_06/docker/">Docker </a> </h2>
       <div class="post-meta">Wed, Jul 4, 2018 -  Read in 1 Min </div>
     </header>
 
-     参考资料  Docker 架构 菜鸟上关于[d]ocker教程](https://www.tutorialspoint.com/docker/index.htm)的翻译。  
+     参考资料  Docker 架构 菜鸟上关于docker教程的翻译。  
     <footer>
         <a href='https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_06/docker/'><nobr>Read more →</nobr></a>
     </footer>
@@ -228,23 +243,6 @@ brew install opencv@2 # 修改Makefile中 #LDFLAGS+= `pkg-config --libs opencv` 
  PSMNet Pyramid Stereo Matching Network (CVPR2018)  
     <footer>
         <a href='https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_06/%E6%B7%B1%E5%BA%A6%E4%BC%B0%E8%AE%A1/'><nobr>Read more →</nobr></a>
-    </footer>
-</article>
-
-    
-        <article class="post">
-    <header>
-      <h2><a href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_05/magick%E7%94%A8%E6%B3%95/">Magick用法 </a> </h2>
-      <div class="post-meta">Tue, Jun 5, 2018 -  Read in 1 Min </div>
-    </header>
-
-    概述 记录Image Magick常用命令。
-SVG to PNG convert tmp.svg tmp.png  缩放图片 convert hugo.png -resize 20% hugo.png  参考资料 How to convert a SVG to a PNG with Image Magick?
-ImageMagick v6 Examples
-pdf to gif mkdir fun-with-im cd fun-with-im curl -o slides.pdf http://phyletica.org/downloads/dpp-3-slides.pdf 将pdf转换为png convert -density 600 slides.pdf -strip -resize @1048576 PNG8:slide-%02d.png 然后将png转换为gif convert -layers OptimizePlus -delay 75 slide-0?.png slide-1[01234].png -delay 300 slide-1[567].png -loop 0 slides.gif  思路是将pdf转换为png，然后将png转换为gif。
-Converting PDF slides to animated GIFs and videos with ImageMagick
-    <footer>
-        <a href='https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_05/magick%E7%94%A8%E6%B3%95/'><nobr>Read more →</nobr></a>
     </footer>
 </article>
 
