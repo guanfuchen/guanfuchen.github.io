@@ -68,7 +68,7 @@
       <pubDate>Sat, 16 Jun 2018 09:38:23 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_06/ssd%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/</guid>
-      <description> 相关资料  Understanding SSD MultiBox — Real-Time Object Detection In Deep Learning 没有涉及数学原理解释SSD目标检测。 caffe SSD 原论文使用的代码。 SSD-Tensorflow 使用Tensorflow实现的SSD算法。 ssd_eccv2016_slide.pdf 解释SSD工作的演示PPT。  </description>
+      <description> 相关资料  Understanding SSD MultiBox — Real-Time Object Detection In Deep Learning 没有涉及数学原理解释SSD目标检测。 caffe SSD 原论文使用的代码。 SSD-Tensorflow 使用Tensorflow实现的SSD算法。 ssd_eccv2016_slide.pdf 解释SSD工作的演示PPT。 ssds.pytorch ssd目标检测相关代码 avod-ssd 3d目标检测  </description>
     </item>
     
     <item>
@@ -78,7 +78,7 @@
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_06/yolo%E6%80%BB%E7%BB%93/</guid>
       <description>概述 将目标检测算法YOLO详细进行解析。
-相关资料  YAD2K YAD2K: Yet Another Darknet 2 Keras YOLO-pytorch  darkent darknet是作者开源的YOLO实现框架，纯CPP实现。
+相关资料  YAD2K YAD2K: Yet Another Darknet 2 Keras YOLO-pytorch py-caffe-yolo 使用caffe的python接口实现的yolo目标检测。  darkent darknet是作者开源的YOLO实现框架，纯CPP实现。
 mac下安装 无opencv直接make即可，使用opencv可视化结果需编译opencv=1（Makefile）。
 brew install opencv@2 # 修改Makefile中 #LDFLAGS+= `pkg-config --libs opencv` #COMMON+= `pkg-config --cflags opencv` LDFLAGS+= `pkg-config --libs /usr/local/opt/opencv@2/lib/pkgconfig/opencv.pc` COMMON+= `pkg-config --cflags /usr/local/opt/opencv@2/lib/pkgconfig/opencv.pc`  Cant make the YOLO when OPENCV=1 Ubuntu 17.10</description>
     </item>
@@ -201,7 +201,7 @@ BaiduPCS-Go 好用的第三方下载工具，下载速度能达到1M多，应用
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>本仓库主要用来记录目标检测方面的相关技术。
-相关资料  YOLO_v3_tutorial_from_scratch YOLO实现教程（PyTorch），值得深入，How to implement a YOLO (v3) object detector from scratch in PyTorch: Part 1网页教程。 deformable-convolution-pytorch 使用了deformable卷积进行目标检测。 PytorchSSD pytorch实现的SSD目标检测，pytorch-ssd。 mAP 目标检测度量mAP。 RefineDet Single-Shot Refinement Neural Network for Object Detection。 PeleeNet 移动设备上实时的目标检测网络。 Pelee移动设备上实时的目标检测系统，相关论文。 darknet_ros darknet在ROS中的包装。 A Review of Object Detection Based on Convolutional Neural Network综述类文章，比较浅显。 SSD: Single Shot MultiBox Detector Focal Loss for Dense Object Detection 对应代码keras-retinanet，pytorch-retinanet Speed/accuracy trade-offs for modern convolutional object detectors Focal Loss for Dense Object Detection以及对应的代码keras-retinanet Relation Networks for Object Detection 微软亚研院目标检测文章和对应代码Relation-Networks-for-Object-Detection。 HistoryObjectRecognition 非常好的显示目标检测的pdf，The Modern History of Object Recognition。 CheXNet-with-localization Weakly Supervised Learning for Findings Detection in Medical Images。 SNIPER: Efficient Multi-Scale Training 作者同时也提供了SSH人脸检测器的代码。 menpodetect menpo github组织上提供了大量人脸相关的工程，包含了AAM、SDM、CLM等等。 Dense Object Nets: Learning Dense Visual Object Descriptors By and For Robotic Manipulation，pytorch-dense-correspondence代码仓库 稠密的目标特征检测学习，可以用在机械臂上。  博客资料  目标检测网络之 YOLOv3 目标检测算法总结 非常好的一篇目标检测算法综述博客。 弄懂目标检测（Faster R-CNN）？看这篇就够了！ 对于faster RCNN中的每一个结构的讲解十分详细。 Object detection: an overview in the age of Deep Learning 一系列博客，很好地介绍了目标检测的历史。 YOLO升级版：YOLOv2和YOLO9000解析 Understanding SSD MultiBox — Real-Time Object Detection In Deep Learning Object-Detection-Development 作者收集了很多目标检测方面的论文资料。 整理读研期间用过、改进过、写过的代码 作者主要专注于目标检测，可以参考。 Deep-learning-object-detection-links.</description>
+相关资料  YOLO_v3_tutorial_from_scratch YOLO实现教程（PyTorch），值得深入，How to implement a YOLO (v3) object detector from scratch in PyTorch: Part 1网页教程。 deformable-convolution-pytorch 使用了deformable卷积进行目标检测。 PytorchSSD pytorch实现的SSD目标检测，pytorch-ssd。 mAP 目标检测度量mAP。 RefineDet Single-Shot Refinement Neural Network for Object Detection。 PeleeNet 移动设备上实时的目标检测网络。 Pelee移动设备上实时的目标检测系统，相关论文。 darknet_ros darknet在ROS中的包装。 A Review of Object Detection Based on Convolutional Neural Network综述类文章，比较浅显。 SSD: Single Shot MultiBox Detector Focal Loss for Dense Object Detection 对应代码keras-retinanet，pytorch-retinanet Speed/accuracy trade-offs for modern convolutional object detectors Focal Loss for Dense Object Detection以及对应的代码keras-retinanet Relation Networks for Object Detection 微软亚研院目标检测文章和对应代码Relation-Networks-for-Object-Detection。 HistoryObjectRecognition 非常好的显示目标检测的pdf，The Modern History of Object Recognition。 CheXNet-with-localization Weakly Supervised Learning for Findings Detection in Medical Images。 SNIPER: Efficient Multi-Scale Training 作者同时也提供了SSH人脸检测器的代码。 menpodetect menpo github组织上提供了大量人脸相关的工程，包含了AAM、SDM、CLM等等。 Dense Object Nets: Learning Dense Visual Object Descriptors By and For Robotic Manipulation，pytorch-dense-correspondence代码仓库 稠密的目标特征检测学习，可以用在机械臂上。 Deeply supervised salient object detection with short connections，以及对应的Salient-Object-Detection  博客资料  目标检测网络之 YOLOv3 目标检测算法总结 非常好的一篇目标检测算法综述博客。 弄懂目标检测（Faster R-CNN）？看这篇就够了！ 对于faster RCNN中的每一个结构的讲解十分详细。 Object detection: an overview in the age of Deep Learning 一系列博客，很好地介绍了目标检测的历史。 YOLO升级版：YOLOv2和YOLO9000解析 Understanding SSD MultiBox — Real-Time Object Detection In Deep Learning Object-Detection-Development 作者收集了很多目标检测方面的论文资料。 整理读研期间用过、改进过、写过的代码 作者主要专注于目标检测，可以参考。 Deep-learning-object-detection-links.</description>
     </item>
     
     <item>
@@ -942,7 +942,7 @@ e-lab references 这是e-lab实验室对相关研究的文章收集，可以作�
       <pubDate>Mon, 13 Nov 2017 00:48:20 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E6%B7%B1%E5%B1%82%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</guid>
-      <description> 论文资料  Generative Adversarial Networks Conditional Generative Adversarial Nets Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks NIPS 2016 Tutorial: Generative Adversarial Networks StarGAN: Unified Generative Adversarial Networks for Multi-Domain Image-to-Image Translation 同时pytorch代码StarGAN 实现了一定模版的图像转换（生气，开心和恐惧）  博客资料 Generative Adversarial Networks (GANs) in 50 lines of code (PyTorch) 4.6 GAN 生成对抗网络 (PyTorch tutorial 神经网络 教学)
+      <description> 论文资料  Generative Adversarial Networks Conditional Generative Adversarial Nets Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks NIPS 2016 Tutorial: Generative Adversarial Networks StarGAN: Unified Generative Adversarial Networks for Multi-Domain Image-to-Image Translation 同时pytorch代码StarGAN 实现了一定模版的图像转换（生气，开心和恐惧） Which Training Methods for GANs do actually Converge?以及相应代码GAN_stability  博客资料 Generative Adversarial Networks (GANs) in 50 lines of code (PyTorch) 4.6 GAN 生成对抗网络 (PyTorch tutorial 神经网络 教学)
 AdversarialNetsPapers 这是github上搜集的关于对抗生成网络相关论文
 代码相关  pytorch-generative-adversarial-networks ganhacks nips2016中关于训练GAN网络的资料。 the-gan-zoo 其中包括了大量的GAN。 Self-Attention-GAN SAGAN的pytorch实现。 keras-adversarial 使用keras实现的常用keras生成对抗网络。 PyTorch-GAN pytorch实现的GAN网络 TODO。  </description>
     </item>
@@ -1059,9 +1059,10 @@ fb.resnet.torch
       <description>论文资料 Pyramid Scene Parsing Network
 Pyramid Scene Parsing Network主页
 网络结构 结果示例 代码实现 pspnet-pytorch
+pspnet pytorch实现的pspnet，同时提供了PASCAL VOC 2012和BRATS 2017数据集上训练的权值文件。
 PSPNet caffe
 PSPNet-TF-Reproduce PSPNet的tensorflow实现。
-代码分析 import torch from torch import nn from torch.nn import functional as F import extractors class PSPModule(nn.Module): def __init__(self, features, out_features=1024, sizes=(1, 2, 3, 6)): super().__init__() # PSP池化模块，尺度为1,2,3,6分别为分辨率降低1,2,3,6 self.stages = [] self.stages = nn.ModuleList([self._make_stage(features, size) for size in sizes]) # 将concat所有的特征层，包括4种尺度的PSP以及原先的输入 self.bottleneck = nn.Conv2d(features * (len(sizes) + 1), out_features, kernel_size=1) self.relu = nn.</description>
+代码分析 import torch from torch import nn from torch.nn import functional as F import extractors class PSPModule(nn.Module): def __init__(self, features, out_features=1024, sizes=(1, 2, 3, 6)): super().__init__() # PSP池化模块，尺度为1,2,3,6分别为分辨率降低1,2,3,6 self.stages = [] self.stages = nn.ModuleList([self._make_stage(features, size) for size in sizes]) # 将concat所有的特征层，包括4种尺度的PSP以及原先的输入 self.bottleneck = nn.Conv2d(features * (len(sizes) + 1), out_features, kernel_size=1) self.</description>
     </item>
     
     <item>
@@ -1337,8 +1338,7 @@ StandardScaler StandardScaler
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E9%9B%86%E5%8F%91%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
       <description>概述 本仓库主要收集计算机视觉相关领域的常用数据集。 - CV Datasets on the web cvpapers提供的分类好的常用计算机视觉数据集网站，包括detection，classification，recognition等等。 - ComputerVisionDatasets 作者提供的常用数据集；
-数据集增强方法 AutoAugment
-视频预测数据集 video-understanding-dataset 视频理解数据集收集，可以参考部分
+数据集增强方法  AutoAugment albumentations，其中包含了RandomCrop64、PadToSize512、HorizontalFlip、VerticalFlip、Rotate、ShiftScaleRotate、Brightness、ShiftHSV、ShiftRGB、Gamma、Grayscale等数据集增强方法，同时和imgaug、torchvision、Keras的数据集增强方法的速度进行了比较。  视频预测数据集 video-understanding-dataset 视频理解数据集收集，可以参考部分
 Moving MNIST Moving MNIST
 Moving MNIST包含了10000序列，每一个序列在64x64帧中包含了20个长度显示2个数字运动。
 UCF101 UCF101 - Action Recognition Data Set
@@ -1354,8 +1354,7 @@ DAVIS Challenge on Video Object Segmentation 2017
 语义分割数据集 Datasets for ADAS
 语义分割常用数据集
 各领域公开数据集下载
-语义分割数据代码 dataset_loaders fvision提供的常用的语义和视频数据loader，其中同时提供了数据集的扩充方法。
-合成数据集 相关论文  UnrealCV: Connecting Computer Vision to Unreal Engine 论文 代码 项目主页 这个提供了常用的合成数据集的相关论文 Playing for Data: Ground Truth from Computer Games 论文 代码 项目主页  LSUN 大尺度场景理解挑战，该挑战从2015年开始，直至现在，PASCAL VOC和ImageNet ILSVRC的挑战在过去十年中已经使对象识别取得了显着进步。我们计划借这个机制，加快场景理解的进度。与ICCV / ECCV每年举办的以物象为中心的ImageNet ILSVRC挑战赛相辅相成，我们每年都会在CVPR主办一个以场景为中心的挑战。我们的挑战主要集中在现场理解中的四个主要任务，包括场景分类，显着预测，房间布局估计和字幕生成（由MS COCO主办）。受到最近使用大数据（如深度学习）的成功启发，我们将重点提供比现有数据大至少几倍的基准，以支持培训这些数据饥饿算法。通过以年度挑战格式提供一套大型基准测试，我们预计未来几年将会为现场认识取得重大进展。</description>
+Multimodal Brain Tumor Segmentation Challenge 2018 肿瘤检测数据集。</description>
     </item>
     
     <item>
