@@ -78,7 +78,7 @@
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_06/yolo%E6%80%BB%E7%BB%93/</guid>
       <description>概述 将目标检测算法YOLO详细进行解析。
-相关资料  YAD2K YAD2K: Yet Another Darknet 2 Keras YOLO-pytorch py-caffe-yolo 使用caffe的python接口实现的yolo目标检测。  darkent darknet是作者开源的YOLO实现框架，纯CPP实现。
+相关资料  YAD2K YAD2K: Yet Another Darknet 2 Keras YOLO-pytorch py-caffe-yolo 使用caffe的python接口实现的yolo目标检测。 Yolo_on_Caffe yolov1 v2 v3的caffe实现。  darkent darknet是作者开源的YOLO实现框架，纯CPP实现。
 mac下安装 无opencv直接make即可，使用opencv可视化结果需编译opencv=1（Makefile）。
 brew install opencv@2 # 修改Makefile中 #LDFLAGS+= `pkg-config --libs opencv` #COMMON+= `pkg-config --cflags opencv` LDFLAGS+= `pkg-config --libs /usr/local/opt/opencv@2/lib/pkgconfig/opencv.pc` COMMON+= `pkg-config --cflags /usr/local/opt/opencv@2/lib/pkgconfig/opencv.pc`  Cant make the YOLO when OPENCV=1 Ubuntu 17.10</description>
     </item>
@@ -942,9 +942,7 @@ e-lab references 这是e-lab实验室对相关研究的文章收集，可以作�
       <pubDate>Mon, 13 Nov 2017 00:48:20 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_11/%E6%B7%B1%E5%B1%82%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</guid>
-      <description> 论文资料  Generative Adversarial Networks Conditional Generative Adversarial Nets Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks NIPS 2016 Tutorial: Generative Adversarial Networks StarGAN: Unified Generative Adversarial Networks for Multi-Domain Image-to-Image Translation 同时pytorch代码StarGAN 实现了一定模版的图像转换（生气，开心和恐惧） Which Training Methods for GANs do actually Converge?以及相应代码GAN_stability  博客资料 Generative Adversarial Networks (GANs) in 50 lines of code (PyTorch) 4.6 GAN 生成对抗网络 (PyTorch tutorial 神经网络 教学)
-AdversarialNetsPapers 这是github上搜集的关于对抗生成网络相关论文
-代码相关  pytorch-generative-adversarial-networks ganhacks nips2016中关于训练GAN网络的资料。 the-gan-zoo 其中包括了大量的GAN。 Self-Attention-GAN SAGAN的pytorch实现。 keras-adversarial 使用keras实现的常用keras生成对抗网络。 PyTorch-GAN pytorch实现的GAN网络 TODO。  </description>
+      <description>论文资料  Generative Adversarial Networks Conditional Generative Adversarial Nets Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks NIPS 2016 Tutorial: Generative Adversarial Networks StarGAN: Unified Generative Adversarial Networks for Multi-Domain Image-to-Image Translation 同时pytorch代码StarGAN 实现了一定模版的图像转换（生气，开心和恐惧） Which Training Methods for GANs do actually Converge?以及相应代码GAN_stability Are GANs Created Equal? A Large-Scale Study 对应代码compare_gan  博客资料 Generative Adversarial Networks (GANs) in 50 lines of code (PyTorch) 4.6 GAN 生成对抗网络 (PyTorch tutorial 神经网络 教学)</description>
     </item>
     
     <item>
