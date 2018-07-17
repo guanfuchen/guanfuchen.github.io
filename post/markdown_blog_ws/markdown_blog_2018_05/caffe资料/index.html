@@ -158,6 +158,14 @@ export PYTHONPATH=$PYTHONPATH:$HOME/GitHub/GitWeb/caffe/python
 <pre><code># USE_LEVELDB := 0
 </code></pre>
 
+<ul>
+<li>Check failed: registry.count(type) == 1 (0 vs. 1)
+注释Makefile.confg中的WITH_PYTHON_LAYER := 1
+同时注释layer_factory.cpp中的#ifdef WITH_PYTHON_LAYER和#endif
+<a href="https://blog.csdn.net/chenzhi1992/article/details/52618386">windows 下跑python版subcnn和 faster rcnn</a>
+<a href="https://blog.csdn.net/dataningwei/article/details/70246535">libcaffe Check failed: registry.count(type) == 1 (0 vs. 1) Unknown layer type: Input (known types: )</a></li>
+</ul>
+
 <hr />
 
 <h2 id="相关资料">相关资料</h2>
@@ -174,8 +182,126 @@ export PYTHONPATH=$PYTHONPATH:$HOME/GitHub/GitWeb/caffe/python
 
 <h2 id="caffe2">caffe2</h2>
 
+<p>Caffe2是一个轻量级，模块化和可扩展的深度学习框架。 Caffe2以原始Caffe为基础，在设计时考虑了表达，速度和模块性。提倡&rdquo;CODE ONCE, RUN ANYWHERE&rdquo;和&rdquo;from zero to scale, cloud to mobile&rdquo;。</p>
+
+<p>Caffe2旨在为您提供一种简单直接的方式来体验深度学习，并利用新模型和算法的社区贡献。您可以使用云中的GPU或通过Caffe2的跨平台库在移动设备上实现大规模扩展。</p>
+
+<p>Caffe2在一系列方向上改善了Caffe 1.0
+- 一流的大规模分布式培训支持
+- 移动部署 新的硬件支持（除了CPU和CUDA）
+- 灵活的未来方向，如量化计算
+- 受到大量Facebook应用程序的压力测试</p>
+
+<p>Caffe2中计算的基本单位之一是运算符。您可以将这些视为Caffe中更灵活的图层版本。 Caffe2拥有400多家不同的运营商，为社区提供指导，帮助他们创造并为这一不断增长的资源做出贡献。有关更多信息，请查看操作员信息并浏览介绍教程。</p>
+
+<p>从原始Caffe转换模型相对容易。我们在下面提供了一个可以转换您的caffemodel的教程，但您仍需要验证准确度和loss是否在范围内或更好。</p>
+
+<p>caffe和caffe2模型互相转换，请参考<a href="https://github.com/pytorch/pytorch/blob/master/caffe2/python/caffe_translator.py">caffe_translator.py</a>。</p>
+
+<p>PyTorch转换为caffe2，首先参考<a href="https://github.com/facebook/fb-caffe-exts#torch2caffe">Github torch2caffe</a>将PyTorch模型转换为caffe，然后根据上述caffe和caffe2模型互相转换方法转换即可。</p>
+
+<h3 id="operators概述">Operators概述</h3>
+
+<p>Caffe2中的一个基本计算单位是Operators。每个运算符包含在给定适当数量和类型的输入和参数的情况下计算输出所需的逻辑。Caffe和Caffe2中Operators功能的总体差异分别如下图所示，例如，在全连接的运算符中，必须提供输入X，偏置b和权重矩阵W中的每一个，并且计算输出为单个：</p>
+
+<p><img src="http://chenguanfuqq.gitee.io/tuquan2/img_2018_5/operators-comparison.png" alt="" /></p>
+
+<p>Caffe2同时支持稀疏运算符，具体参考<a href="https://caffe2.ai/docs/sparse-operations.html">Guide for sparse operations</a>，另外可以实现自定义运算符，具体参考<a href="https://caffe2.ai/docs/custom-operators.html">Guide for creating your own operators</a>。</p>
+
+<h3 id="caffe2概念">Caffe2概念</h3>
+
+<h4 id="blobs-and-workspace-tensors">Blobs and Workspace, Tensors</h4>
+
+<p>Caffe2中的数据被组织为blob。一个blob只是在内存中的数据块命名。大多数blob包含一个张量（想想多维数组），在Python中它们被转换为numpy数组（numpy是一个流行的Python数值库，已经作为Caffe2的先决条件安装）。</p>
+
+<p>一个工作空间存储所有的blobs。以下示例显示如何将blob提供给a workspace并再次获取它们。工作区在您开始使用它们的那一刻初始化。</p>
+
+<pre><code class="language-python">from caffe2.python import workspace, model_helper
+import numpy as np
+# Create random tensor of three dimensions
+x = np.random.rand(4, 3, 2)
+print(x)
+print(x.shape)
+
+workspace.FeedBlob(&quot;my_x&quot;, x)
+
+x2 = workspace.FetchBlob(&quot;my_x&quot;)
+print(x2)
+</code></pre>
+
+<h4 id="nets-and-operators">Nets and Operators</h4>
+
+<p>Caffe2中的基本模型抽象是网络（网络的简称）。网络是运算符的图形，每个运算符采用一组输入blob并生成一个或多个输出blob。</p>
+
+<p>直接编写网络非常繁琐，因此最好使用有助于创建网络的Python类模型助手。即使我们调用它并传入一个名称“我的第一个网”，ModelHelper也会创建两个相互关联的网：</p>
+
+<ol>
+<li>一个初始化参数（参考init_net）</li>
+<li>一个运行实际训练的人（参考exec_net）</li>
+</ol>
+
+<pre><code class="language-python"># 随机创建data和label并作为blob提供给工作区workspace
+# Create the input data
+data = np.random.rand(16, 100).astype(np.float32)
+
+# Create labels for the data as integers [0, 9].
+label = (np.random.rand(16) * 10).astype(np.int32)
+
+workspace.FeedBlob(&quot;data&quot;, data)
+workspace.FeedBlob(&quot;label&quot;, label)
+
+# 使用模型类创建模型
+# Create model using a model helper
+m = model_helper.ModelHelper(name=&quot;my first net&quot;)
+</code></pre>
+
+<p>现在用model_helper来创建我们前面提到过的两个网（init_net和exec_net）。我们计划FC接下来使用此模型中的运算符添加完全连接的图层，但首先我们需要通过创建随机填充的blob来进行准备工作，以获得FC运算符期望的权重和偏差。当我们添加FC运算符时，我们将通过名称引用权重和偏差blob作为输入。</p>
+
+<pre><code class="language-python">weight = m.param_init_net.XavierFill([], 'fc_w', shape=[10, 100])
+bias = m.param_init_net.ConstantFill([], 'fc_b', shape=[10, ])
+
+# 创建net，其中将FC运算符中的输入列表补充完全
+fc_1 = m.net.FC([&quot;data&quot;, &quot;fc_w&quot;, &quot;fc_b&quot;], &quot;fc1&quot;)
+pred = m.net.Sigmoid(fc_1, &quot;pred&quot;)
+softmax, loss = m.net.SoftmaxWithLoss([pred, &quot;label&quot;], [&quot;softmax&quot;, &quot;loss&quot;])
+
+# 最后查看网络存储结构
+print(m.net.Proto())
+</code></pre>
+
+<h4 id="executing">Executing</h4>
+
+<p>现在，当我们定义模型训练操作符时，我们可以开始运行它来训练我们的模型。首先，我们只运行一次param初始化：</p>
+
+<pre><code class="language-python">workspace.RunNetOnce(m.param_init_net)
+workspace.CreateNet(m.net)
+
+# 一次创建网络多次有效地运行
+# Run 100 x 10 iterations
+for _ in range(100):
+    data = np.random.rand(16, 100).astype(np.float32)
+    label = (np.random.rand(16) * 10).astype(np.int32)
+
+    workspace.FeedBlob(&quot;data&quot;, data)
+    workspace.FeedBlob(&quot;label&quot;, label)
+# 注意我们如何通过m.name而不是通过网络定义本身RunNet()。由于网络是在工作空间内创建的，因此我们不需要再次传递定义。
+    workspace.RunNet(m.name, 10)   # run for 10 times
+
+# 执行后，您可以检查存储在输出blob中的结果（包含张量即numpy数组）：
+    print(workspace.FetchBlob(&quot;softmax&quot;))
+    print(workspace.FetchBlob(&quot;loss&quot;))
+</code></pre>
+
+<h4 id="bp反向传播">BP反向传播</h4>
+
+<p>这个网络只包含前向传播，因此它不会学习任何东西。通过在前向传递中为每个运算符添加梯度运算符来创建向后传递。</p>
+
+<h3 id="参考资料">参考资料</h3>
+
 <ul>
 <li><a href="https://github.com/leonardvandriel/caffe2_cpp_tutorial">caffe2_cpp_tutorial</a></li>
+<li><a href="https://caffe2.ai/docs/operators.html">Operators Overview</a></li>
+<li><a href="https://caffe2.ai/docs/operators-catalogue.html">Operators Catalog所有运算符目录</a></li>
 </ul>
 
         </article>
@@ -189,8 +315,8 @@ export PYTHONPATH=$PYTHONPATH:$HOME/GitHub/GitWeb/caffe/python
     <div>
         <section id="datecount">
           <h4 id="date"> Tue May 29, 2018 </h4>
-          <h5 id="wc"> 200 Words </h5>
-          <h5 id="readtime"> Read in about 1 Min </h5>
+          <h5 id="wc"> 400 Words </h5>
+          <h5 id="readtime"> Read in about 2 Min </h5>
         </section>
         <ul id="categories">
           
@@ -266,7 +392,7 @@ export PYTHONPATH=$PYTHONPATH:$HOME/GitHub/GitWeb/caffe/python
 
 </aside>
 
-<meta itemprop="wordCount" content="138">
+<meta itemprop="wordCount" content="383">
 <meta itemprop="datePublished" content="2018-05-29">
 <meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2018_05/caffe%E8%B5%84%E6%96%99/">
 
