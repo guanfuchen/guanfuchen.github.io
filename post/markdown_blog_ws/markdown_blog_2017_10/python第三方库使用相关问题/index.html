@@ -201,6 +201,16 @@ HOME_PATH = expanduser('~')
 
 <hr />
 
+<h1 id="文件移动">文件移动</h1>
+
+<pre><code class="language-python">dst_dir = os.path.dirname(dst)
+if not os.path.exists(dst_dir):
+    os.makedirs(dst_dir)
+os.rename(src, dst)
+</code></pre>
+
+<hr />
+
 <h1 id="python微分库">python微分库</h1>
 
 <p>由于在神经网络中经常使用梯度下降算法，基本神经网络库都会内部集成微分自动推导：</p>
@@ -602,7 +612,7 @@ def colors(n):
 
 </aside>
 
-<meta itemprop="wordCount" content="542">
+<meta itemprop="wordCount" content="552">
 <meta itemprop="datePublished" content="2017-10-26">
 <meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2017_10/python%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
 
