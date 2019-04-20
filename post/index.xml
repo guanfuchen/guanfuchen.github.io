@@ -6,10 +6,19 @@
     <description>Recent content in Posts on import python</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Sep 2018 09:32:02 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 20 Apr 2019 23:27:20 +0800</lastBuildDate>
     
 	<atom:link href="https://guanfuchen.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>YOLACT阅读</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2019_04/yolact%E9%98%85%E8%AF%BB/</link>
+      <pubDate>Sat, 20 Apr 2019 23:27:20 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2019_04/yolact%E9%98%85%E8%AF%BB/</guid>
+      <description> 相关问题  fast nms实现过程 多个物体重叠分割效果  相关资料  YOLACT Real-time Instance Segmentation 论文首页 加州大学提出：实时实例分割算法YOLACT，可达33 FPS/30mAP！现已开源！  </description>
+    </item>
     
     <item>
       <title>论文ppt综述</title>
