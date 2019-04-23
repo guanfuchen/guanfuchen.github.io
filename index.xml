@@ -6,10 +6,19 @@
     <description>Recent content on import python</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 20 Apr 2019 23:27:20 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 24 Apr 2019 07:36:18 +0800</lastBuildDate>
     
 	<atom:link href="https://guanfuchen.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>PANet阅读</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2019_04/panet%E9%98%85%E8%AF%BB/</link>
+      <pubDate>Wed, 24 Apr 2019 07:36:18 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2019_04/panet%E9%98%85%E8%AF%BB/</guid>
+      <description> 相关问题 相关资料  PANet 论文代码 实例分割论文-PANet  </description>
+    </item>
     
     <item>
       <title>YOLACT阅读</title>
@@ -17,7 +26,7 @@
       <pubDate>Sat, 20 Apr 2019 23:27:20 +0800</pubDate>
       
       <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2019_04/yolact%E9%98%85%E8%AF%BB/</guid>
-      <description> 相关问题  fast nms实现过程 多个物体重叠分割效果  相关资料  YOLACT Real-time Instance Segmentation 论文首页 加州大学提出：实时实例分割算法YOLACT，可达33 FPS/30mAP！现已开源！  </description>
+      <description> 相关问题  fast nms实现过程 多个物体重叠分割效果  相关资料  YOLACT Real-time Instance Segmentation 论文首页 加州大学提出：实时实例分割算法YOLACT，可达33 FPS/30mAP！现已开源！ 感知算法论文（一）YOLACT: Real-time Instance Segmentation（2019）译文 YOLACT: Real-time Instance Segmentation YOLACT簡介 - Real-time Instance Segmentation 非极大值抑制NMS的python实现 NMS——非极大值抑制 FCIS，另一篇较早的实例分割论文。  </description>
     </item>
     
     <item>
