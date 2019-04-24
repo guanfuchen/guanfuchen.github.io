@@ -15,13 +15,13 @@
  
 <meta property="og:type" content="article"/>
 <meta property="og:description" content=""/>
-<meta property="og:title" content="PANet阅读 : spf13.com"/>
+<meta property="og:title" content="CVPR2018_相关文章文类 : spf13.com"/>
 <meta property="og:site_name" content="spf13 is Steve Francia"/>
 <meta property="og:image" content="" />
 <meta property="og:image:type" content="image/jpeg" />
 <meta property="og:image:width" content="" />
 <meta property="og:image:height" content="" />
-<meta property="og:url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2019_04/panet%E9%98%85%E8%AF%BB/">
+<meta property="og:url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2019_04/cvpr2018_%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0%E6%96%87%E7%B1%BB/">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-04-24"/>
 <meta property="article:modified_time" content="2019-04-24"/>
@@ -33,7 +33,7 @@
 <meta name="twitter:card" content="summary">
 
 <meta name="twitter:site" content="@spf13">
-<meta name="twitter:title" content="PANet阅读 : spf13.com">
+<meta name="twitter:title" content="CVPR2018_相关文章文类 : spf13.com">
 <meta name="twitter:creator" content="@spf13">
 <meta name="twitter:description" content="">
 <meta name="twitter:image:src" content="">
@@ -42,8 +42,8 @@
 
 
     <base href="https://guanfuchen.github.io">
-    <title> PANet阅读 - spf13.com </title>
-    <link rel="canonical" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2019_04/panet%E9%98%85%E8%AF%BB/">
+    <title> CVPR2018_相关文章文类 - spf13.com </title>
+    <link rel="canonical" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2019_04/cvpr2018_%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0%E6%96%87%E7%B1%BB/">
     
 
     <link href='https://fonts.lug.ustc.edu.cn/css?family=Fjalla+One|Open+Sans:300' rel='stylesheet' type='text/css'>
@@ -105,23 +105,58 @@
 
 
 <section id="main">
-  <h1 itemprop="name" id="title">PANet阅读</h1>
+  <h1 itemprop="name" id="title">CVPR2018_相关文章文类</h1>
   <div>
         <article itemprop="articleBody" id="content">
            
 
 <hr />
 
-<h2 id="相关问题">相关问题</h2>
+<h1 id="关键点检测">关键点检测</h1>
+
+<ul>
+<li>Weakly and Semi Supervised Human Body Part Parsing via Pose-Guided Knowledge Transfer</li>
+</ul>
+
+<p>|Abstract|
+| - |
+| Human body part parsing, or human semantic part segmentation, is fundamental to many computer vision tasks. In conventional semantic segmentation methods, the ground truth segmentations are provided, and fully convolutional networks (FCN) are trained in an end-to-end scheme. Although these methods have demonstrated impressive results, their performance highly depends on the quantity and quality of training data. In this paper, we present a novel method to generate synthetic human part segmentation data using easily-obtained human keypoint annotations. Our key idea is to exploit the anatomical similarity among human to transfer the parsing results of a person to another person with similar pose. Using these estimated results as additional training data, our semi-supervised model outperforms its strong-supervised counterpart by 6 mIOU on the PASCAL-Person-Part dataset, and we achieve state-of-the-art human parsing results. Our approach is general and can be readily extended to other object/animal parsing task assuming that their anatomical similarity can be annotated by keypoints. The proposed model and accompanying source code will be made publicly available. |</p>
+
+<ul>
+<li>Detect-and-Track: Efficient Pose Estimation in Videos</li>
+</ul>
+
+<p>|Abstract|
+| - |
+| This paper addresses the problem of estimating and tracking human body keypoints in complex, multi-person video. We propose an extremely lightweight yet highly effective approach that builds upon the latest advancements in human detection and video understanding. Our method operates in two-stages: keypoint estimation in frames or short clips, followed by lightweight tracking to generate keypoint predictions linked over the entire video. For frame-level pose estimation we experiment with Mask R-CNN, as well as our own proposed 3D extension of this model, which leverages temporal information over small clips to generate more robust frame predictions. We conduct extensive ablative experiments on the newly released multi-person video pose estimation benchmark, PoseTrack, to validate various design choices of our model. Our approach achieves an accuracy of 55.2% on the validation and 51.8% on the test set using the Multi-Object Tracking Accuracy (MOTA) metric, and achieves state of the art performance on the ICCV 2017 PoseTrack keypoint tracking challenge. |</p>
+
+<ul>
+<li>Human Pose Estimation With Parsing Induced Learner</li>
+</ul>
+
+<p>|Abstract|
+| - |
+| Human pose estimation still faces various difficulties in challenging scenarios. Human parsing, as a closely related task, can provide valuable cues for better pose estimation, which however has not been fully exploited. In this paper, we propose a novel Parsing Induced Learner to exploit parsing information to effectively assist pose estimation by learning to fast adapt the base pose estimation model. The proposed Parsing Induced Learner is composed of a parsing encoder and a pose model parameter adapter, which together learn to predict dynamic parameters of the pose model to extract complementary useful features for more accurate pose estimation. Comprehensive experiments on benchmarks LIP and extended PASCAL-Person-Part show that the proposed Parsing Induced Learner can improve performance of both single- and multi-person pose estimation to new state-of-the-art. Cross-dataset experiments also show that the proposed Parsing Induced Learner from LIP dataset can accelerate learning of a human pose estimation model on MPII benchmark in addition to achieving outperforming performance. |</p>
+
+<ul>
+<li>The Best of Both Worlds: Combining CNNs and Geometric Constraints for Hierarchical Motion Segmentation</li>
+</ul>
+
+<p>|Abstract|
+| - |
+| Traditional methods of motion segmentation use powerful geometric constraints to understand motion, but fail to leverage the semantics of high-level image understanding. Modern CNN methods of motion analysis, on the other hand, excel at identifying well-known structures, but may not precisely characterize well-known geometric constraints. In this work, we build a new statistical model of rigid motion flow based on classical perspective projection constraints. We then combine piecewise rigid motions into complex deformable and articulated objects, guided by semantic segmentation from CNNs and a second object-level statistical model. This combination of classical geometric knowledge combined with the pattern recognition abilities of CNNs yields excellent performance on a wide range of motion segmentation benchmarks, from complex geometric scenes to camouflaged animals. |</p>
 
 <hr />
 
-<h2 id="相关资料">相关资料</h2>
+<h1 id="实例分割">实例分割</h1>
 
 <ul>
-<li><a href="https://github.com/ShuLiu1993/PANet">PANet</a> 论文代码</li>
-<li><a href="http://hellodfan.com/2018/03/17/%E5%AE%9E%E4%BE%8B%E5%88%86%E5%89%B2%E8%AE%BA%E6%96%87-PANet/">实例分割论文-PANet</a></li>
+<li>Deep Extreme Cut: From Extreme Points to Object Segmentation</li>
 </ul>
+
+<p>|Abstract|
+| - |
+| This paper explores the use of extreme points in an object (left-most, right-most, top, bottom pixels) as input to obtain precise object segmentation for images and videos. We do so by adding an extra channel to the image in the input of a convolutional neural network (CNN), which contains a Gaussian centered in each of the extreme points. The CNN learns to transform this information into a segmentation of an object that matches those extreme points. We demonstrate the usefulness of this approach for guided segmentation (grabcut-style), interactive segmentation, video object segmentation, and dense segmentation annotation. We show that we obtain the most precise results to date, also with less user input, in an extensive and varied selection of benchmarks and datasets. All our models and code are publicly available on <a href="http://www.vision.ee.ethz.ch/~cvlsegmentation/dextr">http://www.vision.ee.ethz.ch/~cvlsegmentation/dextr</a>. |</p>
 
         </article>
   </div>
@@ -134,8 +169,8 @@
     <div>
         <section id="datecount">
           <h4 id="date"> Wed Apr 24, 2019 </h4>
-          <h5 id="wc"> 100 Words </h5>
-          <h5 id="readtime"> Read in about 1 Min </h5>
+          <h5 id="wc"> 900 Words </h5>
+          <h5 id="readtime"> Read in about 4 Min </h5>
         </section>
         <ul id="categories">
           
@@ -147,10 +182,10 @@
 
     <div>
         <section id="prev">
-            &nbsp;<a class="previous" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2019_04/cvpr2018_%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0%E6%96%87%E7%B1%BB/"><i class="icon-arrow-left"></i> CVPR2018_相关文章文类</a><br>
+            &nbsp;
         </section>
         <section id="next">
-            &nbsp;<a class="next" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2019_04/yolact%E9%98%85%E8%AF%BB/">YOLACT阅读 <i class="icon-arrow-right"></i></a>
+            &nbsp;<a class="next" href="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2019_04/panet%E9%98%85%E8%AF%BB/">PANet阅读 <i class="icon-arrow-right"></i></a>
         </section>
     </div>
 
@@ -211,9 +246,9 @@
 
 </aside>
 
-<meta itemprop="wordCount" content="5">
+<meta itemprop="wordCount" content="813">
 <meta itemprop="datePublished" content="2019-04-24">
-<meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2019_04/panet%E9%98%85%E8%AF%BB/">
+<meta itemprop="url" content="https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2019_04/cvpr2018_%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0%E6%96%87%E7%B1%BB/">
 
 
 <aside id=comments>

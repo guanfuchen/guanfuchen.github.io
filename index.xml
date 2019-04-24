@@ -6,10 +6,19 @@
     <description>Recent content on import python</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 24 Apr 2019 07:36:18 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 24 Apr 2019 23:29:08 +0800</lastBuildDate>
     
 	<atom:link href="https://guanfuchen.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CVPR2018_相关文章文类</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2019_04/cvpr2018_%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0%E6%96%87%E7%B1%BB/</link>
+      <pubDate>Wed, 24 Apr 2019 23:29:08 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2019_04/cvpr2018_%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0%E6%96%87%E7%B1%BB/</guid>
+      <description>关键点检测  Weakly and Semi Supervised Human Body Part Parsing via Pose-Guided Knowledge Transfer  |Abstract| | - | | Human body part parsing, or human semantic part segmentation, is fundamental to many computer vision tasks. In conventional semantic segmentation methods, the ground truth segmentations are provided, and fully convolutional networks (FCN) are trained in an end-to-end scheme. Although these methods have demonstrated impressive results, their performance highly depends on the quantity and quality of training data.</description>
+    </item>
     
     <item>
       <title>PANet阅读</title>
