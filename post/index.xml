@@ -6,10 +6,20 @@
     <description>Recent content in Posts on import python</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 24 Apr 2019 23:29:08 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 05 May 2026 00:00:00 +0800</lastBuildDate>
     
 	<atom:link href="https://guanfuchen.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Claude Code实践</title>
+      <link>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2026_05/claude_code%E5%AE%9E%E8%B7%B5/</link>
+      <pubDate>Tue, 05 May 2026 00:00:00 +0800</pubDate>
+      
+      <guid>https://guanfuchen.github.io/post/markdown_blog_ws/markdown_blog_2026_05/claude_code%E5%AE%9E%E8%B7%B5/</guid>
+      <description>概述 Claude Code是Anthropic官方推出的命令行界面工具，提供了强大的AI辅助编程功能。它允许开发者在终端中直接与Claude进行交互，实现代码编写、调试、重构等自动化任务。
+主要功能 核心能力  智能代码生成: 根据自然语言描述生成完整的代码片段 代码理解与分析: 理解现有代码结构和逻辑 自动重构: 优化代码结构，改善代码质量 Bug修复: 识别和修复代码中的错误 测试生成: 自动生成单元测试和集成测试 文档生成: 为代码生成注释和文档  工作模式  交互式对话: 与Claude进行实时的问答交流 批处理任务: 执行预定义的自动化脚本 项目理解: 分析整个项目的代码库结构 Git集成: 与版本控制系统无缝集成  使用方法 基本安装 # 通过npm安装 npm install -g @anthropic/claude-code # 或通过其他包管理器安装  常用命令 # 启动Claude Code claude-code # 在特定目录下启动 claude-code ./my-project # 执行特定任务 claude-code --task &amp;quot;重构这个函数&amp;quot;  典型工作流程  项目初始化: 在项目根目录启动Claude Code 任务定义: 用自然语言描述需要完成的任务 交互式开发: 与Claude进行多轮对话，完善代码 代码审查: 让Claude检查和优化生成的代码 测试验证: 运行测试确保代码质量 部署集成: 将代码集成到现有项目中  实战案例 案例1：快速原型开发 使用Claude Code快速创建一个RESTful API的原型，从需求分析到代码实现，再到测试生成，大幅提升开发效率。</description>
+    </item>
     
     <item>
       <title>CVPR2018_相关文章文类</title>
